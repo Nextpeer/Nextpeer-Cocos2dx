@@ -1,4 +1,3 @@
-
 #include "GameFieldBaseScene.h"
 
 // NP Integration steps: Import the following headers only for iOS
@@ -29,6 +28,9 @@ bool GameFieldBaseScene::init()
 void GameFieldBaseScene::nextpeerEndGame(CCObject* pSender) {
     
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
+
+    CCNotificationCenter::sharedNotificationCenter()->removeObserver(this, NP_EVNET_END_GAME);
+    
     gamePause = true;
     CCDirector *pDirector = CCDirector::sharedDirector();
     pDirector->popScene();
