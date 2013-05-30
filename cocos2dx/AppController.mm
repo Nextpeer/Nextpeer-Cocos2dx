@@ -49,12 +49,7 @@
 static AppDelegate s_sharedApplication;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
-    
-    // NP Integration steps: Add the following code
-    [self initializeNextpeer];
-    [Nextpeer handleLaunchOptions:launchOptions];
-    
-    
+            
 #ifdef NEXTPEER_SHOULD_USE_PUSH_NOTIFICATION
     // Register for push
     [[UIApplication sharedApplication] registerForRemoteNotificationTypes:UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound | UIRemoteNotificationTypeAlert];    
@@ -92,6 +87,10 @@ static AppDelegate s_sharedApplication;
     [window makeKeyAndVisible];
     
     [[UIApplication sharedApplication] setStatusBarHidden: YES];
+    
+    // NP Integration steps: Add the following code
+    [self initializeNextpeer];
+    [Nextpeer handleLaunchOptions:launchOptions];
     
     cocos2d::CCApplication::sharedApplication()->run();
     return YES;
