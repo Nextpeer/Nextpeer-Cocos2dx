@@ -44,9 +44,13 @@
 		    android:layout_below="@+id/np__home_current_user_container"
 		    android:paddingLeft="@dimen/np__home_content_padding"
 		    android:paddingRight="@dimen/np__home_content_padding"
-		    android:paddingBottom="@dimen/np__home_content_padding"
 	   		android:layout_centerVertical="true"
 	 		android:orientation="horizontal" >
+			    
+			<RelativeLayout
+	            android:id="@+id/np__home_play_random_container"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content">
 			<Button
 	            android:id="@+id/np__home_play_random_tournament_button"
 	            style="@style/NP__.Home.Button"
@@ -82,12 +86,13 @@
 			        android:contentDescription="@string/np__application_name"
 			        android:src="@drawable/np__ic_home_quick_play" />
 			</RelativeLayout>
+			</RelativeLayout>
 	        
 			<RelativeLayout
 	            android:id="@+id/np__home_play_with_fb_friends_container"
 		        android:layout_width="wrap_content"
 		        android:layout_height="wrap_content"
-			    android:layout_below="@+id/np__home_play_random_tournament_button"
+			    android:layout_below="@+id/np__home_play_random_container"
 		        android:layout_marginTop="@dimen/np__home_content_padding">
 		        <Button
 		            android:id="@+id/np__home_play_with_fb_friends_tournament_button"
@@ -189,5 +194,33 @@
 				</RelativeLayout>
 			</RelativeLayout>
 		</RelativeLayout>
+		
+		<RelativeLayout
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:background="@null"
+		    android:paddingLeft="@dimen/np__home_content_padding"
+		    android:paddingRight="@dimen/np__home_content_padding"
+	   		android:layout_centerVertical="true"
+	 		android:orientation="horizontal"
+	            android:id="@+id/np__home_extra_buttons_container"
+			    android:layout_below="@+id/np__home_buttons_container">
+
+		</RelativeLayout>
+		
+		<!-- If the widgets overflow and we scroll, we need this whitespace at the bottom. -->
+		<RelativeLayout
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:background="@null"
+		    android:paddingBottom="@dimen/np__home_content_padding"
+	   		android:layout_centerVertical="true"
+	 		android:orientation="horizontal"
+	            android:id="@+id/np__home_bottom_padding"
+			    android:layout_below="@+id/np__home_extra_buttons_container">
+
+		</RelativeLayout>
+		
+		
 	</RelativeLayout>
 </ScrollView>
