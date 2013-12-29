@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@null"
+    android:orientation="horizontal"
+    android:padding="@dimen/np__content_padding" >
+
+    <com.nextpeer.android.NextpeerUIImageView
+        android:id="@+id/np__tournament_selection_tournament_thumbnail"
+        style="@style/NP__.Widget.Replacement"
+        android:layout_width="@dimen/np__tournament_selector_item_thumbnail_size"
+        android:layout_height="@dimen/np__tournament_selector_item_thumbnail_size"
+        android:layout_marginRight="@dimen/np__tournament_selector_item_thumbnail_margin" />
+
+    <TextView
+        android:id="@+id/np__tournament_selection_tournament_title"
+        style="@style/NP__.TournamentSelector.ListItem.TournamentName"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:text="@string/np__application_name" />
+
+</LinearLayout>

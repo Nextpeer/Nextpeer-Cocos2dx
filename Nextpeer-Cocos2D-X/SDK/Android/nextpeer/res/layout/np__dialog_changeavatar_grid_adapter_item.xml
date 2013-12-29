@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/np__dialog_changeavatar_grid_item_thumbnail_size"
+    android:layout_height="@dimen/np__dialog_changeavatar_grid_item_thumbnail_size"
+    android:background="@android:color/transparent">
+
+    <FrameLayout
+   		android:id="@+id/np__dialog_changeavatar_grid_item_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+   		android:background="@android:color/transparent" >
+
+        <com.nextpeer.android.NextpeerUIImageView
+            android:id="@+id/np__dialog_changeavatar_grid_item_thumbnail"
+		    android:layout_width="@dimen/np__dialog_changeavatar_grid_item_thumbnail_size"
+		    android:layout_height="@dimen/np__dialog_changeavatar_grid_item_thumbnail_size"
+            android:scaleType="centerCrop" />
+    </FrameLayout>
+</RelativeLayout>

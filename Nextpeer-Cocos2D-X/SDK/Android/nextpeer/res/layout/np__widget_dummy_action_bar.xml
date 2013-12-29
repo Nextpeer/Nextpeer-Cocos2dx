@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        android:id="@+id/np__widget_dummy_action_bar"
+        style="@style/NP__.Widget.DummyActionBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/np__dummy_action_bar_default_height" >
+
+        <!-- Menu buttons will be added -->
+ 
+        <TextView
+            android:id="@+id/np__widget_dummy_action_bar_text_title"
+            style="@style/NP__.Widget.DummyActionBar.Text.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+	 	    android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/np__dummy_action_bar_text_title_margin"
+            android:text="@string/np__application_name" />
+        
+	 	<ImageView
+	 	    android:id="@+id/np__widget_dummy_action_bar_overflow_image_view"
+            style="@style/NP__.Widget.DummyActionBar.MoreOverflow"
+            android:contentDescription="@string/np__application_name"
+	 	    android:layout_width="wrap_content"
+	 	    android:layout_height="wrap_content"
+	 	    android:layout_alignParentRight="true"
+	 	    android:layout_centerVertical="true"
+	 	    android:clickable="true"
+	 	    android:layout_marginRight="@dimen/np__dummy_action_bar_text_title_margin"
+	 	    android:visibility="gone" />
+    </RelativeLayout>
+
+</merge>

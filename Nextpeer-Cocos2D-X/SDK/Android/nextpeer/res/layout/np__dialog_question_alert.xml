@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/np__dialog_question_title"
+        style="@style/NP__.DialogWindowTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/np__ic_dialog_information"
+        android:text="@string/np__dialog_alert_error_connectivity_title" />
+
+    <TextView
+        android:id="@+id/np__dialog_question_description"
+        style="@style/NP__.Widget.Text.Content.Medium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/np__content_margin"
+        android:text="@string/np__dialog_alert_error_connectivity_description" />
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1" >
+
+        <Button
+            android:id="@+id/np__dialog_question_button_negative"
+            style="@style/NP__.Widget.Button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/np__widget_button_margin"
+            android:layout_weight="0.5"
+            android:background="@drawable/np__widget_button_negative_selector"
+            android:text="@string/np__dialog_alert_negative" />
+        
+        <Button
+            android:id="@+id/np__dialog_question_button_positive"
+            style="@style/NP__.Widget.Button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/np__widget_button_margin"
+            android:layout_weight="0.5"
+            android:background="@drawable/np__widget_button_positive_selector"
+            android:text="@string/np__dialog_alert_confirm" />
+
+    </LinearLayout>
+</LinearLayout>

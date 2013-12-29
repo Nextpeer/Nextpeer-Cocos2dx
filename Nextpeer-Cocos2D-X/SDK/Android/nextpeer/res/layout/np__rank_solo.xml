@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+   	<RelativeLayout
+       	android:id="@+id/np__rank_solo_image_container"
+       	android:layout_width="wrap_content"
+       	android:layout_height="wrap_content"
+       	android:paddingBottom="@dimen/np__ranks_display_solo_image_badge_padding">
+		    <ImageView
+		        android:id="@+id/np__rank_solo_image_view"
+		        android:layout_width="@dimen/np__ranks_display_solo_avatar_size"
+		        android:layout_height="@dimen/np__ranks_display_solo_avatar_size"
+		        android:adjustViewBounds="true"
+		        android:scaleType="centerCrop"
+		        android:contentDescription="@string/np__application_name"/>
+		    <View
+		        android:id="@+id/np__rank_solo_image_view_border"
+		        android:layout_width="@dimen/np__ranks_display_solo_avatar_size"
+		        android:layout_height="@dimen/np__ranks_display_solo_avatar_size"
+		        android:background="@drawable/np__notification_rank_solo_avatar"/>
+	</RelativeLayout>
+	
+	<RelativeLayout android:id="@+id/np__rank_solo_player_rank_container"
+	    android:layout_width="60dp"
+	    android:layout_height="wrap_content"
+	    android:orientation="horizontal"
+		android:background="@drawable/np__notification_rank_solo_badge"
+		android:layout_alignBottom="@+id/np__rank_solo_image_container"
+		android:layout_centerHorizontal="true">
+		<TextView
+		    android:id="@+id/np__rank_solo_player_rank"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_toLeftOf="@+id/np__rank_solo_rank_separator"
+		    android:lines="1"
+		    android:text="@string/np__place_holder_number"
+		    android:textColor="@color/np__white"
+		    android:textSize="16sp"
+		    android:textStyle="bold" />
+		
+		<TextView
+		    android:id="@+id/np__rank_solo_rank_separator"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:lines="1"
+		    android:text="@string/np__ranks_display_rank_separator"
+		    android:layout_marginRight="@dimen/np__ranks_display_solo_rank_separator_margin"
+		    android:layout_marginLeft="@dimen/np__ranks_display_solo_rank_separator_margin"
+		    android:layout_centerInParent="true"
+		    android:textColor="@color/np__white"
+		    android:textSize="16sp" />
+		
+		<TextView
+		    android:id="@+id/np__rank_solo_total"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_toRightOf="@+id/np__rank_solo_rank_separator"
+		    android:lines="1"
+		    android:text="@string/np__place_holder_number"
+		    android:textColor="@color/np__white"
+		    android:textSize="16sp" />
+	</RelativeLayout>
+
+</RelativeLayout>

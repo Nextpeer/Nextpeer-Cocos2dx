@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@null"
+    android:padding="@dimen/np__content_padding" >
+
+    <com.nextpeer.android.NextpeerUIImageView
+        android:id="@+id/np__invite_active_fb_friends_item_thumbnail"
+        style="@style/NP__.InviteFriends.ListItem.ProfileImage"
+        android:layout_width="@dimen/np__invite_fb_friends_list_item_default_size"
+        android:layout_height="@dimen/np__invite_fb_friends_list_item_default_size" />
+
+    <TextView
+        android:id="@+id/np__invite_active_fb_friends_item_player_name"
+        style="@style/NP__.InviteFriends.ListItem.ProfileName"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/np__invite_active_fb_friends_item_thumbnail"
+        android:layout_alignTop="@+id/np__invite_active_fb_friends_item_thumbnail"
+        android:gravity="center_vertical"
+        android:layout_toRightOf="@+id/np__invite_active_fb_friends_item_thumbnail"
+        android:layout_toLeftOf="@+id/np__invite_active_fb_friends_button_container"
+        android:layout_marginLeft="@dimen/np__content_margin"
+        android:text="@string/np__application_name" />
+    
+    <FrameLayout android:id="@+id/np__invite_active_fb_friends_button_container"
+		 android:layout_width="wrap_content"
+		 android:layout_height="wrap_content"
+  	     android:layout_alignParentRight="true"
+  	     android:layout_centerVertical="true">
+        
+  	 <ImageButton
+  	     android:id="@+id/np__invite_active_fb_friends_item_add_button"
+  	     style="@style/NP__.InviteFriends.ListItem.Button"
+		 android:layout_width="wrap_content"
+	     android:layout_height="@dimen/np__invite_fb_friends_list_item_default_size" 
+  	     android:background="@drawable/np__invite_fb_friends_button_add_selector"
+  	     android:contentDescription="@string/np__application_name"
+  	     android:gravity="center"
+  	     android:src="@drawable/np__ic_invite_friends_add" />
+   	
+	 <ImageButton
+	   	android:id="@+id/np__invite_active_fb_friends_item_invited_button"
+	   	style="@style/NP__.InviteFriends.ListItem.Button"
+		 android:layout_width="wrap_content"
+	     android:layout_height="@dimen/np__invite_fb_friends_list_item_default_size" 
+        android:background="@drawable/np__invite_fb_friends_button_invited_selector"
+	    android:contentDescription="@string/np__application_name"
+		android:gravity="center"
+        android:src="@drawable/np__ic_invite_friends_invited"
+        android:visibility="gone" />
+        
+    </FrameLayout>
+
+</RelativeLayout>

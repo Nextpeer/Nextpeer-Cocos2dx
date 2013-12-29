@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    style="@style/NP__.Fragment">
+
+    <FrameLayout
+        android:id="@+id/np__tournament_loading_friends_player_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/np__tournament_loading_bar_height"
+        android:background="@color/np__tournament_loading_player_bar_background"
+        android:padding="@dimen/np__tournament_loading_player_bar_padding" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/np__card_background"
+            android:gravity="center_vertical"
+            android:paddingBottom="@dimen/np__tournament_loading_player_bar_card_padding"
+            android:paddingTop="@dimen/np__tournament_loading_player_bar_card_padding"
+            android:paddingLeft="@dimen/np__tournament_loading_player_bar_card_padding"
+            android:paddingRight="@dimen/np__tournament_loading_player_bar_card_padding_right" >
+
+            <com.nextpeer.android.NextpeerUIImageView
+                android:id="@+id/np__tournament_loading_friends_player_bar_thumbnail"
+                android:layout_width="@dimen/np__tournament_loading_player_thumbnail_size"
+                android:layout_height="@dimen/np__tournament_loading_player_thumbnail_size"
+                android:layout_alignParentLeft="true"
+                android:layout_marginRight="@dimen/np__tournament_loading_bar_margin"
+                android:layout_marginLeft="@dimen/np__tournament_loading_bar_margin"
+                style="@style/NP__.Widget.Replacement" />
+            
+            <TextView
+                android:id="@+id/tournament_loading_friends_player_bar_label"
+                android:layout_width="@dimen/np__tournament_loading_label_width"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/np__tournament_loading_friends_player_bar_thumbnail"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/np__tournament_loading_friends_player_bar_thumbnail"
+                android:layout_centerVertical="true"
+                android:background="@drawable/np__tournament_loading_label"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:text="@string/np__tournament_loading_this_is_you_label"
+                android:textColor="@color/np__white"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+            
+            <TextView
+                android:id="@+id/np__tournament_loading_friends_player_bar_text_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/np__tournament_loading_friends_player_bar_thumbnail"
+                android:layout_alignTop="@+id/np__tournament_loading_friends_player_bar_thumbnail"
+                android:layout_toRightOf="@+id/np__tournament_loading_friends_player_bar_thumbnail"
+                android:layout_toLeftOf="@+id/tournament_loading_friends_player_bar_label"
+                android:layout_marginLeft="@dimen/np__widget_text_content_horizontal_margin"
+                android:layout_marginRight="@dimen/np__widget_text_content_horizontal_margin"
+                style="@style/NP__.TournamentLoading.PlayerName.Text"
+                android:text="@string/np__application_name"
+                android:gravity="center_vertical|left" />
+            
+        </RelativeLayout>
+
+    </FrameLayout>
+    
+    <RelativeLayout
+        android:id="@+id/np__tournament_loading_friends_loading_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/np__content_background"
+        android:paddingBottom="@dimen/np__tournament_loading_loading_bar_vertical_padding"
+        android:paddingLeft="@dimen/np__content_padding"
+        android:paddingRight="@dimen/np__content_padding"
+        android:paddingTop="@dimen/np__tournament_loading_loading_bar_vertical_padding"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:id="@+id/np__tournament_loading_friends_loading_bar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            style="@style/NP__.TournamentLoading.Loading.Text"
+            android:text="@string/np__tournament_loading_loading_bar_title_connecting" />
+        
+        <ProgressBar
+            android:id="@+id/np__tournament_loading_friends_loading_bar_progressbar"
+            android:layout_width="@dimen/np__tournament_loading_loading_bar_progressbar_size"
+            android:layout_height="@dimen/np__tournament_loading_loading_bar_progressbar_size"
+            android:layout_alignParentRight="true"
+            />
+        
+        <Button
+            android:id="@+id/np__tournament_loading_friends_loading_bar_play_now"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/np__tournament_results_replay_bar_button_replay_selector"
+            android:gravity="center"
+            android:text="@string/np__tournament_loading_play_now_bar_title"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/np__white" 
+            android:visibility="gone"/>
+        
+        <TextView
+            android:id="@+id/np__tournament_loading_friends_loading_bar_text_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/np__tournament_loading_friends_loading_bar_progressbar"
+            android:layout_alignBottom="@+id/np__tournament_loading_friends_loading_bar_progressbar"
+            android:layout_alignLeft="@+id/np__tournament_loading_friends_loading_bar_progressbar"
+            android:layout_alignRight="@+id/np__tournament_loading_friends_loading_bar_progressbar"
+            android:gravity="center"
+            style="@style/NP__.Widget.Text.Content.Title.Small" />
+
+    </RelativeLayout>
+    
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/np__content_line_separator_width"
+        android:background="@color/np__content_line_separator_background" />
+    
+    <ListView
+        android:id="@+id/np__tournament_loading_friends_list_peers"
+        style="@style/NP__.Widget.ListView.Context"
+        android:divider="@drawable/np__list_divider"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+        
+    </ListView>
+
+</LinearLayout>

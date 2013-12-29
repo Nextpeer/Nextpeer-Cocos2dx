@@ -1,0 +1,24 @@
+<resources>
+
+    <style name="NP__.TournamentSelector.ListItem.TournamentName" parent="NP__.Widget.Text.Content.Large">
+        <item name="android:textColor">@color/np__black</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">1</item>
+    </style>
+    
+    <style name="NP__.InviteFriends.ListItem.ProfileName" parent="NP__.Widget.Text.Content.Large">
+        <item name="android:textColor">@color/np__black</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">1</item>
+    </style>
+    
+    <style name="NP__.TournamentResults.Player.Name.Text" parent="NP__.Widget.Text.Content.Large">
+        <item name="android:textColor">@color/np__black</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">2</item>
+    </style>
+   
+    <style name="NP__.Home.Text" parent="NP__.Widget.Text.Content.Large">
+        <item name="android:textSize">30sp</item>
+    </style>
+</resources>

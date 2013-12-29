@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name ="np__invite_fb_friends_list_button_tag" type="id" />
+    <item name ="np__invite_fb_friends_item_tag" type="id" />
+</resources>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+	<!-- Current matches screen -->
+	<string name="np__current_matches_extra_players">+%d players</string>
+</resources>

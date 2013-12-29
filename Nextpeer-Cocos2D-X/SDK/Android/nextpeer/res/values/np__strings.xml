@@ -1,0 +1,165 @@
+<resources>
+
+    <!-- General -->
+    <string name="np__application_name">Nextpeer</string>
+    <string name="np__place_holder_number">10</string>
+	<string name="np__loading_indicator_title">Loading&#8230;</string>
+
+    <!-- Menu / Settings -->
+    <string name="np__menu_action_settings">Settings</string>
+	<string name="np__menu_action_change_name">Change name</string>
+	<string name="np__menu_action_change_avatar">Change avatar</string>
+	<string name="np__menu_action_fb_logout">Logout</string>
+	<string name="np__menu_action_report_to_support">Report to Support</string>
+    
+    <!-- Dialog - Alert -->
+	<string name="np__dialog_alert_confirm">OK</string>
+	<string name="np__dialog_alert_negative">Cancel</string>
+	<string name="np__dialog_alert_error_connectivity_title">No internet connection</string>
+	<string name="np__dialog_alert_error_connectivity_description">Please check your network connections and try again later.</string>
+	
+	<!-- Dialog - Change name -->
+	<string name="np__dialog_changename_title">Change your name</string>
+	<string name="np__dialog_changename_button_positive">Save</string>
+	<string name="np__dialog_changename_button_negative">Cancel</string>
+	<string name="np__dialog_changename_error_empty_name">Name is empty.</string>
+	<string name="np__dialog_changename_error_connection">An error has occurred, please try again later.</string>
+	
+	<!-- Dialog - Change avatar -->
+	<string name="np__dialog_changeavatar_title">Change your avatar</string>
+	<string name="np__dialog_changeavatar_button_positive">Save</string>
+	<string name="np__dialog_changeavatar_button_negative">Cancel</string>
+	<string name="np__dialog_changeavatar_error_empty_name">Name is empty.</string>
+	<string name="np__dialog_changeavatar_error_connection">An error has occurred, please try again later.</string>
+	
+    <!-- Dialog - Logout -->
+	<string name="np__dialog_alert_logout_title">Logout - You sure?</string>
+	<string name="np__dialog_alert_logout_description">Logging out will remove ALL experience and user data.\nAre you sure you want to proceed?</string>
+	<string name="np__dialog_alert_logout_action">Sign out</string>
+	<string name="np__dialog_alert_logout_positive_action">Log me out</string>
+	
+	<!-- Dialog - Play with FB friends -->
+	<string name="np__dialog__try_play_with_fb_friends_title">Play with your friends</string>
+	<string name="np__dialog__try_play_with_fb_friends_description">Would you like to challenge your Facebook friends?</string>
+	<string name="np__dialog__try_play_with_fb_friends_positive">YES</string>
+	<string name="np__dialog__try_play_with_fb_friends_negative">Later</string>
+	
+	<!-- Dialog - Failed to create match -->
+	<string name="np__dialog__failed_to_create_match_title">Failed to create a match</string>
+	
+	<!-- User Profile fetching. -->
+	<string name="np__user_profile_fetching_title">Welcome to Nextpeer</string>
+	
+	<!-- Tournament - Selection -->
+	<string name="np__tournament_selection_title">Select a Tournament</string>
+		
+	<!-- Tournament - Loading -->
+	<string name="np__tournament_loading_loading_bar_title_connecting">Connecting&#8230;</string>
+	<string name="np__tournament_loading_this_is_you_label">THIS IS YOU</string>
+	
+	<!-- Tournament - Loading Random-->
+	<string name="np__tournament_loading_random_title">Loading Tournament</string>
+	<string name="np__tournament_loading_random_loading_bar_title_zero">Looking for players</string>
+	<string name="np__tournament_loading_random_loading_bar_title_one">Found one player</string>
+	<string name="np__tournament_loading_random_loading_bar_title_many">Found %d players</string>
+	
+	<!-- Tournament - Loading Friends-->
+	<string name="np__tournament_loading_friends_title">Loading Match</string>
+	<string name="np__tournament_loading_friends_loading_bar_title_zero">Waiting for your friends</string>
+	<string name="np__tournament_loading_friends_loading_bar_title_one">Found one friend</string>
+	<string name="np__tournament_loading_friends_loading_bar_title_many">Found %d friends</string>
+	<string name="np__tournament_loading_friends_loading_bar_title_stop_waiting">Your friends can join later on</string>
+	<string name="np__tournament_loading_play_now_bar_title">Play Now!</string>
+	
+	<!-- Tournament - Results -->
+	<string name="np__tournament_results_replay_bar_button_replay">Play Again!</string>
+	<string name="np__tournament_results_replay_bar_button_play">Play!</string>
+	<string name="np__tournament_results_peer_label_playing">Playing</string>
+	
+	<!-- Tournament - Results Random -->
+	<string name="np__tournament_results_random_title">Tournament Results</string>
+	<string name="np__tournament_results_random_menu_action_play_with_friends">Play with Friends</string>
+	<string name="np__tournament_results_random_fb_log_in_failed_alert_error_description">Failed to log in to Facebook, please try again later.</string>
+	
+	<!-- Tournament - Results Friends -->
+	<string name="np__tournament_results_friends_active_title">Match Results</string>
+	<string name="np__tournament_results_friends_past_title">Match Over</string>
+	<string name="np__tournament_results_friends_past_button_archive">Archive match</string>
+	<string name="np__tournament_results_friends_score_unknown">\?</string>
+	<string name="np__tournament_results_friends_time_left_days">DAYS</string>
+	<string name="np__tournament_results_friends_time_left_hours">HOURS</string>
+	<string name="np__tournament_results_friends_time_left_minutes">MIN</string>
+	<string name="np__tournament_results_friends_time_left_seconds">SEC</string>
+	<string name="np__tournament_results_friends_time_unknown">\?</string>
+	<string name="np__tournament_results_friends_time_left_title">Time left for this match</string>
+	<string name="np__tournament_results_friends_menu_action_forfeit">Forfeit</string>
+	<string name="np__tournament_results_friends_match_not_found_dialog_text">Sorry! Could not find the match in your match list. It might have been Removed.</string>
+	
+	<!-- Tournament - Disconnect -->
+	<string name="np__tournament_disconnect_title">Lost connection</string>
+	<string name="np__tournament_disconnect_dialog_text">Please check your network connections and try again later.</string>
+		
+	<!-- Home screen -->
+	<string name="np__home_title">Dashboard</string>
+	<string name="np__home_play_random_tournament_button">Quick Play</string>
+	<string name="np__home_play_with_fb_friends_tournament_button">Play with Friends</string>
+	<string name="np__home_your_current_matches_button">Your Matches</string>
+	<string name="np__home_updating_user_profle">Updating&#8230;</string>
+		
+	<!-- Match Invite Not found -->
+	<string name="np__match_not_found_title">Could not find match</string>
+	<string name="np__match_not_found_dialog_text">Sorry! Could not find the match in your match list. It might have been expired.</string>
+	
+	<!-- Invite FB friends screen -->
+	<string name="np__invite_fb_friends_title">Invite Friends</string>
+	<string name="np__invite_fb_friends_filter_show_all_button">INVITE</string>
+	<string name="np__invite_fb_friends_filter_show_active_button">ACTIVE</string>
+	<string name="np__invite_fb_friends_log_in_failed_alert_error_description">Failed to log in to Facebook, please try again later.</string>
+	<string name="np__invite_fb_friends_fetch_failed_alert_error_description">Failed to fetch your Facebook friends, please try again later.</string>
+	<string name="np__invite_fb_friends_fetching_action_description">Fetching your friends</string>
+	<string name="np__invite_fb_friends_no_active_friends_dialog_title">Invite your friends</string>
+	<string name="np__invite_fb_friends_no_active_friends_dialog_description">None of your Facebook friends are currently playing %1$s.\nWhy not letting them know?</string>
+	<string name="np__invite_fb_friends_no_active_friends_dialog_positive">Share!</string>
+	<string name="np__invite_fb_friends_no_active_friends_dialog_negative">Not now</string>
+	<string name="np__invite_fb_friends_limit_passed__dialog_description">You can invite only %d friends to a game</string>
+	<string name="np__invite_fb_friends_start_game_button">Start</string>
+	<string name="np__invite_fb_friends_creating_match">Creating match</string>
+		
+	<!-- Current matches screen -->
+	<string name="np__current_matches_title">Your Matches</string>
+	<string name="np__current_matches_filter_ongoing_button">ONGOING</string>
+	<string name="np__current_matches_filter_past_button">PAST</string>
+	<string name="np__current_matches_past_match_status">won the match</string>
+	<string name="np__current_matches_on_going_time_left_title">left to play</string>
+	<string name="np__current_matches_on_going_time_days">days</string>
+	<string name="np__current_matches_on_going_time_day">day</string>
+	<string name="np__current_matches_on_going_time_hours">hours</string>
+	<string name="np__current_matches_on_going_time_hour">hour</string>
+	<string name="np__current_matches_on_going_time_minutes">minutes</string>
+	<string name="np__current_matches_on_going_time_minute">minute</string>
+	<string name="np__current_matches_on_going_one">One</string>
+	<string name="np__current_matches_on_going_new_item">NEW</string>
+	<string name="np__current_matches_extra_players">+%d</string>
+	<string name="np__current_matches_score_unknown">\?</string>
+	<string name="np__current_matches_on_going_not_available">There aren\'t any on going matches.\nCreate one by inviting your friends!</string>
+	<string name="np__current_matches_past_not_available">There aren\'t any past matches</string>
+	
+	<!-- Facebook -->  
+	<string name="np__facebook_loginview_log_out_button">Log Out</string>
+    <string name="np__facebook_loginview_log_in_button">Log In</string>
+    <string name="np__facebook_loginview_log_out_action">Log Out</string>
+    <string name="np__facebook_loginview_cancel_action">Cancel</string>
+    <string name="np__facebook_loginview_logged_in_as">Logged in as: %1$s</string>
+    <string name="np__facebook_loginview_logged_in_using_facebook">Logged in using Facebook</string>
+    <string name="np__facebook_internet_permission_error_title">AndroidManifest Error</string>
+    <string name="np__facebook_internet_permission_error_message">WebView login requires INTERNET permission</string>
+    <string name="np__facebook_requesterror_web_login">Your Facebook account is locked. Please log into www.facebook.com to continue.</string>
+    <string name="np__facebook_requesterror_relogin">Please log into this app again to reconnect your Facebook account.</string>
+    <string name="np__facebook_requesterror_password_changed">Your Facebook password has changed. Please log into this app again to reconnect your Facebook account.</string>
+    <string name="np__facebook_requesterror_reconnect">Please log into this app again to reconnect your Facebook account.</string>
+    <string name="np__facebook_requesterror_permissions">This app doesn’t have permission to do this. To change permissions, try logging into the app again.</string>
+    
+	<!-- In-Game Display Rank Notifications -->  
+	<string name="np__ranks_display_rank_number">%d</string>
+	<string name="np__ranks_display_rank_separator">/</string>
+</resources>

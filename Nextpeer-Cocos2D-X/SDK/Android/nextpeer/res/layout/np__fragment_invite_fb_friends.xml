@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:orientation="vertical"
+		style="@style/NP__.Fragment">
+    
+    
+    <LinearLayout
+        android:id="@+id/np__invite_fb_friends_filter_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1" 
+        android:visibility="visible"> 
+
+        <Button
+            android:id="@+id/np__invite_fb_friends_filter_show_all_button_active"
+            style="@style/NP__.Widget.SwitchButton.Active"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="@string/np__invite_fb_friends_filter_show_all_button" />
+        <Button
+            android:id="@+id/np__invite_fb_friends_filter_show_all_button_deactive"
+            style="@style/NP__.Widget.SwitchButton.Deactive"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:visibility="gone"
+            android:text="@string/np__invite_fb_friends_filter_show_all_button" />
+        
+        <Button
+            android:id="@+id/np__invite_fb_friends_filter_show_active_button_deactive"
+            style="@style/NP__.Widget.SwitchButton.Deactive"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="@string/np__invite_fb_friends_filter_show_active_button" />
+        <Button
+            android:id="@+id/np__invite_fb_friends_filter_show_active_button_active"
+            style="@style/NP__.Widget.SwitchButton.Active"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:visibility="gone"
+            android:text="@string/np__invite_fb_friends_filter_show_active_button" />
+    </LinearLayout>
+	
+	<RelativeLayout
+	    android:layout_width="fill_parent" 
+	    android:layout_height="fill_parent"
+        android:background="@null"
+        android:gravity="center" >
+    <ListView
+            android:id="@+id/np__invite_fb_friends_picker_list_view"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:divider="@drawable/np__list_divider"
+            android:fastScrollEnabled="true"
+            android:scrollbars="vertical"/>
+
+    <ProgressBar android:id="@+id/np__invite_fb_friends_progress_circle"
+                 android:indeterminate="true"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 style="@android:style/Widget.ProgressBar"
+                 android:layout_centerInParent="true"
+                 android:visibility="invisible"
+            />
+	</RelativeLayout>
+</LinearLayout>

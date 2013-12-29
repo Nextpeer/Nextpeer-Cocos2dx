@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/np__dialog_invite_your_fb_friends_title"
+        style="@style/NP__.DialogWindowTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/np__ic_play_with_fb_friends_dialog"
+        android:text="@string/np__invite_fb_friends_no_active_friends_dialog_title" />
+
+    <TextView
+        android:id="@+id/np__dialog_invite_your_fb_friends_description"
+        style="@style/NP__.Widget.Text.Content.Medium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/np__content_margin"
+        android:text="@string/np__invite_fb_friends_no_active_friends_dialog_description" />
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1" >
+
+        <Button
+            android:id="@+id/np__dialog_invite_your_fb_friends_negative"
+            style="@style/NP__.Widget.Button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/np__widget_button_margin"
+            android:layout_weight="0.5"
+            android:background="@drawable/np__widget_button_negative_selector"
+            android:text="@string/np__invite_fb_friends_no_active_friends_dialog_negative" />
+        
+        <Button
+            android:id="@+id/np__dialog_invite_your_fb_friends_positive"
+            style="@style/NP__.Widget.Button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/np__widget_button_margin"
+            android:layout_weight="0.5"
+            android:background="@drawable/np__widget_facebook_button_selector"
+            android:drawableLeft="@drawable/np__ic_play_with_fb_friends_accept"
+            android:text="@string/np__invite_fb_friends_no_active_friends_dialog_positive" />
+
+    </LinearLayout>
+</LinearLayout>

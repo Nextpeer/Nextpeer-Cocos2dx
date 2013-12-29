@@ -1,0 +1,428 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+         Please note that this might change a lot, 
+    	 seems it not implemented perfect and the only 
+    	 way to manage this is buy recursivly refactorying the file
+    -->
+
+    <style name="NP__" />
+
+    <style name="NP__.Fragment">
+        <item name="android:background">@null</item>
+    </style>
+
+    <!--
+    	========================================================
+    	Animations.
+    	======================================================== 
+    -->
+
+    <style name="NP__.Animation.Notification" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/np__notification_slide_in_up</item>
+        <item name="android:windowExitAnimation">@anim/np__notification_slide_in_down</item>
+    </style>
+    
+    <style name="NP__.Animation.Dialog" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/np__slide_in_up</item>
+        <item name="android:windowExitAnimation">@anim/np__slide_out_down</item>
+    </style>
+    
+    <!--
+    	========================================================
+    	Text Apperence.
+    	========================================================
+    -->
+    
+    <style name="NP__.TextAppearance.Large" parent="@android:style/TextAppearance.Large">
+        <item name="android:textSize">22sp</item>
+    </style>
+    
+    <style name="NP__.TextAppearance.Medium" parent="@android:style/TextAppearance.Medium">
+        <item name="android:textSize">18sp</item>
+    </style>
+    
+    <style name="NP__.TextAppearance.Small" parent="@android:style/TextAppearance.Small">
+        <item name="android:textSize">14sp</item>
+    </style>
+    
+    <style name="NP__.TextAppearance.Tiny" parent="@android:style/TextAppearance.Small">
+        <item name="android:textSize">9sp</item>
+    </style>
+
+    <!--
+    	========================================================
+    	Widgets.
+    	======================================================== 
+    -->
+
+    <style name="NP__.Widget" parent="NP__" />
+
+    <style name="NP__.Widget.DummyActionBar" parent="NP__.Widget">
+        <item name="android:height">@dimen/np__dummy_action_bar_default_height</item>
+        <item name="android:padding">0dip</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:background">@color/np__dummy_action_bar_background</item>
+    </style>
+
+    <style name="NP__.Widget.DummyActionBar.Text" parent="@android:style/Widget.TextView">
+        <item name="android:textColor">@color/np__dummy_action_bar_text</item>
+        <item name="android:padding">0dip</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+    <style name="NP__.Widget.DummyActionBar.Text.Title" parent="NP__.Widget.DummyActionBar.Text">
+        <item name="android:textSize">@dimen/np__dummy_action_bar_title_text_size</item>
+    </style>
+    
+    <style name="NP__.Widget.DummyActionBar.MoreOverflow">
+        <item name="android:src">@drawable/np__widget_moreoverflow</item>
+        <item name="android:padding">0dip</item>
+        <item name="android:maxLines">1</item>
+    </style>
+    
+    <style name="NP__.Widget.Replacement">
+        <item name="android:background">@drawable/np__replacement_thumbnail_background</item>
+        <item name="android:padding">0dip</item>
+        <item name="android:src">@null</item>
+    </style>
+
+    <style name="NP__.Widget.Text" parent="@android:style/Widget.TextView">
+        <item name="android:padding">0dip</item>
+    </style>
+
+    <style name="NP__.Widget.Text.Content" parent="NP__.Widget.Text">
+        <item name="android:textColor">@color/np__widget_text_content</item>
+    </style>
+    
+    <style name="NP__.Widget.Text.Content.Large" parent="NP__.Widget.Text.Content">
+        <item name="android:textAppearance">@style/NP__.TextAppearance.Large</item>
+    </style>
+
+    <style name="NP__.Widget.Text.Content.Medium" parent="NP__.Widget.Text.Content">
+        <item name="android:textAppearance">@style/NP__.TextAppearance.Medium</item>
+    </style>
+
+    <style name="NP__.Widget.Text.Content.Small" parent="NP__.Widget.Text.Content">
+        <item name="android:textAppearance">@style/NP__.TextAppearance.Small</item>
+    </style>
+
+    <style name="NP__.Widget.Text.Content.Title.Small" parent="NP__.Widget.Text.Content.Small">
+        <item name="android:textColor">@color/np__tournament_loading_loading_bar_text</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="NP__.Widget.ListView" parent="@android:style/Widget.ListView">
+        <item name="android:background">@color/np__content_background</item>
+        <item name="android:cacheColorHint">@android:color/transparent</item>
+    </style>
+
+    <style name="NP__.Widget.ListView.Context" parent="NP__.Widget.ListView">
+        <item name="android:divider">@color/np__content_line_separator_background</item>
+        <item name="android:dividerHeight">@dimen/np__content_line_separator_width</item>
+    </style>
+
+    <style name="NP__.Widget.EditText" parent="@android:style/Widget.EditText">
+        <item name="android:background">@drawable/np__widget_edittext</item>
+        <item name="android:padding">@dimen/np__widget_edittext_padding</item>
+        <item name="android:minHeight">@dimen/np__widget_edittext_height</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceMedium</item>
+        <item name="android:textColor">@color/np__grey_dark</item>
+        <item name="android:textColorHint">@color/np__grey</item>
+        <item name="android:gravity">left|center_vertical</item>
+    </style>
+    
+    <style name="NP__.Widget.Button" parent="@android:style/Widget.Button">
+        <item name="android:minHeight">@dimen/np__widget_button_height</item>
+        <item name="android:padding">@dimen/np__widget_button_padding</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceLarge</item>
+        <item name="android:textColor">@color/np__white</item>
+        <item name="android:gravity">center</item>
+        <item name="android:drawablePadding">-40dp</item>
+    </style>
+    
+    <style name="NP__.Widget.SwitchButton.Active" parent="NP__.Widget.Button">
+        <item name="android:minHeight">@dimen/np__widget_switch_button_height</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceLarge</item>
+        <item name="android:textColor">@color/np__switch_selector_active_text</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:drawablePadding">0dp</item>
+    </style>
+    
+    <style name="NP__.Widget.SwitchButton.Deactive" parent="NP__.Widget.Button">
+        <item name="android:minHeight">@dimen/np__widget_switch_button_height</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceLarge</item>
+        <item name="android:textColor">@color/np__switch_selector_deactive_text</item>
+        <item name="android:background">@color/np__switch_selector_deactive_background</item>
+        <item name="android:gravity">center</item>
+        <item name="android:drawablePadding">0dp</item>
+    </style>
+    
+    <!--
+    	========================================================
+    	Home.
+    	======================================================== 
+    -->
+    
+    <style name="NP__.Home.Text" parent="NP__.Widget.Text.Content.Large">
+        <item name="android:textAppearance">?android:attr/textAppearanceLarge</item>
+    </style>
+    
+    <style name="NP__.Home.PlayerName.Text" parent="NP__.Home.Text">
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:marqueeRepeatLimit">marquee_forever</item>
+        <item name="android:textColor">@color/np__black</item>
+        <item name="android:lines">1</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    
+    <style name="NP__.Home.Button" parent="NP__.Widget.Button">
+        <item name="android:minHeight">@dimen/np__home_button_height</item>
+        <item name="android:padding">@dimen/np__home_button_padding</item>
+    </style>
+    
+    <style name="NP__.Home.Text.Button" parent="NP__.Home.Text">
+        <item name="android:textColor">@color/np__white</item>
+        <item name="android:gravity">center</item>
+	    <item name="android:shadowColor">@color/np__grey_dark</item>
+	    <item name="android:shadowDx">1</item>
+	    <item name="android:shadowDy">1</item>
+	    <item name="android:shadowRadius">1</item>
+    </style>
+    
+    <!--
+    	========================================================
+    	Tournament selector.
+    	======================================================== 
+    -->
+    
+    <style name="NP__.TournamentSelector.ListItem.TournamentName" parent="NP__.Widget.Text.Content.Medium">
+        <item name="android:textColor">@color/np__black</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">1</item>
+    </style>
+    
+    <!--
+    	========================================================
+    	Invite Friends.
+    	======================================================== 
+    -->
+    <style name="NP__.InviteFriends.ListItem.Button" parent="NP__.Widget.Button">
+        <item name="android:minWidth">@dimen/np__invite_fb_friends_list_item_default_size</item>
+        <item name="android:minHeight">@dimen/np__invite_fb_friends_list_item_default_size</item>
+        <item name="android:padding">@dimen/np__invite_fb_friends_list_item_button_padding</item>
+    </style>
+    
+    <style name="NP__.InviteFriends.ListItem.ProfileImage" parent="NP__.Widget.Replacement">
+        <item name="android:minWidth">@dimen/np__invite_fb_friends_list_item_default_size</item>
+        <item name="android:minHeight">@dimen/np__invite_fb_friends_list_item_default_size</item>
+    </style>
+    
+    <style name="NP__.InviteFriends.ListItem.ProfileName" parent="NP__.Widget.Text.Content.Medium">
+        <item name="android:textColor">@color/np__black</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">1</item>
+    </style>
+    
+    <!--
+    	========================================================
+    	Tournament Loading.
+    	======================================================== 
+    -->
+    
+    <style name="NP__.TournamentLoading.PlayerName.Text" parent="NP__.Widget.Text.Content.Medium">
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:marqueeRepeatLimit">marquee_forever</item>
+        <item name="android:lines">1</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    
+    <style name="NP__.TournamentLoading.Loading.Text" parent="NP__.Widget.Text.Content.Medium">
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:marqueeRepeatLimit">marquee_forever</item>
+        <item name="android:lines">1</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+    
+    <!--
+    	========================================================
+    	Tournament Results.
+    	======================================================== 
+    -->
+    
+    <style name="NP__.TournamentResults.Button" parent="@android:style/Widget.Button">
+        <item name="android:textAppearance">?android:attr/textAppearanceLarge</item>
+        <item name="android:paddingLeft">@dimen/np__tournament_results_button_padding</item>
+        <item name="android:paddingRight">@dimen/np__tournament_results_button_padding</item>
+        <item name="android:drawablePadding">@dimen/np__tournament_results_button_padding</item>
+        <item name="android:textColor">@color/np__white</item>
+        <item name="android:gravity">center</item>
+    </style>
+       
+    <style name="NP__.TournamentResults.Replay.Button" parent="NP__.TournamentResults.Button">
+        <item name="android:background">@drawable/np__tournament_results_replay_bar_button_replay_selector</item>
+        <item name="android:text">@string/np__tournament_results_replay_bar_button_replay</item>
+        <item name="android:drawableLeft">@drawable/np__ic_replay_white</item>
+    </style>
+    
+    <style name="NP__.TournamentResults.Player.Name.Text" parent="NP__.Widget.Text.Content.Small">
+        <item name="android:textColor">@color/np__black</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">2</item>
+    </style>
+    
+    <!--
+    	========================================================
+    	Tournament Results Friends.
+    	======================================================== 
+    -->
+    
+    <style name="NP__.TournamentResults.Friends.TimeLeft.Box.Time.Text" parent="NP__.Widget.Text.Content.Medium">
+        <item name="android:textAppearance">?android:attr/textAppearanceMedium</item>
+        <item name="android:textColor">@color/np__white</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    
+    <style name="NP__.TournamentResults.Friends.TimeLeft.Box.Time.Title" parent="NP__.Widget.Text.Content.Small">
+        <item name="android:textAppearance">?android:attr/textAppearanceSmall</item>
+        <item name="android:textColor">@color/np__white</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+    
+    <style name="NP__.TournamentResults.Friends.Archive.Button" parent="NP__.TournamentResults.Button">
+        <item name="android:background">@drawable/np__tournament_results_friends_archive_match_button_selector</item>
+        <item name="android:text">@string/np__tournament_results_friends_past_button_archive</item>
+        <item name="android:drawableLeft">@drawable/np__ic_remove_match</item>
+	    <item name="android:shadowColor">@color/np__grey_dark</item>
+	    <item name="android:shadowDx">1</item>
+	    <item name="android:shadowDy">1</item>
+	    <item name="android:shadowRadius">1</item>
+    </style>
+    
+    <!--
+    	========================================================
+    	Current Matches.
+    	======================================================== 
+    -->
+        
+    <style name="NP__.CurrentMatches.Rank.Text" parent="NP__.Widget.Text.Content.Large">
+        <item name="android:ellipsize">end</item>
+        <item name="android:textSize">26sp</item>
+        <item name="android:textColor">@color/np__white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:padding">0dp</item>
+        <item name="android:background">@null</item>
+	    <item name="android:shadowColor">@color/np__grey_dark</item>
+	    <item name="android:shadowDx">1</item>
+	    <item name="android:shadowDy">1</item>
+	    <item name="android:shadowRadius">1</item>
+    </style>
+    
+    <style name="NP__.CurrentMatches.AdditionalPlayers.Text" parent="NP__.Widget.Text.Content.Medium">
+        <item name="android:ellipsize">end</item>
+        <item name="android:textColor">@color/np__current_matches_additonal_players</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    
+    <style name="NP__.CurrentMatches.MatchMarker.Text" parent="NP__.Widget.Text.Content.Medium">
+        <item name="android:ellipsize">end</item>
+        <item name="android:textColor">@color/np__current_matches_marker</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    
+    <style name="NP__.CurrentMatches.MatchStatus.Text" parent="NP__.Widget.Text.Content.Medium">
+        <item name="android:ellipsize">end</item>
+        <item name="android:textColor">@color/np__current_matches_status</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    
+    <!--
+    	========================================================
+    	Dialogs.
+    	======================================================== 
+    -->
+
+    <style name="NP__.DialogWindowTitle">
+        <item name="android:maxLines">1</item>
+        <item name="android:scrollHorizontally">true</item>
+        <item name="android:textAppearance">@style/NP__.TextAppearance.DialogWindowTitle</item>
+        <item name="android:background">@color/np__grey_dark</item>
+        <item name="android:padding">@dimen/np__dialog_content_padding</item>
+        <item name="android:drawablePadding">@dimen/np__dialog_content_padding</item>
+        <item name="android:minHeight">@dimen/np__dialog_title_height</item>
+        <item name="android:gravity">left|center_vertical</item>
+    </style>
+
+    <style name="NP__.DialogWindowTitle.ChangeName" parent="NP__.DialogWindowTitle">
+        <item name="android:background">@null</item>
+        <item name="android:padding">0dp</item>
+        <item name="android:minHeight">0dp</item>
+    </style>
+    
+    <style name="NP__.DialogWindowTitle.ChangeAvatar" parent="NP__.DialogWindowTitle">
+        <item name="android:background">@null</item>
+        <item name="android:padding">0dp</item>
+        <item name="android:minHeight">0dp</item>
+    </style>
+    
+    <style name="NP__.TextAppearance.DialogWindowTitle" parent="@android:style/TextAppearance.DialogWindowTitle">
+        <item name="android:textColor">@color/np__white</item>
+    </style>
+
+    <!--
+    	========================================================
+    	Quick Action Popup.
+    	======================================================== 
+    -->
+    
+	<style name="NP__.QuickActionPopup" />
+	
+	<style name="NP__.QuickActionPopup.PopDownMenu" />
+	
+	<style name="NP__.QuickActionPopup.PopDownMenu.Center">
+		<item name="@android:windowEnterAnimation">@anim/np__widget_popup_grow_from_top</item>
+		<item name="@android:windowExitAnimation">@anim/np__widget_popup_shrink_from_bottom</item>
+	</style>
+	
+	<style name="NP__.QuickActionPopup.PopDownMenu.Left">
+		<item name="@android:windowEnterAnimation">@anim/np__widget_popup_grow_from_topleft_to_bottomright</item>
+		<item name="@android:windowExitAnimation">@anim/np__widget_popup_shrink_from_bottomright_to_topleft</item>
+	</style>
+	
+	<style name="NP__.QuickActionPopup.PopDownMenu.Right">
+		<item name="@android:windowEnterAnimation">@anim/np__widget_popup_grow_from_topright_to_bottomleft</item>
+		<item name="@android:windowExitAnimation">@anim/np__widget_popup_shrink_from_bottomleft_to_topright</item>
+	</style>
+	
+	<style name="NP__.QuickActionPopup.PopDownMenu.Reflect">
+		<item name="@android:windowEnterAnimation">@anim/np__widget_popup_pump_top</item>
+		<item name="@android:windowExitAnimation">@anim/np__widget_popup_disappear</item>
+	</style>
+	
+	<style name="NP__.QuickActionPopup.PopUpMenu" />
+	
+	<style name="NP__.QuickActionPopup.PopUpMenu.Center">
+		<item name="@android:windowEnterAnimation">@anim/np__widget_popup_grow_from_bottom</item>
+		<item name="@android:windowExitAnimation">@anim/np__widget_popup_shrink_from_top</item>
+	</style>
+	
+	<style name="NP__.QuickActionPopup.PopUpMenu.Left">
+		<item name="@android:windowEnterAnimation">@anim/np__widget_popup_grow_from_bottomleft_to_topright</item>
+		<item name="@android:windowExitAnimation">@anim/np__widget_popup_shrink_from_topright_to_bottomleft</item>
+	</style>
+	
+	<style name="NP__.QuickActionPopup.PopUpMenu.Right">
+		<item name="@android:windowEnterAnimation">@anim/np__widget_popup_grow_from_bottomright_to_topleft</item>
+		<item name="@android:windowExitAnimation">@anim/np__widget_popup_shrink_from_topleft_to_bottomright</item>
+	</style>
+	
+	<style name="NP__.QuickActionPopup.PopUpMenu.Reflect">
+		<item name="@android:windowEnterAnimation">@anim/np__widget_popup_pump_bottom</item>
+		<item name="@android:windowExitAnimation">@anim/np__widget_popup_disappear</item>
+	</style>
+</resources>

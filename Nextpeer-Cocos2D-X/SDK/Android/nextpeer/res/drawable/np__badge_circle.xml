@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+  android:shape="oval">
+  <solid
+    android:color="@color/np__badge" />
+  <stroke
+    android:width="@dimen/np__badge_stroke_size"
+    android:color="@color/np__white" />
+  <padding
+    android:left="@dimen/np__badge_padding"
+    android:right="@dimen/np__badge_padding"
+    android:top="@dimen/np__badge_padding"
+    android:bottom="@dimen/np__badge_padding" />
+</shape>

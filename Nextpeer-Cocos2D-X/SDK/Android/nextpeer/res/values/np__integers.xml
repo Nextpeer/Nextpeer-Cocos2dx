@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <integer name="np__slide_animation_duration">250</integer>
+    <integer name="np__fade_animation_duration">350</integer>
+    <integer name="np__notification_animation_duration">300</integer>
+    <integer name="np__notification_duration">2000</integer>
+    
+    <integer name="np__tournament_results_peer_text_min_ems">3</integer>
+
+</resources>

@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/NP__.Fragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/np__tournament_results_friends_active_bar_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/np__tournament_results_bar_background"
+        android:gravity="center_horizontal">
+      	<RelativeLayout
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	 		android:paddingBottom="@dimen/np__tournament_results_bar_margin">
+	        <TextView
+	        	android:id="@+id/np__tournament_results_friends_time_left_title"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentTop="true"
+	            android:layout_centerHorizontal="true"
+		 		android:layout_marginTop="@dimen/np__tournament_results_bar_margin"
+	        	android:text="@string/np__tournament_results_friends_time_left_title"
+	            android:textAppearance="?android:attr/textAppearanceSmall" 
+	            android:textColor="@color/np__tournament_results_time_left_title" />
+	        
+	        <LinearLayout
+	            android:id="@+id/np__tournament_results_friends_time_left_dropdown"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_below="@+id/np__tournament_results_friends_time_left_title"
+		 		android:layout_marginTop="@dimen/np__tournament_results_bar_margin"
+		 		android:layout_centerHorizontal="true">
+	
+	           	<RelativeLayout
+	        		android:id="@+id/np__tournament_results_friends_time_left_days_box"
+	        	    android:layout_width="@dimen/np__tournament_results_friends_time_left_box_width"
+	        	    android:layout_height="@dimen/np__tournament_results_friends_time_left_box_height"
+	        	    android:orientation="vertical" 
+		 		   	android:background="@drawable/np__tournament_results_friends_time_left_box">
+	
+	        		<TextView
+	        		    android:layout_width="wrap_content"
+	        		    android:layout_height="wrap_content"
+	        		    android:layout_centerHorizontal="true"
+	        		    android:layout_below="@+id/np__tournament_results_friends_time_left_days_text"
+	        		    android:text="@string/np__tournament_results_friends_time_left_days"
+	        		    style="@style/NP__.TournamentResults.Friends.TimeLeft.Box.Time.Title" />
+	
+	        		<TextView
+	        		    android:id="@+id/np__tournament_results_friends_time_left_days_text"
+	        		    style="@style/NP__.TournamentResults.Friends.TimeLeft.Box.Time.Text"
+	        		    android:layout_width="wrap_content"
+	        		    android:layout_height="wrap_content"
+	        		    android:layout_alignParentTop="true"
+	        		    android:layout_centerHorizontal="true"
+	        		    android:text="@string/np__place_holder_number" />
+	
+	        	</RelativeLayout>
+	        
+	        	<RelativeLayout
+	        		android:id="@+id/np__tournament_results_friends_time_left_hours_box"
+	        	    android:layout_width="@dimen/np__tournament_results_friends_time_left_box_width"
+	        	    android:layout_height="@dimen/np__tournament_results_friends_time_left_box_height"
+	        	    android:orientation="vertical" 
+		 		   	android:layout_marginLeft="@dimen/np__tournament_results_friends_time_left_box_margin"
+		 		   	android:background="@drawable/np__tournament_results_friends_time_left_box">
+	
+	        		<TextView
+	        		    android:id="@+id/np__tournament_results_friends_time_left_hours_text"
+	        		    android:layout_width="wrap_content"
+	        		    android:layout_height="wrap_content"
+	        		    android:layout_centerHorizontal="true"
+	        		    android:text="@string/np__place_holder_number"
+	        		    style="@style/NP__.TournamentResults.Friends.TimeLeft.Box.Time.Text"  />
+	
+	        		<TextView
+	        		    android:layout_width="wrap_content"
+	        		    android:layout_height="wrap_content"
+	        		    android:layout_centerHorizontal="true"
+	        		    android:layout_below="@+id/np__tournament_results_friends_time_left_hours_text"
+	        		    android:text="@string/np__tournament_results_friends_time_left_hours"
+	        		    style="@style/NP__.TournamentResults.Friends.TimeLeft.Box.Time.Title" />
+	        	</RelativeLayout>
+	        
+	        	<RelativeLayout
+	        		android:id="@+id/np__tournament_results_friends_time_left_min_box"
+	        	    android:layout_width="@dimen/np__tournament_results_friends_time_left_box_width"
+	        	    android:layout_height="@dimen/np__tournament_results_friends_time_left_box_height"
+	        	    android:orientation="vertical" 
+		 		   	android:layout_marginLeft="@dimen/np__tournament_results_friends_time_left_box_margin"
+		 		   	android:background="@drawable/np__tournament_results_friends_time_left_box">
+	
+	        		<TextView
+	        		    android:id="@+id/np__tournament_results_friends_time_left_min_text"
+	        		    android:layout_width="wrap_content"
+	        		    android:layout_height="wrap_content"
+	        		    android:layout_centerHorizontal="true"
+	        		    android:layout_alignParentTop="true"
+	        		    android:text="@string/np__place_holder_number"
+	        		    style="@style/NP__.TournamentResults.Friends.TimeLeft.Box.Time.Text" />
+	
+	        		<TextView
+	        		    android:layout_width="wrap_content"
+	        		    android:layout_height="wrap_content"
+	        		    android:layout_centerHorizontal="true"
+	        		    android:layout_alignParentBottom="true"
+	        		    android:layout_below="@+id/np__tournament_results_friends_time_left_min_text"
+	        		    android:text="@string/np__tournament_results_friends_time_left_minutes"
+	        		    style="@style/NP__.TournamentResults.Friends.TimeLeft.Box.Time.Title"  />
+	        	</RelativeLayout>
+	        
+	        	<RelativeLayout
+	        		android:id="@+id/np__tournament_results_friends_time_left_sec_box"
+	        	    android:layout_width="@dimen/np__tournament_results_friends_time_left_box_width"
+	        	    android:layout_height="@dimen/np__tournament_results_friends_time_left_box_height"
+	        	    android:orientation="vertical" 
+		 		   	android:layout_marginLeft="@dimen/np__tournament_results_friends_time_left_box_margin"
+		 			android:layout_marginRight="@dimen/np__tournament_results_friends_time_left_box_margin"
+		 		   	android:background="@drawable/np__tournament_results_friends_time_left_box">
+	
+	        		<TextView
+	        		    android:id="@+id/np__tournament_results_friends_time_left_sec_text"
+	        		    android:layout_width="wrap_content"
+	        		    android:layout_height="wrap_content"
+	        		    android:layout_centerHorizontal="true"
+	        		    android:text="@string/np__place_holder_number"
+	        		    style="@style/NP__.TournamentResults.Friends.TimeLeft.Box.Time.Text"  />
+	
+	        		<TextView
+	        		    android:layout_width="wrap_content"
+	        		    android:layout_height="wrap_content"
+	        		    android:layout_centerHorizontal="true"
+	        		    android:layout_below="@+id/np__tournament_results_friends_time_left_sec_text"
+	        		    android:text="@string/np__tournament_results_friends_time_left_seconds"
+	        		    style="@style/NP__.TournamentResults.Friends.TimeLeft.Box.Time.Title" />
+	        	</RelativeLayout>
+	        
+	        </LinearLayout>
+	    </RelativeLayout>
+	    
+		<Button
+            android:id="@+id/np__tournament_results_friends_active_bar_button_replay"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/np__tournament_results_default_button_height"
+      	    android:layout_gravity="center_vertical"
+       		style="@style/NP__.TournamentResults.Replay.Button"/>
+    </LinearLayout>
+   
+   <RelativeLayout
+       	android:id="@+id/np__tournament_results_friends_past_bar_container"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/np__tournament_results_default_bar_height"
+        android:background="@color/np__white"
+        android:gravity="center"
+	 	android:orientation="horizontal"
+        android:visibility="gone">
+		<Button
+            android:id="@+id/np__tournament_results_friends_past_button_archive"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/np__tournament_results_default_button_height"
+       		android:layout_centerInParent="true"
+       		style="@style/NP__.TournamentResults.Friends.Archive.Button"/>
+	</RelativeLayout>
+    
+    <ListView
+        android:id="@+id/np__tournament_results_friends_list_peers"
+        style="@style/NP__.Widget.ListView.Context"
+        android:divider="@drawable/np__list_divider"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+        
+    </ListView>
+
+    <RelativeLayout
+        android:id="@+id/np__tournament_results_friends_empty_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@null"
+        android:gravity="center" >
+    </RelativeLayout> 
+    
+</LinearLayout>

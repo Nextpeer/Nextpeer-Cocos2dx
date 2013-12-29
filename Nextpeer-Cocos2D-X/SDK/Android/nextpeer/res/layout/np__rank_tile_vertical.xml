@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+   <RelativeLayout
+       android:id="@+id/np__rank_tile_vertical_list_image_container"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:paddingBottom="@dimen/np__ranks_display_list_image_badge_padding">
+	    <ImageView
+	        android:id="@+id/np__rank_tile_vertical_list_image_view"
+	        android:layout_width="@dimen/np__ranks_display_list_avatar_size"
+	        android:layout_height="@dimen/np__ranks_display_list_avatar_size"
+	        android:adjustViewBounds="true"
+	        android:scaleType="centerCrop"
+	        android:contentDescription="@string/np__application_name"/>
+	    <View
+	        android:id="@+id/np__rank_tile_vertical_list_image_view_border"
+	        android:layout_width="@dimen/np__ranks_display_list_avatar_size"
+	        android:layout_height="@dimen/np__ranks_display_list_avatar_size"
+	        android:background="@drawable/np__notification_rank_list_current_user_avatar"
+	        android:visibility="gone"/>
+	</RelativeLayout>
+	<TextView
+	    android:id="@+id/np__rank_tile_vertical_list_player_rank"
+	    android:layout_width="@dimen/np__ranks_display_list_badge_size"
+	    android:layout_height="@dimen/np__ranks_display_list_badge_size"
+	    android:layout_centerHorizontal="true"
+	    android:layout_alignBottom="@+id/np__rank_tile_vertical_list_image_container"
+	    android:background="@drawable/np__notification_rank_list_badge"
+	    android:gravity="center"
+	    android:lines="1"
+	    android:text="@string/np__place_holder_number"
+	    android:textColor="@color/np__white"
+	    android:textSize="16sp"
+	    android:textStyle="bold" />
+
+</RelativeLayout>

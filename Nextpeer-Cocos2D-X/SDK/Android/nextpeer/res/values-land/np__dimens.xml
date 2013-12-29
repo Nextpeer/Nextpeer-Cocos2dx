@@ -1,0 +1,8 @@
+<resources>
+    <dimen name="np__tournament_selector_item_thumbnail_size">60dp</dimen>
+    <dimen name="np__tournament_selector_item_thumbnail_margin">10dp</dimen>
+    <dimen name="np__home_content_padding">12dp</dimen>
+    <dimen name="np__home_button_height">56dp</dimen>
+    <dimen name="np__current_matches_list_player_thumbnail_size">50dp</dimen>
+    <dimen name="np__invite_fb_friends_list_item_default_size">60dp</dimen>
+</resources>

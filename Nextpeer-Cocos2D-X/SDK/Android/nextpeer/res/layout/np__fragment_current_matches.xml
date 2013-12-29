@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:orientation="vertical"
+		style="@style/NP__.Fragment">
+    
+    <LinearLayout
+        android:id="@+id/np__current_matches_filter_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1" 
+        android:visibility="visible"> 
+
+        <Button
+            android:id="@+id/np__current_matches_filter_ongoing_button_active"
+            style="@style/NP__.Widget.SwitchButton.Active"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="@string/np__current_matches_filter_ongoing_button" />
+        <Button
+            android:id="@+id/np__current_matches_filter_ongoing_button_deactive"
+            style="@style/NP__.Widget.SwitchButton.Deactive"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:visibility="gone"
+            android:text="@string/np__current_matches_filter_ongoing_button" />
+        <Button
+            android:id="@+id/np__current_matches_filter_past_button_deactive"
+            style="@style/NP__.Widget.SwitchButton.Deactive"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="@string/np__current_matches_filter_past_button" />
+        <Button
+            android:id="@+id/np__current_matches_filter_past_button_active"
+            style="@style/NP__.Widget.SwitchButton.Active"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:visibility="gone"
+            android:text="@string/np__current_matches_filter_past_button" />
+    </LinearLayout>
+    
+ 	<ListView
+            android:id="@+id/np__current_matches_list_view"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+	        android:background="@null"
+	        android:gravity="center" 
+            android:fastScrollEnabled="true"
+            android:scrollbars="vertical"/>
+    <RelativeLayout
+        android:id="@+id/np__current_matches_empty_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@null"
+        android:padding="@dimen/np__content_padding"
+        android:gravity="center" >
+        <TextView
+            android:id="@+id/np__current_matches_empty_view_title"
+            style="@style/NP__.Widget.Text.Content.Large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+        	android:gravity="center" 
+            android:text="@string/np__current_matches_on_going_not_available"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+    </RelativeLayout>
+</LinearLayout>

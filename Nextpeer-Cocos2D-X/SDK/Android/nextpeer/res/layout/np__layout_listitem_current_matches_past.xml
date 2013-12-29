@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/np__content_padding"
+    android:background="@null" >
+
+    <View
+        android:id="@+id/np__current_matches_past_ribbon_line"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/np__current_matches_list_divider_height"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:background="@color/np__current_matches__list_divider" />
+    
+    
+   	<ImageView
+        android:id="@+id/np__current_matches_past_your_rank_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/np__current_matches_past_ribbon_line"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="@dimen/np__current_matches_list_ribbon_flag_margin"
+        android:src="@drawable/np__ic_current_matches_rank_ribbon_flag_orange"
+        android:contentDescription="@string/np__application_name"  />
+   	
+   	<ImageView
+        android:id="@+id/np__current_matches_past_your_rank_star"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/np__current_matches_past_your_rank_view"
+        android:layout_alignRight="@+id/np__current_matches_past_your_rank_view"
+        android:layout_marginTop="@dimen/np__current_matches_list_item_margin"
+        android:gravity="center|top"
+        android:src="@drawable/np__ic_current_matches_rank_ribbon_star"
+        android:contentDescription="@string/np__application_name"  />
+   	
+    <TextView
+        android:id="@+id/np__current_matches_past_your_rank_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/NP__.CurrentMatches.Rank.Text"
+        android:layout_below="@+id/np__current_matches_past_your_rank_star"
+        android:layout_alignLeft="@+id/np__current_matches_past_your_rank_view"
+        android:layout_alignRight="@+id/np__current_matches_past_your_rank_view"
+        android:layout_marginTop="@dimen/np__current_matches_list_item_margin"
+        android:gravity="center|top"
+        android:text="@string/np__place_holder_number" />
+    
+   	
+    <com.nextpeer.android.NextpeerUIImageView
+        android:id="@+id/np__current_matches_past_first_player_thumbnail"
+        style="@style/NP__.Widget.Replacement"
+        android:layout_width="@dimen/np__current_matches_list_player_thumbnail_size"
+        android:layout_height="@dimen/np__current_matches_list_player_thumbnail_size"
+        android:layout_alignTop="@+id/np__current_matches_past_your_rank_view"
+        android:layout_toRightOf="@+id/np__current_matches_past_your_rank_view"
+        android:layout_marginTop="@dimen/np__current_matches_list_item_margin"
+        android:layout_marginLeft="@dimen/np__current_matches_list_ribbon_flag_margin"
+        android:gravity="center_vertical"
+        android:contentDescription="@string/np__application_name"
+        android:src="@color/np__nextpeer_orange" />
+    
+    <com.nextpeer.android.NextpeerUIImageView
+        android:id="@+id/np__current_matches_past_second_player_thumbnail"
+        style="@style/NP__.Widget.Replacement"
+        android:layout_width="@dimen/np__current_matches_list_player_thumbnail_size"
+        android:layout_height="@dimen/np__current_matches_list_player_thumbnail_size"
+        android:layout_alignTop="@+id/np__current_matches_past_your_rank_view"
+        android:layout_toRightOf="@+id/np__current_matches_past_first_player_thumbnail"
+        android:layout_marginTop="@dimen/np__current_matches_list_item_margin"
+        android:layout_marginLeft="@dimen/np__current_matches_list_item_margin"
+        android:gravity="center_vertical"
+        android:src="@color/np__nextpeer_orange"
+        android:contentDescription="@string/np__application_name" />
+    
+    <com.nextpeer.android.NextpeerUIImageView
+        android:id="@+id/np__current_matches_past_third_player_thumbnail"
+        style="@style/NP__.Widget.Replacement"
+        android:layout_width="@dimen/np__current_matches_list_player_thumbnail_size"
+        android:layout_height="@dimen/np__current_matches_list_player_thumbnail_size"
+        android:layout_alignTop="@+id/np__current_matches_past_your_rank_view"
+        android:layout_toRightOf="@+id/np__current_matches_past_second_player_thumbnail"
+        android:layout_marginTop="@dimen/np__current_matches_list_item_margin"
+        android:layout_marginLeft="@dimen/np__current_matches_list_item_margin"
+        android:gravity="center_vertical"
+        android:src="@color/np__nextpeer_orange"
+        android:contentDescription="@string/np__application_name" />
+
+    <TextView
+        android:id="@+id/np__current_matches_past_additional_players"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        style="@style/NP__.CurrentMatches.AdditionalPlayers.Text"
+        android:layout_alignBottom="@+id/np__current_matches_past_third_player_thumbnail"
+        android:layout_alignTop="@+id/np__current_matches_past_third_player_thumbnail"
+        android:layout_marginLeft="@dimen/np__current_matches_list_item_margin"
+        android:layout_toRightOf="@+id/np__current_matches_past_third_player_thumbnail"
+        android:gravity="center_vertical"
+        android:text="@string/np__place_holder_number" />
+    
+    <TextView
+        android:id="@+id/np__current_matches_past_tournament_name_of_player"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/NP__.CurrentMatches.MatchMarker.Text"
+        android:layout_alignLeft="@+id/np__current_matches_past_first_player_thumbnail"
+        android:layout_below="@+id/np__current_matches_past_first_player_thumbnail"
+        android:layout_marginTop="@dimen/np__current_matches_list_item_margin"
+        android:text="@string/np__application_name"/>
+    
+    <TextView
+        android:id="@+id/np__current_matches_past_tournament_status"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        style="@style/NP__.CurrentMatches.MatchStatus.Text"
+        android:layout_toRightOf="@+id/np__current_matches_past_tournament_name_of_player"
+        android:layout_below="@+id/np__current_matches_past_first_player_thumbnail"
+        android:layout_marginLeft="@dimen/np__current_matches_list_text_item_margin"
+        android:layout_marginTop="@dimen/np__current_matches_list_item_margin"
+        android:text="@string/np__current_matches_past_match_status" />
+
+</RelativeLayout>
