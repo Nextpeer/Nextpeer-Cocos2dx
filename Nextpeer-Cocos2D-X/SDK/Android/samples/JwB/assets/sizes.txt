@@ -1,2 +1,0 @@
-main menu 300x240
-logo 274x142
