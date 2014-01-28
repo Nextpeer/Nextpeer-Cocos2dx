@@ -20,6 +20,7 @@ namespace nextpeer {
     
     unsigned long Rand::generate(unsigned long min, unsigned long max)
     {
+        if (max<min) max = min;
         unsigned long r = Rand::generate();
         return (r % max) + min;
     }
