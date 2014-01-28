@@ -32,7 +32,7 @@ static Nextpeer_iOSDelegate* _nextpeer_ios_delegate_instance = nil;
 
 // NextpeerDelegate methods
 
--(void)nextpeerDidTournamentStartWithDetails:(NPTournamentStartDataContainer *)tournamentContainer
+-(void)nextpeerWillTournamentStartWithDetails:(NPTournamentStartDataContainer *)tournamentContainer
 {
     TournamentStartData* startData = new TournamentStartData();
     startData->tournamentUuid = string([tournamentContainer.tournamentUuid UTF8String]);
@@ -58,6 +58,12 @@ static Nextpeer_iOSDelegate* _nextpeer_ios_delegate_instance = nil;
     
     startData->autorelease();
     NextpeerNotifier::getInstance()->broadcastTournamentStarted(startData);
+}
+
+-(void)nextpeerDidTournamentStartWithDetails:(NPTournamentStartDataContainer *)tournamentContainer
+{
+    // Left empty on purpose -> all logic done in nextpeerWillTournamentStartWithDetails due to a
+    // Nextpeer bug that allows P2P packets between the "will" and "did" callbacks.
 }
 
 -(void)nextpeerDidTournamentEnd
