@@ -1,5 +1,10 @@
-#ifndef __CnD__NextpeerEventQueue__
-#define __CnD__NextpeerEventQueue__
+//
+//  Created by Nextpeer development team.
+//  Copyright (c) 2014 Nextpeer, Inc. All rights reserved.
+//
+
+#ifndef __NextpeerEventQueue__
+#define __NextpeerEventQueue__
 
 #include <pthread.h>
 #include <deque>
@@ -36,4 +41,4 @@ namespace nextpeer {
     };
 }
 
-#endif /* defined(__CnD__NextpeerEventQueue__) */
+#endif /* defined(__NextpeerEventQueue__) */

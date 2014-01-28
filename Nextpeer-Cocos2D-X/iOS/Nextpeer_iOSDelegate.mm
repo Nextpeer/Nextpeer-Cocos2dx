@@ -1,6 +1,6 @@
 //
 //  Created by Nextpeer development team.
-//  Copyright (c) 2013 Nextpeer, Inc. All rights reserved.
+//  Copyright (c) 2014 Nextpeer, Inc. All rights reserved.
 //
 
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)

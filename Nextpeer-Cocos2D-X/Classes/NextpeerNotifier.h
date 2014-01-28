@@ -1,10 +1,10 @@
 //
 //  Created by Nextpeer development team.
-//  Copyright (c) 2013 Nextpeer, Inc. All rights reserved.
+//  Copyright (c) 2014 Nextpeer, Inc. All rights reserved.
 //
 
-#ifndef ___NEXTPEER_NOTIFIER_H
-#define ___NEXTPEER_NOTIFIER_H
+#ifndef __NextpeerNotifications__
+#define __NextpeerNotifications__
 
 #include "NextpeerNotifications.h"
 
@@ -33,4 +33,4 @@ namespace nextpeer {
     };
 }
 
-#endif // ___NEXTPEER_NOTIFIER_H
+#endif /* defined(__NextpeerNotifications__) */

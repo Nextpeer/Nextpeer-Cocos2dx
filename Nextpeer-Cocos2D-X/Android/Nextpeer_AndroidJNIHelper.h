@@ -1,5 +1,10 @@
-#ifndef ___NEXTPEER_ANDROID_JNI_HELPER_H
-#define ___NEXTPEER_ANDROID_JNI_HELPER_H
+//
+//  Created by Nextpeer development team.
+//  Copyright (c) 2014 Nextpeer, Inc. All rights reserved.
+//
+
+#ifndef __NextpeerAndroidJNIHelper__
+#define __NextpeerAndroidJNIHelper__
 
 #include "platform/CCPlatformMacros.h"
 
@@ -34,5 +39,4 @@ namespace nextpeer {
     };
 }
 
-
-#endif // ___NEXTPEER_ANDROID_JNI_HELPER_H
+#endif /* defined(__NextpeerAndroidJNIHelper__) */

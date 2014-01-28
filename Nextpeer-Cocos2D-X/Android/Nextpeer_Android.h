@@ -1,10 +1,10 @@
 //
 //  Created by Nextpeer development team.
-//  Copyright (c) 2013 Nextpeer, Inc. All rights reserved.
+//  Copyright (c) 2014 Nextpeer, Inc. All rights reserved.
 //
 
-#ifndef ___NEXTPEER_ANDROID_H
-#define ___NEXTPEER_ANDROID_H
+#ifndef __NextpeerAndroid__
+#define __NextpeerAndroid__
 
 #include "platform/CCPlatformMacros.h"
 
@@ -110,4 +110,4 @@ namespace nextpeer {
 
 };
 
-#endif // ___NEXTPEER_ANDROID_H
+#endif /* defined(__NextpeerAndroid__) */

@@ -1,10 +1,10 @@
 //
 //  Created by Nextpeer development team.
-//  Copyright (c) 2013 Nextpeer, Inc. All rights reserved.
+//  Copyright (c) 2014 Nextpeer, Inc. All rights reserved.
 //
 
-#ifndef ___CCNEXTPEER_H
-#define ___CCNEXTPEER_H
+#ifndef __CCNextpeer__
+#define __CCNextpeer__
 
 #include "stdint.h"
 #include <string>
@@ -115,5 +115,4 @@ namespace nextpeer
     };
 };
 
-
-#endif //___CCNEXTPEER_H
+#endif /* defined(__CCNextpeer__) */
