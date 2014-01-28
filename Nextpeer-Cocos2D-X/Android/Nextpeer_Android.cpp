@@ -199,6 +199,11 @@ namespace nextpeer {
 		}
 #endif
 	}
-
+    
+    void Nextpeer_Android::enableRankingDisplay(bool enableRankingDisplay) {
+#if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
+        callStaticVoidMethod("enableRankingDisplay", "(Z)V", enableRankingDisplay);
+#endif
+    }
 } // namespace nextpeer
 

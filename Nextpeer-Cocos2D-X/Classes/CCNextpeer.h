@@ -96,7 +96,12 @@ namespace nextpeer
          This method will return the name of the current player
          */
         virtual std::string getCurrentPlayerName() { return string(""); }
-
+        
+        /**
+         Call this method to enable or disable the in-game ranking display during a tournament. You can change this setting during a tournament (making the ranking display appear and disappear), but will not be animated.
+         */
+        virtual void enableRankingDisplay(bool enableRankingDisplay) { }
+        
     private:
         static CCNextpeer* sharedInstance;
         CCNextpeer(CCNextpeer const&);

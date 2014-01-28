@@ -129,4 +129,11 @@ namespace nextpeer
         return std::string("");
 #endif
     }
+    
+    void Nextpeer_iOS::enableRankingDisplay(bool enableRankingDisplay)
+    {
+#if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
+        [Nextpeer enableRankingDisplay:enableRankingDisplay];
+#endif
+    }
 }
