@@ -16,3 +16,29 @@ profile
 *.moved-aside
 DerivedData
 .idea/
+
+*.swp
+*.lock
+profile
+
+# built application files
+*.apk
+*.ap_
+
+# files for the dex VM
+*.dex
+
+# Java class files
+*.class
+
+# generated files
+bin/
+gen/
+
+# Local configuration file (sdk path, etc)
+local.properties
+
+# Eclipse project files
+.class-path
+.project
+.settings
