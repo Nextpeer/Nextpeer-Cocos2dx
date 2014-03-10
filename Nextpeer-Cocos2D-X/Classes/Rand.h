@@ -1,10 +1,10 @@
 //
 //  Created by Nextpeer development team.
-//  Copyright (c) 2013 Nextpeer, Inc. All rights reserved.
+//  Copyright (c) 2014 Nextpeer, Inc. All rights reserved.
 //
 
-#ifndef ___RAND_H
-#define ___RAND_H
+#ifndef __NextpeerRand__
+#define __NextpeerRand__
 
 #include "mtrand.h"
 
@@ -20,5 +20,5 @@ namespace nextpeer {
     };
 }
 
-#endif // ___RAND_H
+#endif /* defined(__NextpeerRand__) */
 

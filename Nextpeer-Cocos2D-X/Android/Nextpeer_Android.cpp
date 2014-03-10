@@ -1,6 +1,6 @@
 //
 //  Created by Nextpeer development team.
-//  Copyright (c) 2013 Nextpeer, Inc. All rights reserved.
+//  Copyright (c) 2014 Nextpeer, Inc. All rights reserved.
 //
 
 
@@ -199,6 +199,11 @@ namespace nextpeer {
 		}
 #endif
 	}
-
+    
+    void Nextpeer_Android::enableRankingDisplay(bool enableRankingDisplay) {
+#if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
+        callStaticVoidMethod("enableRankingDisplay", "(Z)V", enableRankingDisplay);
+#endif
+    }
 } // namespace nextpeer
 

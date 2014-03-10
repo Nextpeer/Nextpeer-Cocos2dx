@@ -1,10 +1,10 @@
 //
 //  Created by Nextpeer development team.
-//  Copyright (c) 2013 Nextpeer, Inc. All rights reserved.
+//  Copyright (c) 2014 Nextpeer, Inc. All rights reserved.
 //
 
-#ifndef ___NEXTPEER_ANDROID_DELEGATE_H
-#define ___NEXTPEER_ANDROID_DELEGATE_H
+#ifndef __NextpeerAndroidDelegate__
+#define __NextpeerAndroidDelegate__
 
 #include "platform/CCPlatformMacros.h"
 
@@ -31,5 +31,4 @@ extern "C" {
 }
 #endif
 
-
-#endif // ___NEXTPEER_ANDROID_DELEGATE_H
+#endif /* defined(__NextpeerAndroidDelegate__) */

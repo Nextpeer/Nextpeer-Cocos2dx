@@ -1,10 +1,10 @@
 //
 //  Created by Nextpeer development team.
-//  Copyright (c) 2013 Nextpeer, Inc. All rights reserved.
+//  Copyright (c) 2014 Nextpeer, Inc. All rights reserved.
 //
 
-#ifndef ___CCNEXTPEER_H
-#define ___CCNEXTPEER_H
+#ifndef __CCNextpeer__
+#define __CCNextpeer__
 
 #include "stdint.h"
 #include <string>
@@ -96,7 +96,12 @@ namespace nextpeer
          This method will return the name of the current player
          */
         virtual std::string getCurrentPlayerName() { return string(""); }
-
+        
+        /**
+         Call this method to enable or disable the in-game ranking display during a tournament. You can change this setting during a tournament (making the ranking display appear and disappear), but will not be animated.
+         */
+        virtual void enableRankingDisplay(bool enableRankingDisplay) { }
+        
     private:
         static CCNextpeer* sharedInstance;
         CCNextpeer(CCNextpeer const&);
@@ -110,5 +115,4 @@ namespace nextpeer
     };
 };
 
-
-#endif //___CCNEXTPEER_H
+#endif /* defined(__CCNextpeer__) */

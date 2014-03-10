@@ -1,10 +1,10 @@
 //
 //  Created by Nextpeer development team.
-//  Copyright (c) 2013 Nextpeer, Inc. All rights reserved.
+//  Copyright (c) 2014 Nextpeer, Inc. All rights reserved.
 //
 
-#ifndef ___NEXTPEER_PLAYER_H
-#define ___NEXTPEER_PLAYER_H
+#ifndef __NextpeerPlayer__
+#define __NextpeerPlayer__
 
 #include "cocos2d.h"
 USING_NS_CC;
@@ -27,4 +27,4 @@ namespace nextpeer {
     };
 }
 
-#endif // ___NEXTPEER_PLAYER_H
+#endif /* defined(__NextpeerPlayer__) */

@@ -1,6 +1,6 @@
 //
 //  Created by Nextpeer development team.
-//  Copyright (c) 2013 Nextpeer, Inc. All rights reserved.
+//  Copyright (c) 2014 Nextpeer, Inc. All rights reserved.
 //
 
 #include "Rand.h"
@@ -20,6 +20,7 @@ namespace nextpeer {
     
     unsigned long Rand::generate(unsigned long min, unsigned long max)
     {
+        if (max<min) max = min;
         unsigned long r = Rand::generate();
         return (r % max) + min;
     }

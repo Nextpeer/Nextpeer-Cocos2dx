@@ -1,3 +1,8 @@
+//
+//  Created by Nextpeer development team.
+//  Copyright (c) 2014 Nextpeer, Inc. All rights reserved.
+//
+
 #include "NextpeerEventQueue.h"
 
 namespace nextpeer {
