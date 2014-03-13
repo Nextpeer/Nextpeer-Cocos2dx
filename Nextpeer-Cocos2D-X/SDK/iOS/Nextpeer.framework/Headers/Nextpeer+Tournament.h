@@ -43,6 +43,38 @@
 + (void)reportScoreForCurrentTournament:(uint32_t)score;
 
 /**
+ Call this method to change the score modifier of the giving recording. The modifier can be negative or positive and thus points will either
+ be added or reduced from the recording's score.
+ */
++ (void)reportScoreModifier:(int32_t)modifier forRecording:(NSString*)recordingPlayerId;
+
+/**
+ Call this method to pause the given recording.
+ */
++ (void)requestPauseRecording:(NSString*)recordingPlayerId;
+
+/**
+ Call this method to resume the given recording.
+ */
++ (void)requestResumeRecording:(NSString*)recordingPlayerId;
+
+/**
+ Call this method to stop the given recording.
+ */
++ (void)requestStopRecording:(NSString*)recordingPlayerId;
+
+/**
+ Call this method to rewind the given recording by timeDelta milliseconds.
+ */
++ (void)requestRewindRecording:(NSString*)recordingPlayerId withTimeDelta:(uint32_t)timeDelta;
+
+/**
+ Call this method to fast forwad the given recording by timeDelta milliseconds.
+ */
++ (void)requestFastForwardRecording:(NSString*)recordingPlayerId withTimeDelta:(uint32_t)timeDelta;
+
+
+/**
  Call this method to check if any tournament is running at the moment.
  */
 + (BOOL)isCurrentlyInTournament;

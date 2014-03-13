@@ -1,3 +1,22 @@
+1.6.7
+=====
+
+* UDP (unreliable) communication now also transmits directly to the other devices. Will use a local network to transmit whenever possible.
+
+
+1.6.6 (internal version, not released publicly)
+=====
+
+1.6.5 (internal version, not released publicly)
+=====
+
+
+
+1.6.4
+=====
+
+* Server communication improvements.
+
 1.6.3
 =====
 
