@@ -205,5 +205,94 @@ namespace nextpeer {
         callStaticVoidMethod("enableRankingDisplay", "(Z)V", enableRankingDisplay);
 #endif
     }
+    void Nextpeer_Android::reportScoreModifierForRecording(const char* recordingPlayerId, int32_t modifier)
+    {
+#if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
+        JNIEnv* env = NULL;
+        if (!Nextpeer_AndroidJNIHelper::getEnv(&env)) return;
+        
+        jstring playerId = (jstring)env->NewStringUTF(recordingPlayerId);
+        jint jModifier = (jint)(modifier > INT_MAX ? INT_MAX : modifier);
+        
+        callStaticVoidMethod("requestRecordingControlScoreModifier", "(Ljava/lang/String;I)V", playerId, jModifier);
+        
+        env->DeleteLocalRef(playerId);
+#endif
+    }
+    
+    void Nextpeer_Android::requestPauseRecording(const char* recordingPlayerId)
+    {
+#if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
+        JNIEnv* env = NULL;
+        if (!Nextpeer_AndroidJNIHelper::getEnv(&env)) return;
+        
+        jstring playerId = (jstring)env->NewStringUTF(recordingPlayerId);
+        
+        callStaticVoidMethod("requestRecordingControlPauseRecording", "(Ljava/lang/String;)V", playerId);
+        
+        env->DeleteLocalRef(playerId);
+#endif
+    }
+    
+    void Nextpeer_Android::requestResumeRecording(const char* recordingPlayerId)
+    {
+        
+#if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
+        JNIEnv* env = NULL;
+        if (!Nextpeer_AndroidJNIHelper::getEnv(&env)) return;
+        
+        jstring playerId = (jstring)env->NewStringUTF(recordingPlayerId);
+        
+        callStaticVoidMethod("requestRecordingControlResumeRecording", "(Ljava/lang/String;)V", playerId);
+        
+        env->DeleteLocalRef(playerId);
+#endif
+    }
+    
+    void Nextpeer_Android::requestStopRecording(const char* recordingPlayerId)
+    {
+#if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
+        JNIEnv* env = NULL;
+        if (!Nextpeer_AndroidJNIHelper::getEnv(&env)) return;
+        
+        jstring playerId = (jstring)env->NewStringUTF(recordingPlayerId);
+        
+        callStaticVoidMethod("requestRecordingControlStopRecording", "(Ljava/lang/String;)V", playerId);
+        
+        env->DeleteLocalRef(playerId);
+#endif
+        
+    }
+    
+    void Nextpeer_Android::requestRewindRecording(const char* recordingPlayerId, uint32_t timeDelta)
+    {
+#if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
+        JNIEnv* env = NULL;
+        if (!Nextpeer_AndroidJNIHelper::getEnv(&env)) return;
+        
+        jstring playerId = (jstring)env->NewStringUTF(recordingPlayerId);
+        jint delta = (jint)(timeDelta > INT_MAX ? INT_MAX : timeDelta);
+        
+        callStaticVoidMethod("requestRecordingControlRewindRecording", "(Ljava/lang/String;I)V", playerId, timeDelta);
+        
+        env->DeleteLocalRef(playerId);
+#endif
+        
+    }
+    
+    void Nextpeer_Android::requestFastForwardRecording(const char* recordingPlayerId, uint32_t timeDelta)
+    {
+#if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
+        JNIEnv* env = NULL;
+        if (!Nextpeer_AndroidJNIHelper::getEnv(&env)) return;
+        
+        jstring playerId = (jstring)env->NewStringUTF(recordingPlayerId);
+        jint delta = (jint)(timeDelta > INT_MAX ? INT_MAX : timeDelta);
+        
+        callStaticVoidMethod("requestRecordingControlFastForwardRecording", "(Ljava/lang/String;I)V", playerId, timeDelta);
+        
+        env->DeleteLocalRef(playerId);
+#endif
+    }
 } // namespace nextpeer
 

@@ -100,8 +100,38 @@ namespace nextpeer
         /**
          Call this method to enable or disable the in-game ranking display during a tournament. You can change this setting during a tournament (making the ranking display appear and disappear), but will not be animated.
          */
-        virtual void enableRankingDisplay(bool enableRankingDisplay) { }
+        virtual void enableRankingDisplay(bool enableRankingDisplay) {}
         
+        /**
+         Call this method to change the score modifier of the giving recording. The modifier can be negative or positive and thus points will either
+         be added or reduced from the recording's score.
+         */
+        virtual void reportScoreModifierForRecording(const char* recordingPlayerId, int32_t modifier) {}
+        
+        /**
+         Call this method to pause the given recording.
+         */
+        virtual void requestPauseRecording(const char* recordingPlayerId) {}
+        
+        /**
+         Call this method to resume the given recording.
+         */
+        virtual void requestResumeRecording(const char* recordingPlayerId) {}
+        
+        /**
+         Call this method to stop the given recording.
+         */
+        virtual void requestStopRecording(const char* recordingPlayerId) {}
+        
+        /**
+         Call this method to rewind the given recording by timeDelta milliseconds.
+         */
+        virtual void requestRewindRecording(const char* recordingPlayerId, uint32_t timeDelta) {}
+        
+        /**
+         Call this method to fast forwad the given recording by timeDelta milliseconds.
+         */
+        virtual void requestFastForwardRecording(const char* recordingPlayerId, uint32_t timeDelta) {}
     private:
         static CCNextpeer* sharedInstance;
         CCNextpeer(CCNextpeer const&);

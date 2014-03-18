@@ -136,4 +136,56 @@ namespace nextpeer
         [Nextpeer enableRankingDisplay:enableRankingDisplay];
 #endif
     }
+    
+    void Nextpeer_iOS::reportScoreModifierForRecording(const char* recordingPlayerId, int32_t modifier)
+    {
+#if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
+        NSString* playerId = [NSString stringWithUTF8String:recordingPlayerId];
+        [Nextpeer reportScoreModifier:modifier forRecording:playerId];
+#endif
+    }
+    
+    void Nextpeer_iOS::requestPauseRecording(const char* recordingPlayerId)
+    {
+#if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
+        NSString* playerId = [NSString stringWithUTF8String:recordingPlayerId];
+        [Nextpeer requestPauseRecording:playerId];
+#endif
+        
+    }
+    
+    void Nextpeer_iOS::requestResumeRecording(const char* recordingPlayerId)
+    {
+        
+#if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
+        NSString* playerId = [NSString stringWithUTF8String:recordingPlayerId];
+        [Nextpeer requestResumeRecording:playerId];
+#endif
+    }
+    
+    void Nextpeer_iOS::requestStopRecording(const char* recordingPlayerId)
+    {
+#if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
+        NSString* playerId = [NSString stringWithUTF8String:recordingPlayerId];
+        [Nextpeer requestStopRecording:playerId];
+#endif
+        
+    }
+    
+    void Nextpeer_iOS::requestRewindRecording(const char* recordingPlayerId, uint32_t timeDelta)
+    {
+#if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
+        NSString* playerId = [NSString stringWithUTF8String:recordingPlayerId];
+        [Nextpeer requestRewindRecording:playerId withTimeDelta:timeDelta];
+#endif
+        
+    }
+    
+    void Nextpeer_iOS::requestFastForwardRecording(const char* recordingPlayerId, uint32_t timeDelta)
+    {
+#if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
+        NSString* playerId = [NSString stringWithUTF8String:recordingPlayerId];
+        [Nextpeer requestFastForwardRecording:playerId withTimeDelta:timeDelta];
+#endif
+    }
 }
