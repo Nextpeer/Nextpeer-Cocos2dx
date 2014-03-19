@@ -6,6 +6,7 @@
 
 #include "Nextpeer_Android.h"
 #include "NextpeerNotifier.h"
+#include "Nextpeer_AndroidJNIHelper.h"
 
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
 #include "platform/android/jni/JniHelper.h"
