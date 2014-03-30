@@ -5,7 +5,8 @@
     android:background="@null"
     android:padding="@dimen/np__tournament_cell_padding" >
 
-    <com.nextpeer.android.NextpeerUIImageView
+    <ImageView
+		android:contentDescription="@string/np__application_name"
         android:id="@+id/np__tournament_loading_random_peer_thumbnail"
         style="@style/NP__.Widget.Replacement"
         android:layout_width="@dimen/np__tournament_loading_player_thumbnail_size"

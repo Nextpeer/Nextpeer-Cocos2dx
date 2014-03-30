@@ -25,7 +25,8 @@
         android:textColor="@color/np__white"
         android:textStyle="bold" />
 
-    <com.nextpeer.android.NextpeerUIImageView
+    <ImageView
+		android:contentDescription="@string/np__application_name"
         android:id="@+id/np__tournament_results_random_peer_thumbnail"
         style="@style/NP__.Widget.Replacement"
         android:layout_width="@dimen/np__tournament_result_player_thumbnail_size"

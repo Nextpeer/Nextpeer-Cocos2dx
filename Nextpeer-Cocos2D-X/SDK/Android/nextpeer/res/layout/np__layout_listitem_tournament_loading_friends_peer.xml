@@ -11,7 +11,8 @@
         android:layout_height="@dimen/np__tournament_loading_player_thumbnail_size"
         android:layout_marginRight="@dimen/np__tournament_cell_padding" 
         android:layout_alignParentLeft="true">
-    <com.nextpeer.android.NextpeerUIImageView
+    <ImageView
+		android:contentDescription="@string/np__application_name"
         android:id="@+id/np__tournament_loading_friends_peer_thumbnail"
         style="@style/NP__.Widget.Replacement"
         android:layout_width="@dimen/np__tournament_loading_player_thumbnail_size"

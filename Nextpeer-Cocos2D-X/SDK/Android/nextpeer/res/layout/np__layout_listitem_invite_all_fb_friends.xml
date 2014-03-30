@@ -5,7 +5,8 @@
     android:background="@null"
     android:padding="@dimen/np__content_padding" >
 
-    <com.nextpeer.android.NextpeerUIImageView
+    <ImageView
+		android:contentDescription="@string/np__application_name"
         android:id="@+id/np__invite_all_fb_friends_item_thumbnail"
         style="@style/NP__.InviteFriends.ListItem.ProfileImage"
         android:layout_width="@dimen/np__invite_fb_friends_list_item_default_size"

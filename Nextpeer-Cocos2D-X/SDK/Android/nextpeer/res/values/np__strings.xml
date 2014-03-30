@@ -47,6 +47,9 @@
 	<!-- Dialog - Failed to create match -->
 	<string name="np__dialog__failed_to_create_match_title">Failed to create a match</string>
 	
+    <!-- Dialog - Powered by -->
+	<string name="np__powered_by_dialog_title">Mobile Multiplayer Made Easy</string>
+	
 	<!-- User Profile fetching. -->
 	<string name="np__user_profile_fetching_title">Welcome to Nextpeer</string>
 	

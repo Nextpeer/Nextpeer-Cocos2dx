@@ -16,7 +16,8 @@
 			android:layout_centerHorizontal="true"
 			android:orientation="vertical">
 		
-			    <com.nextpeer.android.NextpeerUIImageView
+			    <ImageView
+					android:contentDescription="@string/np__application_name"
 			        android:id="@+id/np__home_current_player_thumbnail"
 			        style="@style/NP__.Widget.Replacement"
 			        android:layout_width="@dimen/np__home_current_player_image_thumbnail_size"

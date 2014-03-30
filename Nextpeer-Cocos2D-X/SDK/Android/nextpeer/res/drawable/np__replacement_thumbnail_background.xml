@@ -4,6 +4,6 @@
 
     <corners android:radius="@dimen/np__content_rectangle_radius_size" />
 
-    <solid android:color="@color/np__replacement_thumbnail_background" />
+    <solid android:color="@android:color/transparent" />
 
 </shape>

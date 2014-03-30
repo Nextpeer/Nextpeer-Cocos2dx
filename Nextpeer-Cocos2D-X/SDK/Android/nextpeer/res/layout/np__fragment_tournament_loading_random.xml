@@ -22,7 +22,8 @@
             android:paddingLeft="@dimen/np__tournament_loading_player_bar_card_padding"
             android:paddingRight="@dimen/np__tournament_loading_player_bar_card_padding_right" >
 
-            <com.nextpeer.android.NextpeerUIImageView
+            <ImageView
+				android:contentDescription="@string/np__application_name"
                 android:id="@+id/np__tournament_loading_random_player_bar_thumbnail"
                 android:layout_width="@dimen/np__tournament_loading_player_thumbnail_size"
                 android:layout_height="@dimen/np__tournament_loading_player_thumbnail_size"

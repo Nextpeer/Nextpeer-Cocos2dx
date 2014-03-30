@@ -30,7 +30,7 @@
     <dimen name="np__dummy_action_bar_icon_vertical_padding">8dp</dimen>
     <dimen name="np__dummy_action_bar_title_text_size">18dp</dimen>
     <dimen name="np__dummy_action_button_min_width">56dip</dimen>
-    <dimen name="np__dummy_action_bar_text_title_margin">16dp</dimen>
+    <dimen name="np__dummy_action_bar_text_title_margin">8dp</dimen>
     
     <dimen name="np__activity_main_content_padding">16dp</dimen>
     
@@ -104,4 +104,7 @@
     <dimen name="np__ranks_display_solo_avatar_stroke_size">2dp</dimen>
     <dimen name="np__ranks_display_view_x_layout_padding">10dp</dimen>
     <dimen name="np__ranks_display_view_y_layout_padding">10dp</dimen>
+    <dimen name="np__powered_by_dialog_margin">16dp</dimen>
+    <dimen name="np__powered_by_dialog_title_margin">8dp</dimen>
+    
 </resources>

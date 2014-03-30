@@ -28,8 +28,6 @@
     
     <color name="np__widget_text_content">#303030</color>
     
-    <color name="np__replacement_thumbnail_background">#FF7402</color>
-    
     <color name="np__dummy_action_bar_background">#48B5FB</color>
     <color name="np__dummy_action_bar_text">#FFFFFF</color>
     <color name="np__dummy_action_bar_drop_shadow_background_start">#77000000</color>

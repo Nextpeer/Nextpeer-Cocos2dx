@@ -12,7 +12,8 @@
         android:layout_centerInParent="true"
    		android:background="@android:color/transparent" >
 
-        <com.nextpeer.android.NextpeerUIImageView
+        <ImageView
+			android:contentDescription="@string/np__application_name"
             android:id="@+id/np__dialog_changeavatar_grid_item_thumbnail"
 		    android:layout_width="@dimen/np__dialog_changeavatar_grid_item_thumbnail_size"
 		    android:layout_height="@dimen/np__dialog_changeavatar_grid_item_thumbnail_size"

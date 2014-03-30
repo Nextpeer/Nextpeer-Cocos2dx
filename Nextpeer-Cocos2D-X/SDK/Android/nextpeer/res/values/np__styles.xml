@@ -75,6 +75,11 @@
         <item name="android:textSize">@dimen/np__dummy_action_bar_title_text_size</item>
     </style>
     
+    <style name="NP__.Widget.DummyActionBar.Logo">
+        <item name="android:src">@drawable/np__ic_nextpeer</item>
+        <item name="android:padding">0dip</item>
+    </style>
+    
     <style name="NP__.Widget.DummyActionBar.MoreOverflow">
         <item name="android:src">@drawable/np__widget_moreoverflow</item>
         <item name="android:padding">0dip</item>
@@ -366,6 +371,11 @@
     
     <style name="NP__.DialogWindowTitle.ChangeAvatar" parent="NP__.DialogWindowTitle">
         <item name="android:background">@null</item>
+        <item name="android:padding">0dp</item>
+        <item name="android:minHeight">0dp</item>
+    </style>
+    
+    <style name="NP__.DialogWindowTitle.PoweredBy" parent="NP__.DialogWindowTitle">
         <item name="android:padding">0dp</item>
         <item name="android:minHeight">0dp</item>
     </style>

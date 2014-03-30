@@ -49,7 +49,7 @@
         android:text="@string/np__place_holder_number" />
     
    	
-    <com.nextpeer.android.NextpeerUIImageView
+    <ImageView
         android:id="@+id/np__current_matches_past_first_player_thumbnail"
         style="@style/NP__.Widget.Replacement"
         android:layout_width="@dimen/np__current_matches_list_player_thumbnail_size"
@@ -62,7 +62,7 @@
         android:contentDescription="@string/np__application_name"
         android:src="@color/np__nextpeer_orange" />
     
-    <com.nextpeer.android.NextpeerUIImageView
+    <ImageView
         android:id="@+id/np__current_matches_past_second_player_thumbnail"
         style="@style/NP__.Widget.Replacement"
         android:layout_width="@dimen/np__current_matches_list_player_thumbnail_size"
@@ -75,7 +75,7 @@
         android:src="@color/np__nextpeer_orange"
         android:contentDescription="@string/np__application_name" />
     
-    <com.nextpeer.android.NextpeerUIImageView
+    <ImageView
         android:id="@+id/np__current_matches_past_third_player_thumbnail"
         style="@style/NP__.Widget.Replacement"
         android:layout_width="@dimen/np__current_matches_list_player_thumbnail_size"
