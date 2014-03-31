@@ -28,13 +28,13 @@
 			        style="@style/NP__.Home.PlayerName.Text"
 				    android:layout_width="fill_parent"
 				    android:layout_height="wrap_content"
-			        android:layout_alignBottom="@+id/np__home_current_player_thumbnail"
-			        android:layout_alignTop="@+id/np__home_current_player_thumbnail"
+				    android:layout_centerVertical="true"
 			        android:layout_toRightOf="@+id/np__home_current_player_thumbnail"
 			        android:layout_marginLeft="@dimen/np__home_content_padding"
 			        android:gravity="center_vertical"
 			        android:maxLines="1"
 			        android:text="@string/np__application_name" />
+			    
 		</RelativeLayout>
 	    
 		<RelativeLayout
@@ -62,10 +62,7 @@
 			<RelativeLayout
 			        android:layout_width="fill_parent"
 			        android:layout_height="wrap_content"
-				    android:layout_alignTop="@+id/np__home_play_random_tournament_button"
-				    android:layout_alignBottom="@id/np__home_play_random_tournament_button"
-				    android:layout_alignRight="@id/np__home_play_random_tournament_button"
-				    android:layout_alignLeft="@id/np__home_play_random_tournament_button"
+	   				android:layout_centerVertical="true"
 		    		android:layout_centerHorizontal="true"
 		  			android:orientation="vertical">
 			    <TextView  
@@ -105,10 +102,7 @@
 				<RelativeLayout
 				        android:layout_width="fill_parent"
 				        android:layout_height="wrap_content"
-					    android:layout_alignTop="@+id/np__home_play_with_fb_friends_tournament_button"
-					    android:layout_alignBottom="@id/np__home_play_with_fb_friends_tournament_button"
-					    android:layout_alignRight="@id/np__home_play_with_fb_friends_tournament_button"
-					    android:layout_alignLeft="@id/np__home_play_with_fb_friends_tournament_button"
+	   					android:layout_centerVertical="true"
 			    		android:layout_centerHorizontal="true"
 			  			android:orientation="vertical">
 				    <TextView  
@@ -148,13 +142,15 @@
 		            android:background="@drawable/np__home_current_matches_button_selector"
 			       	android:gravity="center"/>
 		
-				<RelativeLayout
+				   <!-- Align the current matches to cover the entire button (so the banner icon will be on the top of the button) -->
+				   <RelativeLayout
 				        android:layout_width="fill_parent"
 				        android:layout_height="wrap_content"
 					    android:layout_alignTop="@+id/np__home_your_current_matches_button"
 					    android:layout_alignBottom="@id/np__home_your_current_matches_button"
 					    android:layout_alignRight="@id/np__home_your_current_matches_button"
 					    android:layout_alignLeft="@id/np__home_your_current_matches_button"
+	   					android:layout_centerVertical="true"
 			    		android:layout_centerHorizontal="true"
 			  			android:orientation="vertical">
 				    <TextView  

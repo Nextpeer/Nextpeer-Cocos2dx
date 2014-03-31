@@ -13,10 +13,7 @@
 				<RelativeLayout
 				        android:layout_width="fill_parent"
 				        android:layout_height="wrap_content"
-					    android:layout_alignTop="@+id/np__server_url_clickable_button"
-					    android:layout_alignBottom="@id/np__server_url_clickable_button"
-					    android:layout_alignRight="@id/np__server_url_clickable_button"
-					    android:layout_alignLeft="@id/np__server_url_clickable_button"
+	   					android:layout_centerVertical="true"
 			    		android:layout_centerHorizontal="true"
 			  			android:orientation="vertical">
 				    <TextView  
