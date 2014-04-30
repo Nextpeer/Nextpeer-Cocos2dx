@@ -1,6 +1,20 @@
 #import "NPTournamentContainers.h"
 
 /**
+ The reason for firing a sync event.
+ */
+typedef NS_ENUM(int, NPSynchronizationEventFireReason) {
+    /// All participants have registered for the event.
+    NPSynchronizationEventFireReasonAllReached = 1,
+    
+    /// The registration timeout was reached before all participants registered for the event (at least one participant didn't register for the event).
+    NPSynchronizationEventFireReasonTimeout,
+    
+    /// The sync event was already fired before the latest registration attempt was made.
+    NPSynchronizationEventFireReasonAlreadyFired
+};
+
+/**
  Implement this protocol to receive various method calls regarding the user's
  interaction with the current Nextpeer tournament
  */

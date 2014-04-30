@@ -1,3 +1,14 @@
+1.6.9
+=====
+
+* Bug fixes and usability improvements.
+
+1.6.8
+=====
+
+* __Minimum supported iOS version is now 5.1.1!__
+* arm64 support added - __please see our [arm64 guide](https://developers.nextpeer.com/docs/view/arm64) for transition instructions__!
+
 1.6.7
 =====
 
@@ -9,8 +20,6 @@
 
 1.6.5 (internal version, not released publicly)
 =====
-
-
 
 1.6.4
 =====

@@ -107,3 +107,12 @@ extern NSString* NextpeerSettingRankingDisplayAnimationStyle;
  Specifies the alignment of the in-game ranking display. This setting only has effect if the ranking display style is set to NPRankingDisplayList.
  */
 extern NSString* NextpeerSettingRankingDisplayAlignment;
+
+/**
+ UIColor
+ 
+ Default: internal Nextpeer setting (may change between SDK versions)
+ 
+ Specifies the background color for the following screens: main dashboard, settings, tournament selection, tournament loading, tournament results.
+ */
+extern NSString* NextpeerSettingScreenBackgroundColor;

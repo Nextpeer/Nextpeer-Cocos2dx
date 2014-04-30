@@ -70,18 +70,18 @@
 @property (nonatomic, readonly) NSString* tournamentName;
 
 /// The tournament time to play in seconds
-@property (nonatomic, readonly) NSUInteger tournamentTimeSeconds; 
+@property (nonatomic, readonly) uint32_t tournamentTimeSeconds;
 
 /// A random seed generated for this tournament. All players within the same tournament
 /// receive the same seed from the tournament. Can be used for level generation, to ensure
 /// all players play the same level in a specific game.
-@property (nonatomic, readonly) NSUInteger tournamentRandomSeed;
+@property (nonatomic, readonly) uint32_t tournamentRandomSeed;
 
 /// A flag that states if the current tournament is game controlled
 @property (nonatomic, readonly) BOOL tournamentIsGameControlled;
 
 /// The number of players that started this tournament. Includes the current player.
-@property (nonatomic, readonly) NSUInteger numberOfPlayers;
+@property (nonatomic, readonly) uint32_t numberOfPlayers;
 
 /// The current player.
 @property (nonatomic, readonly) NPTournamentPlayer* currentPlayer;
@@ -108,16 +108,16 @@
 @property (nonatomic, readonly) NSString* playerName;
 
 /// The player total currency amount (after the tournament ended of course).
-@property (nonatomic, readonly) NSUInteger currentCurrencyAmount; 
+@property (nonatomic, readonly) uint32_t currentCurrencyAmount;
 
 /// The player rank in the tournament (where 1 means first, 1..tournamentTotalPlayers).
-@property (nonatomic, readonly) NSUInteger playerRankInTournament; 
+@property (nonatomic, readonly) uint32_t playerRankInTournament;
 
 /// The amount of players in the tournament.
-@property (nonatomic, readonly) NSUInteger tournamentTotalPlayers; 
+@property (nonatomic, readonly) uint32_t tournamentTotalPlayers;
 
 /// The player's score at the end of the tournament.
-@property (nonatomic, readonly) NSUInteger playerScore;
+@property (nonatomic, readonly) uint32_t playerScore;
 
 @end
 

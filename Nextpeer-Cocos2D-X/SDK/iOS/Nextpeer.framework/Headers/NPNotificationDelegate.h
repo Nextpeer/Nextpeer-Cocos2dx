@@ -31,11 +31,6 @@
 - (void)nextpeerNotificationWillShow:(NPNotificationContainer *)notice DEPRECATED_ATTRIBUTE;
 
 /**
- Should return whether Nextpeer can show the welcome banner. Defaults to YES.
- */
-- (BOOL)nextpeerShouldShowWelcomeBanner;
-
-/**
  This method is invoked when a tournament status is reported. A tournament status includes information
  regarding all the players in the tournament - their ranks, who is still playing, their names, IDs, avatar images, etc.
  This information can be used to, for example, generate custom ranking notifications.

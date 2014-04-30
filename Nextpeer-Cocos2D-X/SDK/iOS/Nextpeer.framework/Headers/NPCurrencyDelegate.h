@@ -13,7 +13,7 @@
 /**
  Nextpeer will call this function to retrieve the current amount of currency the player has.
  */
-- (NSUInteger)nextpeerGetCurrency;
+- (uint32_t)nextpeerGetCurrency;
 
 /**
  Nextpeer will use this function to add a certain amount of currency to the total a player has.
@@ -23,7 +23,7 @@
  @warning This method may be called on any thread, including the main thread! Take precaution when receiving this callback
           and be sure to return quickly (i.e. do I/O in another thread) in order to have everything run smoothly.
  */
-- (void)nextpeerAddAmountToCurrency:(NSInteger)amount;
+- (void)nextpeerAddAmountToCurrency:(int32_t)amount;
 
 /**
  Nextpeer will query this method to find out if the game supports the unified currency model.
