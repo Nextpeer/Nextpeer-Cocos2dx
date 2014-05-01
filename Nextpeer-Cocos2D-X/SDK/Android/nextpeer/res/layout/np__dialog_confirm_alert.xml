@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:drawableLeft="@drawable/np__ic_dialog_error"
-        android:text="@string/np__dialog_alert_error_connectivity_title" />
+        android:text="@string/np__error_message_failed_to_change_name_title" />
 
     <TextView
         android:id="@+id/np__dialog_alert_description"
@@ -18,7 +18,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/np__content_margin"
-        android:text="@string/np__dialog_alert_error_connectivity_description" />
+        android:text="@string/np__error_message_failed_to_change_name_description" />
 
     <Button
         android:id="@+id/np__dialog_alert_button_confirm"

@@ -119,6 +119,10 @@
         android:layout_below="@+id/np__current_matches_past_first_player_thumbnail"
         android:layout_marginLeft="@dimen/np__current_matches_list_text_item_margin"
         android:layout_marginTop="@dimen/np__current_matches_list_item_margin"
-        android:text="@string/np__current_matches_past_match_status" />
+        android:text="@string/np__current_matches_past_match_status" 
+	    android:singleLine="true"
+	    android:ellipsize="marquee" 
+	    android:marqueeRepeatLimit="marquee_forever"
+	    android:scrollHorizontally="true"/>
 
 </RelativeLayout>

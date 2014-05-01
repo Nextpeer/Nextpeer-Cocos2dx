@@ -387,10 +387,11 @@ public static final void <B>initialize</B>(Context&nbsp;context,
 <DT><B>Parameters:</B><DD><CODE>context</CODE> - The context used to access resources on behalf of the application. You should pass the
             <CODE>Context#getApplicationContext()</CODE> to avoid the potential memory leak incurred by maintaining references to
             <code>Activity</code> instances. Cannot be null.<DD><CODE>gameKey</CODE> - The game key unique for each game generated at www.nextpeer.com. Cannot be null or empty.<DD><CODE>listener</CODE> - An instance derived from NextpeerListener. Cannot be null or empty.
-<DT><B>Throws:</B>
-<DD><CODE>java.lang.IllegalArgumentException</CODE> - if <code>context</code> is null.
-<DD><CODE>java.lang.IllegalArgumentException</CODE> - if <code>gameKey</code> is null or empty.
-<DD><CODE>java.lang.IllegalStateException</CODE> - if the AndroidManifest.xml file is missing the 'android.permission.INTERNET' permission.</DL>
+                <DT><B>Throws:</B>
+                    <DD><CODE>java.lang.IllegalArgumentException</CODE> - if <code>context</code> is null.
+                        <DD><CODE>java.lang.IllegalArgumentException</CODE> - if <code>gameKey</code> is null or empty.
+                            <DD><CODE>java.lang.IllegalArgumentException</CODE> - if <code>listener</code> is null.
+</DL>
 </DD>
 </DL>
 <HR>
@@ -414,7 +415,7 @@ public static final void <B>initialize</B>(Context&nbsp;context,
 <DD><CODE>java.lang.IllegalArgumentException</CODE> - if <code>context</code> is null.
 <DD><CODE>java.lang.IllegalArgumentException</CODE> - if <code>gameKey</code> is null or empty.
 <DD><CODE>java.lang.IllegalArgumentException</CODE> - if <code>listener</code> is null.
-<DD><CODE>java.lang.IllegalStateException</CODE> - if the AndroidManifest.xml file is missing the 'android.permission.INTERNET' permission.</DL>
+</DL>
 </DD>
 </DL>
 <HR>

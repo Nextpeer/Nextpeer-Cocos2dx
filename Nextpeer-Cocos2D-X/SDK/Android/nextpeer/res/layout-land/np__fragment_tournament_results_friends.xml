@@ -154,7 +154,7 @@
        	android:id="@+id/np__tournament_results_friends_past_bar_container"
         android:layout_width="fill_parent"
         android:layout_height="@dimen/np__tournament_results_default_bar_height"
-        android:background="@color/np__white"
+        android:background="@color/np__tournament_results_bar_background"
         android:gravity="center"
 	 	android:orientation="horizontal"
         android:visibility="gone">
