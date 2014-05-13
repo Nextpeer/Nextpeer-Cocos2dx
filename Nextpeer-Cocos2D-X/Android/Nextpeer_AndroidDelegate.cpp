@@ -8,6 +8,7 @@
 #include "Nextpeer_AndroidDelegate.h"
 #include "Nextpeer_AndroidJNIHelper.h"
 
+#include "NextpeerTournamentSupport.h"
 #include "NextpeerNotifier.h"
 #include "NextpeerPlayer.h"
 using namespace nextpeer;
@@ -132,6 +133,12 @@ JNIEXPORT void JNICALL Java_com_nextpeer_android_NextpeerCocos2DX_onNextpeerRetu
     NextpeerNotifier::getInstance()->broadcastDashboardNextpeerReturnToGame();
 }
 
+
+JNIEXPORT bool JNICALL Java_com_nextpeer_android_NextpeerCocos2DX_onSupportsTournamentNative(JNIEnv* env, jobject caller, jstring tournamentUuid)
+{
+    string uuid = cocos2d::JniHelper::jstring2string(tournamentUuid);
+    return NextpeerTournamentSupport::getInstance()->isTournamentSupported(uuid);
+}
 
 
 #endif

@@ -9,6 +9,7 @@
 
 #include "NextpeerNotifier.h"
 #include "NextpeerPlayer.h"
+#include "NextpeerTournamentSupport.h"
 #include "cocos2d.h"
 
 using namespace nextpeer;
@@ -64,6 +65,11 @@ static Nextpeer_iOSDelegate* _nextpeer_ios_delegate_instance = nil;
 {
     // Left empty on purpose -> all logic done in nextpeerWillTournamentStartWithDetails due to a
     // Nextpeer bug that allows P2P packets between the "will" and "did" callbacks.
+}
+
+-(BOOL)nextpeerSupportsTournamentWithId:(NSString* )tournamentUuid {
+    string uuid([tournamentUuid UTF8String]);
+    return NextpeerTournamentSupport::getInstance()->isTournamentSupported(uuid);
 }
 
 -(void)nextpeerDidTournamentEnd
