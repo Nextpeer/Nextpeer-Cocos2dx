@@ -6,7 +6,7 @@
 #ifndef __NextpeerAndroidDelegate__
 #define __NextpeerAndroidDelegate__
 
-#include "platform/CCPlatformMacros.h"
+#include "CCPlatformConfig.h"
 
 #ifndef CC_TARGET_PLATFORM
 #error "CC_TARGET_PLATFORM should be defined!!!"

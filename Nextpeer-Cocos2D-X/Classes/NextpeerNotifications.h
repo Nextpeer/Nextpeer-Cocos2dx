@@ -28,7 +28,7 @@ USING_NS_CC;
 
 namespace nextpeer {
 
-    class TournamentStartData : public CCObject
+    class TournamentStartData : public Ref
     {
     public:
         virtual ~TournamentStartData()
@@ -43,12 +43,12 @@ namespace nextpeer {
         unsigned int tournamentRandomSeed;
         bool isGameControlled;
         unsigned int numberOfPlayers;
-        CCArray* players;
+        __Array* players;
     };
 
     enum  NextpeerDataChannel { CHANNEL_RELIABLE = 0, CHANNEL_UNRELIABLE = 1 };
 
-    class TournamentP2PData : public CCObject
+    class TournamentP2PData : public Ref
     {
     public:
         NextpeerDataChannel channel;

@@ -14,7 +14,7 @@ USING_NS_CC;
 namespace nextpeer {
     // This class will answer whether a tournament is supported or not.
     // You can update it with your game logic, for example a certain tournament is supported after a specific level or XP.
-    class NextpeerTournamentSupport : public CCObject
+    class NextpeerTournamentSupport : public Ref
     {
     public:
         static NextpeerTournamentSupport* getInstance();

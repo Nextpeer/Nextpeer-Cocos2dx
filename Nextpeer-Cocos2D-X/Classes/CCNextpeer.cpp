@@ -5,7 +5,7 @@
 
 #include "CCNextpeer.h"
 
-#include "platform/CCPlatformMacros.h"
+#include "CCPlatformConfig.h"
 
 #ifndef CC_TARGET_PLATFORM
 #error "CC_TARGET_PLATFORM should be defined!!!"

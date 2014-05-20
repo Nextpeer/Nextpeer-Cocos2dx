@@ -3,7 +3,7 @@
 //  Copyright (c) 2014 Nextpeer, Inc. All rights reserved.
 //
 
-#import "platform/CCPlatformMacros.h"
+#import "CCPlatformConfig.h"
 
 // Any Objective-C++ code must be wrapped in pre-compiler directives to avoid compiler errors on unsupported platforms
 #ifndef CC_TARGET_PLATFORM

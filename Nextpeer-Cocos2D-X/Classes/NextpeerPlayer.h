@@ -13,7 +13,7 @@ USING_NS_CC;
 using namespace std;
 
 namespace nextpeer {
-    class NextpeerPlayer : public CCObject
+    class NextpeerPlayer : public Ref
     {
     public:
         static NextpeerPlayer* create(string playerName, string playerId, string playerImageUrl, bool isRecording);

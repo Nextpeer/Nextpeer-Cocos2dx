@@ -31,12 +31,12 @@ namespace nextpeer {
     public:
         static NextpeerEventQueue* getInstance();
         
-        void addToQueue(string eventName, CCObject* data);
+        void addToQueue(string eventName, Ref* data);
         unsigned int queueSize();
-        pair<string, CCObject*> popQueue();
+        pair<string, Ref*> popQueue();
         
     protected:
-        deque<pair<string, CCObject*> > _queue;
+        deque<pair<string, Ref*> > _queue;
         pthread_mutex_t _lock;
     };
 }

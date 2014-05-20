@@ -73,7 +73,7 @@ namespace nextpeer {
 		}
         
         // This initializes the event queue and starts the scheduler
-        NextpeerNotifier::getInstance()->queueScheduler();
+        NextpeerNotifier::getInstance()->queueScheduler(0);
 #endif
 	}
 

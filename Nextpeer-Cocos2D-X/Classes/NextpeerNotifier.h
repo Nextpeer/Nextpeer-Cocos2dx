@@ -10,7 +10,7 @@
 
 // Containers for notifications
 namespace nextpeer {    
-    class NextpeerNotifier : public CCObject
+    class NextpeerNotifier : public Ref
     {
     public:
         static NextpeerNotifier* getInstance();
@@ -26,7 +26,7 @@ namespace nextpeer {
         void broadcastDashboardDidDisappear();
         void broadcastDashboardNextpeerReturnToGame();
         
-        void queueScheduler();
+        void queueScheduler(float dt);
     private:
         NextpeerNotifier();
         static NextpeerNotifier* _instance;

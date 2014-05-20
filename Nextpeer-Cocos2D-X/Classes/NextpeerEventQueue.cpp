@@ -22,12 +22,12 @@ namespace nextpeer {
         return _instance;
     }
     
-    void NextpeerEventQueue::addToQueue(string eventName, CCObject *data)
+    void NextpeerEventQueue::addToQueue(string eventName, Ref *data)
     {
         CC_SAFE_RETAIN(data);
         pthread_mutex_lock(&_lock);
         
-        _queue.push_back(pair<string, CCObject*>(eventName, data));
+        _queue.push_back(pair<string, Ref*>(eventName, data));
         
         pthread_mutex_unlock(&_lock);
     }
@@ -37,11 +37,11 @@ namespace nextpeer {
         return _queue.size();
     }
     
-    pair<string, CCObject*> NextpeerEventQueue::popQueue()
+    pair<string, Ref*> NextpeerEventQueue::popQueue()
     {
         pthread_mutex_lock(&_lock);
         
-        pair<string, CCObject*> first = _queue[0];
+        pair<string, Ref*> first = _queue[0];
         _queue.pop_front();
         
         if (first.second) first.second->autorelease();

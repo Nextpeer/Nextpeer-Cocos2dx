@@ -44,7 +44,7 @@ static Nextpeer_iOSDelegate* _nextpeer_ios_delegate_instance = nil;
     startData->numberOfPlayers = tournamentContainer.numberOfPlayers;
     
     // Convert the opponents objects
-    CCArray* players = CCArray::createWithCapacity([tournamentContainer.opponents count]);
+    __Array* players = __Array::createWithCapacity([tournamentContainer.opponents count]);
     for (NPTournamentPlayer* player in tournamentContainer.opponents) {
         string playerName([player.playerName UTF8String]);
         string playerId([player.playerId UTF8String]);

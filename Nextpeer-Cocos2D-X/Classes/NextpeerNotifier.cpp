@@ -4,12 +4,10 @@
 //
 
 #include "NextpeerNotifier.h"
-#include "support/CCNotificationCenter.h"
 #include "NextpeerEventQueue.h"
 
 namespace nextpeer
 {
-    
     NextpeerNotifier* NextpeerNotifier::_instance = 0;
 
     NextpeerNotifier* NextpeerNotifier::getInstance()
@@ -22,12 +20,11 @@ namespace nextpeer
     NextpeerNotifier::NextpeerNotifier()
     {
 #ifdef USE_EVENT_QUEUE
-        CCDirector::sharedDirector()->getScheduler()->scheduleSelector(schedule_selector(NextpeerNotifier::queueScheduler), this, 0,
-                                                                       kCCRepeatForever, 0, false);
+        Director::getInstance()->getScheduler()->schedule(schedule_selector(NextpeerNotifier::queueScheduler), this, 0, kRepeatForever, 0, false);
 #endif
     }
     
-    void NextpeerNotifier::queueScheduler()
+    void NextpeerNotifier::queueScheduler(float dt)
     {
         NextpeerEventQueue* queue = NextpeerEventQueue::getInstance();
         unsigned int count = queue->queueSize();
@@ -35,8 +32,8 @@ namespace nextpeer
         if (!count) return;
         
         for (int i = 0; i < count; i++) {
-            pair<string, CCObject*> element = queue->popQueue();
-            CCNotificationCenter::sharedNotificationCenter()->postNotification(element.first.c_str(), element.second);
+            pair<string, Ref*> element = queue->popQueue();
+            __NotificationCenter::getInstance()->postNotification(element.first.c_str(), element.second);
         }
     }
     
@@ -45,7 +42,7 @@ namespace nextpeer
 #ifdef USE_EVENT_QUEUE
         NextpeerEventQueue::getInstance()->addToQueue(string(NEXTPEER_NOTIFICATION_TOURNAMENT_STARTED), tournamentStartData);
 #else
-        CCNotificationCenter::sharedNotificationCenter()->postNotification(NEXTPEER_NOTIFICATION_TOURNAMENT_STARTED, tournamentStartData);
+        __NotificationCenter::getInstance()->postNotification(NEXTPEER_NOTIFICATION_TOURNAMENT_STARTED, tournamentStartData);
 #endif
         
     }
@@ -55,7 +52,7 @@ namespace nextpeer
 #ifdef USE_EVENT_QUEUE
         NextpeerEventQueue::getInstance()->addToQueue(string(NEXTPEER_NOTIFICATION_TOURNAMENT_ENDED), NULL);
 #else
-        CCNotificationCenter::sharedNotificationCenter()->postNotification(NEXTPEER_NOTIFICATION_TOURNAMENT_ENDED, NULL);
+        __NotificationCenter::getInstance()->postNotification(NEXTPEER_NOTIFICATION_TOURNAMENT_ENDED, NULL);
 #endif
     }
     
@@ -64,7 +61,7 @@ namespace nextpeer
 #ifdef USE_EVENT_QUEUE
         NextpeerEventQueue::getInstance()->addToQueue(string(NEXTPEER_NOTIFICATION_INCOMING_DATA_PACKET), data);
 #else
-        CCNotificationCenter::sharedNotificationCenter()->postNotification(NEXTPEER_NOTIFICATION_INCOMING_DATA_PACKET, data);
+        __NotificationCenter::getInstance()->postNotification(NEXTPEER_NOTIFICATION_INCOMING_DATA_PACKET, data);
 #endif
     }
     
@@ -73,7 +70,7 @@ namespace nextpeer
 #ifdef USE_EVENT_QUEUE
         NextpeerEventQueue::getInstance()->addToQueue(string(NEXTPEER_NOTIFICATION_DASHBOARD_WILL_APPEAR), NULL);
 #else
-        CCNotificationCenter::sharedNotificationCenter()->postNotification(NEXTPEER_NOTIFICATION_DASHBOARD_WILL_APPEAR, NULL);
+        __NotificationCenter::getInstance()->postNotification(NEXTPEER_NOTIFICATION_DASHBOARD_WILL_APPEAR, NULL);
 #endif
     }
     
@@ -82,7 +79,7 @@ namespace nextpeer
 #ifdef USE_EVENT_QUEUE
         NextpeerEventQueue::getInstance()->addToQueue(string(NEXTPEER_NOTIFICATION_DASHBOARD_WILL_DISAPPEAR), NULL);
 #else
-        CCNotificationCenter::sharedNotificationCenter()->postNotification(NEXTPEER_NOTIFICATION_DASHBOARD_WILL_DISAPPEAR, NULL);
+        __NotificationCenter::getInstance()->postNotification(NEXTPEER_NOTIFICATION_DASHBOARD_WILL_DISAPPEAR, NULL);
 #endif
     }
     
@@ -91,7 +88,7 @@ namespace nextpeer
 #ifdef USE_EVENT_QUEUE
         NextpeerEventQueue::getInstance()->addToQueue(string(NEXTPEER_NOTIFICATION_DASHBOARD_DID_APPEAR), NULL);
 #else
-        CCNotificationCenter::sharedNotificationCenter()->postNotification(NEXTPEER_NOTIFICATION_DASHBOARD_DID_APPEAR, NULL);
+        __NotificationCenter::getInstance()->postNotification(NEXTPEER_NOTIFICATION_DASHBOARD_DID_APPEAR, NULL);
 #endif
     }
     
@@ -100,7 +97,7 @@ namespace nextpeer
 #ifdef USE_EVENT_QUEUE
         NextpeerEventQueue::getInstance()->addToQueue(string(NEXTPEER_NOTIFICATION_DASHBOARD_DID_DISAPPEAR), NULL);
 #else
-        CCNotificationCenter::sharedNotificationCenter()->postNotification(NEXTPEER_NOTIFICATION_DASHBOARD_DID_DISAPPEAR, NULL);
+        __NotificationCenter::getInstance()->postNotification(NEXTPEER_NOTIFICATION_DASHBOARD_DID_DISAPPEAR, NULL);
 #endif
     }
     
@@ -109,7 +106,7 @@ namespace nextpeer
 #ifdef USE_EVENT_QUEUE
         NextpeerEventQueue::getInstance()->addToQueue(string(NEXTPEER_NOTIFICATION_DASHBOARD_RETURN_TO_GAME), NULL);
 #else
-        CCNotificationCenter::sharedNotificationCenter()->postNotification(NEXTPEER_NOTIFICATION_DASHBOARD_RETURN_TO_GAME, NULL);
+        __NotificationCenter::getInstance()->postNotification(NEXTPEER_NOTIFICATION_DASHBOARD_RETURN_TO_GAME, NULL);
 #endif
     }
 
