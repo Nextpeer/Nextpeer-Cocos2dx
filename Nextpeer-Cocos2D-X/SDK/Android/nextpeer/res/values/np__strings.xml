@@ -21,13 +21,14 @@
     <string name="np__error_message_no_internet_permission_title">Required Permission</string>
 	<string name="np__error_message_no_internet_permission_description">Nextpeer requires internet connection.\nPlease grant INTERNET permission.</string>
 	<string name="np__error_message_no_mail_applications_available">There are no email applications installed on this device. Please send your report to support@nextpeer.com.</string>
+	<string name="np__error_message_package_identifier">Please verify that the package identifier in your AndroidManifest matches the package identifier in the Nextpeer dashboard.</string>
 	
     <!-- Menu / Settings -->
     <string name="np__menu_action_settings">Settings</string>
 	<string name="np__menu_action_change_name">Edit name</string>
 	<string name="np__menu_action_change_avatar">Edit avatar</string>
 	<string name="np__menu_action_fb_logout">Logout</string>
-	<string name="np__menu_action_report_to_support">Report to Support</string>
+	<string name="np__menu_action_report_to_support">Send Feedback</string>
     
     <!-- Dialog - Alert -->
 	<string name="np__dialog_alert_confirm">OK</string>
@@ -159,6 +160,7 @@
 	<string name="np__current_matches_score_unknown">\?</string>
 	<string name="np__current_matches_on_going_not_available">There aren\'t any on-going matches.\nCreate one by inviting your friends!</string>
 	<string name="np__current_matches_past_not_available">There aren\'t any past matches</string>
+	<string name="np__current_matches_updating_user_profle">Updating&#8230;</string>
 	
 	<!-- Facebook -->  
 	<string name="np__facebook_loginview_log_out_button">Log Out</string>
