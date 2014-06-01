@@ -190,6 +190,7 @@
 		
 				</RelativeLayout>
 			</RelativeLayout>
+			
 		</RelativeLayout>
 		
 		<RelativeLayout
@@ -205,6 +206,23 @@
 
 		</RelativeLayout>
 		
+		<RelativeLayout
+            android:id="@+id/np__home_logo_container"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+		    android:layout_below="@+id/np__home_extra_buttons_container"
+		    android:layout_centerHorizontal="true"
+	        android:layout_marginTop="@dimen/np__home_content_padding">
+			   
+			 <ImageView
+			     android:id="@+id/np__home_logo_container_logo"
+			     android:layout_width="wrap_content"
+			     android:layout_height="wrap_content"
+			     android:layout_centerInParent="true"
+			     android:contentDescription="@string/np__application_name"
+			     android:src="@drawable/np__ic_home_nextpeer_logo" />
+		</RelativeLayout>
+		
 		<!-- If the widgets overflow and we scroll, we need this whitespace at the bottom. -->
 		<RelativeLayout
 		    android:layout_width="match_parent"
@@ -214,7 +232,7 @@
 	   		android:layout_centerVertical="true"
 	 		android:orientation="horizontal"
 	            android:id="@+id/np__home_bottom_padding"
-			    android:layout_below="@+id/np__home_extra_buttons_container">
+			    android:layout_below="@+id/np__home_logo_container">
 
 		</RelativeLayout>
 	</RelativeLayout>
