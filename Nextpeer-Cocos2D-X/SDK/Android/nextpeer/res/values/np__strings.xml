@@ -134,9 +134,6 @@
 	<string name="np__invite_fb_friends_log_in_failed_alert_error_description">Failed to log in to Facebook, please check your connection and try again.</string>
 	<string name="np__invite_fb_friends_fetch_failed_alert_error_description">Failed to find your Facebook friends, please check your connection and try again.</string>
 	<string name="np__invite_fb_friends_fetching_action_description">Finding your friends</string>
-	<string name="np__invite_fb_friends_no_active_friends_dialog_title">Invite your friends</string>
-	<string name="np__invite_fb_friends_no_active_friends_dialog_description">None of your Facebook friends are currently playing %1$s.\nWhy not let them know?</string>
-	<string name="np__invite_fb_friends_no_active_friends_dialog_positive">Share!</string>
 	<string name="np__invite_fb_friends_no_active_friends_dialog_negative">Not now</string>
 	<string name="np__invite_fb_friends_limit_passed__dialog_description">You can invite only %d friends to a match</string>
 	<string name="np__invite_fb_friends_start_game_button">Start</string>

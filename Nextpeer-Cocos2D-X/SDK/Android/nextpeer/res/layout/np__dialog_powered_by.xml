@@ -2,14 +2,14 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:background="@color/np__grey_dark"
+	android:background="@color/np__powered_by_background"
     android:orientation="vertical" >
 	
     <LinearLayout
         android:id="@+id/np__powered_by_dialog_game_container"
 	    android:layout_width="wrap_content"
 	    android:layout_height="wrap_content"
-	    android:background="@color/np__grey_dark"
+        android:background="@null" 
 	    android:orientation="horizontal"
 	    android:layout_margin="@dimen/np__powered_by_dialog_margin"
         android:layout_gravity="center_horizontal">
@@ -19,6 +19,7 @@
 	        android:contentDescription="@string/np__application_name"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
+       		android:background="@null" 
 	        android:layout_gravity="center_vertical"
 	       	android:src="@drawable/np__ic_nextpeer"/>
 	    
@@ -26,7 +27,8 @@
 	        android:id="@+id/np__powered_by_dialog_game_name"
 	        style="@style/NP__.DialogWindowTitle.PoweredBy"
 	        android:textAppearance="@style/NP__.TextAppearance.Large"
-	        android:textColor="@color/np__white"
+	        android:textColor="@color/np__grey_dark"
+      		android:background="@null" 
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
 	        android:layout_gravity="center_vertical"
@@ -46,6 +48,7 @@
         android:id="@+id/np__powered_by_dialog_logo"
         style="@style/NP__.DialogWindowTitle.PoweredBy"
         android:contentDescription="@string/np__application_name"
+        android:background="@null" 
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
@@ -54,6 +57,8 @@
     <TextView
         android:id="@+id/np__powered_by_dialog_title"
         style="@style/NP__.DialogWindowTitle.PoweredBy"
+        android:background="@null" 
+	        android:textColor="@color/np__grey_dark"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"

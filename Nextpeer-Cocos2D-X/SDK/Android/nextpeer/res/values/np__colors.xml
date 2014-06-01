@@ -65,4 +65,6 @@
     <color name="np__invite_fb_friends_button_add_selected">#355189</color>
     <color name="np__invite_fb_friends_button_invited">#FE7830</color>
     <color name="np__invite_fb_friends_button_invited_selected">#E46C2B</color>
+    
+    <color name="np__powered_by_background">#DCDCDC</color>
 </resources>
