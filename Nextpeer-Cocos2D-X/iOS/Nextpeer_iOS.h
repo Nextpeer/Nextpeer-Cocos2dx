@@ -133,6 +133,21 @@ namespace nextpeer {
          Call this method to fast forwad the given recording by timeDelta milliseconds.
          */
         virtual void requestFastForwardRecording(const char* recordingPlayerId, uint32_t timeDelta);
+        
+        /**
+         Registers to a synchronized event.
+         
+         A synchronized event can be used to synchronize all players at a particular point in the game. For example, at the beginning of the game, each client may need to load resources, which takes variable time, depending on the player's device. The event will be fired (see [NPTournamentDelegate nextpeerDidReceiveSynchronizedEvent:withReason:]) either when everyone registered for it, or after the specified timeout, and all players will receive it at the same time.
+         
+         When working with synchronized events, you should be aware of the following edge cases:
+         1. Clients who are too late to register to an event will not be notified of the event until they register.
+         2. Recordings will pause when they register to an event that wasn't registered to by a real player, and will wait until the event is fired due the registration of a live player(s).
+         3. Recordings that are late to register to an event will behave just as regular clients, and will continue their playback as usual.
+         
+         @param eventName The name of the synchronization event to register to.
+         @param timeout The maximum amount of time to wait for all other participants to register for the sync event.
+         */
+        virtual void registerToSynchronizedEvent(const char* eventName, uint32_t timeout);
     };
 }
 

@@ -140,5 +140,11 @@ JNIEXPORT bool JNICALL Java_com_nextpeer_android_NextpeerCocos2DX_onSupportsTour
     return NextpeerTournamentSupport::getInstance()->isTournamentSupported(uuid);
 }
 
+JNIEXPORT void JNICALL Java_com_nextpeer_android_NextpeerCocos2DX_onReceiveSynchronizedEventNative(JNIEnv* env, jobject caller, jstring name, jobject fireReason) {
+    
+    string eventName = cocos2d::JniHelper::jstring2string(name);
+
+    NextpeerNotifier::getInstance()->broadcastReceiveSynchronizedEvent(CCString::create(eventName));
+}
 
 #endif

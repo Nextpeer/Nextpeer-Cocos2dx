@@ -29,6 +29,7 @@ extern "C" {
 	JNIEXPORT void JNICALL Java_com_nextpeer_android_NextpeerCocos2DX_onNextpeerDisappearNative(JNIEnv* env, jobject caller);
 	JNIEXPORT void JNICALL Java_com_nextpeer_android_NextpeerCocos2DX_onNextpeerReturnToGameNative(JNIEnv* env, jobject caller);
     JNIEXPORT bool JNICALL Java_com_nextpeer_android_NextpeerCocos2DX_onSupportsTournamentNative(JNIEnv* env, jobject caller, jstring tournamentUuid);
+	JNIEXPORT void JNICALL Java_com_nextpeer_android_NextpeerCocos2DX_onReceiveSynchronizedEventNative(JNIEnv* env, jobject caller, jstring name, jobject fireReason);
 }
 #endif
 

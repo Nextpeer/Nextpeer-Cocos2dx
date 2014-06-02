@@ -59,6 +59,15 @@ namespace nextpeer
 #endif
     }
     
+    void NextpeerNotifier::broadcastReceiveSynchronizedEvent(CCString* eventName)
+    {
+#ifdef USE_EVENT_QUEUE
+        NextpeerEventQueue::getInstance()->addToQueue(string(NEXTPEER_NOTIFICATION_RECEIVE_SYNCHRONIZED_EVENT), eventName);
+#else
+        CCNotificationCenter::sharedNotificationCenter()->postNotification(NEXTPEER_NOTIFICATION_RECEIVE_SYNCHRONIZED_EVENT, eventName);
+#endif
+    }
+    
     void NextpeerNotifier::broadcastIncomingTournamentDataPacket(TournamentP2PData* data)
     {
 #ifdef USE_EVENT_QUEUE
@@ -112,6 +121,5 @@ namespace nextpeer
         CCNotificationCenter::sharedNotificationCenter()->postNotification(NEXTPEER_NOTIFICATION_DASHBOARD_RETURN_TO_GAME, NULL);
 #endif
     }
-
 };
 

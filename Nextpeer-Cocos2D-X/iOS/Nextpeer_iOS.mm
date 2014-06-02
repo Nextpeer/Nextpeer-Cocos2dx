@@ -188,4 +188,13 @@ namespace nextpeer
         [Nextpeer requestFastForwardRecording:playerId withTimeDelta:timeDelta];
 #endif
     }
+    
+    
+    void Nextpeer_iOS::registerToSynchronizedEvent(const char* eventName, uint32_t timeout)
+    {
+#if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
+        NSString* event = [NSString stringWithUTF8String:eventName];
+        [Nextpeer registerToSynchronizedEvent:event withTimetout:timeout];
+#endif
+    }
 }

@@ -14,11 +14,15 @@ namespace nextpeer {
     {
     public:
         static NextpeerNotifier* getInstance();
+        
         // Generic
         void broadcastTournamentStarted(TournamentStartData* tournamentStartData);
         void broadcastTournamentEnded();
+        void broadcastReceiveSynchronizedEvent(CCString* eventName);
+        
         // Tournament specific
         void broadcastIncomingTournamentDataPacket(TournamentP2PData* data);
+        
         // Dashboard notifications
         void broadcastDashboardWillAppear();
         void broadcastDashboardWillDisappear();
