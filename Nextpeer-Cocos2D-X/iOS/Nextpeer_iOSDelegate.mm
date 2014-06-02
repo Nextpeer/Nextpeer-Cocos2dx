@@ -102,7 +102,7 @@ static Nextpeer_iOSDelegate* _nextpeer_ios_delegate_instance = nil;
     NextpeerNotifier::getInstance()->broadcastDashboardNextpeerReturnToGame();
 }
 
--(void)nextpeerDidReceiveSynchronizedEvent:(NSString*)eventName withReason:(NPSynchronizationEventFireReason)fireReason {
+-(void)nextpeerDidReceiveSynchronizedEvent:(NSString*)eventName withReason:(NPSynchronizedEventFireReason)fireReason {
     
     string event([eventName UTF8String]);
     NextpeerNotifier::getInstance()->broadcastReceiveSynchronizedEvent(__String::create(event));
