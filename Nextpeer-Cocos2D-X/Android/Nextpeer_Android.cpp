@@ -295,5 +295,20 @@ namespace nextpeer {
         env->DeleteLocalRef(playerId);
 #endif
     }
+    
+    void Nextpeer_Android::registerToSynchronizedEvent(const char* eventName, uint32_t timeout)
+    {
+#if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
+        JNIEnv* env = NULL;
+        if (!Nextpeer_AndroidJNIHelper::getEnv(&env)) return;
+        
+        jstring event = (jstring)env->NewStringUTF(eventName);
+        jint syncTimeout = (jint)(timeout > INT_MAX ? INT_MAX : timeout);
+        
+        callStaticVoidMethod("registerToSynchronizedEvent", "(Ljava/lang/String;I)V", event, syncTimeout);
+        
+        env->DeleteLocalRef(event);
+#endif
+    }
 } // namespace nextpeer
 

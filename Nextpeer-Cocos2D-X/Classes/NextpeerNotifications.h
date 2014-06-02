@@ -16,6 +16,8 @@ USING_NS_CC;
 // Notifications
 #define NEXTPEER_NOTIFICATION_TOURNAMENT_STARTED "nextpeer_tournament_started"
 #define NEXTPEER_NOTIFICATION_TOURNAMENT_ENDED "nextpeer_tournament_ended"
+#define NEXTPEER_NOTIFICATION_RECEIVE_SYNCHRONIZED_EVENT "nextpeer_receive_synchronized_event"
+
 #define NEXTPEER_NOTIFICATION_INCOMING_DATA_PACKET "nextpeer_incoming_data_packet"
 #define NEXTPEER_NOTIFICATION_DASHBOARD_DID_APPEAR "nextpeer_dashboard_did_appear"
 #define NEXTPEER_NOTIFICATION_DASHBOARD_DID_DISAPPEAR "nextpeer_dashboard_did_disappear"

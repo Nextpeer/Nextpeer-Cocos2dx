@@ -56,6 +56,15 @@ namespace nextpeer
 #endif
     }
     
+    void NextpeerNotifier::broadcastReceiveSynchronizedEvent(__String* eventName)
+    {
+#ifdef USE_EVENT_QUEUE
+        NextpeerEventQueue::getInstance()->addToQueue(string(NEXTPEER_NOTIFICATION_RECEIVE_SYNCHRONIZED_EVENT), eventName);
+#else
+        __NotificationCenter::getInstance()->postNotification(NEXTPEER_NOTIFICATION_RECEIVE_SYNCHRONIZED_EVENT, eventName);
+#endif
+    }
+    
     void NextpeerNotifier::broadcastIncomingTournamentDataPacket(TournamentP2PData* data)
     {
 #ifdef USE_EVENT_QUEUE
