@@ -1,17 +1,17 @@
 #import "NPTournamentContainers.h"
 
 /**
- The reason for firing a sync event.
+ The reason for firing a synchronized event.
  */
-typedef NS_ENUM(int, NPSynchronizationEventFireReason) {
+typedef NS_ENUM(int, NPSynchronizedEventFireReason) {
     /// All participants have registered for the event.
-    NPSynchronizationEventFireReasonAllReached = 1,
+    NPSynchronizedEventFireReasonAllReached = 1,
     
     /// The registration timeout was reached before all participants registered for the event (at least one participant didn't register for the event).
-    NPSynchronizationEventFireReasonTimeout,
+    NPSynchronizedEventFireReasonTimeout,
     
-    /// The sync event was already fired before the latest registration attempt was made.
-    NPSynchronizationEventFireReasonAlreadyFired
+    /// The synchronized event was already fired before the latest registration attempt was made.
+    NPSynchronizedEventFireReasonAlreadyFired
 };
 
 /**
@@ -44,5 +44,15 @@ typedef NS_ENUM(int, NPSynchronizationEventFireReason) {
  as the platform retrieving the last result of each player.
  */
 -(void)nextpeerDidReceiveTournamentResults:(NPTournamentEndDataContainer*)tournamentContainer;
+
+/**
+ Tells the delegate that the synchronized event was fired.
+ 
+ The event will only be fired if you registered for it beforehand with [Nextpeer registerToSynchronizedEvent:withTimetout:].
+ 
+ @param eventName The event that was fired.
+ @param fireReason The reason for firing the synchronized event.
+ */
+-(void)nextpeerDidReceiveSynchronizedEvent:(NSString*)eventName withReason:(NPSynchronizedEventFireReason)fireReason;
 
 @end

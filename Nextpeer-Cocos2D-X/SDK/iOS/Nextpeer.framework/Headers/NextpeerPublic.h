@@ -89,10 +89,12 @@ typedef enum {
 + (void)dismissDashboard;
 
 /**
+ @deprecated This method no longer has any effect. Please use the NextpeerSettingNotificationOrientation and NextpeerSettingObserveNotificationOrientationChange keys in NextpeerSettings.h.
+ 
  Call this method when you wish to change the notification orientation in run time.
  It's preferable to use the settings dictionary if you wish to set this up at start-time.
  */
-+ (void)setNotificationOrientation:(UIInterfaceOrientation)orientation;
++ (void)setNotificationOrientation:(UIInterfaceOrientation)orientation DEPRECATED_ATTRIBUTE;
 
 /**
  Let the platform handle a url request, this will used when the Facebook App redirects to the app during the SSO process.

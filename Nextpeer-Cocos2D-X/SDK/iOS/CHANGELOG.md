@@ -1,7 +1,13 @@
+1.6.10
+======
+
+* Bug fixes.
+
 1.6.9
 =====
 
 * Bug fixes and usability improvements.
+* Removed welcome banner from the SDK.
 
 1.6.8
 =====
