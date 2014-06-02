@@ -14,7 +14,7 @@ extern NSString* NextpeerSettingDisplayName;
 
  Default: auto-selection of the orientation depending on the integrated bundle.
 
- Defines what orientation the game notification (and the in-game ranking display) should appear by default. The notification system does not auto rotate (unless NextpeerSettingObserveNotificationOrientationChange is specified as YES).
+ Defines what orientation the the in-game ranking display should appear in by default. The notification system does not auto rotate (unless NextpeerSettingObserveNotificationOrientationChange is specified as YES).
  */
 extern NSString* NextpeerSettingNotificationOrientation;
 
@@ -24,9 +24,7 @@ extern NSString* NextpeerSettingNotificationOrientation;
 
  Default: NO
 
- Defines if Nextpeer should observe notification orientation change and adjust the in-game notifications according to changes (including in-game ranking display).
- For example, if your game supports Landcape orientation, Default UIInterfaceOrientationLandscapeRight, you can verify that even if the user
- changes the orientation (in-game) to UIInterfaceOrientationLandscapeLeft the notification orientation will adjust itself.
+ Defines if Nextpeer should observe notification orientation change and adjust the in-game ranking display accordingly. For example, if your game supports both Landscape Right and Landscape Left rotations, you can set this setting to YES, so that the in-game ranking display will follow the orientation of the game.
  */
 extern NSString* NextpeerSettingObserveNotificationOrientationChange;
 
