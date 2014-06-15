@@ -9,7 +9,11 @@
 #pragma mark NPTournamentCustomMessageBaseContainer
 #pragma mark -
 
+/**
+ The base class for the reliable and unreliable custom message containers.
+ */
 @interface NPTournamentCustomMessageBaseContainer : NSObject
+
 /// The player name.
 @property (nonatomic, readonly) NSString* playerName;
 

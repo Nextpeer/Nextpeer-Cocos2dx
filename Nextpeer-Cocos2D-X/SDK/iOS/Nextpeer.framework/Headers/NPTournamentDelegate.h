@@ -40,7 +40,7 @@ typedef NS_ENUM(int, NPSynchronizedEventFireReason) {
 /**
  This method is invoked whenever the current tournament has finished
  and the platform gathered the information from all the players.
- It might take some time between the call to NextpeerDelegate::nextpeerDidTournamentEnd to this,
+ It might take some time between the call to [NextpeerDelegate nextpeerDidTournamentEnd] to this,
  as the platform retrieving the last result of each player.
  */
 -(void)nextpeerDidReceiveTournamentResults:(NPTournamentEndDataContainer*)tournamentContainer;

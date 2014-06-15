@@ -1,8 +1,5 @@
 /**
- 
- IMPORTRANT NOTE:
-
- This delegate should only be implemented by games that have UNIFIED virtual currency with Nextpeer.
+ @warning This delegate should only be implemented by games that have UNIFIED virtual currency with Nextpeer.
  This means that the game is the one that stores the amount of currency a player and Nextpeer
  manipulates this number using this delegate.
  */
