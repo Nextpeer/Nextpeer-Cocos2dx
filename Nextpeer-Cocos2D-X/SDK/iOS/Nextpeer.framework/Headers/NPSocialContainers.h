@@ -11,7 +11,7 @@
  */
 @interface NPGamePlayerContainer : NSObject 
 
-/// The player Id.
+/// The player ID.
 @property (nonatomic, readonly) NSString* playerId;
 
 /// The player name.

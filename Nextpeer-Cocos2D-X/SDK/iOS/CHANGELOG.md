@@ -1,3 +1,15 @@
+1.7.1
+=====
+
+* Added reference documentation - see the 'doc' subfolder.
+* Bugfix: removed unwanted status bar appearance on iOS 7.
+
+1.7.0
+=====
+
+* Added synchronized events for synchronizing players (for example, at game start). Please see [Nextpeer registerToSynchronizedEvent:withTimetout:] and [NPTournamentDelegate nextpeerDidReceiveSynchronizedEvent:withReason:], as well as the iOS Developer's Guide.
+* Bug fixes and performance improvements.
+
 1.6.10
 ======
 
