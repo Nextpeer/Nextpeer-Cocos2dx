@@ -69,19 +69,20 @@
 	
 	<!-- Tournament - Selection -->
 	<string name="np__tournament_selection_title">Select a Tournament</string>
+	<string name="np__tournament_selection_not_available">There aren\'t any available tournaments.\nPlease download the latest version of the game!</string>
 		
 	<!-- Tournament - Loading -->
-	<string name="np__tournament_loading_loading_bar_title_connecting">Connecting&#8230;</string>
 	<string name="np__tournament_loading_this_is_you_label">THIS IS YOU</string>
 	
 	<!-- Tournament - Loading Random-->
 	<string name="np__tournament_loading_random_title">Loading Tournament</string>
-	<string name="np__tournament_loading_random_loading_bar_title_zero">Searching for players</string>
-	<string name="np__tournament_loading_random_loading_bar_title_one">Found one player</string>
-	<string name="np__tournament_loading_random_loading_bar_title_many">Found %d players</string>
+	<string name="np__tournament_loading_random_loading_bar_title_zero">Searching for the perfect match</string>
+	<string name="np__tournament_loading_random_loading_bar_title_one">Found one opponent</string>
+	<string name="np__tournament_loading_random_loading_bar_title_many">Found %d opponents</string>
 	
 	<!-- Tournament - Loading Friends-->
 	<string name="np__tournament_loading_friends_title">Loading Match</string>
+	<string name="np__tournament_loading_friends_loading_bar_title_connecting">Connecting&#8230;</string>
 	<string name="np__tournament_loading_friends_loading_bar_title_zero">Waiting for your friends</string>
 	<string name="np__tournament_loading_friends_loading_bar_title_one">Found one friend</string>
 	<string name="np__tournament_loading_friends_loading_bar_title_many">Found %d friends</string>
