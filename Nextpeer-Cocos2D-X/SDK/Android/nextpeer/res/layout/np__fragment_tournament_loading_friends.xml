@@ -84,7 +84,7 @@
             android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
             style="@style/NP__.TournamentLoading.Loading.Text"
-            android:text="@string/np__tournament_loading_loading_bar_title_connecting" />
+            android:text="@string/np__tournament_loading_friends_loading_bar_title_connecting" />
         
         <ProgressBar
             android:id="@+id/np__tournament_loading_friends_loading_bar_progressbar"

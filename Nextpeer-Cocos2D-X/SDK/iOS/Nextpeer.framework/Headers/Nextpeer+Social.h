@@ -20,7 +20,7 @@
 /**
  Use this method to retrieve the current player details such as name and image.
  
- @note If the user never opened Nextpeer's dashboard or Nextpeer was not initialized the method will return NIL.
+ @note If the user never opened Nextpeer's dashboard or Nextpeer was not initialized the method will return nil.
  */
 + (NPGamePlayerContainer *)getCurrentPlayerDetails;
 
