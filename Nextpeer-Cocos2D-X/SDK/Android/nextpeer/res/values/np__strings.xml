@@ -20,7 +20,7 @@
     <string name="np__error_message_disconnect_from_the_room_description">The connection has timed out. Please check your connection and try again.\nContact us if this issue persists.</string>
     <string name="np__error_message_no_internet_permission_title">Required Permission</string>
 	<string name="np__error_message_no_internet_permission_description">Nextpeer requires internet connection.\nPlease grant INTERNET permission.</string>
-	<string name="np__error_message_no_mail_applications_available">There are no email applications installed on this device. Please send your report to support@nextpeer.com.</string>
+	<string name="np__error_message_no_mail_applications_available">There are no email applications installed on this device. Please send your report to userfeedback@nextpeer.com.</string>
 	<string name="np__error_message_package_identifier">Please verify that the package identifier in your AndroidManifest matches the package identifier in the Nextpeer dashboard.</string>
 	
     <!-- Menu / Settings -->
