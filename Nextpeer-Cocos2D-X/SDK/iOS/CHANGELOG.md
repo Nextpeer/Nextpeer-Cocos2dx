@@ -1,6 +1,14 @@
+1.7.3
+=====
+
+* Bugfix: made unreliable message channel more robust in face of network errors.
+
 1.7.2
 =====
-* Share Moments!
+
+* __Minimum supported iOS version is now 6.0!__
+* Share moments - at the end of the game, the player will be able to share their in-game moments on Gamestream.
+* Networking bug fixes.
 
 1.7.1
 =====
