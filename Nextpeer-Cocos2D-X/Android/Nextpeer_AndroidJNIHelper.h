@@ -6,7 +6,7 @@
 #ifndef __NextpeerAndroidJNIHelper__
 #define __NextpeerAndroidJNIHelper__
 
-#include "CCPlatformConfig.h"
+#include "base/CCPlatformConfig.h"
 
 #ifndef CC_TARGET_PLATFORM
 #error "CC_TARGET_PLATFORM should be defined!!!"
