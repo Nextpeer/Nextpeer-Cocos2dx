@@ -79,6 +79,7 @@ namespace nextpeer
     
     void NextpeerNotifier::broadcastDashboardWillAppear()
     {
+        cocos2d::CCDirector::sharedDirector()->pause();
 #ifdef USE_EVENT_QUEUE
         NextpeerEventQueue::getInstance()->addToQueue(string(NEXTPEER_NOTIFICATION_DASHBOARD_WILL_APPEAR), NULL);
 #else
@@ -88,6 +89,7 @@ namespace nextpeer
     
     void NextpeerNotifier::broadcastDashboardWillDisappear()
     {
+        cocos2d::CCDirector::sharedDirector()->resume();
 #ifdef USE_EVENT_QUEUE
         NextpeerEventQueue::getInstance()->addToQueue(string(NEXTPEER_NOTIFICATION_DASHBOARD_WILL_DISAPPEAR), NULL);
 #else
