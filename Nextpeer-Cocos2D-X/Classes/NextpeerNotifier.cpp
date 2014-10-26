@@ -5,7 +5,6 @@
 
 #include "NextpeerNotifier.h"
 #include "NextpeerEventQueue.h"
-
 namespace nextpeer
 {
     NextpeerNotifier* NextpeerNotifier::_instance = 0;
@@ -76,6 +75,9 @@ namespace nextpeer
     
     void NextpeerNotifier::broadcastDashboardWillAppear()
     {
+        auto director = Director::getInstance();
+        director->pause();
+        
 #ifdef USE_EVENT_QUEUE
         NextpeerEventQueue::getInstance()->addToQueue(string(NEXTPEER_NOTIFICATION_DASHBOARD_WILL_APPEAR), NULL);
 #else
@@ -85,6 +87,9 @@ namespace nextpeer
     
     void NextpeerNotifier::broadcastDashboardWillDisappear()
     {
+        auto director = Director::getInstance();
+        director->resume();
+        
 #ifdef USE_EVENT_QUEUE
         NextpeerEventQueue::getInstance()->addToQueue(string(NEXTPEER_NOTIFICATION_DASHBOARD_WILL_DISAPPEAR), NULL);
 #else
