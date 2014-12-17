@@ -1,12 +1,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.nextpeer.android"
     android:versionCode="1"
-    android:versionName="1.4.7" >
+    android:versionName="1.5.0" >
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />   
-
+    
     <uses-sdk android:minSdkVersion="8" />
 
     <application
@@ -24,10 +23,6 @@
         
         <service android:name="com.nextpeer.android.NextpeerPushService" />
         <receiver android:name="com.nextpeer.android.NextpeerBroadcastReceiver">
-            <intent-filter>
-                <action android:name="android.intent.action.BOOT_COMPLETED" />
-                <action android:name="android.intent.action.USER_PRESENT" />
-            </intent-filter>
         </receiver>
     </application>
 
