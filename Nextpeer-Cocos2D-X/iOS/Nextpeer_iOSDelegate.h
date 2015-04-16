@@ -8,7 +8,7 @@
 
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
 
-#import "CCPlatformConfig.h"
+#import "platform/CCPlatformConfig.h"
 #import "Nextpeer/Nextpeer.h"
 
 
