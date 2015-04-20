@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/np__buddy_list_item_container"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/np__buddies_list_item_height"
+    android:background="@drawable/np__shadowed_rounded_corner_white_background"
+    android:orientation="horizontal" >
+
+    <com.nextpeer.android.open.ui.NPCircularImageView
+        android:id="@+id/np__buddies_list_item_picture"
+        android:layout_width="@dimen/np__buddies_list_profile_picture_default_size"
+        android:layout_height="@dimen/np__buddies_list_profile_picture_default_size"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="@dimen/np__buddies_list_item_content_margin"
+        android:layout_marginStart="@dimen/np__buddies_list_item_content_margin"
+        android:src="@drawable/np__ic_default_player_profile"
+        app:np__image_border="true"
+        app:np__image_borderColor="@color/np__buddies_list_profile_picture_border_line_color"
+        app:np__image_borderWidth="@dimen/np__buddies_list_profile_picture_border_line_size"
+        app:np__image_shadow="false" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center_vertical"
+        android:layout_marginEnd="@dimen/np__buddies_list_item_content_margin"
+        android:layout_marginLeft="@dimen/np__buddies_list_item_content_margin"
+        android:layout_marginRight="@dimen/np__buddies_list_item_content_margin"
+        android:layout_marginStart="@dimen/np__buddies_list_item_content_margin"
+        android:layout_toLeftOf="@+id/np__buddies_list_item_flag"
+        android:layout_toRightOf="@+id/np__buddies_list_item_picture"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/np__buddies_list_item_name"
+            style="@style/NP__.Buddies.Item.Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/np__buddies_list_item_new_friend_lable"
+            style="@style/NP__.Buddies.Item.NewFriendLable.Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/np__buddies_list_item_flag"
+        android:layout_width="@dimen/np__buddies_search_users_list_flag_width"
+        android:layout_height="@dimen/np__buddies_search_users_list_flag_height"
+        android:layout_alignWithParentIfMissing="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center_vertical"
+        android:layout_marginEnd="@dimen/np__buddies_list_button_right_margin"
+        android:layout_marginRight="@dimen/np__buddies_list_button_right_margin"
+        android:layout_toLeftOf="@+id/np__buddies_list_item_button"
+        android:background="@drawable/np__ic_flag_default" />
+
+    <com.nextpeer.android.open.ui.NPButton
+        android:id="@+id/np__buddies_list_item_button"
+        style="@style/NP__.Buddies.Button"
+        android:layout_width="@dimen/np__buddies_list_button_width"
+        android:layout_height="@dimen/np__buddies_list_button_height"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center_vertical"
+        android:layout_marginEnd="@dimen/np__buddies_list_button_right_margin"
+        android:layout_marginRight="@dimen/np__buddies_list_button_right_margin"
+        android:focusable="false" />
+
+</RelativeLayout>

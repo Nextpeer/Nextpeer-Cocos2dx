@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@null" >
+
+    <ListView
+        android:id="@+id/np__game_stream_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        style="@style/NP__.Widget.ListView"   
+        android:dividerHeight="0dp" />
+
+    <TextView
+        android:id="@+id/np__game_stream_new_stories_available"
+        style="@style/NP__.GameStream.NewStories.Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/np__gamestream_new_stories_background"
+        android:drawableLeft="@drawable/np__ic_gamestream_new_stories"
+        android:drawablePadding="@dimen/np__game_stream_new_stories_padding"
+        android:drawableStart="@drawable/np__ic_gamestream_new_stories"
+        android:padding="@dimen/np__game_stream_new_stories_padding"
+        android:layout_marginTop="@dimen/np__game_stream_new_stories_top_margin"
+        android:visibility="gone" />
+
+</FrameLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/np__game_stream_content_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@null">
+
+    <com.nextpeer.android.open.ui.NPImageView
+        android:id="@+id/np__game_stream_item_content_picture"
+        style="@style/NP__.GameStream.Item.Header.Image"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/np__game_stream_item_content_image_height"
+        android:adjustViewBounds="true" 
+        android:scaleType="centerCrop"/>
+    
+</RelativeLayout>

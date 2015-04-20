@@ -106,12 +106,8 @@ namespace nextpeer {
 	}
 
 	uint32_t Nextpeer_Android::timeLeftInTournament()
-	{
-#if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
-		return callStaticIntMethod("timeLeftForTournament", "()I");
-#else
-		return 0;
-#endif
+    {
+        return 0;
 	}
 
 	bool Nextpeer_Android::isCurrentlyInTournament()

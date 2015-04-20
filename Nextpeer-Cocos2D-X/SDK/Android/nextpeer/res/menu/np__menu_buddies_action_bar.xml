@@ -1,0 +1,15 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" >
+
+    <item
+        android:id="@+id/np__buddies_action_bar_search_button"
+        android:icon="@drawable/np__ic_buddies_search"
+        android:showAsAction="ifRoom"
+        android:title=""/>
+    <item
+        android:id="@+id/np__buddies_action_bar_invite_friends_button"
+        android:icon="@drawable/np__ic_buddies_action_bar_invite_buddies"
+        android:showAsAction="ifRoom"
+        android:title=""/>
+
+</menu>

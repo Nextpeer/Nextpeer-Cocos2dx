@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/np__report_player_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/np__report_player_dialog_transparent_stroke_padding" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/np__rounded_corner_white_background"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/np__report_player_dialog_padding"
+            android:paddingLeft="@dimen/np__report_player_dialog_padding"
+            android:paddingRight="@dimen/np__report_player_dialog_padding"
+            android:paddingTop="@dimen/np__report_player_dialog_padding_top" >
+
+            <TextView
+                android:id="@+id/np__report_player_action_bar_title"
+                style="@style/NP__.ReportPlayer.Title.Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/np__report_player_description"
+                style="@style/NP__.ReportPlayer.Description.Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/np__report_player_button_top_margin"
+                android:gravity="center"
+                android:text="@string/np__application_name" />
+
+            <ListView
+                android:id="@+id/np__report_player_buttons_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/np__report_player_buttons_list_divider_size"
+                android:divider="@null"
+                android:dividerHeight="@dimen/np__report_player_buttons_list_divider_size" >
+            </ListView>
+        </LinearLayout>
+    </FrameLayout>
+
+    <ImageButton
+        android:id="@+id/np__report_player_close_button"
+        style="@style/NP__.Widget.ImageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|top"
+        android:src="@drawable/np__ic_close_window" />
+
+</FrameLayout>

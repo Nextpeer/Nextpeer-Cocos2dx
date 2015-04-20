@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/np__more_profile_list_item_container"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/np__more_list_item_content_height"
+    android:background="@color/np__white"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingBottom="@dimen/np__more_list_item_top_bottom_padding"
+    android:paddingLeft="@dimen/np__more_list_item_left_right_padding"
+    android:paddingRight="@dimen/np__more_list_item_left_right_padding"
+    android:paddingTop="@dimen/np__more_list_item_top_bottom_padding"
+    android:clickable="true" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:gravity="center_vertical" >
+
+        <com.nextpeer.android.open.ui.NPCircularImageView
+            android:id="@+id/np__more_list_item_picture"
+            android:layout_width="@dimen/np__more_list_item_profile_picture_size"
+            android:layout_height="@dimen/np__more_list_item_profile_picture_size"
+            android:layout_marginLeft="@dimen/np__more_list_item_content_left_margin"
+            android:layout_marginStart="@dimen/np__more_list_item_content_left_margin"
+            android:src="@drawable/np__ic_default_player_profile"
+            app:np__image_border="true"
+            app:np__image_borderColor="@color/np__palette_dark_blue"
+            app:np__image_borderWidth="@dimen/np__profile_picture_border_line_size"
+            app:np__image_shadow="false" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" 
+            android:layout_marginLeft="@dimen/np__more_list_item_content_left_margin"
+            android:layout_marginStart="@dimen/np__more_list_item_content_left_margin" >
+
+            <TextView
+                android:id="@+id/np__more_profile_name"
+                style="@style/NP__.More.Item.Profile.Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" 
+                android:text="@string/np__application_name"/>
+            
+            <TextView
+                android:id="@+id/np__more_profile_moto"
+                style="@style/NP__.More.Item.Profile.Motto.Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" 
+                android:text="@string/np__application_name"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

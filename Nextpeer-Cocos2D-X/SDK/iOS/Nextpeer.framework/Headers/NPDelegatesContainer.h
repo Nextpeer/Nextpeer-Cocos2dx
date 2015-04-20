@@ -1,20 +1,17 @@
 #import "NextpeerDelegate.h"
-#import "NPNotificationDelegate.h"
 #import "NPTournamentDelegate.h"
-#import "NPCurrencyDelegate.h"
+#import "NPFacebookBridgeDelegate.h"
 
 @interface NPDelegatesContainer : NSObject
 
 #if __has_feature(objc_arc)
 @property (nonatomic, weak) id<NextpeerDelegate> nextpeerDelegate;
-@property (nonatomic, weak) id<NPNotificationDelegate> notificationDelegate;
 @property (nonatomic, weak) id<NPTournamentDelegate> tournamentDelegate;
-@property (nonatomic, weak) id<NPCurrencyDelegate> currencyDelegate;
+@property (nonatomic, weak) id<NPFacebookBridgeDelegate> facebookBridgeDelegate;
 #else
 @property (nonatomic, assign) id<NextpeerDelegate> nextpeerDelegate;
-@property (nonatomic, assign) id<NPNotificationDelegate> notificationDelegate;
 @property (nonatomic, assign) id<NPTournamentDelegate> tournamentDelegate;
-@property (nonatomic, assign) id<NPCurrencyDelegate> currencyDelegate;
+@property (nonatomic, assign) id<NPFacebookBridgeDelegate> facebookBridgeDelegate;
 #endif
 
 + (NPDelegatesContainer*)containerWithNextpeerDelegate:(id<NextpeerDelegate>)aNPDelegate;
@@ -23,16 +20,7 @@
 									tournamentDelegate:(id<NPTournamentDelegate>)aTournamentDelegate;
 
 + (NPDelegatesContainer*)containerWithNextpeerDelegate:(id<NextpeerDelegate>)aNPDelegate
-								notificationDelegate:(id<NPNotificationDelegate>)aNoticeDelegate;
-
-+ (NPDelegatesContainer*)containerWithNextpeerDelegate:(id<NextpeerDelegate>)aNPDelegate
-                                  notificationDelegate:(id<NPNotificationDelegate>)aNoticeDelegate 
-                                    tournamentDelegate:(id<NPTournamentDelegate>)aTournamentDelegate;
-
-+ (NPDelegatesContainer*)containerWithNextpeerDelegate:(id<NextpeerDelegate>)aNPDelegate 
-                                  notificationDelegate:(id<NPNotificationDelegate>)aNoticeDelegate 
-                                    tournamentDelegate:(id<NPTournamentDelegate>)aTournamentDelegate 
-                                      currencyDelegate:(id<NPCurrencyDelegate>)aCurrencyDelegate;
-
+									tournamentDelegate:(id<NPTournamentDelegate>)aTournamentDelegate
+								facebookBridgeDelegate:(id<NPFacebookBridgeDelegate>)aFacebookDelegate;
 
 @end

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/np__challenges_list_empty_view">
+    
+	<RelativeLayout
+	    android:id="@+id/np__challenges_list_empty_view_moveable_container"
+		android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_centerInParent="true">
+	    <TextView
+	    android:id="@+id/np__challenges_list_empty_view_text"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    style="@style/NP__.EmptyStates.Text"
+	    android:layout_marginLeft="@dimen/np__empty_states_bubble_text_side_margin"
+	    android:layout_marginRight="@dimen/np__empty_states_bubble_text_side_margin"
+	    android:padding="@dimen/np__empty_states_bubble_padding"
+	    android:text="@string/np__application_name"
+       	android:background="@drawable/np__empty_state_bubble" 
+       	android:gravity="center_horizontal"
+       	android:layout_centerHorizontal="true"
+       	android:layout_alignParentTop="true"/>
+	    
+	    <LinearLayout
+        android:layout_width="@dimen/np__empty_states_bubble_arrow_size"
+        android:layout_height="@dimen/np__empty_states_bubble_arrow_size"  
+       	android:layout_centerHorizontal="true"
+       	android:layout_below="@+id/np__challenges_list_empty_view_text"
+       	android:layout_marginTop="@dimen/np__empty_states_bubble_arrow_override_marging"
+	    android:background="@drawable/np__empty_state_bubble_arrow"
+        android:rotation="180" 
+	        />
+	    <ImageView
+	    android:id="@+id/np__challenges_list_empty_view_body"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+       	android:layout_centerHorizontal="true"
+       	android:paddingLeft="@dimen/np__empty_states_bubble_body_misalign_padding_left"
+       	android:layout_below="@+id/np__challenges_list_empty_view_text"
+       	android:layout_marginTop="@dimen/np__empty_states_bubble_text_top_margin"
+	    android:src="@drawable/np__empty_state_body"
+	        />
+	    <ImageView
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+       	android:paddingLeft="@dimen/np__empty_states_bubble_body_misalign_padding_left"
+       	android:layout_alignLeft="@+id/np__challenges_list_empty_view_body"
+       	android:layout_alignTop="@+id/np__challenges_list_empty_view_body"
+	    android:src="@drawable/np__empty_state_hands_down"
+	        />
+	    
+	    <ImageView
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+       	android:paddingLeft="@dimen/np__empty_states_bubble_body_misalign_padding_left"
+       	android:layout_alignLeft="@+id/np__challenges_list_empty_view_body"
+       	android:layout_alignTop="@+id/np__challenges_list_empty_view_body"
+	    android:src="@drawable/np__empty_state_happy_mouth"
+	        />
+    </RelativeLayout>
+    
+    <ImageView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:src="@drawable/np__empty_state_shadow"
+       	android:layout_centerHorizontal="true"
+       	android:paddingLeft="@dimen/np__empty_states_bubble_body_misalign_padding_left"
+    android:layout_alignBottom="@+id/np__challenges_list_empty_view_moveable_container"
+        />
+</RelativeLayout>

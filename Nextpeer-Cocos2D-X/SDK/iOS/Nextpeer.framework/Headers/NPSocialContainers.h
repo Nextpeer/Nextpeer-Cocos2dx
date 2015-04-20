@@ -24,7 +24,4 @@
 /// @note This property can sometimes return nil (happens if the image is unavailable in the local cache).
 @property (nonatomic, readonly) UIImage* playerImage;
 
-/// Whether or not the current player is a Facebook (or Twitter in the future for example) user or not.
-@property (nonatomic, readonly) BOOL isSocialAuthenticated;
-
 @end

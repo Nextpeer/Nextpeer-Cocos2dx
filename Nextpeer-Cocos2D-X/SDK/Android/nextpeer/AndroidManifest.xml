@@ -1,29 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.nextpeer.android"
     android:versionCode="1"
-    android:versionName="1.5.1" >
+    android:versionName="1.0" >
 
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    
-    <uses-sdk android:minSdkVersion="8" />
+    <uses-sdk
+        android:minSdkVersion="13"
+        android:targetSdkVersion="21" />
 
     <application
-        android:allowBackup="true"
-        android:icon="@drawable/np__ic_launcher"
-        android:label="@string/np__application_name"
+        android:icon="@drawable/np__ic_nextpeer_logo"
+        android:logo="@drawable/np__ic_nextpeer_logo"
+		android:allowBackup="true"
         android:theme="@style/NP__Theme" >
         
-        <activity android:name="com.nextpeer.android.NextpeerActivity"
-         	  android:label="@string/np__application_name"
-              android:theme="@style/NP__Theme" />
-        <activity android:name="com.nextpeer.android.facebook.LoginActivity"
-                  android:theme="@android:style/Theme.Translucent.NoTitleBar"
-                  android:label="@string/np__application_name" />
-        
+        <activity
+            android:name="com.nextpeer.android.NextpeerActivity"
+            android:label="@string/np__application_name"
+            android:screenOrientation="portrait">
+        </activity>
         <service android:name="com.nextpeer.android.NextpeerPushService" />
         <receiver android:name="com.nextpeer.android.NextpeerBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
         </receiver>
     </application>
-
 </manifest>

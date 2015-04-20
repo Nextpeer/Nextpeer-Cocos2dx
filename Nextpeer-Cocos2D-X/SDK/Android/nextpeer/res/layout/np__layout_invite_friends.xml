@@ -1,0 +1,23 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/np__share_kit_list_padding" >
+
+    <TextView
+        android:id="@+id/np__invite_friends_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        style="@style/NP__.ShareKits.Title.Text"
+        android:visibility="gone"
+        android:layout_marginBottom="@dimen/np__share_kit_list_divider_size"/>
+
+    <ListView
+        android:id="@+id/np__invite_friends_buttons_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        style="@style/NP__.Widget.ListView"   
+        android:dividerHeight="@dimen/np__share_kit_list_divider_size" >
+    </ListView>
+
+</LinearLayout>

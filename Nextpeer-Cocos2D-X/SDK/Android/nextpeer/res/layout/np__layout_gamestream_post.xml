@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/np__game_stream_post_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@null">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/np__game_stream_item_post_margin_sides"
+        android:layout_marginRight="@dimen/np__game_stream_item_post_margin_sides"
+        android:layout_marginTop="@dimen/np__game_stream_item_post_margin_top"
+        android:paddingTop="@dimen/np__game_stream_item_content_padding"
+        android:orientation="vertical"
+        android:background="@drawable/np__gamestream_post_border">
+
+        <include layout="@layout/np__layout_game_stream_story_header" />
+		<include layout="@layout/np__layout_game_stream_story_content"/>
+		<include layout="@layout/np__layout_game_stream_story_footer"/>
+    </LinearLayout>
+
+</FrameLayout>

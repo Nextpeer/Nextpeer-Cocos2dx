@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/np__transparent_background" >
+
+        <include
+            android:id="@+id/np__about_action_bar_layout"
+            layout="@layout/np__layout_dialog_action_bar" />
+
+        <TextView
+            android:id="@+id/np__about_description_header_text"
+            style="@style/NP__.About.Text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/np__about_action_bar_layout"
+            android:layout_marginTop="@dimen/np__about_text_top_margin"
+            android:background="@null" />
+
+        <com.nextpeer.android.open.ui.NPButton
+            android:id="@+id/np__about_feedback_button"
+            style="@style/NP__.Widget.Button"
+            android:layout_width="@dimen/np__about_button_width"
+            android:layout_height="@dimen/np__about_button_height"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/np__about_send_feedback_button_bottom_margin"
+            android:text="@string/np__application_name"
+            app:np__button_color="@color/np__palette_yellow" />
+
+        <TextView
+            android:id="@+id/np__about_description_text"
+            style="@style/NP__.About.Text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/np__about_description_header_text"
+            android:background="@null" />
+
+        <TextView
+            android:id="@+id/np__about_version"
+            style="@style/NP__.About.Version.Text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/np__about_feedback_button"
+            android:layout_marginBottom="@dimen/np__about_version_text_bottom_margin" 
+            android:gravity="center_horizontal"/>
+
+        <View
+            android:id="@+id/np__about_separator"
+            android:layout_width="@dimen/np__about_separator_line_width"
+            android:layout_height="1dp"
+            android:layout_above="@id/np__about_version"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/np__about_separator_line_bottom_margin"
+            android:background="@color/np__white" />
+
+        <ImageView
+            android:id="@+id/np__about_logo_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/np__about_separator"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/np__about_nextpeer_logo_bottom_margin"
+            android:src="@drawable/np__ic_nextpeer_logo" />
+    </RelativeLayout>
+
+</RelativeLayout>

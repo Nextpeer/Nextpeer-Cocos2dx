@@ -1,12 +1,19 @@
-<resources>
-
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
     <!--
-        Base application theme for API 14+. This theme completely replaces
-        AppBaseTheme from BOTH res/values/styles.xml and
-        res/values-v11/styles.xml on API 14+ devices.
+        Base application theme for API 11+. This theme completely replaces
+        AppBaseTheme from BOTH res/values/styles.xml on API 11+ devices.
     -->
-    <style name="NP__BaseTheme" parent="android:Theme.Holo.Light.DarkActionBar">
-        <!-- API 14 theme customizations can go here. -->
+    
+    <style name="NP__.Widget.ActionBar" parent="@android:style/Widget.Holo.Light.ActionBar">
+        <item name="android:height">@dimen/np__dummy_action_bar_default_height</item>
+        <item name="android:padding">0dip</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:background">@color/np__white</item>
+        <item name="android:titleTextStyle">@style/NP__Theme.ActionBar.TitleTextStyle</item>
     </style>
 
+    <style name="NP__Theme.ActionBar.TitleTextStyle" parent="@android:style/Widget.TextView">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/np__palette_dark_blue</item>
+    </style>
 </resources>

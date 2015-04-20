@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="@dimen/np__date_picker_component_width"
+    android:layout_height="wrap_content"
+    >
+
+    <Button
+        android:textSize="@dimen/np__date_picker_done_label_size"
+        android:textColor="@color/np__done_text_color"
+        android:id="@+id/np__date_picker_button_done"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dip"
+        android:text="@string/np__date_picker_done_label"
+        />
+</LinearLayout>

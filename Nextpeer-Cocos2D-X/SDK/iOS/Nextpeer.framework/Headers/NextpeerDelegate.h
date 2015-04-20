@@ -37,18 +37,13 @@
 -(BOOL)nextpeerSupportsTournamentWithId:(NSString* )tournamentUuid;
 
 /**
- This method will be called in case Nextpeer is not supported on the device.
+ The user can be invited to a tournament which is not available. Use this method to customize the alert message which will be presented when the user try to play that match.
  
- @return YES we will not show our error view and let you the opportunity to intervene. Default is NO - we will show a UIAlertView.
- */
--(BOOL)nextpeerNotSupportedShouldShowCustomError;
-
-/**
- We will call it when the before the tournament will start (prior the dismissing the dashboard).
+ @param tournamentUuid The tournament ID, as set on the game dashboard.
  
- @param tournamentContainer The descriptor object for the start of the tournament.
+ @return The dialog message to present.
  */
-- (void)nextpeerWillTournamentStartWithDetails:(NPTournamentStartDataContainer *)tournamentContainer;
+-(NSString *)nextpeerNotSupportsTournamentMessageWithId:(NSString* )tournamentUuid;
 
 /**
  This is where you should pause your game.
@@ -80,17 +75,9 @@
 - (void)nextpeerDashboardDidReturnToGame;
 
 /**
- Tells Nextpeer if the game wants to display its own screens immediately after the player taps the "Play Again" button and before the next game starts.
- If you implement this method, you must also implement [NextpeerDelegate nextpeerWillHideToShowInterGameScreen].
+ This method will be called in case Nextpeer is not supported on the device.
  
- @return YES if you allow showing the inter-game screen, NO otherwise.
+ @return YES we will not show our error view and let you the opportunity to intervene. Default is NO - we will show a UIAlertView.
  */
--(BOOL)shouldAllowInterGameScreen;
-
-/**
- Tells the game that Nextpeer will hide itself in order to allow the game to display a "inter-game" screen.
- Only relevant in conjunction with [NextpeerDelegate shouldAllowInterGameScreen].
- */
--(void)nextpeerWillHideToShowInterGameScreen;
-
+-(BOOL)nextpeerNotSupportedShouldShowCustomError;
 @end

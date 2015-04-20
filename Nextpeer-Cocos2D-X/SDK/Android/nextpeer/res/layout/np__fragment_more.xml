@@ -1,0 +1,45 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/np__more_tab_padding" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/np__rounded_corner_white_background"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/np__more_options_container_padding"
+            android:paddingRight="@dimen/np__more_options_container_padding" >
+
+            <include
+                android:id="@+id/np__more_list_item_profile"
+                layout="@layout/np__layout_more_profile_list_item" />
+
+            <include
+                android:id="@+id/np__more_list_item_messages"
+                layout="@layout/np__layout_more_list_item" />
+
+            <include
+                android:id="@+id/np__more_list_item_settings"
+                layout="@layout/np__layout_more_list_item" />
+
+            <include
+                android:id="@+id/np__more_list_item_privacy"
+                layout="@layout/np__layout_more_list_item" />
+
+            <include
+                android:id="@+id/np__more_list_item_send_feedback"
+                layout="@layout/np__layout_more_list_item" />
+
+            <include
+                android:id="@+id/np__more_list_item_about"
+                layout="@layout/np__layout_more_list_item" />
+        </LinearLayout>
+    </FrameLayout>
+
+</LinearLayout>

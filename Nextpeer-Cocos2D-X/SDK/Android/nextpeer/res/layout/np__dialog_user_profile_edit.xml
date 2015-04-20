@@ -1,0 +1,181 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/np__user_profile_edit_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/np__transparent_background"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/np__user_profile_edit_action_bar_container"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/np__dummy_action_bar_default_height"
+            android:background="@color/np__white"
+            android:gravity="center_vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <ImageButton
+                    android:id="@+id/np__user_profile_edit_back_button"
+                    style="@style/NP__.Widget.ImageButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:src="@drawable/np__ic_navigate_back" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="@dimen/np__user_profile_edit_action_bar_vertical_separator"
+                    android:layout_marginEnd="@dimen/np__user_profile_edit_action_bar_vertical_separator_margin"
+                    android:layout_marginRight="@dimen/np__user_profile_edit_action_bar_vertical_separator_margin"
+                    android:background="@color/np__grey_light" />
+
+                <TextView
+                    android:id="@+id/np__user_profile_edit_action_bar_title"
+                    style="@style/NP__.Credentials.Title.Text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/np__application_name" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:orientation="horizontal" >
+
+                <ImageButton
+                    android:id="@+id/np__user_profile_edit_done_button"
+                    style="@style/NP__.Widget.ImageButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@null"
+                    android:src="@drawable/np__ic_check_mark" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="@dimen/np__fragment_default_padding" >
+
+                <com.nextpeer.android.open.ui.NPCircularImageView
+                    android:id="@+id/np__user_profile_edit_picture"
+                    android:layout_width="@dimen/np__user_profile_picture_radius"
+                    android:layout_height="@dimen/np__user_profile_picture_radius"
+                    android:layout_marginTop="@dimen/np__user_profile_picture_top_margin"
+                    android:clickable="true"
+                    android:src="@drawable/np__ic_add_player_profile_picture"
+                    app:np__image_border="true"
+                    app:np__image_borderColor="@color/np__white"
+                    app:np__image_borderWidth="@dimen/np__user_profile_picture_border_line_size"
+                    app:np__image_shadow="true" />
+
+                <TextView
+                    android:id="@+id/np__user_profile_edit_description"
+                    style="@style/NP__.Profile.Edit.Description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/np__user_profile_edit_title_text_margin_bottom"
+                    android:layout_marginTop="@dimen/np__user_profile_edit_title_text_margin_top"
+                    android:gravity="center_horizontal"
+                    android:text="@string/np__application_name" />
+
+                <EditText
+                    android:id="@+id/np__user_profile_edit_username"
+                    style="@style/NP__.Profile.Edit.Text"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/np__user_profile_edit_text_height"
+                    android:layout_margin="@dimen/np__user_profile_edit_text_margin" />
+
+                <EditText
+                    android:id="@+id/np__user_profile_edit_motto"
+                    style="@style/NP__.Profile.Edit.Text"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/np__user_profile_edit_text_height"
+                    android:layout_margin="@dimen/np__user_profile_edit_text_margin" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <AutoCompleteTextView
+                        android:id="@+id/np__user_profile_edit_country"
+                        style="@style/NP__.Profile.SearchView"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/np__user_profile_edit_text_height"
+                        android:layout_margin="@dimen/np__user_profile_edit_text_margin"
+                        android:layout_weight="1"
+                        android:hint="@string/np__application_name" />
+
+                    <AutoCompleteTextView
+                        android:id="@+id/np__user_profile_edit_city"
+                        style="@style/NP__.Profile.SearchView"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/np__user_profile_edit_text_height"
+                        android:layout_margin="@dimen/np__user_profile_edit_text_margin"
+                        android:layout_weight="1"
+                        android:hint="@string/np__application_name" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <Spinner
+                        android:id="@+id/np__user_profile_edit_gender"
+                        style="@style/NP__.Profile.Spinner"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/np__user_profile_edit_text_height"
+                        android:layout_margin="@dimen/np__user_profile_edit_text_margin"
+                        android:layout_weight="1"
+                        android:hint="@string/np__application_name" />
+
+                    <Button
+                        android:id="@+id/np__user_profile_edit_birthday"
+                        style="@style/NP__.Profile.Edit.Button"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/np__user_profile_edit_text_height"
+                        android:layout_margin="@dimen/np__user_profile_edit_text_margin"
+                        android:layout_weight="1"
+                        android:hint="@string/np__application_name" />
+                </LinearLayout>
+                
+                <!-- This is placeholder view which holds nothing. The reason being the fact that on some Android versions the soft keyboard
+                doesn't update the view size correctly and prevents the user to scroll while editing. 
+                See https://code.google.com/p/android/issues/detail?id=57382 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/np__scrollable_keyboard_height"
+                    android:orientation="vertical"
+                    android:id="@+id/np__user_profile_bottom_placeholder"
+                    >
+                    
+                </LinearLayout>
+                
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</LinearLayout>

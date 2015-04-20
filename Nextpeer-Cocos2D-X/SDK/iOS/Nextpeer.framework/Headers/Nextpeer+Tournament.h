@@ -1,10 +1,38 @@
 /*
  Public Nextpeer API - Tournament
  */
-
 #import "NextpeerPublic.h"
 
 @interface Nextpeer (Tournament)
+
+/**
+ Call this method to report the current score for the tournament. This allows Nextpeer to send
+ various notifications about the players' scores.
+ 
+ @param score The player's current score.
+ */
++ (void)reportScoreForCurrentTournament:(uint32_t)score;
+
+/**
+ Call this method to check if any tournament is running at the moment.
+ */
++ (BOOL)isCurrentlyInTournament;
+
+/**
+ Call this method when the user wishes to exit the current tournament.
+ This will close any in-game notifiactions and dialogs.
+ */
++ (void)reportForfeitForCurrentTournament;
+
+/**
+ Call this method when your game manages the current tournament and the player just died (a.k.a. 'Last Man Standing').
+ Nextpeer will call the [NextpeerDelegate nextpeerDidTournamentEnd] method after reporting the last score.
+ 
+ @note The method will act only if the current tournament is from a 'GameControlled' tournament type.
+ 
+ @param score The final score of the player.
+ */
++ (void)reportControlledTournamentOverWithScore:(float)score;
 
 /**
  This method is used to push a buffer to the other players.
@@ -41,17 +69,9 @@
  3. Recordings that are late to register to an event will behave just as regular clients, and will continue their playback as usual.
  
  @param eventName The name of the synchronized event to register to.
- @param timeout The maximum amount of time to wait for all other participants to register for the sync event.
+ @param timeoutInSeconds The maximum amount of seconds to wait for all other participants to register for the sync event.
  */
-+ (void)registerToSynchronizedEvent:(NSString*)eventName withTimetout:(NSTimeInterval)timeout;
-
-/**
- Call this method to report the current score for the tournament. This allows Nextpeer to send
- various notifications about the players' scores.
- 
- @param score The player's current score.
- */
-+ (void)reportScoreForCurrentTournament:(uint32_t)score;
++ (void)registerToSynchronizedEvent:(NSString*)eventName withTimetout:(NSTimeInterval)timeoutInSeconds;
 
 /**
  Call this method to change the score modifier of the giving recording. The modifier can be negative or positive and thus points will either
@@ -99,58 +119,11 @@
  */
 + (void)requestFastForwardRecording:(NSString*)recordingPlayerId withTimeDelta:(uint32_t)timeDelta;
 
-
-/**
- Call this method to check if any tournament is running at the moment.
- */
-+ (BOOL)isCurrentlyInTournament;
-
-/**
- Call this method when the user wishes to exit the current tournament.
- This will close any in-game notifiactions and dialogs.
- */
-+ (void)reportForfeitForCurrentTournament;
-
-/**
- Call this method when your game manages the current tournament and the player just died (a.k.a. 'Last Man Standing').
- Nextpeer will call the [NextpeerDelegate nextpeerDidTournamentEnd] method after reporting the last score.
- 
- @note The method will act only if the current tournament is from a 'GameControlled' tournament type.
- 
- @param score The final score of the player.
- */
-+ (void)reportControlledTournamentOverWithScore:(uint32_t)score;
-
-/**
- This method will return the amount of seconds left for this tournament.
- 
- @return The number of seconds left in the tournament, or 0 if there is no ongoing tournament or if the tournament is not time-based.
- */
-+ (NSUInteger)timeLeftInTournament;
-
 /**
  Call this method to enable or disable the in-game ranking display during a tournament. You can change this setting during a tournament (making the ranking display appear and disappear), but will not be animated.
  
  @param enableRankingDisplay YES if the ranking display should be enabled, NO otherwise.
  */
 +(void)enableRankingDisplay:(BOOL)enableRankingDisplay;
-
-/**
- Call this method when you have finished running the inter-game logic. The player will be taken to their next tournament.
- 
- @see [NextpeerDelegate shouldAllowInterGameScreen]
- */
-+ (void)resumePlayAgainLogic;
-
-/**
- This method will broadcast a notification to the other players in the tournament.
- The current player's image will be displayed along with the text.
- 
- To use the current player's name in the message use %PLAYER_NAME%.
- E.g., @"%PLAYER_NAME% sent you a bomb!"
- 
- @deprecated In-game notifications are no longer used, so this method is deprecated and will have no effect. Consider using [Nextpeer pushDataToOtherPlayers:] instead.
- */
-+ (void)pushMessageToOtherPlayers:(NSString*)message DEPRECATED_ATTRIBUTE;
 
 @end

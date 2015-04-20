@@ -25,6 +25,7 @@ namespace nextpeer
         Nextpeer_iOSDelegate* delegate = [Nextpeer_iOSDelegate sharedInstance];
         
         NSDictionary* settings = [NSDictionary dictionaryWithObjectsAndKeys:
+                                  [NSNumber numberWithUnsignedInteger:NPNotificationPosition_BOTTOM],NextpeerSettingNotificationPosition,
                                   [NSNumber numberWithBool:TRUE],
                                   NextpeerSettingObserveNotificationOrientationChange,
                                   nil];
@@ -33,7 +34,6 @@ namespace nextpeer
                                andSettings:settings
                               andDelegates:[NPDelegatesContainer
                                             containerWithNextpeerDelegate:delegate
-                                            notificationDelegate:delegate
                                             tournamentDelegate:delegate]];
 #endif
     }
@@ -96,8 +96,6 @@ namespace nextpeer
     uint32_t Nextpeer_iOS::timeLeftInTournament()
     {
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
-        return [Nextpeer timeLeftInTournament];
-#else
         return 0;
 #endif
     }
@@ -195,6 +193,13 @@ namespace nextpeer
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
         NSString* event = [NSString stringWithUTF8String:eventName];
         [Nextpeer registerToSynchronizedEvent:event withTimetout:timeout];
+#endif
+    }
+    
+    void Nextpeer_iOS::captureMoment()
+    {
+#if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
+        [Nextpeer captureMoment];
 #endif
     }
 }

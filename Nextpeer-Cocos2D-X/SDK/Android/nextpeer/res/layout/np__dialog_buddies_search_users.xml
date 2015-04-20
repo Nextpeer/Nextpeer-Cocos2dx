@@ -1,0 +1,99 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/np__buddies_search_users_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/np__transparent_background"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/np__buddies_search_box_height"
+            android:background="@color/np__palette_dark_blue"
+            android:orientation="horizontal" >
+
+            <ImageButton
+                android:id="@+id/np__buddies_search_users_dialog_back_button"
+                style="@style/NP__.Widget.ImageButton"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:src="@drawable/np__ic_buddies_search_box_back" />
+
+            <LinearLayout
+                android:id="@+id/np__buddies_search_users_dialog_search_box_container"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/np__buddies_search_users_button_margin"
+                android:layout_marginRight="@dimen/np__buddies_search_users_button_margin"
+                android:layout_marginEnd="@dimen/np__buddies_search_users_button_margin"
+                android:layout_marginBottom="@dimen/np__buddies_search_users_button_margin"
+                android:background="@drawable/np__rounded_corner_white_background"
+                android:orientation="horizontal" >
+
+                <ImageButton
+                    android:id="@+id/np__buddies_search_users_dialog_search_button"
+                    style="@style/NP__.Widget.ImageButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:src="@drawable/np__ic_buddies_search_box_action" />
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal" >
+
+                    <EditText
+                        android:id="@+id/np__buddies_search_users_dialog_search_box"
+                        style="@style/NP__.Buddies.Search"
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+
+                    <ImageButton
+                        android:id="@+id/np__buddies_search_users_dialog_cancel_button"
+                        style="@style/NP__.Widget.ImageButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginEnd="@dimen/np__buddies_search_users_button_margin"
+                        android:layout_marginRight="@dimen/np__buddies_search_users_button_margin"
+                        android:background="@null"
+                        android:src="@drawable/np__ic_buddies_search_box_clear" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/np__buddies_search_users_dialog_list_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:padding="@dimen/np__buddies_search_users_list_container_margin"
+            android:visibility="invisible" >
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/np__white" >
+
+                <ListView
+                    android:id="@+id/np__buddies_search_users_dialog_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+            		style="@style/NP__.Widget.ListView"  
+                    android:clickable="true"
+                    android:divider="@color/np__grey"
+                    android:dividerHeight="@dimen/np__buddies_search_users_list_divider_height" />
+            </FrameLayout>
+        </FrameLayout>
+    </LinearLayout>
+
+</LinearLayout>

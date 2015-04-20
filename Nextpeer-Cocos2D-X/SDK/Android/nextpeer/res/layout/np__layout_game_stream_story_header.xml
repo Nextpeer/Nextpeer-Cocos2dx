@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/np__game_stream_item_header_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@null"
+    android:orientation="horizontal"
+    android:paddingLeft="@dimen/np__game_stream_item_content_padding"
+    android:paddingRight="@dimen/np__game_stream_item_content_padding"
+    android:paddingBottom="@dimen/np__game_stream_item_content_padding" >
+
+    <com.nextpeer.android.open.ui.NPCircularImageView
+        android:id="@+id/np__game_stream_item_header_picture"
+        style="@style/NP__.GameStream.Item.Header.Image"
+        android:layout_width="@dimen/np__game_stream_item_post_header_picture_default_size"
+        android:layout_height="@dimen/np__game_stream_item_post_header_picture_default_size"
+        android:clickable="true"
+        android:src="@drawable/np__ic_default_player_profile"
+        app:np__image_border="true"
+        app:np__image_borderColor="@color/np__palette_dark_blue"
+        app:np__image_borderWidth="@dimen/np__profile_picture_border_line_size"
+        app:np__image_shadow="false" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/np__game_stream_item_content_margin"
+        android:layout_marginLeft="@dimen/np__game_stream_item_content_margin"
+        android:layout_marginRight="@dimen/np__game_stream_item_content_margin"
+        android:layout_marginStart="@dimen/np__game_stream_item_content_margin" >
+
+        <TextView
+            android:id="@+id/np__game_stream_item_header_title"
+            style="@style/NP__.GameStream.Item.Header.Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/np__game_stream_item_header_story_time"
+            android:layout_marginRight="@dimen/np__game_stream_item_content_margin"
+            android:text="@string/np__application_name" />
+
+        <TextView
+            android:id="@+id/np__game_stream_item_header_story_time"
+            style="@style/NP__.GameStream.Item.Header.StoryTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:text="@string/np__application_name" />
+
+        <TextView
+            android:id="@+id/np__game_stream_item_text"
+            style="@style/NP__.GameStream.Item.Story.Text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/np__game_stream_item_header_title"
+            android:layout_alignRight="@+id/np__game_stream_item_header_story_time"
+            android:layout_below="@+id/np__game_stream_item_header_title"
+            android:ellipsize="end"
+            android:paddingBottom="@dimen/np__game_stream_header_post_vertical_padding"
+            android:paddingTop="@dimen/np__game_stream_header_post_vertical_padding"
+            android:text="@string/np__application_name" />
+    </RelativeLayout>
+
+</LinearLayout>

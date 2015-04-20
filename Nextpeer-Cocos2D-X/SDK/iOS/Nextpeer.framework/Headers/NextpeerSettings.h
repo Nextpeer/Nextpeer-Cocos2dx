@@ -1,13 +1,24 @@
 #pragma once
 
+
 /**
- NSString 
+ NSNumber BOOL
+ 
+ Default: YES
+ 
+ Defines if Nextpeer should observe device orientation change and adjust the dashboard according to changes.
+ Nextpeer will keep the transformation in the main orientation. For example if you game supports landscape orientation, Nextpeer will switch between LandscapeLeft to LandscapeRight (but will not switch to portrait).
+ */
+extern NSString* NextpeerSettingSupportsDashboardRotation;
 
- Your application's display name. Used as the game title (welcome screen, tournament selector, etc.).
-
- @note This field will override the display name value from the developer dashboard.
-*/
-extern NSString* NextpeerSettingDisplayName;
+/**
+ NSNumber UIInterfaceOrientation
+ 
+ Default: [UIApplication sharedApplication].statusBarOrientation
+ 
+ Defines the orientation in which the Nextpeer dashboard will be first launched. If not specified, Nextpeer will try to orient itself according to the status bar orientation.
+ */
+extern NSString* NextpeerSettingInitialDashboardOrientation;
 
 /**
  NSNumber UIInterfaceOrientation
@@ -17,7 +28,6 @@ extern NSString* NextpeerSettingDisplayName;
  Defines what orientation the the in-game ranking display should appear in by default. The notification system does not auto rotate (unless NextpeerSettingObserveNotificationOrientationChange is specified as YES).
  */
 extern NSString* NextpeerSettingNotificationOrientation;
-
 
 /**
  NSNumber BOOL
@@ -29,7 +39,7 @@ extern NSString* NextpeerSettingNotificationOrientation;
 extern NSString* NextpeerSettingObserveNotificationOrientationChange;
 
 /**
- NSNumber NPNotificationPosition (see NextpeerPublic.h)
+ NSNumber NPRankingDisplayScreenPosition (see NextpeerPublic.h)
 
  Default: NPNotificationPosition_TOP.
  
@@ -46,38 +56,6 @@ extern NSString* NextpeerSettingObserveNotificationOrientationChange;
      NPNotificationPosition_RIGHT            rankings are shown in the middle-right of the screen
  */
 extern NSString* NextpeerSettingNotificationPosition;
-
-/**
- @deprecated In-game notifications are no longer used, so this setting is deprecated.
- 
- NSNumber BOOL
-
- Default: YES
-
- Behavior: Specifies if the game supports retina mode (iOS4+). This affects generated images that come
-           from the NPNotificationContainer. If set to True, the generated images will be sized according to the
-           device compatibility (retina devices receiving larger images).
- */
-extern NSString* NextpeerSettingGameSupportsRetina DEPRECATED_ATTRIBUTE;
-
-/**
- NSNumber BOOL
-
- Default: NO
-
- Defines if Nextpeer should observe device orientation change and adjust the dashboard according to changes.
- Nextpeer will keep the transformation in the main orientation. For example if you game supports landscape orientation, Nextpeer will switch between LandscapeLeft to LandscapeRight (but will not switch to portrait).
- */
-extern NSString* NextpeerSettingSupportsDashboardRotation;
-
-/**
- NSNumber UIInterfaceOrientation
- 
- Default: [UIApplication sharedApplication].statusBarOrientation
- 
- Defines the orientation in which the Nextpeer dashboard will be first launched. If not specified, Nextpeer will try to orient itself according to the status bar orientation.
- */
-extern NSString* NextpeerSettingInitialDashboardOrientation;
 
 /**
  NSNumber NPRankingDisplayStyle (see NextpeerPublic.h)
@@ -107,10 +85,13 @@ extern NSString* NextpeerSettingRankingDisplayAnimationStyle;
 extern NSString* NextpeerSettingRankingDisplayAlignment;
 
 /**
- UIColor
+ NSNumber BOOL
  
- Default: internal Nextpeer setting (may change between SDK versions)
- 
- Specifies the background color for the following screens: main dashboard, settings, tournament selection, tournament loading, tournament results.
+ Default: NO
+ Nextpeer uses remote and local notifications to alert the user about invites, buddy requests and so on. 
+ If the application is in idle state and the user taps on a notification, Nextpeer will open the designated screen to the user.
+ This setting will allow you to opt out from this, Nextpeer will not open any UI flow and will merly notify the user on the event.
+
  */
-extern NSString* NextpeerSettingScreenBackgroundColor;
+extern NSString* NextpeerSettingShouldOptOutFromNextpeerPushInteractions;
+

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2012 Jake Wharton
+     Copyright (C) 2011 Patrik Åkerfeldt
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<resources>
+    <declare-styleable name="NPViewPagerIndicator">
+        <!-- Style of the icon indicator's views. -->
+        <attr name="np__iconPageIndicatorStyle" format="reference"/>
+        <!-- Style of the tab indicator's tabs. -->
+        <attr name="np__tabPageIndicatorStyle" format="reference"/>
+    </declare-styleable>
+    
+	<!-- NPCircularImageView Custom Styling -->
+	<declare-styleable name="NPCircularImageView">
+
+		<!-- Whether or not to draw a circular border around the image. -->
+		<attr name="np__image_border" format="boolean"/>
+		<!-- The color of the border draw around the image. (if enabled) -->
+		<attr name="np__image_borderColor" format="color"/>
+		<!-- Makes the border this pixels wide. (if enabled) -->
+		<attr name="np__image_borderWidth" format="dimension"/>
+		<!-- Whether or not to draw a selector on this view upon touch events. -->
+		<attr name="np__image_selector" format="boolean"/>
+		<!-- The color of the selector draw on top of the image upon touch events. (if enabled) -->
+		<attr name="np__image_selectorColor" format="color"/>
+		<!-- The color of the selector stroke drawn around the image upon touch events. Be sure to provide some opacity. (if enabled) -->
+		<attr name="np__image_selectorStrokeColor" format="color"/>
+		<!-- The selector stroke drawn around the image upon touch events this pixels wide. (if enabled) -->
+		<attr name="np__image_selectorStrokeWidth" format="dimension"/>
+		<!-- Whether or not to draw a shadow around your circular image. -->
+		<attr name="np__image_shadow" format="boolean"/>
+		<!-- The radius for the shadow to extend to. (if enabled) -->
+		<attr name="np__image_shadowRadius" format="float"/>
+		<!-- Horizontal shadow offset. (if enabled) -->
+		<attr name="np__image_shadowDx" format="float"/>
+		<!-- Vertical shadow offset. (if enabled) -->
+		<attr name="np__image_shadowDy" format="float"/>
+		<!-- The color of the shadow drawn around your circular image. (if enabled) -->
+		<attr name="np__image_shadowColor" format="color"/>
+	</declare-styleable>
+
+	<declare-styleable name="NPCircularImageViewStyle">
+		<attr name="np__circularImageViewDefault" format="reference"/>
+	</declare-styleable>
+    
+    <declare-styleable name="NPTheme">
+        <attr name="np__circularImageViewStyle" format="reference"></attr>
+    </declare-styleable>
+    
+    <declare-styleable name="NPPagerSlidingTabStrip">
+        <attr name="np__pstsIndicatorColor" format="color" />
+        <attr name="np__pstsUnderlineColor" format="color" />
+        <attr name="np__pstsDividerColor" format="color" />
+        <attr name="np__pstsIndicatorHeight" format="dimension" />
+        <attr name="np__pstsUnderlineHeight" format="dimension" />
+        <attr name="np__pstsDividerPadding" format="dimension" />
+        <attr name="np__pstsTabPaddingLeftRight" format="dimension" />
+        <attr name="np__pstsScrollOffset" format="dimension" />
+        <attr name="np__pstsTabBackground" format="reference" />
+        <attr name="np__pstsShouldExpand" format="boolean" />
+        <attr name="np__pstsTextAllCaps" format="boolean" />
+    </declare-styleable>
+    
+    <!-- Crop -->
+    <attr name="np__cropImageStyle" format="reference" />
+
+    <declare-styleable name="NPCropImageView">
+        <attr name="np__highlightColor" format="reference|color" />
+        <attr name="np__showThirds" format="boolean" />
+        <attr name="np__showHandles">
+          <enum name="np__changing" value="0" />
+          <enum name="np__always" value="1" />
+          <enum name="np__never" value="2" />
+        </attr>
+    </declare-styleable>
+    
+    <!-- NPButton -->
+    <declare-styleable name="NPButton">
+        <attr name="np__button_color" format="color" />
+        <attr name="np__button_text_color" format="color" />
+    </declare-styleable>
+    
+    <declare-styleable name="NPCircleButton">
+        <attr name="np__circle_button_radius" format="dimension" />
+    </declare-styleable>
+    
+    <!-- Progress wheel -->
+    <declare-styleable name="NPProgressWheel">
+        <attr name="np__progressIndeterminate" format="boolean" />
+        <attr name="np__barColor" format="color" />
+        <attr name="np__rimColor" format="color" />
+        <attr name="np__rimWidth" format="dimension" />
+        <attr name="np__spinSpeed" format="float" />
+        <attr name="np__barSpinCycleTime" format="integer" />
+        <attr name="np__circleRadius" format="dimension" />
+        <attr name="np__fillRadius" format="boolean" />
+        <attr name="np__barWidth" format="dimension" />
+        <attr name="np__linearProgress" format="boolean" />
+    </declare-styleable>
+    
+     <!-- NPTabButton -->
+	<declare-styleable name="NPTabButton">
+        <attr name="np__isBadged" format="boolean" />
+    </declare-styleable>
+    
+	 
+	<!-- NPImageView -->
+	<declare-styleable name="NPImageView">
+        <attr name="android:drawable"/>
+    </declare-styleable>
+    
+	<!-- NPSwitch -->
+    <!-- in switche's view indicate state of view -->
+    <attr name="np__switch_is_checked" format="boolean" />
+    
+</resources>
+
+

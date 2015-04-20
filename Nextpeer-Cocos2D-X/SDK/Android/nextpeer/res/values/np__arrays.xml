@@ -1,0 +1,47 @@
+<resources>
+
+    <string-array name="np__user_profile_edit_gender">
+        <item>gender.type.male.label</item>
+        <item>gender.type.female.label</item>
+        <item>gender.type.unspecified.label</item>
+        <item>gender.hint.label</item> <!-- hint -->
+    </string-array>
+        
+    <!-- tournament loading -->
+    <integer-array name="np__tournament_loading_player_picture_size">
+        <item>90</item>
+        <item>80</item>
+        <item>60</item>
+    </integer-array>
+    
+    <integer-array name="np__tournament_loading_player_name_size">
+        <item>22</item>
+        <item>16</item>
+        <item>12</item>
+    </integer-array>
+    
+    <integer-array name="np__tournament_loading_player_level_size">
+        <item>16</item>
+        <item>12</item>
+        <item>10</item>
+    </integer-array>
+    
+    <!-- game mode -->
+    <integer-array name="np__game_mode_button_size">
+        <item>192</item> <!-- 1/2 modes -->
+        <item>137</item> <!-- 3 modes -->
+        <item>122</item> <!-- 4 modes or more -->
+    </integer-array>
+    
+    <integer-array name="np__game_mode_button_color">
+        <item>@color/np__palette_red</item>
+        <item>@color/np__palette_light_blue</item> 
+        <item>@color/np__palette_dark_blue</item>
+        <item>@color/np__palette_purple</item>
+        <item>@color/np__palette_yellow</item>
+        <item>@color/np__palette_green</item>
+        <item>@color/np__palette_brown</item>
+        <item>@color/np__palette_black</item>
+    </integer-array>
+
+</resources>

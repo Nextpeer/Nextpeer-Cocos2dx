@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView android:textSize="@dimen/np__date_picker_header_text_size" android:textColor="@color/np__white" android:gravity="center" android:id="@+id/date_picker_header" android:background="@color/np__date_picker_calendar_header" android:layout_width="@dimen/np__date_picker_component_width" android:layout_height="@dimen/np__date_picker_header_height" android:includeFontPadding="false" 
+  xmlns:android="http://schemas.android.com/apk/res/android" />
