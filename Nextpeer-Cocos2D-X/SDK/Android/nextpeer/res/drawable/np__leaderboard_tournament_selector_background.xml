@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle" >
+
+    <item>
+        <shape>
+
+            <!-- set the shadow color here -->
+            <stroke
+                android:width="@dimen/np__leaderboard_list_item_shadow_size"
+                android:color="@color/np__shadow_color" />
+            <!-- setting the thickness of shadow (positive value will give shadow on that side) -->
+            <padding
+                android:bottom="@dimen/np__leaderboard_list_item_shadow_seen_padding"
+                android:right="@dimen/np__leaderboard_list_item_shadow_seen_padding"/>
+
+            <corners
+                android:bottomLeftRadius="@dimen/np__leaderboard_list_item_rounded_corner_size"
+                android:bottomRightRadius="@dimen/np__leaderboard_list_item_rounded_corner_size"
+                android:topLeftRadius="@dimen/np__leaderboard_list_item_rounded_corner_size"
+                android:topRightRadius="@dimen/np__leaderboard_list_item_rounded_corner_size" />
+        </shape>
+    </item>
+    <!-- Background -->
+    <item>
+        <shape>
+            <solid android:color="@color/np__palette_purple" />
+
+            <corners
+                android:bottomLeftRadius="@dimen/np__leaderboard_list_item_rounded_corner_size"
+                android:bottomRightRadius="@dimen/np__leaderboard_list_item_rounded_corner_size"
+                android:topLeftRadius="@dimen/np__leaderboard_list_item_rounded_corner_size"
+                android:topRightRadius="@dimen/np__leaderboard_list_item_rounded_corner_size" />
+        </shape>
+    </item>
+
+</layer-list>

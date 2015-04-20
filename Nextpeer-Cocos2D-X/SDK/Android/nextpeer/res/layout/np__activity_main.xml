@@ -1,23 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<!--suppress MergeRootFrame -->
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/np__app_container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:keepScreenOn="true">
 
-    <include layout="@layout/np__widget_dummy_action_bar" />
-
-    <FrameLayout
+    <ImageView
+        android:id="@+id/np__app_background_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@null" >
-        
-        <FrameLayout
-            android:id="@+id/np__main_fragment_container"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-
-        <include layout="@layout/np__widget_dummy_action_bar_drop_shadow"/>
-        
-    </FrameLayout>
-
-</LinearLayout>
+        android:layout_height="match_parent" />
+    
+</FrameLayout>

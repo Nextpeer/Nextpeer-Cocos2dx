@@ -13,7 +13,7 @@
 
 
 
-@interface Nextpeer_iOSDelegate : NSObject <NextpeerDelegate, NPTournamentDelegate, NPNotificationDelegate>
+@interface Nextpeer_iOSDelegate : NSObject <NextpeerDelegate, NPTournamentDelegate>
 
 +(Nextpeer_iOSDelegate*)sharedInstance;
 

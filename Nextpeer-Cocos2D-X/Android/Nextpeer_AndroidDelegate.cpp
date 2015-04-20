@@ -59,9 +59,7 @@ JNIEXPORT void JNICALL Java_com_nextpeer_android_NextpeerCocos2DX_onTournamentSt
     // Copy over the data from the Java object over to the C++ object
     startDataObject->tournamentUuid = cocos2d::JniHelper::jstring2string(Nextpeer_AndroidJNIHelper::getStringFieldValue(startDataClass, "tournamentUuid", startData));
     startDataObject->tournamentName = cocos2d::JniHelper::jstring2string(Nextpeer_AndroidJNIHelper::getStringFieldValue(startDataClass, "tournamentName", startData));
-    startDataObject->tournamentTimeInSeconds = (unsigned int)Nextpeer_AndroidJNIHelper::getIntFieldValue(startDataClass, "tournamentTimeSeconds", startData);
     startDataObject->tournamentRandomSeed = (unsigned int)Nextpeer_AndroidJNIHelper::getIntFieldValue(startDataClass, "tournamentRandomSeed", startData);
-    startDataObject->isGameControlled = (bool)Nextpeer_AndroidJNIHelper::getBoolFieldValue(startDataClass, "tournamentIsGameControlled", startData);
     startDataObject->numberOfPlayers = (unsigned int)Nextpeer_AndroidJNIHelper::getIntFieldValue(startDataClass, "numberOfPlayers", startData);
 
     JNIEnv* pEnv = 0;

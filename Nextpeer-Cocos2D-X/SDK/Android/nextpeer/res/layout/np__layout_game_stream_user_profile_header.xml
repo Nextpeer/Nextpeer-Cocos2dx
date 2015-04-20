@@ -1,0 +1,39 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/np__game_stream_profile_picture_layout"
+    android:layout_marginBottom="@dimen/np__game_stream_header_margin"
+    android:background="@null"
+    android:gravity="center" >
+
+    <com.nextpeer.android.open.ui.NPCircularImageView
+        android:id="@+id/np__game_stream_profile_player_image_view"
+        android:layout_width="@dimen/np__game_stream_header_picture_default_size"
+        android:layout_height="@dimen/np__game_stream_header_picture_default_size"
+        android:layout_marginTop="@dimen/np__game_stream_header_margin"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        app:np__image_border="true"
+        app:np__image_borderColor="@color/np__white"
+        app:np__image_borderWidth="@dimen/np__profile_picture_border_line_size"
+        app:np__image_shadow="true" />
+    <ProgressBar
+        android:id="@+id/np__game_stream_profile_player_image_progress_bar" 
+        android:layout_width="@dimen/np__game_stream_header_picture_default_size"
+        android:layout_height="@dimen/np__game_stream_header_picture_default_size"
+        android:layout_alignTop="@+id/np__game_stream_profile_player_image_view"
+        android:layout_alignBottom="@+id/np__game_stream_profile_player_image_view"
+        android:layout_alignLeft="@+id/np__game_stream_profile_player_image_view"
+        android:layout_alignRight="@+id/np__game_stream_profile_player_image_view"
+        android:visibility="invisible"/>
+    
+    <TextView
+        android:id="@+id/np__game_stream_profile_player_name"
+        style="@style/NP__.GameStream.Header.Text"
+        android:layout_below="@+id/np__game_stream_profile_player_image_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="@string/np__game_stream_header_default_user_name" />
+
+</RelativeLayout>

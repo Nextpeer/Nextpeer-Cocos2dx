@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/np__game_stream_post_dialog_background_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/np__transparent_background" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/np__game_stream_post_dialog_actions"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/np__dummy_action_bar_default_height"
+            android:background="@color/np__transparent_background"
+            android:gravity="center_vertical" >
+
+            <ImageButton
+                android:id="@+id/np__game_stream_post_dialog_back_button"
+                style="@style/NP__.Widget.ImageButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:background="@null"
+                android:src="@drawable/np__ic_navigate_back" />
+
+            <ImageButton
+                android:id="@+id/np__game_stream_post_dialog_done_button"
+                style="@style/NP__.Widget.ImageButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:background="@null"
+                android:src="@drawable/np__ic_check_mark" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/np__game_stream_post_dialog_profile_picture_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/np__game_stream_post_dialog_profile_picture_bottom_margin"
+            android:layout_marginTop="@dimen/np__game_stream_post_dialog_profile_picture_top_margin"
+            android:gravity="center" >
+
+            <com.nextpeer.android.open.ui.NPCircularImageView
+                android:id="@+id/np__game_stream_dialog_user_profile_image"
+                android:layout_width="@dimen/np__profile_picture_radius"
+                android:layout_height="@dimen/np__profile_picture_radius"
+                android:src="@drawable/np__ic_default_player_profile"
+                app:np__image_border="true"
+                app:np__image_borderColor="@color/np__white"
+                app:np__image_borderWidth="@dimen/np__profile_picture_border_line_size"
+                app:np__image_shadow="false" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/np__game_stream_post_dialog_text_container"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="@dimen/np__fragment_default_padding" >
+
+            <EditText
+                android:id="@+id/np__game_stream_post_dialog_text"
+                style="@style/NP__.GameStream.Post.Text"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/np__game_stream_post_dialog_text_box_height"
+                android:background="@null"
+                android:gravity="center|top"
+                android:textColor="@color/np__game_stream_post_text" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

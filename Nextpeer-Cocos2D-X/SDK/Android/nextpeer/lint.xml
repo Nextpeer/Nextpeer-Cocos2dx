@@ -1,3 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <lint>
+    
+    <!-- Ignore the NewApi issue in the nineoldandroids files -->
+    <issue id="NewApi">
+        <ignore path="src/com/nineoldandroids/" />
+    </issue>
+    
+    <!-- Ignore the InlinedApi issue in the nineoldandroids files -->
+    <issue id="InlinedApi">
+        <ignore path="src/com/nineoldandroids/" />
+    </issue>
+    
+    <!-- Ignore the UnusedResources issue in the flags (which used dynamicly) and image which currently not in use but will be in the future -->
+    <issue id="UnusedResources">
+        <ignore path="res/drawable*/np__flag*.png" />
+        <ignore path="res/drawable*/np__ic_auto_complete_text_box_handle.png" />
+        <ignore path="res/drawable*/np__ic_buddies_more.png" />
+        <ignore path="res/drawable*/np__ic_gamestream_add_profile_picture_player.png" />
+        <ignore path="res/drawable*/np__ic_gamestream_new_stories.png" />
+        <ignore path="res/drawable*/np__ic_post_upload_image.png" />
+    </issue>
+    
+    <!-- Ignore the ContentDescription issue in the layouts -->
+    <issue id="ContentDescription">
+        <ignore path="res/layout/" />
+    </issue>
+    
+    <!-- Ignore the Overdraw issue since we use dynamic background -->
+    <issue id="Overdraw">
+        <ignore path="res/layout/" />
+    </issue>
+    
+    <!-- Ignore the UselessParent issue since we use dynamic background and we need two layers - for the background image and the transparent layer-->
+    <issue id="UselessParent">
+        <ignore path="res/layout/" />
+    </issue>
+    
+    <!-- Ignore the IconDuplicatesConfig fro crop resources since this library doesn't have icon for all sizes so we duplicated those we needed-->
+	<issue id="IconDuplicatesConfig">
+        <ignore path="res/drawable*/crop*" />
+    </issue>
+    
+    <!-- Ignore the IconDuplicatesConfig fro crop resources since this library doesn't have icon for all sizes so we duplicated those we needed-->
+	<issue id="IconDipSize">
+        <ignore path="res/drawable*/crop*" />
+    </issue>
+    
+    <!-- Ignore the Assert issue in the okhttp files -->
+    <issue id="Assert">
+        <ignore path="src/com/squareup/okhttp/" />
+        <ignore path="src/com/google/" />
+        <ignore path="src/com/nineoldandroids/" />
+    </issue>
+    
+    <!-- Ignore the Assert issue in the okhttp files -->
+    <issue id="DefaultLocale">
+        <ignore path="src/com/squareup/okhttp/" />
+        <ignore path="src/com/google/" />
+        <ignore path="src/com/nineoldandroids/" />
+    </issue>
+    
+        <!-- Ignore the UselessParent issue since we use dynamic background and we need two layers - for the background image and the transparent layer-->
+    <issue id="UselessParent">
+        <ignore path="res/drawable*/crop*" />
+    </issue>
+    
 </lint>

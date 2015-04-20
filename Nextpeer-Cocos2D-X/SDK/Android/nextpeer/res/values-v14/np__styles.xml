@@ -1,2 +1,14 @@
 <resources>
+
+    <style name="NP__.Widget.ActionBar.Text" parent="NP__.TextAppearance.Large">
+        <item name="android:textColor">@color/np__black</item>
+        <item name="android:padding">0dip</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+    <style name="NP__.Widget.ActionBar.Logo">
+        <item name="android:src">@drawable/np__ic_nextpeer_logo </item>
+        <item name="android:padding">0dip</item>
+    </style>
+    
 </resources>

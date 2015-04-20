@@ -1,0 +1,40 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/np__gamestream_pull_to_refresh_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <include layout="@layout/np__layout_gamestream" />
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+        <LinearLayout
+            android:id="@+id/np__game_stream_quick_play_footer_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@color/np__transparent_background" >
+
+            <com.nextpeer.android.open.ui.NPButton
+                android:id="@+id/np__quick_play_button"
+                style="@style/NP__.GameStream.QuickPlay.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/np__game_stream_quick_play_button_margin"
+                android:text="@string/np__game_stream_quick_play_button_text"
+                android:drawableRight="@drawable/np__ic_gamestream_start_game"
+                android:drawableEnd="@drawable/np__ic_gamestream_start_game"
+                android:drawablePadding="@dimen/np__game_stream_quick_play_button_icon_padding"
+                app:np__button_color="@color/np__palette_orange" />
+        </LinearLayout>
+    </FrameLayout>
+
+</LinearLayout>

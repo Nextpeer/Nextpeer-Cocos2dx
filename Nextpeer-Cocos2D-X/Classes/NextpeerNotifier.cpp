@@ -6,6 +6,8 @@
 #include "NextpeerNotifier.h"
 #include "support/CCNotificationCenter.h"
 #include "NextpeerEventQueue.h"
+#include "cocos2d.h"
+#import "CCDirector.h"
 
 namespace nextpeer
 {

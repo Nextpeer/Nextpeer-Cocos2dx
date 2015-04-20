@@ -7,11 +7,20 @@
     -->
     <style name="NP__BaseTheme" parent="android:Theme.Holo.Light">
         <!-- API 11 theme customizations can go here. -->
-        <item name="android:windowActionBar">false</item>
+        <!-- <item name="android:windowActionBar">false</item> -->
+        
+        <item name="android:actionBarStyle">@style/NP__.Widget.ActionBar</item>
+        <item name="android:windowContentOverlay">@null</item>
+        
     </style>
-    
-    <style name="NP__.Theme.Dialog" parent="NP__Theme.DialogBase">
-        <item name="android:windowActionBar">false</item>
+
+    <!-- Application theme. -->
+    <style name="NP__Theme" parent="NP__BaseTheme">
+        <item name="android:textAppearanceLarge">@style/NP__.TextAppearance.Large</item>
+        <item name="android:textAppearanceMedium">@style/NP__.TextAppearance.Medium</item>
+        <item name="android:textAppearanceSmall">@style/NP__.TextAppearance.Small</item>
+        <item name="android:dropDownListViewStyle">@style/NP__Theme.DropDownBase</item>
+        <item name="android:homeAsUpIndicator">@drawable/np__action_bar_back_navigation_icon_padding</item>
     </style>
 
 </resources>

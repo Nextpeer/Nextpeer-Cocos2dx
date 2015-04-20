@@ -1,0 +1,75 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/np__credentials_select_avatar_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/np__credentials_select_avatar_action_bar_container"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/np__dummy_action_bar_default_height"
+        android:background="@color/np__white" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <ImageButton
+                android:id="@+id/np__credentials_select_avatar_profile_back_button"
+                style="@style/NP__.Widget.ImageButton"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:src="@drawable/np__ic_navigate_back" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="@dimen/np__credentials_profile_dialog_action_bar_vertical_separator"
+                android:layout_marginLeft="@dimen/np__credentials_profile_dialog_action_bar_vertical_separator_margin"
+                android:layout_marginRight="@dimen/np__credentials_profile_dialog_action_bar_vertical_separator_margin"
+                android:background="@color/np__grey_light" />
+
+            <TextView
+                android:id="@+id/np__credentials_select_avatar_Action_bar_title"
+                style="@style/NP__.Credentials.Title.Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/np__credentials_select_avatar_action_bar_title" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <ImageButton
+                android:id="@+id/np__credentials_select_avatar_profile_done_button"
+                style="@style/NP__.Widget.ImageButton"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:src="@drawable/np__ic_check_mark" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <GridView
+        android:id="@+id/np__credentials_select_avatar_gridView"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:background="@color/np__transparent_background"
+        android:columnWidth="@dimen/np__credentials_select_avatar_grid_column_width"
+        android:drawSelectorOnTop="true"
+        android:gravity="center"
+        android:numColumns="auto_fit"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="@dimen/np__credentials_select_avatar_grid_vertical_spacing" >
+    </GridView>
+
+</LinearLayout>

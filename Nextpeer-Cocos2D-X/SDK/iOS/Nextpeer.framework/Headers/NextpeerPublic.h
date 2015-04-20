@@ -1,13 +1,13 @@
+
 @class NPDelegatesContainer;
+@class NPGamePlayerContainer;
 
 /**
- Defines where notifications (including the in-game ranking display) can appear on the screen.
+ Defines where the in-game ranking display can appear on the screen.
  */
-typedef NS_ENUM(int, NPNotificationPosition)
+typedef NS_ENUM(int, NPRankingDisplayScreenPosition)
 {
-    /// The default notification position.
-	NPNotificationPosition_TOP = 1,
-    
+	NPNotificationPosition_TOP = 0, // Default
 	NPNotificationPosition_BOTTOM,
 	NPNotificationPosition_TOP_LEFT,
 	NPNotificationPosition_BOTTOM_LEFT,
@@ -22,7 +22,7 @@ typedef NS_ENUM(int, NPNotificationPosition)
  */
 typedef NS_ENUM(int, NPRankingDisplayStyle) {
     /// Displays the ranks as a list of 2 or 3 players, centered on the current player, who is flanked by the players immediately above and below him in rank.
-    NPRankingDisplayList = 1,
+    NPRankingDisplayList = 0,
     
     /// Displays only the current player's avatar, and a label which indicates the rank of the current player relative to all the tournament participants. Does not show any other player.
     NPRankingDisplaySolo
@@ -33,7 +33,7 @@ typedef NS_ENUM(int, NPRankingDisplayStyle) {
  */
 typedef NS_ENUM(int, NPRankingDisplayAnimationStyle) {
     /// Optimised animation, based on the current device. Older devices will have reduced animaiton, to prevent a negative impact on performance.
-    NPRankingDisplayAnimationOptimised = 1,
+    NPRankingDisplayAnimationOptimised = 0,
     
     /// Full animation (on all devices). In some cases this may negatively affect performance, particularly on older devices.
     NPRankingDisplayAnimationFull,
@@ -47,10 +47,21 @@ typedef NS_ENUM(int, NPRankingDisplayAnimationStyle) {
  */
 typedef NS_ENUM(int, NPRankingDisplayAlignment) {
     /// Horizontal alignment - avatars are aligned left-to-right.
-    NPRankingDisplayAlignmentHorizontal = 1,
+    NPRankingDisplayAlignmentHorizontal = 0,
     
     /// Vertical alignment - avatars are aligned top-down.
     NPRankingDisplayAlignmentVertical
+};
+
+/**
+ Defines the screen type to open.
+ */
+typedef NS_ENUM(int, NPScreenType) {
+    NPScreenTypeDefault = 0,
+    NPScreenTypeStream,
+    NPScreenTypeLeaderboards,
+    NPScreenTypeChallenges,
+    NPScreenTypeBuddies
 };
 
 @interface Nextpeer : NSObject
@@ -77,7 +88,17 @@ typedef NS_ENUM(int, NPRankingDisplayAlignment) {
                     andDelegates:(NPDelegatesContainer*)delegatesContainer;
 
 /**
- Launches the Nextpeer Dashboard view at the top of your application's keyed window.
+ Log in to Nextpeer with Facebook user. This method should be invoked when user logs in to Facebook form game UI.
+ */
++ (void)loginWithFacebook;
+
+/**
+ Logout Facebook user from Nextpeer. This method should be invoked when user logs out from Facebook in game UI.
+ */
++ (void)logoutFromFacebook;
+
+/**
+ Launches the Nextpeer Dashboard view at the top of your application's keyed window with the stream screen type.
  
  @note If [Nextpeer isNextpeerSupported] returns NO this method will not execute.
  If the player has not yet authorized your app, they will be prompted to setup an
@@ -86,33 +107,18 @@ typedef NS_ENUM(int, NPRankingDisplayAlignment) {
 + (void)launchDashboard;
 
 /**
- Removes the Nextpeer dashboard from your application's keyed window.
+ Launches the Nextpeer Dashboard view at the top of your application's keyed window with the given screen type.
+ @param screenType The screen type to launch.
+ @note If [Nextpeer isNextpeerSupported] returns NO this method will not execute.
+ If the player has not yet authorized your app, they will be prompted to setup an
+ account or authorize your application before accessing the Nextpeer dashboard.
  */
-+ (void)dismissDashboard;
-
-/**
- Call this method when you wish to change the notification orientation in run time.
- It's preferable to use the settings dictionary if you wish to set this up at start-time.
- 
- @deprecated This method no longer has any effect. Please use the NextpeerSettingNotificationOrientation and NextpeerSettingObserveNotificationOrientationChange keys in NextpeerSettings.h.
- */
-+ (void)setNotificationOrientation:(UIInterfaceOrientation)orientation DEPRECATED_ATTRIBUTE;
-
-/**
- Let the platform handle a url request, this will used when the Facebook App redirects to the app during the SSO process.
- 
- @note The SDK may launch the Nextpeer dashboard under some scenarios from this call.
- 
- @param url The URL that was passed to the application delegate's handleOpenURL method(s).
- 
- @return YES if the url starts with np[app_id] and the SDK handled the request; NO if the attempt to handle the URL failed (not supported by the platform).
- */
-+ (BOOL)handleOpenURL:(NSURL *)url;
++ (void)launchDashboardWithType:(NPScreenType)screenType;
 
 /**
  Call this method to verify if the current run time environment supports Nextpeer requirements.
  
- @note Minimum iOS version supported by the SDK is iOS 4.0. You can handle such case by implementing the 
+ @note Minimum iOS version supported by the SDK is iOS 6.0. You can handle such case by implementing the 
        [NextpeerDelegate nextpeerNotSupportedShouldShowCustomError] method (otherwise Nextpeer will display alert).
  
  @return YES if the run time requirements match, NO otherwise.
@@ -120,75 +126,14 @@ typedef NS_ENUM(int, NPRankingDisplayAlignment) {
 + (BOOL)isNextpeerSupported;
 
 /**
- Call this method register this user's device token. This will allow Nextpeer to send invitations to this user
- when he/she is invited to play the current game. Note that this is only relevant if you've followed the push notification
- integration instructions and provided the p12 file for your game.
+ Use this method to retrieve the current player details such as name and image.
  
- @param deviceToken The device token, as reported by the iOS SDK.
- 
- Example:
- 
-     - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
-         // Updates the device token and registers the token with Nextpeer
-         [Nextpeer registerDeviceToken:deviceToken];
-     }
- 
+ @note If the user never opened Nextpeer's dashboard or Nextpeer was not initialized the method will return nil.
  */
-+ (void)registerDeviceToken:(NSData*)deviceToken;
++ (NPGamePlayerContainer *)getCurrentPlayerDetails;
 
 /**
- Call this method after the launching of the app. This allows Nextpeer to respond to any push or local notifications
- that may have been received when the app was in the background.
- Note that you will need to call this method after Nextpeer has already been initialized.
- 
- @param launchOptions The launch options of the application, as reported by the iOS SDK.
- 
- Example:
- 
-     - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-         ...
-         [Nextpeer initializeWithProductKey:...];
-         ...
-         [Nextpeer handleLaunchOptions:launchOptions];
-         ...
-     }
- 
- @return Returns a boolean value indicating if the notification will be handled by Nextpeer.
+ Call this method to capture a specail moment in you game. A moment can be a new level, high score or any other special event in your game.
  */
-+ (BOOL)handleLaunchOptions:(NSDictionary*)launchOptions;
-
-/**
- Call this method after the receiving a remote push notification while the app is running.
- 
- @param userInfo The user info for the notification, as reported by the iOS SDK.
- 
- Example:
- 
-     - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
-        ...
-        [Nextpeer handleRemoteNotification:userInfo];
-        ...
-     }
- 
- @return Returns a boolean value indicating if the notification will be handled by Nextpeer.
- */
-+ (BOOL)handleRemoteNotification:(NSDictionary*)userInfo;
-
-/**
- Call this method after the receiving a local push notification while the app is running.
- 
- @param notification The notification, as reported by the iOS SDK.
- 
- Example:
- 
-     - (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification {
-         ...
-         [Nextpeer handleLocalNotification:notification];
-         ...
-     }
- 
- @return Returns a boolean value indicating if the notification will be handled by Nextpeer.
- */
-+ (BOOL)handleLocalNotification:(UILocalNotification*)notification;
-
++(void)captureMoment;
 @end

@@ -1,39 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:orientation="horizontal">
-   <RelativeLayout
-       android:id="@+id/np__rank_tile_horizontal_list_image_container"
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       android:paddingRight="@dimen/np__ranks_display_list_image_badge_padding">
-	    <ImageView
-	        android:id="@+id/np__rank_tile_horizontal_list_image_view"
-	        android:layout_width="@dimen/np__ranks_display_list_avatar_size"
-	        android:layout_height="@dimen/np__ranks_display_list_avatar_size"
-	        android:adjustViewBounds="true"
-	        android:scaleType="centerCrop"
-	        android:contentDescription="@string/np__application_name"/>
-	    <View
-	        android:id="@+id/np__rank_tile_horizontal_list_image_view_border"
-	        android:layout_width="@dimen/np__ranks_display_list_avatar_size"
-	        android:layout_height="@dimen/np__ranks_display_list_avatar_size"
-	        android:background="@drawable/np__notification_rank_list_current_user_avatar"
-	        android:visibility="gone"/>
-	</RelativeLayout>
-	<TextView
-	    android:id="@+id/np__rank_tile_horizontal_list_player_rank"
-	    android:layout_width="@dimen/np__ranks_display_list_badge_size"
-	    android:layout_height="@dimen/np__ranks_display_list_badge_size"
-	    android:layout_alignRight="@+id/np__rank_tile_horizontal_list_image_container"
-	    android:layout_centerVertical="true"
-	    android:background="@drawable/np__notification_rank_list_badge"
-	    android:gravity="center"
-	    android:lines="1"
-	    android:text="@string/np__place_holder_number"
-	    android:textColor="@color/np__white"
-	    android:textSize="16sp"
-	    android:textStyle="bold" />
+    android:orientation="horizontal" >
+
+    <!-- suppress RtlSymmetry -->
+    <RelativeLayout
+        android:id="@+id/np__rank_tile_horizontal_list_image_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/np__ranks_display_list_border_padding"
+        android:layout_marginStart="@dimen/np__ranks_display_list_border_padding"
+        android:paddingEnd="@dimen/np__ranks_display_list_image_badge_padding"
+        android:paddingRight="@dimen/np__ranks_display_list_image_badge_padding" >
+
+        <com.nextpeer.android.open.ui.NPCircularImageView
+            android:id="@+id/np__rank_tile_horizontal_list_image_view"
+            android:layout_width="@dimen/np__ranks_display_list_avatar_size"
+            android:layout_height="@dimen/np__ranks_display_list_avatar_size"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/np__ic_default_player_profile"
+            app:np__image_border="true"
+            app:np__image_borderColor="@color/np__palette_orange"
+            app:np__image_borderWidth="@dimen/np__ranks_display_list_avatar_border_size"
+            app:np__image_shadow="false" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/np__rank_tile_horizontal_list_player_rank"
+        android:layout_width="@dimen/np__ranks_display_list_badge_size"
+        android:layout_height="@dimen/np__ranks_display_list_badge_size"
+        android:layout_alignRight="@+id/np__rank_tile_horizontal_list_image_container"
+        android:layout_alignEnd="@+id/np__rank_tile_horizontal_list_image_container"
+        android:layout_centerVertical="true"
+        android:background="@drawable/np__notification_rank_list_badge"
+        android:gravity="center"
+        android:lines="1"
+        android:textColor="@color/np__white"
+        android:textSize="16sp"
+        android:textStyle="bold" />
 
 </RelativeLayout>

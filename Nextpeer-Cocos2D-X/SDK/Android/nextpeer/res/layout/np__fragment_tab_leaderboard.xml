@@ -1,0 +1,108 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/np__leaderboard_page_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/np__leaderboard_tab_padding" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/np__leaderboard_title"
+                style="@style/NP__.Leaderboard.Title.Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/np__leaderboard_title_buttom_margin"
+                android:text="@string/np__leaderboard_title"
+                android:textColor="@color/np__palette_dark_blue"
+                android:typeface="normal" />
+
+            <RelativeLayout
+                android:id="@+id/np__leaderboard_selector_container"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/np__leaderboard_selector_height"
+                android:layout_marginBottom="@dimen/np__leaderboard_selector_bottom_margin"
+                android:background="@drawable/np__leaderboard_tournament_selector_background"
+                android:orientation="horizontal" >
+
+                <ImageButton
+                    android:id="@+id/np__leaderboard_selector_previous_button"
+                    style="@style/NP__.Widget.ImageButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:background="@null"
+                    android:src="@drawable/np__ic_leaderboard_next_arrow_left" />
+
+                <TextView
+                    android:id="@+id/np__leaderboard_selector_title"
+                    style="@style/NP__.Leaderboard.Selector.Text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/np__application_name"
+                    android:textColor="@color/np__white"
+                    android:textStyle="bold" />
+
+                <ImageButton
+                    android:id="@+id/np__leaderboard_selector_next_button"
+                    style="@style/NP__.Widget.ImageButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@null"
+                    android:src="@drawable/np__ic_leaderboard_next_arrow" />
+            </RelativeLayout>
+
+            <ListView
+                android:id="@+id/np__leaderboard_list"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+            	style="@style/NP__.Widget.ListView"  
+                android:clickable="true"
+                android:dividerHeight="@dimen/np__leaderboard_list_item_top_bottom_margin" />
+
+            <LinearLayout
+                android:id="@+id/np__leaderboard_surrounding_container"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/np__leaderboard_surrounding_title"
+                    style="@style/NP__.TextAppearance.Large"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/np__leaderboard_my_ranking_title_buttom_margin"
+                    android:layout_marginTop="@dimen/np__leaderboard_my_ranking_title_top_margin"
+                    android:text="@string/np__leaderboad_surrounding_title"
+                    android:textColor="@color/np__palette_dark_blue" />
+
+                <ListView
+                    android:id="@+id/np__leaderboard_surrounding_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:clickable="true"
+                    android:divider="@null"
+                    android:dividerHeight="@dimen/np__leaderboard_selector_bottom_margin" />
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</LinearLayout>

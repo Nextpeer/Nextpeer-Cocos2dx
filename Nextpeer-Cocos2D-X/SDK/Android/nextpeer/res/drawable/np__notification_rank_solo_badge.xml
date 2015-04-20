@@ -2,7 +2,7 @@
 <shape xmlns:android="http://schemas.android.com/apk/res/android"
   android:shape="rectangle">
   <solid
-    android:color="@color/np__nextpeer_orange" />
+    android:color="@color/np__palette_orange" />
   <stroke android:width="@dimen/np__ranks_display_solo_badge_stroke_width" android:color="@color/np__white"/>
  <corners android:radius="20dp" />
   <padding

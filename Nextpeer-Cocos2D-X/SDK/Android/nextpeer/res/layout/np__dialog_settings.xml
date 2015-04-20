@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/np__settings_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/np__transparent_background" >
+
+        <include
+            android:id="@+id/np__settings_action_bar_layout"
+            layout="@layout/np__layout_dialog_action_bar" />
+        <LinearLayout
+            android:layout_width="@dimen/np__settings_button_width"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/np__settings_button_buttom_margin"
+            android:layout_centerHorizontal="true"
+            android:orientation="vertical" >
+
+            <com.nextpeer.android.open.ui.NPButton
+                android:id="@+id/np__settings_about_button"
+                style="@style/NP__.Settings.Button"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/np__settings_button_height"
+                android:layout_marginBottom="@dimen/np__settings_button_buttom_margin"
+                android:padding="@dimen/np__settings_button_padding"
+                android:text="@string/np__application_name"
+                app:np__button_color="@color/np__palette_orange" />
+
+            <com.nextpeer.android.open.ui.NPButton
+                android:id="@+id/np__settings_feedback_button"
+                style="@style/NP__.Settings.Button"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/np__settings_button_height"
+                android:layout_marginBottom="@dimen/np__settings_button_buttom_margin"
+                android:padding="@dimen/np__settings_button_padding"
+                android:text="@string/np__application_name"
+                app:np__button_color="@color/np__palette_yellow" />
+
+            <com.nextpeer.android.open.ui.NPButton
+                android:id="@+id/np__settings_signout_button"
+                style="@style/NP__.Settings.Button"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/np__settings_button_height"
+                android:layout_marginBottom="@dimen/np__settings_button_buttom_margin"
+                android:text="@string/np__application_name"
+                app:np__button_color="@color/np__palette_dark_blue" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

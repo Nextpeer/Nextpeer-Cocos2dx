@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/np__user_profile_layout_margin"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/np__user_profile_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <RelativeLayout 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+        	android:orientation="vertical"
+            android:layout_marginTop="@dimen/np__user_profile_picture_top_margin">
+	        <com.nextpeer.android.open.ui.NPCircularImageView
+	            android:id="@+id/np__user_profile_picture"
+	            android:layout_width="@dimen/np__user_profile_picture_radius"
+	            android:layout_height="@dimen/np__user_profile_picture_radius"
+	            android:clickable="true"
+	            android:src="@drawable/np__ic_default_player_profile"
+	            app:np__image_border="true"
+	            app:np__image_borderColor="@color/np__white"
+	            app:np__image_borderWidth="@dimen/np__user_profile_picture_border_line_size"
+	            app:np__image_shadow="true" />
+	
+		    <ProgressBar
+		        android:id="@+id/np__user_profile_picture_progress_bar" 
+		        android:layout_width="@dimen/np__user_profile_picture_radius"
+		        android:layout_height="@dimen/np__user_profile_picture_radius"
+		        android:layout_alignTop="@+id/np__user_profile_picture"
+		        android:layout_alignBottom="@+id/np__user_profile_picture"
+		        android:layout_alignLeft="@+id/np__user_profile_picture"
+		        android:layout_alignRight="@+id/np__user_profile_picture"
+		        android:visibility="invisible"/>
+        </RelativeLayout>
+        
+        <TextView
+            android:id="@+id/np__user_profile_name"
+            style="@style/NP__.Profile.Title.Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/np__user_profile_name_top_margin"
+            android:text="@string/np__application_name" />
+
+        <TextView
+            android:id="@+id/np__user_profile_motto"
+            style="@style/NP__.Profile.Content.Motto.Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/np__user_profile_motto_top_margin"
+            android:text="@string/np__application_name" />
+
+        <LinearLayout
+            android:id="@+id/np__user_profile_details_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/np__user_profile_details_top_margin"
+            android:gravity="center_horizontal" 
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/np__user_profile_details_country"
+                style="@style/NP__.Profile.Content.Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:drawableLeft="@drawable/np__ic_flag_default"
+                android:drawablePadding="@dimen/np__user_profile_country_flag_right_margin"
+                android:drawableStart="@drawable/np__ic_flag_default"
+                android:text="@string/np__application_name" />
+
+            <View
+                android:id="@+id/np__user_profile_details_first_separator"
+                android:layout_width="@dimen/np__user_profile_details_separatoer_width"
+                android:layout_height="@dimen/np__user_profile_details_separatoer_height"
+                android:layout_marginLeft="@dimen/np__user_profile_details_separatoer_sides_margin"
+                android:layout_marginRight="@dimen/np__user_profile_details_separatoer_sides_margin"
+                android:layout_gravity="center_vertical"
+                android:background="@color/np__grey" />
+
+            <TextView
+                android:id="@+id/np__user_profile_details_xp"
+                style="@style/NP__.Profile.Content.Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/np__application_name" />
+
+            <View
+                android:id="@+id/np__user_profile_details_second_separator"
+                android:layout_width="@dimen/np__user_profile_details_separatoer_width"
+                android:layout_height="@dimen/np__user_profile_details_separatoer_height"
+                android:layout_marginLeft="@dimen/np__user_profile_details_separatoer_sides_margin"
+                android:layout_marginRight="@dimen/np__user_profile_details_separatoer_sides_margin"
+                android:layout_gravity="center_vertical"
+                android:background="@color/np__grey"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/np__user_profile_details_id"
+                style="@style/NP__.Profile.Content.Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/np__application_name"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/np__user_profile_buttons_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/np__user_profile_buttons_top_margin"
+            android:orientation="horizontal" >
+
+            <com.nextpeer.android.open.ui.NPButton
+                android:id="@+id/np__user_profile_buddies_button"
+                style="@style/NP__.Profile.Button"
+                android:layout_width="@dimen/np__user_profile_button_width"
+                android:layout_height="@dimen/np__user_profile_button_height"
+                android:layout_margin="@dimen/np__user_profile_button_margin"
+                android:text="@string/np__application_name"
+                app:np__button_text_color="@color/np__black"
+                app:np__button_color="@color/np__white" />
+
+            <com.nextpeer.android.open.ui.NPButton
+                android:id="@+id/np__user_profile_messages_button"
+                style="@style/NP__.Profile.Button"
+                android:layout_width="@dimen/np__user_profile_button_width"
+                android:layout_height="@dimen/np__user_profile_button_height"
+                android:layout_margin="@dimen/np__user_profile_button_margin"
+                android:text="@string/np__application_name"
+                app:np__button_text_color="@color/np__black"
+                app:np__button_color="@color/np__white" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/np__user_profile_layout_buttom_margin" >
+
+            <!-- suppress UselessParent  - we need the parent layout in order to have buttom margin either if np__user_profile_action_buttons_container is visible or gone -->
+
+            <LinearLayout
+                android:id="@+id/np__user_profile_action_buttons_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <com.nextpeer.android.open.ui.NPButton
+                    android:id="@+id/np__user_profile_add_buddy_button"
+                    style="@style/NP__.Profile.Button"
+                    android:layout_width="@dimen/np__user_profile_button_width"
+                    android:layout_height="@dimen/np__user_profile_button_height"
+                    android:layout_margin="@dimen/np__user_profile_button_margin"
+                    android:text="@string/np__application_name"
+                    app:np__button_color="@color/np__palette_light_blue" />
+
+                <com.nextpeer.android.open.ui.NPButton
+                    android:id="@+id/np__user_profile_challenge_button"
+                    style="@style/NP__.Profile.Button"
+                    android:layout_width="@dimen/np__user_profile_button_width"
+                    android:layout_height="@dimen/np__user_profile_button_height"
+                    android:layout_margin="@dimen/np__user_profile_button_margin"
+                    android:text="@string/np__application_name"
+                    app:np__button_color="@color/np__palette_red" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/np__user_profile_stream_title_top_margin"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/np__user_profile_stream_title"
+            style="@style/NP__.Profile.Stream.Title.Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/np__application_name" />
+    </LinearLayout>
+
+</LinearLayout>

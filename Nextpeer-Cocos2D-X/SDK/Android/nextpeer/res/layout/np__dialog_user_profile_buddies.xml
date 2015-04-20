@@ -1,0 +1,54 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/np__user_profile_buddies_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@null"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/np__user_profile_buddies_title_container"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/np__dummy_action_bar_default_height"
+        android:background="@color/np__white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/np__user_profile_buddies_action_bar_padding" >
+
+        <ImageButton
+            android:id="@+id/np__user_profile_buddies_back_button"
+            style="@style/NP__.Widget.ImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:src="@drawable/np__ic_navigate_back" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="@dimen/np__user_profile_buddies_action_bar_vertical_separator"
+            android:layout_marginLeft="@dimen/np__user_profile_buddies_action_bar_vertical_separator_margin"
+            android:layout_marginRight="@dimen/np__user_profile_buddies_action_bar_vertical_separator_margin"
+            android:background="@color/np__grey_light" />
+
+        <TextView
+            android:id="@+id/np__user_profile_buddies_title"
+            style="@style/NP__.Credentials.Title.Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/np__buddies" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/np__user_profile_buddies_list_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/np__transparent_background"
+        android:padding="@dimen/np__buddies_list_padding" >
+
+        <ListView
+            android:id="@+id/np__user_profile_buddies_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            style="@style/NP__.Widget.ListView"   />
+    </FrameLayout>
+
+</LinearLayout>
