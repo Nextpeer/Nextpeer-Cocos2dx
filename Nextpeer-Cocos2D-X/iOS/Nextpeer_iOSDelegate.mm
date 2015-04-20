@@ -10,7 +10,6 @@
 #include "NextpeerNotifier.h"
 #include "NextpeerPlayer.h"
 #include "NextpeerTournamentSupport.h"
-#include "cocos2d.h"
 
 using namespace nextpeer;
 
@@ -33,14 +32,12 @@ static Nextpeer_iOSDelegate* _nextpeer_ios_delegate_instance = nil;
 
 // NextpeerDelegate methods
 
--(void)nextpeerWillTournamentStartWithDetails:(NPTournamentStartDataContainer *)tournamentContainer
+-(void)nextpeerDidTournamentStartWithDetails:(NPTournamentStartDataContainer *)tournamentContainer
 {
     TournamentStartData* startData = new TournamentStartData();
     startData->tournamentUuid = string([tournamentContainer.tournamentUuid UTF8String]);
     startData->tournamentName = string([tournamentContainer.tournamentName UTF8String]);
-    startData->tournamentTimeInSeconds = tournamentContainer.tournamentTimeSeconds;
     startData->tournamentRandomSeed = tournamentContainer.tournamentRandomSeed;
-    startData->isGameControlled = tournamentContainer.tournamentIsGameControlled;
     startData->numberOfPlayers = tournamentContainer.numberOfPlayers;
     
     // Convert the opponents objects
@@ -48,23 +45,17 @@ static Nextpeer_iOSDelegate* _nextpeer_ios_delegate_instance = nil;
     for (NPTournamentPlayer* player in tournamentContainer.opponents) {
         string playerName([player.playerName UTF8String]);
         string playerId([player.playerId UTF8String]);
-        string playerImageUrl([player.playerImageUrl UTF8String]);
+        string playerImageUrl([player.imageUrl UTF8String]);
         bool isRecording = player.playerIsBot;
         
         players->addObject(NextpeerPlayer::create(playerName, playerId, playerImageUrl, isRecording));
     }
     
-    players->retain();
     startData->players = players;
+    players->retain();
     
     startData->autorelease();
     NextpeerNotifier::getInstance()->broadcastTournamentStarted(startData);
-}
-
--(void)nextpeerDidTournamentStartWithDetails:(NPTournamentStartDataContainer *)tournamentContainer
-{
-    // Left empty on purpose -> all logic done in nextpeerWillTournamentStartWithDetails due to a
-    // Nextpeer bug that allows P2P packets between the "will" and "did" callbacks.
 }
 
 -(BOOL)nextpeerSupportsTournamentWithId:(NSString* )tournamentUuid {
@@ -105,7 +96,7 @@ static Nextpeer_iOSDelegate* _nextpeer_ios_delegate_instance = nil;
 -(void)nextpeerDidReceiveSynchronizedEvent:(NSString*)eventName withReason:(NPSynchronizedEventFireReason)fireReason {
     
     string event([eventName UTF8String]);
-    NextpeerNotifier::getInstance()->broadcastReceiveSynchronizedEvent(__String::create(event));
+    NextpeerNotifier::getInstance()->broadcastReceiveSynchronizedEvent(CCString::create(event));
 }
 
 // NPTournamentDelegate methods

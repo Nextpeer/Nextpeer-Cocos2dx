@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item >
+        <shape android:shape="oval">
+
+            <!-- set the shadow color here -->
+            <stroke
+                android:width="@dimen/np__widget_button_shadow_size"
+                android:color="@color/np__shadow_color" />
+            <!-- setting the thickness of shadow (positive value will give shadow on that side) -->
+            <padding
+                android:bottom="@dimen/np__widget_button_shadow_seen_padding"
+                android:right="@dimen/np__widget_button_shadow_seen_padding"
+                 />
+        </shape>
+    </item>
+    <!-- Image -->    
+    <item android:drawable="@drawable/np__tournament_loading_count_down"/>
+
+</layer-list>

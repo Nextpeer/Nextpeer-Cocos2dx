@@ -23,16 +23,16 @@
         	 to a particular API-level can go here.
         -->
 
-
-        <!-- Hides the action bar or title bar -->
-        <item name="android:windowNoTitle">true</item>
-        
         <item name="android:textAppearanceLarge">@style/NP__.TextAppearance.Large</item>
         <item name="android:textAppearanceMedium">@style/NP__.TextAppearance.Medium</item>
         <item name="android:textAppearanceSmall">@style/NP__.TextAppearance.Small</item>
-        
+        <item name="android:dropDownListViewStyle">@style/NP__Theme.DropDownBase</item>
     </style>
 
+    <style name="NP__Theme.DropDownBase" parent="@style/NP__.Widget.DropDown">
+        <item name="android:divider">@android:color/transparent</item>
+        <item name="android:dividerHeight">0dp</item>
+    </style>
     
     <!--
     	========================================================
@@ -40,17 +40,11 @@
     	======================================================== 
     -->
 
-    <style name="NP__Theme.DialogBase">
-        <item name="android:windowFrame">@null</item>
-        <item name="android:windowIsFloating">true</item>
-        <item name="android:windowTitleStyle">@style/NP__.DialogWindowTitle</item>
-        <item name="android:windowBackground">@drawable/np__dialog_full_light</item>
-        <item name="android:windowContentOverlay">@null</item>
+    <style name="NP__Theme.DialogBase" parent="@android:style/Theme.Black.NoTitleBar.Fullscreen">
         <item name="android:windowAnimationStyle">@style/NP__.Animation.Dialog</item>
         <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
     </style>
-
+    
     <!-- this style will always be empty in this file, but will contain stuff in /res/values-v11/themes.xml -->
-    <style name="NP__.Theme.Dialog" parent="NP__Theme.DialogBase" />
-
+    <style name="NP__Theme.Dialog" parent="NP__Theme.DialogBase" />
 </resources>

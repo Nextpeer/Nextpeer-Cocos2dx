@@ -147,6 +147,11 @@ namespace nextpeer
          @param timeout The maximum amount of time to wait for all other participants to register for the sync event.
          */
         virtual void registerToSynchronizedEvent(const char* eventName, uint32_t timeout) {}
+        
+        /**
+            Call this method to capture a specail moment in you game. A moment can be a new level, high score or any other special event in your game.
+        */
+        virtual void captureMoment() {}
     private:
         static CCNextpeer* sharedInstance;
         CCNextpeer(CCNextpeer const&);

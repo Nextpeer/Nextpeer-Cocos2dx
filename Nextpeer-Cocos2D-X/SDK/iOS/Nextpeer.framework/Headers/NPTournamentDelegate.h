@@ -38,14 +38,6 @@ typedef NS_ENUM(int, NPSynchronizedEventFireReason) {
 -(void)nextpeerDidReceiveUnreliableTournamentCustomMessage:(NPTournamentCustomUnreliableMessageContainer*)message;
 
 /**
- This method is invoked whenever the current tournament has finished
- and the platform gathered the information from all the players.
- It might take some time between the call to [NextpeerDelegate nextpeerDidTournamentEnd] to this,
- as the platform retrieving the last result of each player.
- */
--(void)nextpeerDidReceiveTournamentResults:(NPTournamentEndDataContainer*)tournamentContainer;
-
-/**
  Tells the delegate that the synchronized event was fired.
  
  The event will only be fired if you registered for it beforehand with [Nextpeer registerToSynchronizedEvent:withTimetout:].
@@ -55,4 +47,14 @@ typedef NS_ENUM(int, NPSynchronizedEventFireReason) {
  */
 -(void)nextpeerDidReceiveSynchronizedEvent:(NSString*)eventName withReason:(NPSynchronizedEventFireReason)fireReason;
 
+/**
+ This method is invoked when a tournament status is reported. A tournament status includes information
+ regarding all the players in the tournament - their ranks, who is still playing, their names, IDs, avatar images, etc.
+ This information can be used to, for example, generate custom ranking notifications.
+ 
+ The rate of tournament status updates is approximately one per second.
+ 
+ @param tournamentStatus The current tournament status.
+ */
+-(void)nextpeerDidReceiveTournamentStatus:(NPTournamentStatusInfo*)tournamentStatus;
 @end

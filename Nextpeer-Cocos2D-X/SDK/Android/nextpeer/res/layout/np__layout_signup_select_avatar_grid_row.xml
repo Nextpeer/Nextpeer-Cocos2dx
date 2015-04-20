@@ -1,0 +1,22 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/np__credentials_signup_select_avatar_picture_contaner"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/np__credentials_select_avatar_grid_row_top_margin"
+    android:orientation="vertical"
+    android:padding="@dimen/np__credentials_select_avatar_grid_row_padding" >
+
+    <com.nextpeer.android.open.ui.NPCircularImageView
+        android:id="@+id/np__credentials_signup_select_avatar_picture"
+        android:layout_width="@dimen/np__credentials_select_avatar_grid_row_picture_size"
+        android:layout_height="@dimen/np__credentials_select_avatar_grid_row_picture_size"
+        android:clickable="true"
+        android:src="@drawable/np__ic_default_player_profile"
+        app:np__image_border="true"
+        app:np__image_borderColor="@color/np__white"
+        app:np__image_borderWidth="@dimen/np__credentials_select_avatar_grid_row_picture_border_size"
+        app:np__image_shadow="false" />
+
+</LinearLayout>

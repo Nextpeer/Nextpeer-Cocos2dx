@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/np__share_moments_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/np__transparent_background" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <!-- Title -->
+
+            <RelativeLayout
+                android:id="@+id/np__share_moments_title_container"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/np__dummy_action_bar_default_height"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/np__dummy_action_bar_padding" >
+
+                <ImageButton
+                    android:id="@+id/np__share_moments_close_button"
+                    style="@style/NP__.Widget.ImageButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:background="@null"
+                    android:src="@drawable/np__ic_close" />
+
+                <ImageView
+                    android:id="@+id/np__share_moments_title_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/np__ic_nextpeer_logo" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="3" >
+
+                    <com.nextpeer.android.open.NPGalleryViewPager
+                        android:id="@+id/np__share_moments_gallery"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="@dimen/np__share_moment_screen_form_top_margin"
+                    android:layout_weight="2"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/np__share_moments_description"
+                        style="@style/NP__.Sharemoments.Description.Text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/np__share_moment_screen_content_top_margin"
+                        android:text="@string/np__application_name" />
+
+                    <EditText
+                        android:id="@+id/np__share_moments_post_text"
+                        style="@style/NP__.Widget.EditText"
+                        android:layout_width="@dimen/np__widget_edittext_width"
+                        android:layout_height="@dimen/np__widget_edittext_height"
+                        android:layout_marginTop="@dimen/np__share_moment_screen_content_top_margin"
+                        android:inputType="textEmailAddress" />
+
+                    <com.nextpeer.android.open.ui.NPButton
+                        android:id="@+id/np__share_moments_publish_button"
+                        style="@style/NP__.Widget.Button"
+                        android:layout_width="@dimen/np__widget_button_width"
+                        android:layout_height="@dimen/np__widget_button_height"
+                        android:layout_marginTop="@dimen/np__share_moment_screen_content_top_margin"
+                        android:text="@string/np__application_name"
+                        app:np__button_color="@color/np__palette_orange" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+
+</RelativeLayout>

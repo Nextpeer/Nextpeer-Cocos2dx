@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/np__game_mode_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/np__transparent_background"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/np__game_mode_action_bar_container"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/np__dummy_action_bar_default_height"
+            android:background="@color/np__white"
+            android:orientation="horizontal"
+            android:padding="@dimen/np__game_mode_action_bar_padding" >
+
+            <ImageButton
+                android:id="@+id/np__game_mode_back_button"
+                style="@style/NP__.Widget.ImageButton"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:background="@null"
+                android:src="@drawable/np__ic_navigate_back" />
+
+            <TextView
+                android:id="@+id/np__game_mode_action_bar_title"
+                style="@style/NP__.Credentials.Title.Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/np__application_name" />
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <com.nextpeer.android.open.ui.NPGridLayout
+                    android:id="@+id/np__game_mode_grid"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@null"
+                    android:clickable="false"
+                    android:orientation="vertical" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</RelativeLayout>

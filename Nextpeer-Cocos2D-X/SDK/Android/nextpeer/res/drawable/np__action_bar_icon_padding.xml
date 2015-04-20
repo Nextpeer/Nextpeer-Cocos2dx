@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:drawable="@drawable/np__ic_action_bar_logo"
+        android:left="@dimen/np__action_bar_home_button_left_margin"
+        android:right="@dimen/np__action_bar_home_button_right_margin"/>
+</layer-list>

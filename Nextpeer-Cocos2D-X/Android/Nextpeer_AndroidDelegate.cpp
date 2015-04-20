@@ -59,9 +59,7 @@ JNIEXPORT void JNICALL Java_com_nextpeer_android_NextpeerCocos2DX_onTournamentSt
     // Copy over the data from the Java object over to the C++ object
     startDataObject->tournamentUuid = cocos2d::JniHelper::jstring2string(Nextpeer_AndroidJNIHelper::getStringFieldValue(startDataClass, "tournamentUuid", startData));
     startDataObject->tournamentName = cocos2d::JniHelper::jstring2string(Nextpeer_AndroidJNIHelper::getStringFieldValue(startDataClass, "tournamentName", startData));
-    startDataObject->tournamentTimeInSeconds = (unsigned int)Nextpeer_AndroidJNIHelper::getIntFieldValue(startDataClass, "tournamentTimeSeconds", startData);
     startDataObject->tournamentRandomSeed = (unsigned int)Nextpeer_AndroidJNIHelper::getIntFieldValue(startDataClass, "tournamentRandomSeed", startData);
-    startDataObject->isGameControlled = (bool)Nextpeer_AndroidJNIHelper::getBoolFieldValue(startDataClass, "tournamentIsGameControlled", startData);
     startDataObject->numberOfPlayers = (unsigned int)Nextpeer_AndroidJNIHelper::getIntFieldValue(startDataClass, "numberOfPlayers", startData);
 
     JNIEnv* pEnv = 0;
@@ -70,7 +68,7 @@ JNIEXPORT void JNICALL Java_com_nextpeer_android_NextpeerCocos2DX_onTournamentSt
     jsize opponentsCount = pEnv->GetArrayLength(opponents);
     
     // We don't use autorelease since this is probably not the main thread of the application
-    CCArray* players = new CCArray();
+    __Array* players = __Array::create()
     players->initWithCapacity(opponentsCount);
     for (int i = 0; i < opponentsCount; i++) {
         jobject player = env->GetObjectArrayElement(opponents, i);
@@ -143,7 +141,8 @@ JNIEXPORT bool JNICALL Java_com_nextpeer_android_NextpeerCocos2DX_onSupportsTour
 JNIEXPORT void JNICALL Java_com_nextpeer_android_NextpeerCocos2DX_onReceiveSynchronizedEventNative(JNIEnv* env, jobject caller, jstring name, jobject fireReason) {
     
     string eventName = cocos2d::JniHelper::jstring2string(name);
-    NextpeerNotifier::getInstance()->broadcastReceiveSynchronizedEvent(__String::create(eventName));
+
+    NextpeerNotifier::getInstance()->broadcastReceiveSynchronizedEvent(CCString::create(eventName));
 }
 
 #endif

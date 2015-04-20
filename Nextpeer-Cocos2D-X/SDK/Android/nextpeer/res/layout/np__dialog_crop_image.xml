@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/np__crop_done_cancel_bar"
+        layout="@layout/np__layout_crop_done_cancel" />
+
+    <com.nextpeer.android.open.ui.crop.NPCropImageView
+        android:id="@+id/np__crop_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/np__crop_texture"
+        android:layout_below="@id/np__crop_done_cancel_bar" />
+
+</RelativeLayout>

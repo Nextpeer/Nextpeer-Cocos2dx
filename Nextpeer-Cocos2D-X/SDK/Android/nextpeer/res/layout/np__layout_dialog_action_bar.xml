@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/np__dialog_action_bar_container"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/np__dummy_action_bar_default_height"
+    android:background="@color/np__white"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="@dimen/np__dummy_action_bar_padding" >
+
+    <ImageButton
+        android:id="@+id/np__dialog_action_bar_back_button"
+        style="@style/NP__.Widget.ImageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@null"
+        android:src="@drawable/np__ic_navigate_back" />
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="@dimen/np__dialog_action_bar_vertical_separator"
+        android:layout_marginEnd="@dimen/np__dialog_action_bar_vertical_separator_margin"
+        android:layout_marginRight="@dimen/np__dialog_action_bar_vertical_separator_margin"
+        android:background="@color/np__dialog_action_bar_vertical_separator" />
+
+    <TextView
+        android:id="@+id/np__dialog_action_bar_title"
+        style="@style/NP__.Widget.Dialog.ActionBar.Title.Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/np__application_name" />
+
+</LinearLayout>

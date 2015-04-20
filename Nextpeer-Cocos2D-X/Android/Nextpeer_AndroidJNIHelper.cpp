@@ -45,26 +45,7 @@ namespace nextpeer {
         
         return bRet;
     }
-    
-    jclass Nextpeer_AndroidJNIHelper::getClassID(const char *className, JNIEnv* env) {
-        if (NULL == className) {
-            return NULL;
-        }
-        
-        jstring _jstrClassName = env->NewStringUTF(className);
-        
-        jclass _clazz = (jclass) env->CallObjectMethod(cocos2d::JniHelper::classloader,
-                                                       cocos2d::JniHelper::loadclassMethod_methodID,
-                                                       _jstrClassName);
-        
-        if (NULL == _clazz) {
-            LOGD("Classloader failed to find class of %s", className);
-        }
-        
-        env->DeleteLocalRef(_jstrClassName);
-        
-        return _clazz;
-    }
+
     
     bool Nextpeer_AndroidJNIHelper::getFieldInfo(JniFieldInfo& fieldInfo, const char* className, const char* fieldName, const char* paramCode)
     {
@@ -77,7 +58,7 @@ namespace nextpeer {
                 break;
             }
             
-            jclass classID = getClassID(className, pEnv);
+            jclass classID = cocos2d::JniHelper::getClassID(className, pEnv);
             fieldID = pEnv->GetFieldID(classID, fieldName, paramCode);
             
             if (!fieldID) {

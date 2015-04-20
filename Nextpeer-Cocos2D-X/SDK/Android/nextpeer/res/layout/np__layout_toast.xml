@@ -1,0 +1,38 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/np__toast_container"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:background="@color/np__palette_dark_blue"
+    android:padding="@dimen/np__toast_padding">
+
+ <ImageView 
+        android:id="@+id/np__toast_image"
+     	android:layout_width="wrap_content"
+     	android:layout_height="wrap_content"
+      android:src="@drawable/np__ic_tab_bar_buddies_on"
+     	android:contentDescription="@string/np__application_name" />
+    
+  <LinearLayout android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:layout_marginLeft="5dp"
+      android:orientation="vertical">
+
+	    <TextView        
+	        android:id="@+id/np__toast_title" 
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        style="@style/NP__.Toast.Title"
+	        android:text="@string/np__application_name" />
+	
+	    <TextView
+	        android:id="@+id/np__toast_text"
+	        style="@style/NP__.Toast.Text"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/np__application_name" />
+    </LinearLayout>
+
+</LinearLayout>

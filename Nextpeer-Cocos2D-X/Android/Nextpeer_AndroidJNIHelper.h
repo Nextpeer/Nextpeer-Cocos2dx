@@ -6,7 +6,7 @@
 #ifndef __NextpeerAndroidJNIHelper__
 #define __NextpeerAndroidJNIHelper__
 
-#include "platform/CCPlatformConfig.h"
+#include "platform/CCPlatformMacros.h"
 
 #ifndef CC_TARGET_PLATFORM
 #error "CC_TARGET_PLATFORM should be defined!!!"
@@ -36,7 +36,6 @@ namespace nextpeer {
         static jobject getObjectFieldValue(const char* className, const char* fieldName, const char* signature, jobject object);
         
         static bool getEnv(JNIEnv **env);
-        static jclass getClassID(const char *className, JNIEnv* env);
     };
 }
 

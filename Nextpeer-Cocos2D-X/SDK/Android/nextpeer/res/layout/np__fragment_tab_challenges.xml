@@ -1,0 +1,31 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/np__challenges_swiped_tab_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:padding="@dimen/np__challenges_list_padding" >
+
+            <FrameLayout 
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+                
+            <include layout="@layout/np__fragment_tab_challenges_empty_view" 
+                android:visibility="invisible"/>
+            
+            <ListView
+                android:id="@+id/np__challenges_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                style="@style/NP__.Widget.ListView"  
+                android:clickable="true"
+                android:visibility="invisible"
+                />
+                
+            </FrameLayout>
+        </android.support.v4.widget.SwipeRefreshLayout>
+</LinearLayout>

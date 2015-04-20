@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/np__credentials_signup_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/np__transparent_background" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/np__credentials_signup_action_bar_container"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/np__dummy_action_bar_default_height"
+                android:background="@color/np__white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/np__dummy_action_bar_padding" >
+
+                <ImageButton
+                    android:id="@+id/np__credentials_signup_action_bar_cancel_button"
+                    style="@style/NP__.Widget.ImageButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:src="@drawable/np__ic_close" />
+
+                <LinearLayout
+                    android:id="@+id/np__credentials_signup_profile_action_bar_title_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/np__credentials_signup_action_bar_image_right_margin"
+                    android:layout_marginEnd="@dimen/np__credentials_signup_action_bar_image_right_margin"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:id="@+id/np__credentials_signup_profile_action_bar_title_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:src="@drawable/np__ic_nextpeer_logo" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <include layout="@layout/np__layout_credentials_email_password_form" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_horizontal" >
+
+        <TextView
+            android:id="@+id/np__credentials_signup_privacy_policy_link"
+            style="@style/NP__.Credentials.Footer.Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/np__credentials_dialog_privacy_policy_bottom_margin"
+            android:text="@string/np__application_name" />
+    </LinearLayout>
+
+</RelativeLayout>

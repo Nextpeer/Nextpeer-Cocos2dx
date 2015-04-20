@@ -41,9 +41,7 @@ namespace nextpeer {
     public:
         string tournamentUuid;
         string tournamentName;
-        unsigned int tournamentTimeInSeconds;
         unsigned int tournamentRandomSeed;
-        bool isGameControlled;
         unsigned int numberOfPlayers;
         __Array* players;
     };
