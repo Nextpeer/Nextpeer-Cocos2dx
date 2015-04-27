@@ -7,7 +7,7 @@
 #include "support/CCNotificationCenter.h"
 #include "NextpeerEventQueue.h"
 #include "cocos2d.h"
-#import "CCDirector.h"
+#include "CCDirector.h"
 
 namespace nextpeer
 {
@@ -29,7 +29,7 @@ namespace nextpeer
 #endif
     }
     
-    void NextpeerNotifier::queueScheduler(float dt=0)
+    void NextpeerNotifier::queueScheduler(float dt)
     {
         NextpeerEventQueue* queue = NextpeerEventQueue::getInstance();
         unsigned long count = queue->queueSize();

@@ -121,7 +121,7 @@ namespace nextpeer {
 		}
 
 		return (bool)ret;
-#else
+#endif
 		return false;
 	}
 
