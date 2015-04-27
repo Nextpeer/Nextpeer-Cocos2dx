@@ -196,6 +196,8 @@
     <string name="np__string_service_leaderboard_title_key">leaderboard.title.label</string>
     <string name="np__string_service_leaderboard_surrounding_key">leaderboard.subtitle.label</string>
     <string name="np__string_service_leaderboard_current_user_display_name_key">leaderboard.currentPlayerName.label</string>
+    <string name="np__string_service_leaderboard_empty_state_play_button_key">leaderboard.emptyState.play.button</string>
+    <string name="np__string_service_leaderboard_empty_state_bubble_label_key">leaderboard.emptyState.bubble.label</string>
     
     <string name="np__string_service_challenges_button_play_key">challenges.cells.play.button</string>
     <string name="np__string_service_challenges_expired_text_key">challenges.newChallenges.leftDescription.label</string>

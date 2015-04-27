@@ -423,7 +423,7 @@
 
     <!--
     	========================================================
-    	Leader board
+    	Leaderboard
     	======================================================== 
     -->
     <style name="NP__.Leaderboard.Item.Text" parent="NP__.Widget.Text.Content.Medium">
@@ -439,6 +439,10 @@
 	<style name="NP__.Leaderboard.Selector.Text" parent="NP__.Widget.Text.Content.Large">
         <item name="android:textColor">@color/np__white</item>
         <item name="android:textSize">16sp</item>
+    </style>
+    
+    <style name="NP__.Leaderboard.EmptyState.Button" parent="NP__.Widget.Button">
+        <item name="android:minWidth">@dimen/np__leaderboard_empty_state_button_min_width</item>
     </style>
     
     <!--
@@ -533,6 +537,9 @@
     <style name="NP__.Settings.ToggleButton.Text" parent="NP__.Widget.Text">
         <item name="android:textColor">@color/np__palette_dark_blue</item>
         <item name="android:textSize">14sp</item>
+    </style>
+    
+    <style name="NP__.Settings.Button" parent="NP__.Widget.Button">
     </style>
     
     <!--

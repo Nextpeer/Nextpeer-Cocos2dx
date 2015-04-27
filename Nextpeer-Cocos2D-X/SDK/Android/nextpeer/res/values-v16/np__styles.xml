@@ -167,6 +167,10 @@
         <item name="android:fontFamily">sans-serif-medium</item>
     </style>
     
+    <style name="NP__.Leaderboard.EmptyState.Button" parent="NP__.Widget.Button">
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:minWidth">@dimen/np__leaderboard_empty_state_button_min_width</item>
+    </style>
     <!--
     	========================================================
     	Results
