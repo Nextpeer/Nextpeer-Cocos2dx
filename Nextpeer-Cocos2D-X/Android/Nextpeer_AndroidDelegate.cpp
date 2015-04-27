@@ -68,7 +68,7 @@ JNIEXPORT void JNICALL Java_com_nextpeer_android_NextpeerCocos2DX_onTournamentSt
     jsize opponentsCount = pEnv->GetArrayLength(opponents);
     
     // We don't use autorelease since this is probably not the main thread of the application
-    __Array* players = __Array::create()
+    __Array* players = __Array::create();
     players->initWithCapacity(opponentsCount);
     for (int i = 0; i < opponentsCount; i++) {
         jobject player = env->GetObjectArrayElement(opponents, i);
