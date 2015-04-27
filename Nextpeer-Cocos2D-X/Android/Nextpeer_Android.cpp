@@ -156,9 +156,8 @@ namespace nextpeer {
 
 			return cocos2d::JniHelper::jstring2string(name);
 		}
-#else
-		return string("");
 #endif
+        return string("");
 	}
 
 	void Nextpeer_Android::unreliablePushDataToOtherPlayers(void* pBuffer, uint32_t length)

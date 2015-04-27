@@ -26,7 +26,7 @@ namespace nextpeer
     void NextpeerNotifier::queueScheduler(float dt)
     {
         NextpeerEventQueue* queue = NextpeerEventQueue::getInstance();
-        unsigned int count = queue->queueSize();
+        unsigned long count = queue->queueSize();
 
         if (!count) return;
         

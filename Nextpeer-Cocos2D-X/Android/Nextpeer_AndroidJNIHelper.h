@@ -28,6 +28,8 @@ namespace nextpeer {
     
     class Nextpeer_AndroidJNIHelper
     {
+    private:
+        static jclass getClassID(const char *className, JNIEnv *env);
     public:
         static bool getFieldInfo(JniFieldInfo& fieldInfo, const char* className, const char* fieldName, const char* paramCode);
         static jstring getStringFieldValue(const char* className, const char* fieldName, jobject object);

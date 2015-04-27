@@ -58,7 +58,7 @@ namespace nextpeer {
                 break;
             }
             
-            jclass classID = cocos2d::JniHelper::getClassID(className, pEnv);
+            jclass classID = Nextpeer_AndroidJNIHelper::getClassID(className, pEnv);
             fieldID = pEnv->GetFieldID(classID, fieldName, paramCode);
             
             if (!fieldID) {
@@ -123,21 +123,26 @@ namespace nextpeer {
     }
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+    jclass Nextpeer_AndroidJNIHelper::getClassID(const char *className, JNIEnv *env)
+    {
+        if (nullptr == className) {
+            return nullptr;
+        }
+        
+        if ( !env ) env = cocos2d::JniHelper::getEnv();
+        
+        jstring _jstrClassName = env->NewStringUTF(className);
+        
+        jclass _clazz = (jclass) env->CallObjectMethod(cocos2d::JniHelper::classloader,
+                                                       cocos2d::JniHelper::loadclassMethod_methodID,
+                                                       _jstrClassName);
+        
+        if (nullptr == _clazz) {
+            env->ExceptionClear();
+        }
+        
+        env->DeleteLocalRef(_jstrClassName);
+        
+        return _clazz;
+    }
 }
