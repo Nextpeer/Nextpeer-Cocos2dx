@@ -32,7 +32,7 @@ namespace nextpeer {
         static NextpeerEventQueue* getInstance();
         
         void addToQueue(string eventName, Ref* data);
-        unsigned int queueSize();
+        unsigned long queueSize();
         pair<string, Ref*> popQueue();
         
     protected:
