@@ -1,31 +1,28 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
-
-    <android.support.v4.widget.SwipeRefreshLayout
-        android:id="@+id/np__leaderboard_page_container"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+    android:orientation="vertical"
         android:padding="@dimen/np__leaderboard_tab_padding" >
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center_horizontal"
-            android:orientation="vertical" >
-
-            <TextView
-                android:id="@+id/np__leaderboard_title"
-                style="@style/NP__.Leaderboard.Title.Text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/np__leaderboard_title_buttom_margin"
-                android:text="@string/np__leaderboard_title"
-                android:textColor="@color/np__palette_dark_blue"
-                android:typeface="normal" />
-
-            <RelativeLayout
+      <TextView
+          android:id="@+id/np__leaderboard_title"
+          style="@style/NP__.Leaderboard.Title.Text"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+     	  android:layout_alignParentTop="true"
+     	  android:layout_centerHorizontal="true"
+          android:layout_marginBottom="@dimen/np__leaderboard_title_buttom_margin"
+          android:text="@string/np__leaderboard_title"
+          android:textColor="@color/np__palette_dark_blue"
+          android:typeface="normal" />
+            
+      <LinearLayout 
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/np__leaderboard_title"
+   				android:orientation="vertical">
+          
+      <RelativeLayout
                 android:id="@+id/np__leaderboard_selector_container"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/np__leaderboard_selector_height"
@@ -64,7 +61,27 @@
                     android:layout_centerVertical="true"
                     android:background="@null"
                     android:src="@drawable/np__ic_leaderboard_next_arrow" />
-            </RelativeLayout>
+    </RelativeLayout>
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/np__leaderboard_page_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+      	<FrameLayout 
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            
+	     <include layout="@layout/np__fragment_tab_leaderboard_empty_view" 
+		        android:layout_width="match_parent"
+		        android:layout_height="match_parent"
+		        android:visibility="invisible"/>
+        <LinearLayout
+                    android:id="@+id/np__leaderboard_list_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" 
+                android:visibility="invisible">
 
             <ListView
                 android:id="@+id/np__leaderboard_list"
@@ -103,6 +120,16 @@
                     android:dividerHeight="@dimen/np__leaderboard_selector_bottom_margin" />
             </LinearLayout>
         </LinearLayout>
+        </FrameLayout>
+	    
     </android.support.v4.widget.SwipeRefreshLayout>
+   </LinearLayout>
 
-</LinearLayout>
+     
+    <ProgressBar
+        android:id="@+id/np__leaderboard_progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+</RelativeLayout>
