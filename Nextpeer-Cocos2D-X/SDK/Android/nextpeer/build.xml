@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="NextpeerActivity" default="help">
-
+    <property name="java.target" value="1.6" />
+    <property name="java.source" value="1.6" />
+    
     <!-- The local.properties file is created and updated by the 'android' tool.
          It contains the path to the SDK. It should *NOT* be checked into
          Version Control Systems. -->
