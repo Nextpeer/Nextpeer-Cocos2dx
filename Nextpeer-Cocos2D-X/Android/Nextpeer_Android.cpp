@@ -123,7 +123,6 @@ namespace nextpeer {
 		return (bool)ret;
 #else
 		return false;
-#endif
 	}
 
 	std::string Nextpeer_Android::getCurrentPlayerId()
@@ -139,10 +138,9 @@ namespace nextpeer {
 		}
 		else {
 			return string("");
-		}
-#else
-		return string("");
+        }
 #endif
+		return string("");
 	}
 
 	std::string Nextpeer_Android::getCurrentPlayerName()
@@ -155,10 +153,9 @@ namespace nextpeer {
 			if (!name) return string("");
 
 			return cocos2d::JniHelper::jstring2string(name);
-		}
-#else
-		return string("");
+        }
 #endif
+		return string("");
 	}
 
 	void Nextpeer_Android::unreliablePushDataToOtherPlayers(void* pBuffer, uint32_t length)

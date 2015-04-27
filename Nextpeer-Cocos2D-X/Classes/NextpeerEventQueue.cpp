@@ -32,7 +32,7 @@ namespace nextpeer {
         pthread_mutex_unlock(&_lock);
     }
     
-    unsigned int NextpeerEventQueue::queueSize()
+    unsigned long NextpeerEventQueue::queueSize()
     {
         return _queue.size();
     }

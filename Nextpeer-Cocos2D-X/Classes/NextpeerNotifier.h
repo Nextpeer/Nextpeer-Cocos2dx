@@ -30,7 +30,7 @@ namespace nextpeer {
         void broadcastDashboardDidDisappear();
         void broadcastDashboardNextpeerReturnToGame();
         
-        void queueScheduler();
+        void queueScheduler(float dt=0);
     private:
         NextpeerNotifier();
         static NextpeerNotifier* _instance;
