@@ -55,6 +55,11 @@
     "feed.footer.action.challenge.label": "CHALLENGE",
     "feed.footer.action.externalShare.label": "SHARE",
     
+    "fullStory.footer.action.install.label": "INSTALL",
+    "fullStory.footer.action.challenge.label": "CHALLENGE",
+    "fullStory.footer.action.externalShare.label": "SHARE",
+    "fullStory.screen.title.label": "%USER_NAME%'s Post",
+    
     "forgotPassword.actions.default.label":"ENTER YOUR EMAIL TO RESET YOUR PASSWORD",
     "forgotPassword.email.text.placeholder": "Your email",
     "forgotPassword.error.invalidEmail.label": "Invalid email address",
