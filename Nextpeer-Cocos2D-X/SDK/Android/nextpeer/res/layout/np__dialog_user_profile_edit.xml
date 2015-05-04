@@ -68,8 +68,7 @@
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:fillViewport="true"
-            >
+            android:fillViewport="true" >
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -105,14 +104,18 @@
                     style="@style/NP__.Profile.Edit.Text"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/np__user_profile_edit_text_height"
-                    android:layout_margin="@dimen/np__user_profile_edit_text_margin" />
+                    android:layout_margin="@dimen/np__user_profile_edit_text_margin"
+                    android:focusable="false"
+                    android:maxLength="@integer/np__user_profile_edit_name_max_length" />
 
                 <EditText
                     android:id="@+id/np__user_profile_edit_motto"
                     style="@style/NP__.Profile.Edit.Text"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/np__user_profile_edit_text_height"
-                    android:layout_margin="@dimen/np__user_profile_edit_text_margin" />
+                    android:layout_margin="@dimen/np__user_profile_edit_text_margin"
+                    android:focusable="false"
+                    android:maxLength="@integer/np__user_profile_edit_motto_max_length" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -126,6 +129,7 @@
                         android:layout_height="@dimen/np__user_profile_edit_text_height"
                         android:layout_margin="@dimen/np__user_profile_edit_text_margin"
                         android:layout_weight="1"
+                        android:focusable="false"
                         android:hint="@string/np__application_name" />
 
                     <AutoCompleteTextView
@@ -135,7 +139,9 @@
                         android:layout_height="@dimen/np__user_profile_edit_text_height"
                         android:layout_margin="@dimen/np__user_profile_edit_text_margin"
                         android:layout_weight="1"
-                        android:hint="@string/np__application_name" />
+                        android:focusable="false"
+                        android:hint="@string/np__application_name"
+                        android:maxLength="@integer/np__user_profile_edit_city_max_length" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -150,6 +156,7 @@
                         android:layout_height="@dimen/np__user_profile_edit_text_height"
                         android:layout_margin="@dimen/np__user_profile_edit_text_margin"
                         android:layout_weight="1"
+                        android:focusable="false"
                         android:hint="@string/np__application_name" />
 
                     <Button
@@ -159,21 +166,22 @@
                         android:layout_height="@dimen/np__user_profile_edit_text_height"
                         android:layout_margin="@dimen/np__user_profile_edit_text_margin"
                         android:layout_weight="1"
+                        android:focusable="false"
                         android:hint="@string/np__application_name" />
                 </LinearLayout>
-                
-                <!-- This is placeholder view which holds nothing. The reason being the fact that on some Android versions the soft keyboard
+
+                <!--
+                This is placeholder view which holds nothing. The reason being the fact that on some Android versions the soft keyboard
                 doesn't update the view size correctly and prevents the user to scroll while editing. 
-                See https://code.google.com/p/android/issues/detail?id=57382 -->
+                See https://code.google.com/p/android/issues/detail?id=57382
+                -->
+
                 <LinearLayout
+                    android:id="@+id/np__user_profile_bottom_placeholder"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/np__scrollable_keyboard_height"
-                    android:orientation="vertical"
-                    android:id="@+id/np__user_profile_bottom_placeholder"
-                    >
-                    
+                    android:orientation="vertical" >
                 </LinearLayout>
-                
             </LinearLayout>
         </ScrollView>
     </LinearLayout>

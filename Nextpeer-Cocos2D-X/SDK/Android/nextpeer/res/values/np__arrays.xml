@@ -26,13 +26,6 @@
         <item>10</item>
     </integer-array>
     
-    <!-- game mode -->
-    <integer-array name="np__game_mode_button_size">
-        <item>192</item> <!-- 1/2 modes -->
-        <item>137</item> <!-- 3 modes -->
-        <item>122</item> <!-- 4 modes or more -->
-    </integer-array>
-    
     <integer-array name="np__game_mode_button_color">
         <item>@color/np__palette_red</item>
         <item>@color/np__palette_light_blue</item> 

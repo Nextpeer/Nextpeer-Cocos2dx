@@ -148,6 +148,7 @@
     
     "post.label": "What's on your mind?",
     "post.status.label": "Posting...",
+    "post.justPosted.label": "Just posted, go and visit your stream.",
     
     "profile.edit.birthday.text.placeholder": "Birthday",
     "profile.edit.city.text.placeholder": "Your city",
@@ -210,6 +211,8 @@
     "shareMoment.externalShare.subject.text.placeholder" : "My moment in %GAME_NAME%",
     "shareMoment.signedUser.text.placeholder": "Love this game",
     "shareMoment.title.label": "SHARE YOUR MOMENT TO THE STREAM",
+    "shareMoment.justPosted.label": "Just posted, go and visit your stream.",
+    "shareMoment.status.label": "Sharing...",
     
     "sideMenu.exit.label": "Exit",
     "sideMenu.about.label": "About",

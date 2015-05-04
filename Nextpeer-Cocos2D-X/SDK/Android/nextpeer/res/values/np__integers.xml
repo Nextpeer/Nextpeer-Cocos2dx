@@ -9,5 +9,9 @@
     <integer name="np__circular_progress_min_sweep_angle">20</integer>
     <integer name="np__circular_progress_max_sweep_angle">300</integer>
     
+    <!-- Loading indicator -->
+    <integer name="np__loading_indicator_rotation_duration">300</integer>
+    <integer name="np__loading_indicator_rotation_start_offset">200</integer>
+    
     
 </resources>
