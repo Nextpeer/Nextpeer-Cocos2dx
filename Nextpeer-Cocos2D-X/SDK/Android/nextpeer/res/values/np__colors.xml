@@ -13,7 +13,6 @@
     <color name="np__white">#FFFFFF</color>
     <color name="np__black">#000000</color>
     <color name="np__grey">#C0C0C0</color>
-    <color name="np__grey_dark">#434343</color>
     <color name="np__grey_light">#DCDCDC</color>
     <color name="np__grey_super_light">#F0F0F0</color>
     <color name="np__shadow_color">#48000000</color>
@@ -78,8 +77,6 @@
     <color name="np__date_picker_text_normal">#ff999999</color>
     <color name="np__date_picker_calendar_header">#ff999999</color>
     <color name="np__date_picker_date_picker_view_animator">#fff2f2f2</color>
-    <color name="np__date_picker_ampm_text_color">#8c8c8c</color>
-    <color name="np__date_picker_numbers_text_color">#8c8c8c</color>
     
     <!-- Crop -->
     <color name="np__crop_button_bar">#f3f3f3</color>
@@ -89,4 +86,7 @@
     
     <!-- Circular progress -->
     <color name="np__circular_progress_default_color">#33b5e5</color>
+    
+    <!-- Loading indicator -->
+    <color name="np__loading_indicator_background">#e6283C40</color>
 </resources>

@@ -27,16 +27,16 @@
     
     <string name="np__string_service_stream_default_user_name_key">stream.player.nameWhenNotSet.label</string>
     <string name="np__string_service_stream_play_random_button_key">stream.play.random.label</string>
+    <!--suppress UnusedResources - Tablet only-->
     <string name="np__string_service_stream_play_challenge_button_key">stream.play.challenge.label</string>
     <string name="np__string_service_stream_new_stories_button_key">stream.newStories.label</string>
-    <string name="np__string_service_stream_load_more_lable_key">stream.loadMoreAtBottom.label</string>
     <string name="np__string_service_stream_share_message_signed_in_key">stream.shareMessage.signedIn.text.placeholder</string>
     <string name="np__string_service_stream_share_message_not_signed_in_key">stream.shareMessage.notSignedIn.text.placeholder</string>
     <string name="np__string_service_stream_share_message_subject_key">stream.shareMessage.subject.text.placeholder</string>
-    <string name="np__string_service_stream_empty_state_buble_key">stream.emptyState.bubble.label</string>
     
     <string name="np__string_service_post_description_key">post.label</string>
     <string name="np__string_service_post_status_label_key">post.status.label</string>
+    <string name="np__string_service_post_just_posted_label_key">post.justPosted.label</string>
     
     <string name="np__string_service_game_mode_title_key">gameModes.title.label</string>
     
@@ -52,8 +52,6 @@
     <string name="np__string_service_profile_lable_my_stream_key">profile.view.screen.streamHeader.label</string>
     <string name="np__string_service_profile_lable_nextpeer_id_key">profile.view.screen.nextpeerId.label</string>
     <string name="np__string_service_profile_lable_xp_key">profile.view.screen.xp.label</string>
-    <string name="np__string_service_profile_fetching_message_key">profile.view.screen.status.fetching.label</string>
-    <string name="np__string_service_profile_fetching_failed_error_message_key">profile.view.screen.status.fetchingFailed.label</string>
     
     <string name="np__string_service_oponent_profile_title_key">opponent.screen.title.label</string> 
     <string name="np__string_service_oponent_profile_button_messages_key">opponent.screen.message.button</string>
@@ -105,8 +103,6 @@
     
     <string name="np__string_service_player_buddies_button_add_key">playerBuddies.cell.addBuddy.button</string>
     <string name="np__string_service_player_buddies_button_play_key">playerBuddies.cell.playBuddy.button</string>
-    <string name="np__string_service_player_buddies_search_placeholder_text_key">playerBuddies.searchBar.text.placeholder</string>
-    <string name="np__string_service_player_buddies_unsigned_user_lable_key">playerBuddies.text.unsignedUser.label</string>
     <string name="np__string_service_player_buddies_failed_to_fetch_error_key">playerBuddies.screen.status.failedToFetch.label</string>
     <string name="np__string_service_player_buddies_failed_to_add_buddy_error_key">playerBuddies.screen.status.failedToAddBuddy.label</string>
     
@@ -192,6 +188,8 @@
     <string name="np__string_service_share_moments_description_key">shareMoment.title.label</string>
     <string name="np__string_service_share_moments_button_key">shareMoment.button.text</string>
     <string name="np__string_service_share_moments_post_placeholder_key">shareMoment.signedUser.text.placeholder</string>
+    <string name="np__string_service_share_moments_just_posted_lable_key">shareMoment.justPosted.label</string>
+    <string name="np__string_service_share_moments_status_lable_key">shareMoment.status.label</string>
     
     <string name="np__string_service_leaderboard_title_key">leaderboard.title.label</string>
     <string name="np__string_service_leaderboard_surrounding_key">leaderboard.subtitle.label</string>

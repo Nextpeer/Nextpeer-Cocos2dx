@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:wheel="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/np__nextpeer_icon_loading_indicator_container"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        android:id="@+id/np__nextpeer_icon_loading_indicator_image_background"
+        android:layout_width="@dimen/np__icon_loading_indicator_background_radius"
+        android:layout_height="@dimen/np__icon_loading_indicator_background_radius" 
+        android:background="@drawable/np__icon_loading_indicator_background">
+
+        <ImageView
+            android:id="@+id/np__nextpeer_icon_loading_indicator_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/np__ic_action_bar_logo" />
+    </RelativeLayout>
+
+</RelativeLayout>
