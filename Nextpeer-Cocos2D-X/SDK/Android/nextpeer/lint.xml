@@ -19,6 +19,15 @@
         <ignore path="res/drawable*/np__ic_gamestream_add_profile_picture_player.png" />
         <ignore path="res/drawable*/np__ic_gamestream_new_stories.png" />
         <ignore path="res/drawable*/np__ic_post_upload_image.png" />
+        <!-- Will bew used in the future -->
+        <ignore path="res/drawable*/np__empty_state_arrow_up.png" />
+        <ignore path="res/drawable*/np__empty_state_hands_side.png" />
+        <ignore path="res/drawable*/np__empty_state_panic_mouth.png" />
+        <ignore path="res/drawable*/np__empty_state_sad_mouth.png" />
+        <ignore path="res/drawable*/np__ic_dialog_error.png" />
+        <ignore path="res/drawable*/np__tournament_loading_sync_waiting.png" />
+        
+        <ignore path="res/layout/np__layout_date_picker_header_view.xml" />
     </issue>
     
     <!-- Ignore the ContentDescription issue in the layouts -->
@@ -29,6 +38,35 @@
     <!-- Ignore the Overdraw issue since we use dynamic background -->
     <issue id="Overdraw">
         <ignore path="res/layout/" />
+    </issue>
+    
+    <!-- Ignore the RtlSymmetry -->
+    <issue id="RtlSymmetry">
+        <ignore path="res/layout/" />
+    </issue>
+    
+    <!-- Ignore the RtlHardcoded -->
+    <issue id="RtlHardcoded">
+        <ignore path="res/layout/" />
+    </issue>
+    
+    <issue id="IconColors">
+        <ignore path="res/" />
+    </issue>
+    
+    <!-- Ignore the IconDuplicatesConfig issue in the known duplicated icons -->
+    <issue id="IconDuplicatesConfig">
+        <ignore path="res/drawable*/np__crop_divider.9.png" />	<!-- Crop package doesn't have xxhdpi icons -->
+        <ignore path="res/drawable*/np__crop_ic_cancel.png" />	<!-- Crop package doesn't have xxhdpi icons -->
+        <ignore path="res/drawable*/np__crop_ic_done.png" />	<!-- Crop package doesn't have xxhdpi icons -->
+        <ignore path="res/drawable*/np__crop_tile.png" />		<!-- Crop package doesn't have xxhdpi icons -->
+    </issue>
+    
+    <!-- Ignore the IconDuplicatesConfig issue crop package - external open source code -->
+    <issue id="IconDipSize">
+        <ignore path="res/drawable*/np__crop_ic_cancel.png" />
+        <ignore path="res/drawable*/np__crop_ic_done.png" />	
+        <ignore path="res/drawable*/np__crop_tile.png" />		
     </issue>
     
     <!-- Ignore the UselessParent issue since we use dynamic background and we need two layers - for the background image and the transparent layer-->
@@ -51,6 +89,16 @@
         <ignore path="src/com/squareup/okhttp/" />
         <ignore path="src/com/google/" />
         <ignore path="src/com/nineoldandroids/" />
+    </issue>
+    
+    <!-- Ignore the UseSparseArrays issue in the okhttp files -->
+    <issue id="UseSparseArrays">
+        <ignore path="src/com/squareup/okhttp/" />
+    </issue>
+    
+    <!-- Ignore the MergeRootFrame issue -->
+    <issue id="MergeRootFrame">
+        <ignore path="res/layout/np__activity_main.xml" />
     </issue>
     
     <!-- Ignore the Assert issue in the okhttp files -->

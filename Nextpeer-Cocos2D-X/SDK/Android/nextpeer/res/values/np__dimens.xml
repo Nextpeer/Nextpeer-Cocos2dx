@@ -17,10 +17,7 @@
     <dimen name="np__widget_button_shadow_size">3dp</dimen>
     <dimen name="np__widget_button_shadow_seen_padding">2dp</dimen>
     <dimen name="np__widget_button_rounded_corners_radius">2dp</dimen>
-    <dimen name="np__widget_button_stroke_padding">3dp</dimen>
    
-    <dimen name="np__widget_switch_corners_radius">8dp</dimen>
-    
     <dimen name="np__dummy_action_bar_default_height">48dp</dimen>
     <dimen name="np__dummy_action_bar_padding">5dp</dimen>
     
@@ -64,7 +61,6 @@
     <dimen name="np__game_stream_item_content_padding">10dp</dimen>
     <dimen name="np__game_stream_item_content_margin">8dp</dimen>
     <dimen name="np__game_stream_item_content_image_height">120dp</dimen>
-    <dimen name="np__game_stream_title_side_margin">60dp</dimen>
     <dimen name="np__game_stream_post_dialog_player_image_thumbnail_size">50dp</dimen>
     <dimen name="np__game_stream_item_post_margin_sides">16dp</dimen>
     <dimen name="np__game_stream_item_post_margin_top">10dp</dimen>
@@ -90,7 +86,6 @@
     <dimen name="np__buddies_list_profile_picture_border_line_size">1dp</dimen>
     <dimen name="np__buddies_list_button_width">52dp</dimen>
     <dimen name="np__buddies_list_button_height">24dp</dimen>
-    <dimen name="np__buddies_list_button_left_margin">8dp</dimen>
     <dimen name="np__buddies_list_button_right_margin">12dp</dimen>    
     <dimen name="np__buddies_list_padding">@dimen/np__fragment_default_padding</dimen>
     <dimen name="np__buddies_list_item_height">@dimen/np__widget_listview_item_default_height</dimen>
@@ -163,8 +158,6 @@
     <dimen name="np__report_player_button_height">35dp</dimen>
     <dimen name="np__report_player_button_top_margin">12dp</dimen>
     <dimen name="np__report_player_button_stroke_width">1dp</dimen>
-    <dimen name="np__report_player_button_text_size">15sp</dimen>
-    <dimen name="np__report_player_action_bar_padding">5dp</dimen>
     <dimen name="np__report_player_buttons_list_divider_size">8dp</dimen>
     <dimen name="np__report_player_dialog_height">320dp</dimen>
     <dimen name="np__report_player_dialog_width">340dp</dimen>
@@ -242,8 +235,6 @@
     <dimen name="np__settings_button_padding">10dp</dimen>
     <dimen name="np__settings_button_height">50dp</dimen>
     <dimen name="np__settings_button_width">310dp</dimen>
-    <dimen name="np__settings_push_notification_layout_top_matgin">32dp</dimen>
-    <dimen name="np__settings_push_notification_text_right_matgin">12dp</dimen>
     <dimen name="np__about_text_top_margin">56dp</dimen>
     <dimen name="np__about_button_height">50dp</dimen>
     <dimen name="np__about_button_width">310dp</dimen>
@@ -292,9 +283,6 @@
     <dimen name="np__date_picker_year_label_height">64dip</dimen>
     <dimen name="np__date_picker_year_label_text_size">22sp</dimen>
 
-    <dimen name="np__date_picker_time_label_size">60sp</dimen>
-    <dimen name="np__date_picker_ampm_label_size">16sp</dimen>
-    
     <!-- Crop -->
     <dimen name="np__crop_bar_height">48dp</dimen>
     
@@ -303,15 +291,10 @@
     <dimen name="np__action_bar_home_button_right_margin">5dp</dimen>
     
     <!-- Toast -->
-    <dimen name="np__toast_image_margin">10dp</dimen>
     <dimen name="np__toast_padding">10dp</dimen>
     
     <!-- Loading indicator -->
-    <dimen name="np__loading_indicator_width">50dp</dimen>
-    <dimen name="np__loading_indicator_height">50dp</dimen>    
-    
-    <dimen name="np__dialog_content_padding">0dp</dimen>
-    <dimen name="np__dialog_title_height">64dp</dimen>
+    <dimen name="np__icon_loading_indicator_background_radius">75dp</dimen>
     
     <!-- Circular progress -->
     <dimen name="np__circular_progress_default_stroke_width">4dp</dimen>
