@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/np__game_list_item_container"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/np__game_list_item_height"
+    android:background="@drawable/np__shadowed_rounded_corner_white_background"
+    android:orientation="horizontal"
+    android:padding="@dimen/np__game_list_item_padding" >
+
+    <com.nextpeer.android.open.ui.NPImageView
+        android:id="@+id/np__game_list_item_picture"
+        android:layout_width="@dimen/np__game_list_item_picture_size"
+        android:layout_height="@dimen/np__game_list_item_picture_size"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center_vertical" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="@dimen/np__game_list_item_content_margin"
+        android:layout_toLeftOf="@+id/np__game_list_item_button"
+        android:layout_toRightOf="@+id/np__game_list_item_picture"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/np__game_list_item_title"
+            style="@style/NP__.Ads.Item.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/np__game_list_item_text"
+            style="@style/NP__.Ads.Item.Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" 
+            android:visibility="gone"/>
+    </LinearLayout>
+
+    <com.nextpeer.android.open.ui.NPButton
+        android:id="@+id/np__game_list_item_button"
+        style="@style/NP__.Ads.Button"
+        android:layout_width="@dimen/np__game_list_item_button_width"
+        android:layout_height="@dimen/np__game_list_item_button_height"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="@dimen/np__game_list_item_content_margin" 
+        android:drawablePadding="@dimen/np__game_button_icon_padding"/>
+
+</RelativeLayout>
