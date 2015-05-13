@@ -6,18 +6,11 @@
     	======================================================== 
     -->
     
-    <style name="NP__.Widget.Button" parent="@android:style/Widget.Button">
-        <item name="android:textAppearance">@style/NP__.TextAppearance.Medium</item>
-        <item name="android:gravity">center</item>
-        <item name="android:ellipsize">marquee</item>
-        <item name="android:marqueeRepeatLimit">marquee_forever</item>
-        <item name="android:textSize">16sp</item>
+    <style name="NP__.Widget.Button" parent="NP__.Base.Widget.Button">
         <item name="android:fontFamily">sans-serif-medium</item>
     </style>
     
-    <style name="NP__.Widget.Dialog.ActionBar.Title.Text" parent="NP__.Widget.Text.Content.Large">
-        <item name="android:textColor">@color/np__palette_dark_blue</item>
-		<item name="android:textSize">20sp</item>
+    <style name="NP__.Widget.Dialog.ActionBar.Title.Text" parent="NP__.Base.Widget.Dialog.ActionBar.Title.Text">
         <item name="android:fontFamily">sans-serif</item>
     </style>
 
@@ -27,51 +20,31 @@
     	======================================================== 
     -->
 
-    <style name="NP__.GameStream.Header.Text" parent="NP__.Widget.Text.Content.Medium">
-        <item name="android:textColor">@color/np__game_stream_post_title</item>
+    <style name="NP__.GameStream.Header.Text" parent="NP__.Base.GameStream.Header.Text">
         <item name="android:fontFamily">sans-serif</item>
     </style>
 
-    <style name="NP__.GameStream.Item.Header.Text" parent="NP__.Widget.Text.Content.Small">
-        <item name="android:textColor">@color/np__game_stream_post_title</item> 
-        <item name="android:fontFamily">sans-serif-medium</item>
-        <item name="android:ellipsize">end</item>
-        <item name="android:singleLine">true</item>
-        <item name="android:maxLines">1</item>
-    </style>
-
-    <style name="NP__.GameStream.Item.Header.StoryTime" parent="NP__.TextAppearance.Small">
-        <item name="android:textColor">@color/np__game_stream_post_timestamp_text</item>
-        <item name="android:textSize">11sp</item>
-        <item name="android:ellipsize">end</item>
-        <item name="android:singleLine">true</item>
-        <item name="android:maxLines">1</item>
+    <style name="NP__.GameStream.Item.Header.Text" parent="NP__.Base.GameStream.Item.Header.Text">
         <item name="android:fontFamily">sans-serif-medium</item>
     </style>
 
-    <style name="NP__.GameStream.Item.Story.Text" parent="NP__.TextAppearance.Medium">
-        <item name="android:textColor">@color/np__palette_dark_blue</item>
-        <item name="android:textSize">16sp</item>
-        <item name="android:textStyle">italic</item>
+    <style name="NP__.GameStream.Item.Header.StoryTime" parent="NP__.Base.GameStream.Item.Header.StoryTime">
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="NP__.GameStream.Item.Story.Text" parent="NP__.Base.GameStream.Item.Story.Text">
         <item name="android:fontFamily">sans-serif-medium</item>
     </style>
     
-    <style name="NP__.GameStream.Item.Footer.Button.Text" parent="NP__.TextAppearance.Small">
-        <item name="android:textColor">@color/np__game_stream_post_like_counter</item>
-        <item name="android:textSize">11sp</item>
+    <style name="NP__.GameStream.Item.Footer.Button.Text" parent="NP__.Base.GameStream.Item.Footer.Button.Text">
         <item name="android:fontFamily">sans-serif</item>
     </style>
     
-    <style name="NP__.GameStream.Post.Text" parent="NP__.TextAppearance.Large">
-        <item name="android:textColor">@color/np__palette_dark_blue</item>
+    <style name="NP__.GameStream.Post.Text" parent="NP__.Base.GameStream.Post.Text">
         <item name="android:fontFamily">sans-serif-light</item>
-        <item name="android:inputType">textMultiLine|textNoSuggestions</item>
-        <item name="android:cursorVisible">false</item>
     </style>
     
-    <style name="NP__.GameStream.NewStories.Text" parent="NP__.TextAppearance.Small">
-        <item name="android:textColor">@color/np__palette_dark_blue</item>
-        <item name="android:gravity">center</item>
+    <style name="NP__.GameStream.NewStories.Text" parent="NP__.Base.GameStream.NewStories.Text">
         <item name="android:fontFamily">sans-serif-medium</item>
     </style>
     <!--
@@ -79,36 +52,23 @@
     	User Profile
     	======================================================== 
     -->
-    <style name="NP__.Profile.Title.Text" parent="NP__.Widget.Text.Content.Large">
-        <item name="android:textColor">@color/np__palette_dark_blue</item>
-        <item name="android:textSize">22sp</item>
+    <style name="NP__.Profile.Title.Text" parent="NP__.Base.Profile.Title.Text">
         <item name="android:fontFamily">sans-serif</item>
     </style>
     
-    <style name="NP__.Profile.Edit.Description" parent="NP__.Widget.Text.Content.Small">
-        <item name="android:textColor">@color/np__palette_dark_blue</item>
-        <item name="android:textSize">16sp</item>
+    <style name="NP__.Profile.Edit.Description" parent="NP__.Base.Profile.Edit.Description">
         <item name="android:fontFamily">sans-serif-light</item>
     </style>
     
-    <style name="NP__.Profile.Content.Text" parent="NP__.Widget.Text.Content.Small">
-        <item name="android:textColor">@color/np__palette_dark_blue</item>
-        <item name="android:textSize">14sp</item>
-        <item name="android:ellipsize">end</item>
-        <item name="android:maxLines">1</item>
-        <item name="android:singleLine">true</item>
+    <style name="NP__.Profile.Content.Text" parent="NP__.Base.Profile.Content.Text">
         <item name="android:fontFamily">sans-serif-light</item>
     </style>
     
-    <style name="NP__.Profile.Stream.Title.Text" parent="NP__.Widget.Text.Content.Medium">
-        <item name="android:textColor">@color/np__palette_dark_blue</item>
-        <item name="android:textSize">16sp</item>
+    <style name="NP__.Profile.Stream.Title.Text" parent="NP__.Base.Profile.Stream.Title.Text">
         <item name="android:fontFamily">sans-serif</item>
     </style>
     
-    <style name="NP__.Profile.Button" parent="NP__.Widget.Button">
-        <item name="android:textColor">@color/np__palette_dark_blue</item>
-        <item name="android:textSize">16sp</item>
+    <style name="NP__.Profile.Button" parent="NP__.Base.Profile.Button">
         <item name="android:fontFamily">sans-serif-medium</item>
     </style>
     
@@ -117,30 +77,19 @@
     	Credentials
     	======================================================== 
     -->
-    <style name="NP__.Credentials.Title.Text" parent="NP__.Widget.Text.Content.Large">
-        <item name="android:textColor">@color/np__palette_dark_blue</item>
-		<item name="android:textSize">20sp</item>
+    <style name="NP__.Credentials.Title.Text" parent="NP__.Base.Credentials.Title.Text">
         <item name="android:fontFamily">sans-serif</item>
     </style>
     
-    <style name="NP__.Credentials.Error.Text" parent="NP__.Widget.Text.Content.Small">
-        <item name="android:textColor">@color/np__palette_red</item>
-        <item name="android:textSize">12sp</item>
+    <style name="NP__.Credentials.Error.Text" parent="NP__.Base.Credentials.Error.Text">
         <item name="android:fontFamily">sans-serif-light</item>
     </style>
     
-    <style name="NP__.Credentials.Edit.Text" parent="NP__.Widget.EditText">
-		<item name="android:textSize">15sp</item>
+    <style name="NP__.Credentials.Edit.Text" parent="NP__.Base.Credentials.Edit.Text">
         <item name="android:fontFamily">sans-serif-light</item>
     </style>
     
-    <style name="NP__.Credentials.Button" parent="NP__.Widget.Button">
-        <item name="android:textSize">16sp</item>
-    </style>
-    
-    <style name="NP__.Credentials.Footer.Text" parent="NP__.Widget.Text.Content.Small">
-        <item name="android:textColor">@color/np__palette_dark_blue</item>
-		<item name="android:textSize">12sp</item>
+    <style name="NP__.Credentials.Footer.Text" parent="NP__.Base.Credentials.Footer.Text">
 		<item name="android:fontFamily">sans-serif-light</item>
     </style>
     
@@ -149,27 +98,20 @@
     	Leader board
     	======================================================== 
     -->
-    <style name="NP__.Leaderboard.Item.Text" parent="NP__.Widget.Text.Content.Small">
-        <item name="android:textColor">@color/np__palette_dark_blue</item>
-        <item name="android:textSize">14sp</item>
+    <style name="NP__.Leaderboard.Item.Text" parent="NP__.Base.Leaderboard.Item.Text">
         <item name="android:fontFamily">sans-serif</item>
     </style>
     
-	<style name="NP__.Leaderboard.Title.Text" parent="NP__.Widget.Text.Content.Large">
-        <item name="android:textColor">@color/np__palette_dark_blue</item>
-        <item name="android:textSize">20sp</item>
+	<style name="NP__.Leaderboard.Title.Text" parent="NP__.Base.Leaderboard.Title.Text">
         <item name="android:fontFamily">sans-serif</item>
     </style>
     
-	<style name="NP__.Leaderboard.Selector.Text" parent="NP__.Widget.Text.Content.Medium">
-        <item name="android:textColor">@color/np__white</item>
-        <item name="android:textSize">16sp</item>
+	<style name="NP__.Leaderboard.Selector.Text" parent="NP__.Base.Leaderboard.Selector.Text">
         <item name="android:fontFamily">sans-serif-medium</item>
     </style>
     
-    <style name="NP__.Leaderboard.EmptyState.Button" parent="NP__.Widget.Button">
+    <style name="NP__.Leaderboard.EmptyState.Button" parent="NP__.Base.Leaderboard.EmptyState.Button">
         <item name="android:fontFamily">sans-serif</item>
-        <item name="android:minWidth">@dimen/np__leaderboard_empty_state_button_min_width</item>
     </style>
     <!--
     	========================================================
@@ -177,22 +119,12 @@
     	======================================================== 
     -->
     
-    <style name="NP__.Results.Item.Text" parent="NP__.Widget.Text.Content.Small">
-        <item name="android:textColor">@color/np__palette_dark_blue</item>
-        <item name="android:textSize">15sp</item>
+    <style name="NP__.Results.Item.Text" parent="NP__.Base.Results.Item.Text">
         <item name="android:fontFamily">sans-serif</item>
-        <item name="android:ellipsize">end</item>
-        <item name="android:singleLine">true</item>
-        <item name="android:maxLines">1</item>
     </style>
 
-	<style name="NP__.Results.Item.Position.Text" parent="NP__.Widget.Text.Content.Small">
-        <item name="android:textSize">15sp</item>
+	<style name="NP__.Results.Item.Position.Text" parent="NP__.Base.Results.Item.Position.Text">
         <item name="android:fontFamily">sans-serif</item>
-        <item name="android:textStyle">bold</item>
-        <item name="android:ellipsize">end</item>
-        <item name="android:singleLine">true</item>
-        <item name="android:maxLines">1</item>
     </style>
     
     <!--
@@ -200,9 +132,7 @@
     	Empty states
     	======================================================== 
     -->
-    <style name="NP__.EmptyStates.Text" parent="NP__.Widget.Text.Content.Medium">
-        <item name="android:textColor">@color/np__palette_dark_blue</item>
-        <item name="android:textSize">16sp</item>
+    <style name="NP__.EmptyStates.Text" parent="NP__.Base.EmptyStates.Text">
         <item name="android:fontFamily">sans-serif-medium</item>
     </style>
     
@@ -211,34 +141,23 @@
     	Challenges
     	======================================================== 
     -->
-    <style name="NP__.Challenges.Item.Text" parent="NP__.Widget.Text.Content.Medium">
-        <item name="android:textColor">@color/np__palette_dark_blue</item>
-        <item name="android:textSize">15sp</item>
+    <style name="NP__.Challenges.Item.Text" parent="NP__.Base.Challenges.Item.Text">
         <item name="android:fontFamily">sans-serif-medium</item>
     </style>
 
-    <style name="NP__.Challenges.Item.Text.Timestamp" parent="NP__.Widget.Text.Content.Tiny">
-        <item name="android:textColor">@color/np__grey</item>
-        <item name="android:textSize">11sp</item>
+    <style name="NP__.Challenges.Item.Text.Timestamp" parent="NP__.Base.Challenges.Item.Text.Timestamp">
         <item name="android:fontFamily">sans-serif-light</item>
     </style>
 
-    <style name="NP__.Challenges.Item.Text.Players" parent="NP__.Widget.Text.Content.Tiny">
-        <item name="android:textColor">@color/np__palette_red</item>
-        <item name="android:textSize">11sp</item>
+    <style name="NP__.Challenges.Item.Text.Players" parent="NP__.Base.Challenges.Item.Text.Players">
         <item name="android:fontFamily">sans-serif-light</item>
     </style>
 
-    <style name="NP__.Challenges.Item.Text.Position" parent="NP__.Widget.Text.Content.Medium">
-        <item name="android:textColor">@color/np__white</item>
-        <item name="android:textStyle">bold</item>
-        <item name="android:gravity">center</item>
-        <item name="android:textSize">14sp</item>
+    <style name="NP__.Challenges.Item.Text.Position" parent="NP__.Base.Challenges.Item.Text.Position">
         <item name="android:fontFamily">sans-serif</item>
     </style>
     
-    <style name="NP__.Challenges.Item.Button" parent="NP__.Widget.Button">
-        <item name="android:textSize">11sp</item>
+    <style name="NP__.Challenges.Item.Button" parent="NP__.Base.Challenges.Item.Button">
         <item name="android:fontFamily">sans-serif-medium</item>
     </style>
     
@@ -247,36 +166,20 @@
     	Buddies
     	======================================================== 
     -->
-    <style name="NP__.Buddies.Item.Text" parent="NP__.Widget.Text.Content.Medium">
-        <item name="android:textColor">@color/np__palette_dark_blue</item>
-        <item name="android:textSize">15sp</item>
+    <style name="NP__.Buddies.Item.Text" parent="NP__.Base.Buddies.Item.Text">
         <item name="android:fontFamily">sans-serif-medium</item>
-        <item name="android:ellipsize">end</item>
-        <item name="android:singleLine">true</item>
-        <item name="android:maxLines">1</item>
     </style>
     
-    <style name="NP__.Buddies.Item.NewFriendLable.Text" parent="NP__.Widget.Text.Content.Medium">
-        <item name="android:textColor">@color/np__palette_red</item>
-        <item name="android:textSize">11sp</item>
+    <style name="NP__.Buddies.Item.NewFriendLable.Text" parent="NP__.Base.Buddies.Item.NewFriendLable.Text">
         <item name="android:fontFamily">sans-serif-light</item>
-        <item name="android:ellipsize">end</item>
-        <item name="android:singleLine">true</item>
-        <item name="android:maxLines">1</item>
     </style>
 
-    <style name="NP__.Buddies.Button" parent="NP__.Widget.Button">
-        <item name="android:textSize">11sp</item>
+    <style name="NP__.Buddies.Button" parent="NP__.Base.Buddies.Button">
         <item name="android:fontFamily">sans-serif-medium</item>
     </style>
     
-    <style name="NP__.Buddies.Search" parent="@android:style/Widget.EditText">
-		<item name="android:textColor">@color/np__palette_dark_blue</item>
-		<item name="android:textColorHint">@color/np__grey_light</item>
-        <item name="android:textSize">16sp</item>
+    <style name="NP__.Buddies.Search" parent="NP__.Base.Buddies.Search">
         <item name="android:fontFamily">sans-serif-light</item>
-        <item name="android:background">@drawable/np__rounded_corner_white_background</item>
-        <item name="android:inputType">textNoSuggestions</item>
     </style>
     
     <!--
@@ -284,20 +187,15 @@
     	More
     	======================================================== 
     -->
-    <style name="NP__.More.Item.Profile.Text" parent="NP__.Widget.Text.Content.Medium">
-        <item name="android:textColor">@color/np__palette_dark_blue</item>
-        <item name="android:textSize">16sp</item>
+    <style name="NP__.More.Item.Profile.Text" parent="NP__.Base.More.Item.Profile.Text">
         <item name="android:fontFamily">sans-serif-medium</item>
     </style>
 
-    <style name="NP__.More.Item.Profile.Motto.Text" parent="NP__.Widget.Text.Content.Small">
-        <item name="android:textColor">@color/np__grey</item>
-        <item name="android:textSize">12sp</item>
+    <style name="NP__.More.Item.Profile.Motto.Text" parent="NP__.Base.More.Item.Profile.Motto.Text">
         <item name="android:fontFamily">sans-serif-light</item>
     </style>
     
-    <style name="NP__.More.Item.Text" parent="NP__.Widget.Text.Content.Medium">
-        <item name="android:textSize">16sp</item>
+    <style name="NP__.More.Item.Text" parent="NP__.Base.More.Item.Text">
         <item name="android:fontFamily">sans-serif-medium</item>
     </style>
     
@@ -306,13 +204,11 @@
     	Settings
     	======================================================== 
     -->
-    <style name="NP__.Settings.ToggleButton.Text" parent="NP__.Widget.Text">
-        <item name="android:textColor">@color/np__palette_dark_blue</item>
-        <item name="android:textSize">14sp</item>
+    <style name="NP__.Settings.ToggleButton.Text" parent="NP__.Base.Settings.ToggleButton.Text">
         <item name="android:fontFamily">sans-serif-light</item>
     </style>
     
-    <style name="NP__.Settings.Button" parent="NP__.Widget.Button">
+    <style name="NP__.Settings.Button" parent="NP__.Base.Settings.Button">
         <item name="android:fontFamily">sans-serif</item>
     </style>
     
@@ -322,15 +218,11 @@
     	======================================================== 
     -->
     
-   <style name="NP__.About.Text" parent="NP__.TextAppearance.Large">
-        <item name="android:textColor">@color/np__palette_dark_blue</item>
-        <item name="android:gravity">center|top</item>
+   <style name="NP__.About.Text" parent="NP__.Base.About.Text">
         <item name="android:fontFamily">sans-serif-light</item>
     </style>
     
-	<style name="NP__.About.Version.Text" parent="NP__.TextAppearance.Medium">
-        <item name="android:textColor">@color/np__palette_dark_blue</item>
-        <item name="android:textSize">16sp</item>
+	<style name="NP__.About.Version.Text" parent="NP__.Base.About.Version.Text">
         <item name="android:fontFamily">sans-serif-light</item>
     </style>
     
@@ -340,20 +232,31 @@
     	======================================================== 
     -->
     
-	<style name="NP__.ReportPlayer.Title.Text" parent="NP__.Widget.Text.Content.Large">
-        <item name="android:textColor">@color/np__palette_dark_blue</item>
-		<item name="android:textSize">20sp</item>
+	<style name="NP__.ReportPlayer.Title.Text" parent="NP__.Base.ReportPlayer.Title.Text">
 		<item name="android:fontFamily">sans-serif</item>
     </style>    
     
-    <style name="NP__.ReportPlayer.Description.Text" parent="NP__.Widget.Text.Content.Medium">
-        <item name="android:textColor">@color/np__palette_dark_blue</item>
-        <item name="android:textSize">12sp</item>
+    <style name="NP__.ReportPlayer.Description.Text" parent="NP__.Base.ReportPlayer.Description.Text">
         <item name="android:fontFamily">sans-serif-light</item>
     </style>
     
-    <style name="NP__.ReportPlayer.Dialog" parent="NP__Theme.Dialog">
-        <item name="android:backgroundDimEnabled">true</item>
-        <item name="android:windowBackground">@android:color/transparent</item>
+    <style name="NP__.ReportPlayer.Dialog" parent="NP__.Base.ReportPlayer.Dialog">
+    </style>
+    
+    <!--
+    	========================================================
+    	Ads
+    	======================================================== 
+    -->
+    <style name="NP__.Ads.Title" parent="NP__.Base.Ads.Title">
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+    
+    <style name="NP__.Ads.Item.Title" parent="NP__.Base.Ads.Item.Title">
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+    
+    <style name="NP__.Ads.Item.Text" parent="NP__.Base.Ads.Item.Text">
+        <item name="android:fontFamily">sans-serif-light</item>
     </style>
 </resources>

@@ -16,6 +16,7 @@
         android:layout_height="match_parent"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@+id/np__leaderboard_list_item_score"
         android:gravity="center_vertical" >
 
         <LinearLayout
@@ -48,22 +49,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/np__leaderboard_list_item_content_left_margin"
-            android:layout_marginStart="@dimen/np__leaderboard_list_item_content_left_margin" />
+            android:layout_marginStart="@dimen/np__leaderboard_list_item_content_left_margin" 
+            android:text="@string/np__application_name"/>
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
+   <TextView
+       android:id="@+id/np__leaderboard_list_item_score"
+       style="@style/NP__.Leaderboard.Item.Text"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
-        android:gravity="center_vertical" >
-
-        <TextView
-            android:id="@+id/np__leaderboard_list_item_score"
-            style="@style/NP__.Leaderboard.Item.Text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-    </LinearLayout>
+        android:gravity="center_vertical"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content" />
 
 </RelativeLayout>

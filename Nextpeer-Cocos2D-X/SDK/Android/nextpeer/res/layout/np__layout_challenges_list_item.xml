@@ -8,117 +8,124 @@
     android:orientation="horizontal" >
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:gravity="center_vertical"
-        android:padding="@dimen/np__widget_listview_item_default_padding" >
-
-        <com.nextpeer.android.open.ui.NPCircularImageView
-            android:id="@+id/np__challenges_list_item_picture"
-            android:layout_width="@dimen/np__challenges_list_profile_picture_default_size"
-            android:layout_height="@dimen/np__challenges_list_profile_picture_default_size"
-            android:src="@drawable/np__ic_default_player_profile"
-            app:np__image_border="true"
-            app:np__image_borderColor="@color/np__palette_dark_blue"
-            app:np__image_borderWidth="@dimen/np__challenges_list_profile_picture_border_line_size"
-            app:np__image_shadow="false" />
+        android:padding="@dimen/np__widget_listview_item_default_padding"
+        android:weightSum="5" >
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_gravity="top"
-            android:layout_marginLeft="@dimen/np__challenges_list_item_content_separator_margin"
-            android:layout_marginStart="@dimen/np__challenges_list_item_content_separator_margin"
-            android:orientation="vertical" >
+            android:layout_weight="4"
+            android:gravity="center_vertical" >
+
+            <com.nextpeer.android.open.ui.NPCircularImageView
+                android:id="@+id/np__challenges_list_item_picture"
+                android:layout_width="@dimen/np__challenges_list_profile_picture_default_size"
+                android:layout_height="@dimen/np__challenges_list_profile_picture_default_size"
+                android:src="@drawable/np__ic_default_player_profile"
+                app:np__image_border="true"
+                app:np__image_borderColor="@color/np__palette_dark_blue"
+                app:np__image_borderWidth="@dimen/np__challenges_list_profile_picture_border_line_size"
+                app:np__image_shadow="false" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal" >
+                android:layout_height="match_parent"
+                android:layout_gravity="top"
+                android:layout_marginLeft="@dimen/np__challenges_list_item_content_separator_margin"
+                android:layout_marginStart="@dimen/np__challenges_list_item_content_separator_margin"
+                android:orientation="vertical" >
 
-                <TextView
-                    android:id="@+id/np__challenges_list_item_name"
-                    style="@style/NP__.Challenges.Item.Text"
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/np__application_name" />
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/np__challenges_list_item_name"
+                        style="@style/NP__.Challenges.Item.Text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/np__application_name" />
+
+                    <TextView
+                        android:id="@+id/np__challenges_list_item_num_of_players"
+                        style="@style/NP__.Challenges.Item.Text.Players"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top"
+                        android:layout_marginLeft="@dimen/np__challenges_list_item_content_separator_margin"
+                        android:layout_marginStart="@dimen/np__challenges_list_item_content_separator_margin"
+                        android:text="@string/np__application_name" />
+                </LinearLayout>
 
                 <TextView
-                    android:id="@+id/np__challenges_list_item_num_of_players"
-                    style="@style/NP__.Challenges.Item.Text.Players"
+                    android:id="@+id/np__challenges_list_item_timestamp"
+                    style="@style/NP__.Challenges.Item.Text.Timestamp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="top"
-                    android:layout_marginLeft="@dimen/np__challenges_list_item_content_separator_margin"
-                    android:layout_marginStart="@dimen/np__challenges_list_item_content_separator_margin"
                     android:text="@string/np__application_name" />
             </LinearLayout>
-
-            <TextView
-                android:id="@+id/np__challenges_list_item_timestamp"
-                style="@style/NP__.Challenges.Item.Text.Timestamp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/np__application_name" />
         </LinearLayout>
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/np__challenges_list_item_button_container"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_centerVertical="true"
-        android:layout_marginEnd="@dimen/np__challenges_list_item_content_separator_margin"
-        android:layout_marginRight="@dimen/np__challenges_list_item_content_separator_margin"
-        android:visibility="gone" >
-
-        <com.nextpeer.android.open.ui.NPButton
-            android:id="@+id/np__challenges_list_item_button"
-            style="@style/NP__.Challenges.Item.Button"
-            android:layout_width="@dimen/np__challenges_list_button_width"
-            android:layout_height="@dimen/np__challenges_list_button_height"
-            android:layout_gravity="center_vertical"
-            android:clickable="false"
-            android:focusable="false"
-            android:text="@string/np__application_name"
-            app:np__button_color="@color/np__palette_red" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/np__challenges_list_item_completed_left_part_container"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_centerVertical="true"
-        android:layout_marginEnd="@dimen/np__challenges_list_badge_right_margin"
-        android:layout_marginRight="@dimen/np__challenges_list_badge_right_margin"
-        android:visibility="visible" >
 
         <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center" >
+            android:id="@+id/np__challenges_list_item_completed_right_part_container"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
 
-            <ImageView
-                android:id="@+id/np__challenges_list_item_badge"
+            <LinearLayout
+                android:id="@+id/np__challenges_list_item_button_container"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:background="@drawable/np__ic_badge_silver" />
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:visibility="gone" >
 
-            <TextView
-                android:id="@+id/np__challenges_list_item_position"
-                style="@style/NP__.Challenges.Item.Text.Position"
+                <com.nextpeer.android.open.ui.NPButton
+                    android:id="@+id/np__challenges_list_item_button"
+                    style="@style/NP__.Challenges.Item.Button"
+                    android:layout_width="@dimen/np__challenges_list_button_width"
+                    android:layout_height="@dimen/np__challenges_list_button_height"
+                    android:layout_gravity="center_vertical"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:text="@string/np__application_name"
+                    app:np__button_color="@color/np__palette_red" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/np__challenges_list_item_completed_badge_container"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="@dimen/np__challenges_list_badge_text_buttom_margin" />
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/np__challenges_list_badge_right_margin"
+                android:visibility="visible" >
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center" >
+
+                    <ImageView
+                        android:id="@+id/np__challenges_list_item_badge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/np__ic_badge_silver" />
+
+                    <TextView
+                        android:id="@+id/np__challenges_list_item_position"
+                        style="@style/NP__.Challenges.Item.Text.Position"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/np__challenges_list_badge_text_buttom_margin" />
+                </RelativeLayout>
+            </LinearLayout>
         </RelativeLayout>
     </LinearLayout>
 
