@@ -1,36 +1,48 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="@dimen/np__fragment_default_padding" >
+    android:orientation="vertical" >
 
-    <LinearLayout
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center_horizontal"
-        android:layout_above="@+id/np__tournament_results_play_again_button"
-        android:orientation="vertical" >
+        android:layout_height="match_parent" >
 
-        <ListView
-            android:id="@+id/np__tournament_results_list"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            style="@style/NP__.Widget.ListView"  
-            android:clickable="true" />
-    </LinearLayout>
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="@dimen/np__fragment_default_padding" >
 
-    <com.nextpeer.android.open.ui.NPButton
-        android:id="@+id/np__tournament_results_play_again_button"
-        style="@style/NP__.Results.PlayAgain.Button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_margin="@dimen/np__tournament_results_play_again_button_margin"
-        android:drawableEnd="@drawable/np__ic_gamestream_start_game"
-        android:drawablePadding="@dimen/np__tournament_results_play_again_button_icon_padding"
-        android:drawableRight="@drawable/np__ic_gamestream_start_game"
-        android:text="@string/np__application_name"
-        app:np__button_color="@color/np__palette_orange" />
+            <ListView
+                android:id="@+id/np__tournament_results_list"
+                style="@style/NP__.Widget.ListView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:clickable="true" />
+        </LinearLayout>
 
-</RelativeLayout>
+        <LinearLayout
+            android:id="@+id/np__tournament_results_play_again_button_footer_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@color/np__transparent_background" >
+
+            <com.nextpeer.android.open.ui.NPButton
+                android:id="@+id/np__tournament_results_play_again_button"
+                style="@style/NP__.Results.PlayAgain.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/np__tournament_results_play_again_button_margin"
+                android:drawableEnd="@drawable/np__ic_gamestream_start_game"
+                android:drawablePadding="@dimen/np__tournament_results_play_again_button_icon_padding"
+                android:drawableRight="@drawable/np__ic_gamestream_start_game"
+                android:text="@string/np__application_name"
+                app:np__button_color="@color/np__palette_orange" />
+        </LinearLayout>
+    </FrameLayout>
+
+</LinearLayout>

@@ -48,6 +48,7 @@
     
     <string name="np__string_service_profile_title_mine_key">profile.view.screen.title.label</string>
     <string name="np__string_service_profile_button_messages_key">profile.view.screen.messages.button</string>
+    <string name="np__string_service_profile_button_games_key">profile.view.screen.games.label</string>
     <string name="np__string_service_profile_button_buddies_key">profile.view.screen.buddies.button</string>
     <string name="np__string_service_profile_lable_my_stream_key">profile.view.screen.streamHeader.label</string>
     <string name="np__string_service_profile_lable_nextpeer_id_key">profile.view.screen.nextpeerId.label</string>
@@ -55,6 +56,7 @@
     
     <string name="np__string_service_oponent_profile_title_key">opponent.screen.title.label</string> 
     <string name="np__string_service_oponent_profile_button_messages_key">opponent.screen.message.button</string>
+    <string name="np__string_service_oponent_profile_button_games_key">opponent.screen.games.button</string>
     <string name="np__string_service_oponent_profile_button_buddies_key">opponent.screen.buddies.button</string>
     <string name="np__string_service_oponent_profile_button_challenge_key">opponent.screen.challenge.button</string>
     <string name="np__string_service_oponent_profile_label_stream_key">opponent.screen.streamHeader.label</string>
@@ -92,6 +94,9 @@
     <string name="np__string_service_profile_edit_option_select_photo_key">avatarPicker.photoChooser.title.label</string>
     <string name="np__string_service_profile_edit_option_take_photo_key">avatarPicker.takePhoto.title.label</string>
     
+    <string name="np__string_service_games_title_label_key">games.title.label</string>
+    <string name="np__string_service_games_subtitle_label_key">games.subtitle.label</string>
+    
     <string name="np__string_service_buddies_edit_textx_search_key">buddies.searchBar.label</string>
     <string name="np__string_service_buddies_button_accept_key">buddies.cells.requestAccept.button</string>
     <string name="np__string_service_buddies_button_play_key">buddies.cells.play.button</string>
@@ -100,6 +105,7 @@
     <string name="np__string_service_buddies_invite_title_key">buddies.invite.label</string>
     <string name="np__string_service_buddies_invite_share_message_signed_in_key">buddies.sharers.shareMessage.signedIn.text.placeholder</string>
     <string name="np__string_service_buddies_invite_share_message_not_signed_in_key">buddies.sharers.shareMessage.notSignedIn.text.placeholder</string>
+    <string name="np__string_service_buddies_sharers_copy_action_complited_label_key">buddies.sharers.copy.actionCompleted.label</string>
     
     <string name="np__string_service_player_buddies_button_add_key">playerBuddies.cell.addBuddy.button</string>
     <string name="np__string_service_player_buddies_button_play_key">playerBuddies.cell.playBuddy.button</string>
@@ -180,6 +186,8 @@
         
     <string name="np__string_service_results_active_title_key">results.active.title.label</string>
     <string name="np__string_service_results_static_title_key">results.static.title.label</string>
+    <string name="np__string_service_results_active_subtitle_label_key">results.active.subtitle.label</string>
+    <string name="np__string_service_results_static_subtitle_label_key">results.static.subtitle.label</string>
     <string name="np__string_service_results_button_play_again_key">results.active.quickPlay.button</string>
     <string name="np__string_service_results_button_challenge_again_key">results.static.challengeAgain.button</string>
     <string name="np__string_service_results_random_score_not_available_text_key">results.noScoreAvailable.label</string>
@@ -250,6 +258,10 @@
     <string name="np__string_service_share_kit_tencent_button_key">buddies.sharers.tencentWeibo.label</string>
     <string name="np__string_service_share_kit_wechat_button_key">buddies.sharers.wechat.label</string>
     <string name="np__string_service_share_kit_hangout_button_key">buddies.sharers.hangouts.label</string>
+    
+    <string name="np__string_service_opponent_games_title_lable_key">opponentGames.title.label</string>
+    <string name="np__string_service_opponent_games_challenge_title_lable_key">opponentGames.challangeTitle.label</string>
+    <string name="np__string_service_opponent_games_subtitle_lable_key">opponentGames.subtitle.label</string>
     
 
     <!-- New -->

@@ -1,0 +1,23 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="@dimen/np__native_ads_list_top_margin"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/np__native_ads_list_title"
+        style="@style/NP__.Ads.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/np__native_ads_list_title_bottom_margin"
+        android:visibility="gone"/>
+
+    <ListView
+        android:id="@+id/np__native_ads_list"
+        style="@style/NP__.Widget.ListView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:dividerHeight="@dimen/np__games_list_divider_size" />
+
+</LinearLayout>

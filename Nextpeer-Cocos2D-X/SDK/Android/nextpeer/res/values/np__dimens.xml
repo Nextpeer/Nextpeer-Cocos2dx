@@ -140,6 +140,7 @@
     <dimen name="np__user_profile_button_height">42dp</dimen>
     <dimen name="np__user_profile_button_margin">5dp</dimen>
     <dimen name="np__user_profile_stream_title_top_margin">15dp</dimen>
+    <dimen name="np__user_profile_picture_right_image_button_margin">15dp</dimen>
     
     <dimen name="np__user_profile_edit_title_text_margin_top">20dp</dimen>
     <dimen name="np__user_profile_edit_title_text_margin_bottom">22dp</dimen>
@@ -252,7 +253,7 @@
     <dimen name="np__challenges_list_button_width">52dp</dimen>
     <dimen name="np__challenges_list_button_height">24dp</dimen>
     <dimen name="np__challenges_list_badge_text_buttom_margin">3dp</dimen>
-    <dimen name="np__challenges_list_badge_right_margin">13dp</dimen>
+    <dimen name="np__challenges_list_badge_right_margin">10dp</dimen>
     <dimen name="np__challenges_list_item_content_separator_margin">5dp</dimen>
     
     <!-- Empty States -->
@@ -264,6 +265,18 @@
     <dimen name="np__empty_states_bubble_arrow_size">30dp</dimen>
     <dimen name="np__empty_states_bubble_text_side_margin">40dp</dimen>
     <dimen name="np__empty_states_bubble_body_misalign_padding_left">3dp</dimen>
+    
+    <!-- Native Ads -->
+	<dimen name="np__game_list_item_height">73dp</dimen>
+	<dimen name="np__game_list_item_picture_size">56dp</dimen>
+	<dimen name="np__game_list_item_content_margin">10dp</dimen>
+	<dimen name="np__game_list_item_padding">10dp</dimen>
+	<dimen name="np__game_list_item_button_width">83dp</dimen>
+	<dimen name="np__game_list_item_button_height">34dp</dimen>
+	<dimen name="np__games_list_divider_size">10dp</dimen>
+	<dimen name="np__native_ads_list_top_margin">30dp</dimen>
+	<dimen name="np__native_ads_list_title_bottom_margin">20dp</dimen>
+	<dimen name="np__game_button_icon_padding">5dp</dimen>
     
     <!-- Date picker -->
     <dimen name="np__date_picker_done_label_size">14sp</dimen>

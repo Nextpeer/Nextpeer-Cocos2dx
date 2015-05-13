@@ -47,21 +47,11 @@
             android:orientation="horizontal" >
 
             <ImageButton
-                android:id="@+id/np__user_profile_action_bar_button"
+                android:id="@+id/np__user_profile_action_bar_right_button"
                 style="@style/NP__.Widget.ImageButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@null"
-                android:src="@drawable/np__ic_user_profile_edit" />
-
-            <ImageButton
-                android:id="@+id/np__user_profile_action_bar_post_button"
-                style="@style/NP__.Widget.ImageButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@null"
-                android:src="@drawable/np__ic_gamestream_action_bar_post" 
-                android:visibility="gone"/>
+                android:background="@null" />
         </LinearLayout>
     </RelativeLayout>
 

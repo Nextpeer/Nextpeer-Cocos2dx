@@ -1,0 +1,362 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!--
+    	========================================================
+    	Widgets.
+    	======================================================== 
+    -->
+    
+    <style name="NP__.Base.Widget.Button" parent="@android:style/Widget.Button">
+        <item name="android:textAppearance">@style/NP__.TextAppearance.Medium</item>
+        <item name="android:gravity">center</item>
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:marqueeRepeatLimit">marquee_forever</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+    
+    <style name="NP__.Base.Widget.Dialog.ActionBar.Title.Text" parent="NP__.Widget.Text.Content.Large">
+        <item name="android:textColor">@color/np__palette_dark_blue</item>
+		<item name="android:textSize">20sp</item>
+		<item name="android:ellipsize">end</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    
+
+    <!--
+    	========================================================
+    	Game Stream.
+    	======================================================== 
+    -->
+
+    <style name="NP__.Base.GameStream.Header.Text" parent="NP__.Widget.Text.Content.Medium">
+        <item name="android:textColor">@color/np__game_stream_post_title</item>
+    </style>
+
+    <style name="NP__.Base.GameStream.Item.Header.Text" parent="NP__.Widget.Text.Content.Small">
+        <item name="android:textColor">@color/np__game_stream_post_title</item> 
+        <item name="android:ellipsize">end</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+    <style name="NP__.Base.GameStream.Item.Header.StoryTime" parent="NP__.TextAppearance.Small">
+        <item name="android:textColor">@color/np__game_stream_post_timestamp_text</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+    <style name="NP__.Base.GameStream.Item.Story.Text" parent="NP__.TextAppearance.Medium">
+        <item name="android:textColor">@color/np__palette_dark_blue</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">italic</item>
+    </style>
+    
+    <style name="NP__.Base.GameStream.Item.Footer.Button.Text" parent="NP__.TextAppearance.Small">
+        <item name="android:textColor">@color/np__game_stream_post_like_counter</item>
+        <item name="android:textSize">11sp</item>
+    </style>
+    
+    <style name="NP__.Base.GameStream.Post.Text" parent="NP__.TextAppearance.Large">
+        <item name="android:textColor">@color/np__palette_dark_blue</item>
+        <item name="android:inputType">textMultiLine|textNoSuggestions</item>
+        <item name="android:cursorVisible">false</item>
+    </style>
+    
+    <style name="NP__.Base.GameStream.NewStories.Text" parent="NP__.TextAppearance.Small">
+        <item name="android:textColor">@color/np__palette_dark_blue</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <!--
+    	========================================================
+    	User Profile
+    	======================================================== 
+    -->
+    <style name="NP__.Base.Profile.Title.Text" parent="NP__.Widget.Text.Content.Large">
+        <item name="android:textColor">@color/np__palette_dark_blue</item>
+        <item name="android:textSize">22sp</item>
+    </style>
+    
+    <style name="NP__.Base.Profile.Edit.Description" parent="NP__.Widget.Text.Content.Small">
+        <item name="android:textColor">@color/np__palette_dark_blue</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+    
+    <style name="NP__.Base.Profile.Content.Text" parent="NP__.Widget.Text.Content.Small">
+        <item name="android:textColor">@color/np__palette_dark_blue</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    
+    <style name="NP__.Base.Profile.Stream.Title.Text" parent="NP__.Widget.Text.Content.Medium">
+        <item name="android:textColor">@color/np__palette_dark_blue</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+    
+    <style name="NP__.Base.Profile.Button" parent="NP__.Widget.Button">
+        <item name="android:textColor">@color/np__palette_dark_blue</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+    
+    <!--
+    	========================================================
+    	Credentials
+    	======================================================== 
+    -->
+    <style name="NP__.Base.Credentials.Title.Text" parent="NP__.Widget.Text.Content.Large">
+        <item name="android:textColor">@color/np__palette_dark_blue</item>
+		<item name="android:textSize">20sp</item>
+    </style>
+    
+    <style name="NP__.Base.Credentials.Error.Text" parent="NP__.Widget.Text.Content.Small">
+        <item name="android:textColor">@color/np__palette_red</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+    
+    <style name="NP__.Base.Credentials.Edit.Text" parent="NP__.Widget.EditText">
+		<item name="android:textSize">15sp</item>
+    </style>
+    
+    <style name="NP__.Base.Credentials.Button" parent="NP__.Widget.Button">
+        <item name="android:textSize">16sp</item>
+    </style>
+    
+    <style name="NP__.Base.Credentials.Footer.Text" parent="NP__.Widget.Text.Content.Small">
+        <item name="android:textColor">@color/np__palette_dark_blue</item>
+		<item name="android:textSize">12sp</item>
+    </style>
+    
+    <!--
+    	========================================================
+    	Leader board
+    	======================================================== 
+    -->
+    <style name="NP__.Base.Leaderboard.Item.Text" parent="NP__.Widget.Text.Content.Small">
+        <item name="android:textColor">@color/np__palette_dark_blue</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    
+	<style name="NP__.Base.Leaderboard.Title.Text" parent="NP__.Widget.Text.Content.Large">
+        <item name="android:textColor">@color/np__palette_dark_blue</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    
+	<style name="NP__.Base.Leaderboard.Selector.Text" parent="NP__.Widget.Text.Content.Medium">
+        <item name="android:textColor">@color/np__white</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    
+    <style name="NP__.Base.Leaderboard.EmptyState.Button" parent="NP__.Widget.Button">
+        <item name="android:minWidth">@dimen/np__leaderboard_empty_state_button_min_width</item>
+    </style>
+    <!--
+    	========================================================
+    	Results
+    	======================================================== 
+    -->
+    
+    <style name="NP__.Base.Results.Item.Text" parent="NP__.Widget.Text.Content.Small">
+        <item name="android:textColor">@color/np__palette_dark_blue</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+	<style name="NP__.Base.Results.Item.Position.Text" parent="NP__.Widget.Text.Content.Small">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:maxLines">1</item>
+    </style>
+    
+    <!--
+    	========================================================
+    	Empty states
+    	======================================================== 
+    -->
+    <style name="NP__.Base.EmptyStates.Text" parent="NP__.Widget.Text.Content.Medium">
+        <item name="android:textColor">@color/np__palette_dark_blue</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+    
+    <!--
+    	========================================================
+    	Challenges
+    	======================================================== 
+    -->
+    <style name="NP__.Base.Challenges.Item.Text" parent="NP__.Widget.Text.Content.Medium">
+        <item name="android:textColor">@color/np__palette_dark_blue</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="NP__.Base.Challenges.Item.Text.Timestamp" parent="NP__.Widget.Text.Content.Tiny">
+        <item name="android:textColor">@color/np__grey</item>
+        <item name="android:textSize">11sp</item>
+    </style>
+
+    <style name="NP__.Base.Challenges.Item.Text.Players" parent="NP__.Widget.Text.Content.Tiny">
+        <item name="android:textColor">@color/np__palette_red</item>
+        <item name="android:textSize">11sp</item>
+    </style>
+
+    <style name="NP__.Base.Challenges.Item.Text.Position" parent="NP__.Widget.Text.Content.Medium">
+        <item name="android:textColor">@color/np__white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+    
+    <style name="NP__.Base.Challenges.Item.Button" parent="NP__.Widget.Button">
+        <item name="android:textSize">11sp</item>
+    </style>
+    
+    <!--
+    	========================================================
+    	Buddies
+    	======================================================== 
+    -->
+    <style name="NP__.Base.Buddies.Item.Text" parent="NP__.Widget.Text.Content.Medium">
+        <item name="android:textColor">@color/np__palette_dark_blue</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:maxLines">1</item>
+    </style>
+    
+    <style name="NP__.Base.Buddies.Item.NewFriendLable.Text" parent="NP__.Widget.Text.Content.Medium">
+        <item name="android:textColor">@color/np__palette_red</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+    <style name="NP__.Base.Buddies.Button" parent="NP__.Widget.Button">
+        <item name="android:textSize">11sp</item>
+    </style>
+    
+    <style name="NP__.Base.Buddies.Search" parent="@android:style/Widget.EditText">
+		<item name="android:textColor">@color/np__palette_dark_blue</item>
+		<item name="android:textColorHint">@color/np__grey_light</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:background">@drawable/np__rounded_corner_white_background</item>
+        <item name="android:inputType">textNoSuggestions</item>
+    </style>
+    
+    <!--
+    	========================================================
+    	More
+    	======================================================== 
+    -->
+    <style name="NP__.Base.More.Item.Profile.Text" parent="NP__.Widget.Text.Content.Medium">
+        <item name="android:textColor">@color/np__palette_dark_blue</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="NP__.Base.More.Item.Profile.Motto.Text" parent="NP__.Widget.Text.Content.Small">
+        <item name="android:textColor">@color/np__grey</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+    
+    <style name="NP__.Base.More.Item.Text" parent="NP__.Widget.Text.Content.Medium">
+        <item name="android:textSize">16sp</item>
+    </style>
+    
+    <!--
+    	========================================================
+    	Settings
+    	======================================================== 
+    -->
+    <style name="NP__.Base.Settings.ToggleButton.Text" parent="NP__.Widget.Text">
+        <item name="android:textColor">@color/np__palette_dark_blue</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+    
+    <style name="NP__.Base.Settings.Button" parent="NP__.Widget.Button">
+    </style>
+    
+    <!--
+    	========================================================
+    	About
+    	======================================================== 
+    -->
+    
+   <style name="NP__.Base.About.Text" parent="NP__.TextAppearance.Large">
+        <item name="android:textColor">@color/np__palette_dark_blue</item>
+        <item name="android:gravity">center|top</item>
+    </style>
+    
+	<style name="NP__.Base.About.Version.Text" parent="NP__.TextAppearance.Medium">
+        <item name="android:textColor">@color/np__palette_dark_blue</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+    
+    <!--
+    	========================================================
+    	Report Player
+    	======================================================== 
+    -->
+    
+	<style name="NP__.Base.ReportPlayer.Title.Text" parent="NP__.Widget.Text.Content.Large">
+        <item name="android:textColor">@color/np__palette_dark_blue</item>
+		<item name="android:textSize">20sp</item>
+    </style>    
+    
+    <style name="NP__.Base.ReportPlayer.Description.Text" parent="NP__.Widget.Text.Content.Medium">
+        <item name="android:textColor">@color/np__palette_dark_blue</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+    
+    <style name="NP__.Base.ReportPlayer.Dialog" parent="NP__Theme.Dialog">
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+    
+   <!--
+    	========================================================
+    	Ads
+    	======================================================== 
+    -->
+<style name="NP__.Base.Ads.Title" parent="NP__.Widget.Text.Content.Large">
+        <item name="android:textColor">@color/np__palette_dark_blue</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:maxLines">1</item>
+    </style>
+    
+    <style name="NP__.Base.Ads.Item.Title" parent="NP__.Widget.Text.Content.Medium">
+        <item name="android:textColor">@color/np__palette_dark_blue</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:maxLines">1</item>
+    </style>
+    
+    <style name="NP__.Base.Ads.Item.Text" parent="NP__.Widget.Text.Content.Small">
+        <item name="android:textColor">@color/np__native_ads_description_text_color</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">2</item>
+    </style>
+    
+    <style name="NP__.Base.Ads.Button" parent="NP__.Widget.Button">
+        <item name="android:textSize">11sp</item>
+    </style>
+
+</resources>

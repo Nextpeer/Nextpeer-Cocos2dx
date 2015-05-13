@@ -52,6 +52,8 @@
     "challenges.newChallenges.leftMinutes.label":"minutes",
     "challenges.alerts.gameModeNotSupportedMessage.label": "Seems like this challenge isn't supported for this game. If this persists please contact our support team.",
     "challenges.emptyState.bubble.label": "INVITE YOUR BUDDIES TO CHALLENGE THEM!",
+
+    "games.title.label": "My Games",
     
     "feed.footer.action.install.label": "INSTALL",
     "feed.footer.action.challenge.label": "CHALLENGE",
