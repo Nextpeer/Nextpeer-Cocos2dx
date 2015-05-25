@@ -50,6 +50,9 @@
     "challenges.newChallenges.leftMinutes.label":"minutes",
     "challenges.alerts.gameModeNotSupportedMessage.label": "Seems like this challenge isn't supported for this game. If this persists please contact our support team.",
     "challenges.emptyState.bubble.label": "INVITE YOUR BUDDIES TO CHALLENGE THEM!",
+    "challenges.newChallenges.subtitle.label": "New Challenges",
+    "challenges.ongoingChallenges.subtitle.label": "Ongoing Challenges",
+    "challenges.completedChallenges.subtitle.label": "Completed Challenges",
     
     "feed.footer.action.install.label": "INSTALL",
     "feed.footer.action.challenge.label": "CHALLENGE",
@@ -148,6 +151,7 @@
     
     "post.label": "What's on your mind?",
     "post.status.label": "Posting...",
+    "postShareMomentsPicker.title.label": "Share Your Moment",
     
     "profile.edit.birthday.text.placeholder": "Birthday",
     "profile.edit.city.text.placeholder": "Your city",
