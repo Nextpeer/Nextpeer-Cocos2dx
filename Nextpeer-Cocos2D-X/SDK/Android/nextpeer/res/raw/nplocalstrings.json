@@ -151,6 +151,13 @@
     "post.label": "What's on your mind?",
     "post.status.label": "Posting...",
     "post.justPosted.label": "Just posted, go and visit your stream.",
+    "postShareMomentsPicker.title.label": "Share Your Moment",
+
+    "fullStory.footer.action.install.label": "INSTALL",
+    "fullStory.footer.action.challenge.label": "CHALLENGE",
+    "fullStory.footer.action.externalShare.label": "SHARE",
+    "fullStory.screen.title.label": "%USER_NAME%'s Post",
+    "fullStory.status.failedToFetchPostDetails.label": "Failed to fetch post details. Please check your network connection and try again.",
     
     "profile.edit.birthday.text.placeholder": "Birthday",
     "profile.edit.city.text.placeholder": "Your city",
