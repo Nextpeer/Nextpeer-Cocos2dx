@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Button Selected -->
+    <item android:drawable="@drawable/np__selectable_image_background_selected" android:state_selected="true"/>
+    <!-- Button Selected -->
+    <item android:drawable="@drawable/np__selectable_image_background_unselected" android:state_selected="false"/>
+</selector>

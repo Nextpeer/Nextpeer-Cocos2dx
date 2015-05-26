@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle" >
+	<!-- stroke -->
+    <item>
+        <shape>
+            <stroke
+                android:width="@dimen/np__widget_gallery_item_size_border_width" android:color="@color/np__palette_dark_blue"/>
+
+            <padding
+                android:bottom="@dimen/np__widget_gallery_item_size_border_width"
+                android:left="@dimen/np__widget_gallery_item_size_border_width"
+                android:right="@dimen/np__widget_gallery_item_size_border_width"
+                android:top="@dimen/np__widget_gallery_item_size_border_width" />
+            
+        </shape>
+    </item>
+</layer-list>
