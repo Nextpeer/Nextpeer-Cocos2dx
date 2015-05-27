@@ -91,6 +91,7 @@
     <declare-styleable name="NPButton">
         <attr name="np__button_color" format="color" />
         <attr name="np__button_text_color" format="color" />
+        <attr name="np__button_border_color" format="color" />
     </declare-styleable>
     
     <declare-styleable name="NPCircleButton">

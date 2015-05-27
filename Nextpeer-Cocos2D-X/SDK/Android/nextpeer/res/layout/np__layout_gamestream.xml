@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         style="@style/NP__.Widget.ListView"   
-        android:dividerHeight="0dp" />
+        android:dividerHeight="@dimen/np__game_stream_item_post_margin_top" />
 
     <TextView
         android:id="@+id/np__game_stream_new_stories_available"

@@ -37,6 +37,7 @@
     <string name="np__string_service_post_description_key">post.label</string>
     <string name="np__string_service_post_status_label_key">post.status.label</string>
     <string name="np__string_service_post_just_posted_label_key">post.justPosted.label</string>
+    <string name="np__string_service_post_share_moment_picker_title_label_key">postShareMomentsPicker.title.label</string>
     
     <string name="np__string_service_game_mode_title_key">gameModes.title.label</string>
     
@@ -50,9 +51,12 @@
     <string name="np__string_service_profile_button_messages_key">profile.view.screen.messages.button</string>
     <string name="np__string_service_profile_button_games_key">profile.view.screen.games.label</string>
     <string name="np__string_service_profile_button_buddies_key">profile.view.screen.buddies.button</string>
-    <string name="np__string_service_profile_lable_my_stream_key">profile.view.screen.streamHeader.label</string>
-    <string name="np__string_service_profile_lable_nextpeer_id_key">profile.view.screen.nextpeerId.label</string>
-    <string name="np__string_service_profile_lable_xp_key">profile.view.screen.xp.label</string>
+    <string name="np__string_service_profile_label_my_stream_key">profile.view.screen.streamHeader.label</string>
+    <string name="np__string_service_profile_label_nextpeer_id_key">profile.view.screen.nextpeerId.label</string>
+    <string name="np__string_service_profile_label_xp_key">profile.view.screen.xp.label</string>
+    <string name="np__string_service_profile_fetching_message_key">profile.view.screen.status.fetching.label</string>
+    <string name="np__string_service_profile_fetching_failed_error_message_key">profile.view.screen.status.fetchingFailed.label</string>
+    <string name="np__string_service_profile_about_to_lose_sync_message">profile.view.screen.sync.message</string>
     
     <string name="np__string_service_oponent_profile_title_key">opponent.screen.title.label</string> 
     <string name="np__string_service_oponent_profile_button_messages_key">opponent.screen.message.button</string>
@@ -86,9 +90,9 @@
     <string name="np__string_service_profile_edit_updating_failed_label_key">profile.edit.updating.failed.label</string>
     <string name="np__string_service_profile_edit_updating_label_key">profile.edit.updating.status.label</string>
     
-    <string name="np__string_service_profile_edit_leave_without_save_alert_lable_key">profile.edit.leaveWithoutSaveChangesAlertMessage.label</string>
-    <string name="np__string_service_profile_edit_leave_without_save_alert_persist_lable_key">profile.edit.leaveWithoutSaveChangesAlertPersistChanges.button</string>
-    <string name="np__string_service_profile_edit_leave_without_save_alert_leave_lable_key">profile.edit.leaveWithoutSaveChangesAlertLeave.button</string>
+    <string name="np__string_service_profile_edit_leave_without_save_alert_label_key">profile.edit.leaveWithoutSaveChangesAlertMessage.label</string>
+    <string name="np__string_service_profile_edit_leave_without_save_alert_persist_label_key">profile.edit.leaveWithoutSaveChangesAlertPersistChanges.button</string>
+    <string name="np__string_service_profile_edit_leave_without_save_alert_leave_label_key">profile.edit.leaveWithoutSaveChangesAlertLeave.button</string>
     
     <string name="np__string_service_profile_edit_option_select_avatar_key">avatarPicker.avatarChooser.title.label</string>
     <string name="np__string_service_profile_edit_option_select_photo_key">avatarPicker.photoChooser.title.label</string>
@@ -100,7 +104,7 @@
     <string name="np__string_service_buddies_edit_textx_search_key">buddies.searchBar.label</string>
     <string name="np__string_service_buddies_button_accept_key">buddies.cells.requestAccept.button</string>
     <string name="np__string_service_buddies_button_play_key">buddies.cells.play.button</string>
-    <string name="np__string_service_buddies_buddy_approved_request_lable_key">buddies.cells.buddyApprovedRequest.label</string>
+    <string name="np__string_service_buddies_buddy_approved_request_label_key">buddies.cells.buddyApprovedRequest.label</string>
     
     <string name="np__string_service_buddies_invite_title_key">buddies.invite.label</string>
     <string name="np__string_service_buddies_invite_share_message_signed_in_key">buddies.sharers.shareMessage.signedIn.text.placeholder</string>
@@ -136,8 +140,8 @@
     <string name="np__string_service_signup_label_async_challenge_key">signUp.actions.asyncChallenge.label</string>
     <string name="np__string_service_signup_status_sign_up_failed">signUp.status.signUpFailed.label</string>
     <string name="np__string_service_signup_status_signing_up">signUp.status.signingUp.label</string>
-    <string name="np__string_service_signup_status_updating_user_lable_key">signUp.status.updatingUser.label</string>
-    <string name="np__string_service_signup_status_updating_user_failed_lable_key">signUp.step2.status.failed.label</string>
+    <string name="np__string_service_signup_status_updating_user_label_key">signUp.status.updatingUser.label</string>
+    <string name="np__string_service_signup_status_updating_user_failed_label_key">signUp.step2.status.failed.label</string>
     
     <string name="np__string_service_signin_text_email_key">signIn.email.text.placeholder</string>
     <string name="np__string_service_signin_text_password_key">signIn.password.text.placeholder</string>
@@ -165,7 +169,7 @@
     <string name="np__string_service_forgot_password_button_key">forgotPassword.sendPassword.button</string>
     <string name="np__string_service_forgot_password_status_failed">forgotPassword.notifications.failure.label</string>   
     <string name="np__string_service_forgot_password_status_reset">forgotPassword.notifications.reset.label</string>
-    <string name="np__string_service_forgot_password_status_success_lable_key">forgotPassword.notifications.success.label</string>    
+    <string name="np__string_service_forgot_password_status_success_label_key">forgotPassword.notifications.success.label</string>    
 
 	<string name="np__string_service_registration_error_empty_email">registration.error.emailCannotBeEmpty.label</string>
 	<string name="np__string_service_registration_error_invalid_email">registration.error.emailInvalid.label</string>
@@ -182,7 +186,7 @@
     <string name="np__string_service_loading_level_text_key">loading.playerLevel.label</string>
     
     <string name="np__string_service_loading_footer_more_one_player_label_key">loading.footerMoreOnePlayer.label</string>
-    <string name="np__string_service_loading_footer_more_players_lable_key">loading.footerMorePlayers.label</string>
+    <string name="np__string_service_loading_footer_more_players_label_key">loading.footerMorePlayers.label</string>
         
     <string name="np__string_service_results_active_title_key">results.active.title.label</string>
     <string name="np__string_service_results_static_title_key">results.static.title.label</string>
@@ -196,8 +200,8 @@
     <string name="np__string_service_share_moments_description_key">shareMoment.title.label</string>
     <string name="np__string_service_share_moments_button_key">shareMoment.button.text</string>
     <string name="np__string_service_share_moments_post_placeholder_key">shareMoment.signedUser.text.placeholder</string>
-    <string name="np__string_service_share_moments_just_posted_lable_key">shareMoment.justPosted.label</string>
-    <string name="np__string_service_share_moments_status_lable_key">shareMoment.status.label</string>
+    <string name="np__string_service_share_moments_just_posted_label_key">shareMoment.justPosted.label</string>
+    <string name="np__string_service_share_moments_status_label_key">shareMoment.status.label</string>
     
     <string name="np__string_service_leaderboard_title_key">leaderboard.title.label</string>
     <string name="np__string_service_leaderboard_surrounding_key">leaderboard.subtitle.label</string>
@@ -259,9 +263,15 @@
     <string name="np__string_service_share_kit_wechat_button_key">buddies.sharers.wechat.label</string>
     <string name="np__string_service_share_kit_hangout_button_key">buddies.sharers.hangouts.label</string>
     
-    <string name="np__string_service_opponent_games_title_lable_key">opponentGames.title.label</string>
-    <string name="np__string_service_opponent_games_challenge_title_lable_key">opponentGames.challangeTitle.label</string>
-    <string name="np__string_service_opponent_games_subtitle_lable_key">opponentGames.subtitle.label</string>
+    <string name="np__string_service_opponent_games_title_label_key">opponentGames.title.label</string>
+    <string name="np__string_service_opponent_games_challenge_title_label_key">opponentGames.challangeTitle.label</string>
+    <string name="np__string_service_opponent_games_subtitle_label_key">opponentGames.subtitle.label</string>
+    
+    <string name="np__string_service_full_story_footer_action_install_label_key">fullStory.footer.action.install.label</string>
+    <string name="np__string_service_full_story_footer_action_challenge_label_key">fullStory.footer.action.challenge.label</string>
+    <string name="np__string_service_full_story_footer_action_share_label_key">fullStory.footer.action.externalShare.label</string>
+    <string name="np__string_service_full_story_screen_title_label_key">fullStory.screen.title.label</string>
+    <string name="np__string_service_full_story_status_failed_to_fetch_post_details_label_key">fullStory.status.failedToFetchPostDetails.label</string>
     
 
     <!-- New -->
@@ -276,6 +286,7 @@
     <string name="np__credentials_forgot_password">Forgot Password</string>
     <string name="np__credentials_select_avatar_action_bar_title">Choose Avatar</string>
     <string name="np__credentials_error_email_exist">This email already exist</string>
+    <string name="np__credentials_facebook_login">Facebook</string>
     
     <!-- Loading -->
     <string name="np__tournament_loading_footer_text_one_player">+%1$s</string>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/np__transparent_background" >
+
+        <include
+            android:id="@+id/np__gamestream_post_select_moment_action_bar_layout"
+            layout="@layout/np__layout_dialog_action_bar" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/np__gamestream_post_select_moment_action_bar_layout"
+            android:padding="@dimen/np__fragment_default_padding" >
+
+            <GridView
+                android:id="@+id/np__gamestream_post_select_moment_gridView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:drawSelectorOnTop="true"
+                android:gravity="center"
+                android:numColumns="2"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="@dimen/np__game_stream_post_select_moment_grid_spacing" 
+                android:horizontalSpacing="@dimen/np__game_stream_post_select_moment_grid_spacing" >
+            </GridView>
+        </FrameLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

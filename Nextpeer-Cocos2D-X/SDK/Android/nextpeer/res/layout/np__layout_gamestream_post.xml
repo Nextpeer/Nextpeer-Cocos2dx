@@ -10,7 +10,6 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/np__game_stream_item_post_margin_sides"
         android:layout_marginRight="@dimen/np__game_stream_item_post_margin_sides"
-        android:layout_marginTop="@dimen/np__game_stream_item_post_margin_top"
         android:paddingTop="@dimen/np__game_stream_item_content_padding"
         android:orientation="vertical"
         android:background="@drawable/np__gamestream_post_border">
