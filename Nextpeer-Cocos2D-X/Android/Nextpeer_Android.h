@@ -151,6 +151,11 @@ namespace nextpeer {
          @param timeout The maximum amount of time to wait for all other participants to register for the sync event.
          */
         virtual void registerToSynchronizedEvent(const char* eventName, uint32_t timeout);
+        
+		static Nextpeer_Android* getInstance();
+		
+	private:
+		static Nextpeer_Android* _sharedInstance;
     };
 
 };

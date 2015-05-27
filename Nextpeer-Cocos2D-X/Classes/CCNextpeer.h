@@ -153,7 +153,6 @@ namespace nextpeer
         */
         virtual void captureMoment() {}
     private:
-        static CCNextpeer* sharedInstance;
         CCNextpeer(CCNextpeer const&);
         CCNextpeer& operator=(CCNextpeer const &);
 

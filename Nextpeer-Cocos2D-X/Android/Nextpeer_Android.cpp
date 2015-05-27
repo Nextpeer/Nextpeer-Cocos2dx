@@ -15,8 +15,35 @@
 
 using namespace std;
 
-namespace nextpeer {
-	const char *NextpeerClass = "com/nextpeer/android/NextpeerCocos2DX";
+
+// CCNextpeer
+namespace nextpeer
+{
+    CCNextpeer::CCNextpeer() {}
+    CCNextpeer::~CCNextpeer() {}
+    CCNextpeer* CCNextpeer::getInstance()
+    {
+        return Nextpeer_Android::getInstance();
+    }
+}
+
+// Nextpeer_Android
+namespace nextpeer
+{
+    Nextpeer_Android* Nextpeer_Android::_sharedInstance = nullptr;
+
+    Nextpeer_Android* Nextpeer_Android::getInstance()
+    {
+        #if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
+            if (_sharedInstance == nullptr) {
+                _sharedInstance = new Nextpeer_Android();
+            }
+        #endif
+
+        return _sharedInstance;
+    }
+
+	const char *NextpeerClass = "com.nextpeer.android.NextpeerCocos2DX";
 
 	/*
 		Helper function for calling static functions on the main Nextpeer class
