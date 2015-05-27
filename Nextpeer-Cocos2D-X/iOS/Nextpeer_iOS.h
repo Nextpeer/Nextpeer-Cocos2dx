@@ -9,6 +9,7 @@
 #include "Export.h"
 #include "stdint.h"
 #include "CCNextpeer.h"
+#include "Nextpeer/Nextpeer.h"
 
 namespace nextpeer {
     
@@ -17,15 +18,20 @@ namespace nextpeer {
      */
     class Nextpeer_iOS : public CCNextpeer
     {
-    public:       
-        
-        /** @name Open the dashboard */
-       
+    public:
+		Nextpeer_iOS();
+	
+		/**
+		 Set Nextpeer-Facebook bridge.
+		 Should be invoked before initialize.
+		 */
+		virtual void setFacebookBridge(id<NPFacebookBridgeDelegate> bridge);
+
         /**
          Initializes the SDK using your app's parameters
          */
         virtual void initialize(const char* apiKey);
-        
+
         /**
          Launches the Nextpeer Dashboard
          
@@ -153,6 +159,13 @@ namespace nextpeer {
          Call this method to capture a specail moment in you game. A moment can be a new level, high score or any other special event in your game.
          */
         virtual void captureMoment();
+
+
+        static Nextpeer_iOS* getInstance();
+		
+	private:
+        static Nextpeer_iOS* _sharedInstance;
+		id<NPFacebookBridgeDelegate> _facebookBridge;
     };
 }
 

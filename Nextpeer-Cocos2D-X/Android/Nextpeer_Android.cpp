@@ -15,8 +15,35 @@
 
 using namespace std;
 
-namespace nextpeer {
-	const char *NextpeerClass = "com/nextpeer/android/NextpeerCocos2DX";
+
+// CCNextpeer
+namespace nextpeer
+{
+    CCNextpeer::CCNextpeer() {}
+    CCNextpeer::~CCNextpeer() {}
+    CCNextpeer* CCNextpeer::getInstance()
+    {
+        return Nextpeer_Android::getInstance();
+    }
+}
+
+// Nextpeer_Android
+namespace nextpeer
+{
+    Nextpeer_Android* Nextpeer_Android::_sharedInstance = NULL;
+
+    Nextpeer_Android* Nextpeer_Android::getInstance()
+    {
+        #if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
+            if (_sharedInstance == NULL) {
+                _sharedInstance = new Nextpeer_Android();
+            }
+        #endif
+
+        return _sharedInstance;
+    }
+
+	const char *NextpeerClass = "com.nextpeer.android.NextpeerCocos2DX";
 
 	/*
 		Helper function for calling static functions on the main Nextpeer class
@@ -71,7 +98,7 @@ namespace nextpeer {
 			methodInfo.env->CallStaticVoidMethod(methodInfo.classID, methodInfo.methodID, stringArg);
 			methodInfo.env->DeleteLocalRef(stringArg);
 		}
-        
+
         // This initializes the event queue and starts the scheduler
         NextpeerNotifier::getInstance()->queueScheduler();
 #endif
@@ -88,7 +115,7 @@ namespace nextpeer {
 	{
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
 		callStaticVoidMethod("reportScoreForCurrentTournament", "(I)V", score);
-#endif		
+#endif
 	}
 
 	void Nextpeer_Android::reportControlledTournamentOverWithScore(uint32_t score)
@@ -121,8 +148,9 @@ namespace nextpeer {
 		}
 
 		return (bool)ret;
-#endif
+#else
 		return false;
+#endif
 	}
 
 	std::string Nextpeer_Android::getCurrentPlayerId()
@@ -138,9 +166,10 @@ namespace nextpeer {
 		}
 		else {
 			return string("");
-        }
-#endif
+		}
+#else
 		return string("");
+#endif
 	}
 
 	std::string Nextpeer_Android::getCurrentPlayerName()
@@ -153,9 +182,9 @@ namespace nextpeer {
 			if (!name) return string("");
 
 			return cocos2d::JniHelper::jstring2string(name);
-        }
+		}
 #endif
-		return string("");
+        return string("");
 	}
 
 	void Nextpeer_Android::unreliablePushDataToOtherPlayers(void* pBuffer, uint32_t length)
@@ -193,7 +222,7 @@ namespace nextpeer {
 		}
 #endif
 	}
-    
+
     void Nextpeer_Android::enableRankingDisplay(bool enableRankingDisplay) {
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
         callStaticVoidMethod("enableRankingDisplay", "(Z)V", enableRankingDisplay);
@@ -204,87 +233,87 @@ namespace nextpeer {
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
         JNIEnv* env = NULL;
         if (!Nextpeer_AndroidJNIHelper::getEnv(&env)) return;
-        
+
         jstring playerId = (jstring)env->NewStringUTF(recordingPlayerId);
         jint jModifier = (jint)(modifier > INT_MAX ? INT_MAX : modifier);
-        
+
         callStaticVoidMethod("requestRecordingControlScoreModifier", "(Ljava/lang/String;I)V", playerId, jModifier);
-        
+
         env->DeleteLocalRef(playerId);
 #endif
     }
-    
+
     void Nextpeer_Android::requestPauseRecording(const char* recordingPlayerId)
     {
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
         JNIEnv* env = NULL;
         if (!Nextpeer_AndroidJNIHelper::getEnv(&env)) return;
-        
+
         jstring playerId = (jstring)env->NewStringUTF(recordingPlayerId);
-        
+
         callStaticVoidMethod("requestRecordingControlPauseRecording", "(Ljava/lang/String;)V", playerId);
-        
+
         env->DeleteLocalRef(playerId);
 #endif
     }
-    
+
     void Nextpeer_Android::requestResumeRecording(const char* recordingPlayerId)
     {
-        
+
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
         JNIEnv* env = NULL;
         if (!Nextpeer_AndroidJNIHelper::getEnv(&env)) return;
-        
+
         jstring playerId = (jstring)env->NewStringUTF(recordingPlayerId);
-        
+
         callStaticVoidMethod("requestRecordingControlResumeRecording", "(Ljava/lang/String;)V", playerId);
-        
+
         env->DeleteLocalRef(playerId);
 #endif
     }
-    
+
     void Nextpeer_Android::requestStopRecording(const char* recordingPlayerId)
     {
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
         JNIEnv* env = NULL;
         if (!Nextpeer_AndroidJNIHelper::getEnv(&env)) return;
-        
+
         jstring playerId = (jstring)env->NewStringUTF(recordingPlayerId);
-        
+
         callStaticVoidMethod("requestRecordingControlStopRecording", "(Ljava/lang/String;)V", playerId);
-        
+
         env->DeleteLocalRef(playerId);
 #endif
-        
+
     }
-    
+
     void Nextpeer_Android::requestRewindRecording(const char* recordingPlayerId, uint32_t timeDelta)
     {
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
         JNIEnv* env = NULL;
         if (!Nextpeer_AndroidJNIHelper::getEnv(&env)) return;
-        
+
         jstring playerId = (jstring)env->NewStringUTF(recordingPlayerId);
         jint delta = (jint)(timeDelta > INT_MAX ? INT_MAX : timeDelta);
-        
+
         callStaticVoidMethod("requestRecordingControlRewindRecording", "(Ljava/lang/String;I)V", playerId, timeDelta);
-        
+
         env->DeleteLocalRef(playerId);
 #endif
-        
+
     }
-    
+
     void Nextpeer_Android::requestFastForwardRecording(const char* recordingPlayerId, uint32_t timeDelta)
     {
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
         JNIEnv* env = NULL;
         if (!Nextpeer_AndroidJNIHelper::getEnv(&env)) return;
-        
+
         jstring playerId = (jstring)env->NewStringUTF(recordingPlayerId);
         jint delta = (jint)(timeDelta > INT_MAX ? INT_MAX : timeDelta);
-        
+
         callStaticVoidMethod("requestRecordingControlFastForwardRecording", "(Ljava/lang/String;I)V", playerId, timeDelta);
-        
+
         env->DeleteLocalRef(playerId);
 #endif
     }
@@ -293,12 +322,12 @@ namespace nextpeer {
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
             JNIEnv* env = NULL;
             if (!Nextpeer_AndroidJNIHelper::getEnv(&env)) return;
-            
+
             jstring event = (jstring)env->NewStringUTF(eventName);
             jint syncTimeout = (jint)(timeout > INT_MAX ? INT_MAX : timeout);
-            
+
             callStaticVoidMethod("registerToSynchronizedEvent", "(Ljava/lang/String;I)V", event, syncTimeout);
-            
+
             env->DeleteLocalRef(event);
 #endif
     }
