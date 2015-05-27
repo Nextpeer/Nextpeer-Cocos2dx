@@ -149,11 +149,10 @@ namespace nextpeer
         virtual void registerToSynchronizedEvent(const char* eventName, uint32_t timeout) {}
         
         /**
-         Call this method to capture a specail moment in you game. A moment can be a new level, high score or any other special event in your game.
-         */
+            Call this method to capture a specail moment in you game. A moment can be a new level, high score or any other special event in your game.
+        */
         virtual void captureMoment() {}
     private:
-        static CCNextpeer* sharedInstance;
         CCNextpeer(CCNextpeer const&);
         CCNextpeer& operator=(CCNextpeer const &);
 

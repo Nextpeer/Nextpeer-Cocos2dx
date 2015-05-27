@@ -16,8 +16,46 @@
 
 #import <Foundation/Foundation.h>
 
+// CCNextpeer
 namespace nextpeer
 {
+    CCNextpeer::CCNextpeer() {}
+    CCNextpeer::~CCNextpeer() {}
+    CCNextpeer* CCNextpeer::getInstance()
+	{
+		return Nextpeer_iOS::getInstance();
+	}
+}
+
+// Nextpeer_iOS
+namespace nextpeer
+{
+    Nextpeer_iOS* Nextpeer_iOS::_sharedInstance = nil;
+    
+	
+    Nextpeer_iOS* Nextpeer_iOS::getInstance()
+    {
+		#if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
+			if (_sharedInstance == nil) {
+				_sharedInstance = new Nextpeer_iOS();
+			}
+		#endif
+		
+        return _sharedInstance;
+    }
+
+	Nextpeer_iOS::Nextpeer_iOS()
+		: _facebookBridge(nil)
+	{
+	}
+	
+	void Nextpeer_iOS::setFacebookBridge(id<NPFacebookBridgeDelegate> bridge)
+	{
+#if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
+		_facebookBridge = bridge;
+#endif
+	}
+
     void Nextpeer_iOS::initialize(const char *apiKey)
     {
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
@@ -34,7 +72,8 @@ namespace nextpeer
                                andSettings:settings
                               andDelegates:[NPDelegatesContainer
                                             containerWithNextpeerDelegate:delegate
-                                            tournamentDelegate:delegate]];
+                                            tournamentDelegate:delegate
+											facebookBridgeDelegate:_facebookBridge]];
 #endif
     }
     
