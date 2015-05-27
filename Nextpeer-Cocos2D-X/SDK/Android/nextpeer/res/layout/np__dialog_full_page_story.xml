@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/np__transparent_background" >
+
+        <include
+            android:id="@+id/np__full_page_story_action_bar_layout"
+            layout="@layout/np__layout_dialog_action_bar" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/np__full_page_story_action_bar_layout"
+            android:fillViewport="true" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/np__fragment_default_padding" >
+
+                <include
+                    android:id="@+id/np__full_page_story_post_layout"
+                    layout="@layout/np__layout_gamestream_post" />
+
+                <include
+                    android:id="@+id/np__full_page_story_game_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/np__widget_listview_default_divider_height"
+                    android:layout_marginLeft="@dimen/np__game_stream_item_post_margin_sides"
+                    android:layout_marginRight="@dimen/np__game_stream_item_post_margin_sides"
+                    android:layout_marginTop="@dimen/np__widget_listview_default_divider_height"
+                    layout="@layout/np__layout_games_list_item" />
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+</RelativeLayout>

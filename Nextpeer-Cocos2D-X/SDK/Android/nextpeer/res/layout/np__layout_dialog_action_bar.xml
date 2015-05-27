@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/np__dialog_action_bar_container"
     android:layout_width="match_parent"
@@ -14,14 +14,19 @@
         style="@style/NP__.Widget.ImageButton"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
         android:background="@null"
         android:src="@drawable/np__ic_navigate_back" />
 
     <View
+        android:id="@+id/np__dialog_action_bar_divider"
         android:layout_width="1dp"
         android:layout_height="@dimen/np__dialog_action_bar_vertical_separator"
+        android:layout_centerVertical="true"
         android:layout_marginEnd="@dimen/np__dialog_action_bar_vertical_separator_margin"
         android:layout_marginRight="@dimen/np__dialog_action_bar_vertical_separator_margin"
+        android:layout_toRightOf="@id/np__dialog_action_bar_back_button"
         android:background="@color/np__dialog_action_bar_vertical_separator" />
 
     <TextView
@@ -29,6 +34,20 @@
         style="@style/NP__.Widget.Dialog.ActionBar.Title.Text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/np__dialog_action_bar_divider"
         android:text="@string/np__application_name" />
 
-</LinearLayout>
+    <ImageButton
+        android:id="@+id/np__dialog_action_bar_done_button"
+        style="@style/NP__.Widget.ImageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@null"
+        android:src="@drawable/np__ic_check_mark"
+        android:visibility="gone" />
+
+</RelativeLayout>

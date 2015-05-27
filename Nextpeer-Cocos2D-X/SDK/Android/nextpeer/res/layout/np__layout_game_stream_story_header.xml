@@ -58,7 +58,6 @@
             android:layout_alignLeft="@+id/np__game_stream_item_header_title"
             android:layout_alignRight="@+id/np__game_stream_item_header_story_time"
             android:layout_below="@+id/np__game_stream_item_header_title"
-            android:ellipsize="end"
             android:paddingBottom="@dimen/np__game_stream_header_post_vertical_padding"
             android:paddingTop="@dimen/np__game_stream_header_post_vertical_padding"
             android:text="@string/np__application_name" />

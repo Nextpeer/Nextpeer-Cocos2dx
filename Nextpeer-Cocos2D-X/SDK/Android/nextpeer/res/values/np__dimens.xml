@@ -17,6 +17,11 @@
     <dimen name="np__widget_button_shadow_size">3dp</dimen>
     <dimen name="np__widget_button_shadow_seen_padding">2dp</dimen>
     <dimen name="np__widget_button_rounded_corners_radius">2dp</dimen>
+    <dimen name="np__widget_button_border_width">1dp</dimen>
+    
+    <!-- Gallery -->
+    <dimen name="np__widget_gallery_item_size">140dp</dimen>
+    <dimen name="np__widget_gallery_item_size_border_width">2dp</dimen>
    
     <dimen name="np__dummy_action_bar_default_height">48dp</dimen>
     <dimen name="np__dummy_action_bar_padding">5dp</dimen>
@@ -72,14 +77,18 @@
     <dimen name="np__game_stream_post_shadow_unseen_size">-2dp</dimen>
     <dimen name="np__game_stream_quick_play_button_margin">10dp</dimen>
     <dimen name="np__game_stream_quick_play_button_icon_padding">20dp</dimen>
-    <dimen name="np__game_stream_post_dialog_text_box_height">180dp</dimen>
+    <dimen name="np__game_stream_post_dialog_text_box_height">140dp</dimen>
     <dimen name="np__game_stream_post_dialog_profile_picture_top_margin">16dp</dimen>
     <dimen name="np__game_stream_post_dialog_profile_picture_bottom_margin">12dp</dimen>
+    <dimen name="np__game_stream_post_dialog_upload_picture_top_margin">10dp</dimen>
+    <dimen name="np__game_stream_post_dialog_upload_picture_transparent_stroke_padding">18dp</dimen>
     <dimen name="np__game_stream_new_stories_shadow_size">4dp</dimen>
     <dimen name="np__game_stream_new_stories_shadow_seen_padding">2dp</dimen>
     <dimen name="np__game_stream_new_stories_corners_radius">8dp</dimen>
     <dimen name="np__game_stream_new_stories_padding">5dp</dimen>
     <dimen name="np__game_stream_new_stories_top_margin">20dp</dimen>
+    <dimen name="np__game_stream_post_select_moment_grid_column_width">150dp</dimen>
+    <dimen name="np__game_stream_post_select_moment_grid_spacing">20dp</dimen>
     
     <!-- Buddies -->
     <dimen name="np__buddies_list_profile_picture_default_size">@dimen/np__widget_listview_item_default_picture_size</dimen>

@@ -1,0 +1,17 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+    <com.nextpeer.android.open.ui.NPImageView
+        android:id="@+id/np__grid_raw_image"
+        android:layout_width="@dimen/np__widget_gallery_item_size"
+        android:layout_height="@dimen/np__widget_gallery_item_size"
+        android:adjustViewBounds="true"
+        android:background="@drawable/np__image_background_selector"
+        android:clickable="true"
+        android:padding="1dp"
+        android:scaleType="fitXY" />
+
+</LinearLayout>

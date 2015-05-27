@@ -6,12 +6,16 @@
     <integer name="np__user_profile_edit_name_max_length">40</integer>
     <integer name="np__user_profile_edit_motto_max_length">160</integer>
     <integer name="np__user_profile_edit_city_max_length">64</integer>
+    
     <integer name="np__circular_progress_min_sweep_angle">20</integer>
     <integer name="np__circular_progress_max_sweep_angle">300</integer>
     
     <!-- Loading indicator -->
     <integer name="np__loading_indicator_rotation_duration">300</integer>
     <integer name="np__loading_indicator_rotation_start_offset">200</integer>
+    
+    <!-- Post -->
+    <integer name="np__post_text_max_length">144</integer>
     
     
 </resources>

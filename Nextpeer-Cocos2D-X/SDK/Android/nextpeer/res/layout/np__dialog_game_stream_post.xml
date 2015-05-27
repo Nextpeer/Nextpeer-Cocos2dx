@@ -78,10 +78,58 @@
                 android:layout_height="@dimen/np__game_stream_post_dialog_text_box_height"
                 android:background="@null"
                 android:gravity="center|top"
-                android:textColor="@color/np__game_stream_post_text" />
+                android:textColor="@color/np__game_stream_post_text" 
+                android:maxLength="@integer/np__post_text_max_length"/>
 
+            <FrameLayout
+                android:id="@+id/np__game_stream_post_dialog_image_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/np__game_stream_post_dialog_upload_picture_top_margin" >
+
+                <EditText
+                    android:id="@+id/np__game_stream_post_dialog_dummy_text"
+                    style="@style/NP__.GameStream.Post.Text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="bottom"
+                    android:background="@null" 
+                    android:maxLength="0"/>
+
+                <ImageButton
+                    android:id="@+id/np__game_stream_post_dialog_upload_image_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/np__ic_post_upload_image"
+                    android:visibility="gone" />
+
+                <FrameLayout
+                    android:id="@+id/np__game_stream_post_dialog_selected_image_layout"
+                    android:layout_width="@dimen/np__widget_gallery_item_size"
+                    android:layout_height="@dimen/np__widget_gallery_item_size"
+                    android:layout_gravity="center_horizontal"
+                    android:visibility="gone" >
+
+                    <com.nextpeer.android.open.ui.NPImageView
+                        android:id="@+id/np__game_stream_post_dialog_selected_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:padding="@dimen/np__game_stream_post_dialog_upload_picture_transparent_stroke_padding"
+                        android:scaleType="fitXY" />
+
+                    <ImageButton
+                        android:id="@+id/np__game_stream_post_dialog_selected_image_cancel_button"
+                        style="@style/NP__.Widget.ImageButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right|top"
+                        android:src="@drawable/np__ic_close_window" />
+                </FrameLayout>
+            </FrameLayout>
         </LinearLayout>
-
     </LinearLayout>
 
 </FrameLayout>

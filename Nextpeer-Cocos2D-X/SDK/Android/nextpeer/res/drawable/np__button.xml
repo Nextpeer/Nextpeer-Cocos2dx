@@ -20,6 +20,28 @@
                 android:topRightRadius="@dimen/np__widget_button_rounded_corners_radius" />
         </shape>
     </item>
+    
+	<!-- stroke -->
+    <item android:id="@+id/np__button_border_color">
+        <shape>
+            <stroke
+                android:width="@dimen/np__widget_button_border_width"/>
+
+            <padding
+                android:bottom="@dimen/np__widget_button_border_width"
+                android:left="@dimen/np__widget_button_border_width"
+                android:right="@dimen/np__widget_button_border_width"
+                android:top="@dimen/np__widget_button_border_width" />
+            
+           <corners
+                android:bottomLeftRadius="@dimen/np__widget_button_rounded_corners_radius"
+                android:bottomRightRadius="@dimen/np__widget_button_rounded_corners_radius"
+                android:topLeftRadius="@dimen/np__widget_button_rounded_corners_radius"
+                android:topRightRadius="@dimen/np__widget_button_rounded_corners_radius" />
+            
+        </shape>
+    </item>
+    
     <!-- Background -->
      <item android:id="@+id/np__button_color">
         <shape>
