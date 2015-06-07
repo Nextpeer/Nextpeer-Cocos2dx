@@ -94,6 +94,7 @@
                     android:layout_height="match_parent"
                     android:layout_gravity="bottom"
                     android:background="@null" 
+                    android:clickable="false"
                     android:maxLength="0"/>
 
                 <ImageButton
@@ -101,21 +102,21 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@null"
-                    android:layout_gravity="center_horizontal"
+                    android:layout_gravity="center"
                     android:src="@drawable/np__ic_post_upload_image"
-                    android:visibility="gone" />
+                    android:visibility="invisible" />
 
                 <FrameLayout
                     android:id="@+id/np__game_stream_post_dialog_selected_image_layout"
-                    android:layout_width="@dimen/np__widget_gallery_item_size"
-                    android:layout_height="@dimen/np__widget_gallery_item_size"
-                    android:layout_gravity="center_horizontal"
-                    android:visibility="gone" >
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|top"
+                    android:visibility="invisible" >
 
                     <com.nextpeer.android.open.ui.NPImageView
                         android:id="@+id/np__game_stream_post_dialog_selected_image"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_width="@dimen/np__game_stream_post_dialog_selected_picture_size"
+                        android:layout_height="@dimen/np__game_stream_post_dialog_selected_picture_size"
                         android:adjustViewBounds="true"
                         android:padding="@dimen/np__game_stream_post_dialog_upload_picture_transparent_stroke_padding"
                         android:scaleType="fitXY" />
