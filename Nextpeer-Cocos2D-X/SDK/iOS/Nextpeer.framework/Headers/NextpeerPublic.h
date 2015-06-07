@@ -118,7 +118,7 @@ typedef NS_ENUM(int, NPScreenType) {
 /**
  Call this method to verify if the current run time environment supports Nextpeer requirements.
  
- @note Minimum iOS version supported by the SDK is iOS 7.0. You can handle such case by implementing the 
+ @note Minimum iOS version supported by the SDK is iOS 6.0. You can handle such case by implementing the 
        [NextpeerDelegate nextpeerNotSupportedShouldShowCustomError] method (otherwise Nextpeer will display alert).
  
  @return YES if the run time requirements match, NO otherwise.
