@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.nextpeer.android.open.NPTile xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/np__buddy_list_item_container"
     android:layout_width="match_parent"
     android:layout_height="@dimen/np__buddies_list_item_height"
-    android:background="@drawable/np__shadowed_rounded_corner_white_background"
     android:orientation="horizontal" >
 
     <com.nextpeer.android.open.ui.NPCircularImageView
@@ -73,6 +72,7 @@
         android:layout_gravity="center_vertical"
         android:layout_marginEnd="@dimen/np__buddies_list_button_right_margin"
         android:layout_marginRight="@dimen/np__buddies_list_button_right_margin"
-        android:focusable="false" />
+        android:focusable="false"
+        />
 
-</RelativeLayout>
+</com.nextpeer.android.open.NPTile>

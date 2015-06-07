@@ -1,14 +1,12 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.nextpeer.android.open.NPTile xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/np__leaderboard_list_item_container"
     android:layout_width="match_parent"
     android:layout_height="@dimen/np__leaderboard_list_item_height"
-    android:background="@drawable/np__leaderboard_list_item_background"
+    android:background="@drawable/np__tile_background_unpressed"
     android:gravity="center_vertical"
     android:orientation="horizontal"
     android:paddingBottom="@dimen/np__leaderboard_list_item_top_bottom_padding"
-    android:paddingLeft="@dimen/np__leaderboard_list_item_left_right_padding"
-    android:paddingRight="@dimen/np__leaderboard_list_item_left_right_padding"
     android:paddingTop="@dimen/np__leaderboard_list_item_top_bottom_padding" >
 
     <LinearLayout
@@ -17,11 +15,12 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_toLeftOf="@+id/np__leaderboard_list_item_score"
-        android:gravity="center_vertical" >
+        android:gravity="center_vertical"
+        android:layout_marginLeft="@dimen/np__leaderboard_list_item_left_right_padding" >
 
         <LinearLayout
             android:layout_width="@dimen/np__leaderboard_list_item_position_width"
-            android:layout_height="match_parent" 
+            android:layout_height="match_parent"
             android:gravity="center_vertical" >
 
             <TextView
@@ -49,18 +48,19 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/np__leaderboard_list_item_content_left_margin"
-            android:layout_marginStart="@dimen/np__leaderboard_list_item_content_left_margin" 
-            android:text="@string/np__application_name"/>
+            android:layout_marginStart="@dimen/np__leaderboard_list_item_content_left_margin"
+            android:text="@string/np__application_name" />
     </LinearLayout>
 
-   <TextView
-       android:id="@+id/np__leaderboard_list_item_score"
-       style="@style/NP__.Leaderboard.Item.Text"
+    <TextView
+        android:id="@+id/np__leaderboard_list_item_score"
+        style="@style/NP__.Leaderboard.Item.Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
         android:gravity="center_vertical"
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content" />
+        android:layout_marginRight="@dimen/np__leaderboard_list_item_left_right_padding" />
 
-</RelativeLayout>
+</com.nextpeer.android.open.NPTile>
