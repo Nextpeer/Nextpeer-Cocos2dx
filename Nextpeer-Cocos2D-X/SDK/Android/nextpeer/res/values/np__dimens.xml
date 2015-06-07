@@ -77,7 +77,8 @@
     <dimen name="np__game_stream_post_shadow_unseen_size">-2dp</dimen>
     <dimen name="np__game_stream_quick_play_button_margin">10dp</dimen>
     <dimen name="np__game_stream_quick_play_button_icon_padding">20dp</dimen>
-    <dimen name="np__game_stream_post_dialog_text_box_height">140dp</dimen>
+    <dimen name="np__game_stream_post_dialog_text_box_height">120dp</dimen>
+    <dimen name="np__game_stream_post_dialog_selected_picture_size">74dp</dimen>
     <dimen name="np__game_stream_post_dialog_profile_picture_top_margin">16dp</dimen>
     <dimen name="np__game_stream_post_dialog_profile_picture_bottom_margin">12dp</dimen>
     <dimen name="np__game_stream_post_dialog_upload_picture_top_margin">10dp</dimen>
