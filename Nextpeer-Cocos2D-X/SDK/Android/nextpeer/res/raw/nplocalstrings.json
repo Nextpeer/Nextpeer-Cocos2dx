@@ -41,8 +41,6 @@
     "challenges.status.creating.label":"Creating...",
     "challenges.status.async.challenge.creationFailed.label":"Could not find anyone to play with. Please invite your buddies!",
     "challenges.status.creationFailed.label":"Failed to create challenge. Please check your network connection and try again.",
-    "challenges.switch.completedChallenges.label":"Completed",
-    "challenges.switch.newChallenges.label":"New",
     
     "challenges.newChallenges.leftDescription.label":"Expires in",
     "challenges.newChallenges.leftOneDay.label":"a day",
@@ -52,8 +50,6 @@
     "challenges.newChallenges.leftMinutes.label":"minutes",
     "challenges.alerts.gameModeNotSupportedMessage.label": "Seems like this challenge isn't supported for this game. If this persists please contact our support team.",
     "challenges.emptyState.bubble.label": "INVITE YOUR BUDDIES TO CHALLENGE THEM!",
-
-    "games.title.label": "My Games",
     
     "feed.footer.action.install.label": "INSTALL",
     "feed.footer.action.challenge.label": "CHALLENGE",

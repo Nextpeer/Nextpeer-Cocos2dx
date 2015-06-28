@@ -25,14 +25,12 @@
 + (void)reportForfeitForCurrentTournament;
 
 /**
- Call this method when your game manages the current tournament and the player just died (a.k.a. 'Last Man Standing').
+ Call this method when your game manages the current tournament and the player just died.
  Nextpeer will call the [NextpeerDelegate nextpeerDidTournamentEnd] method after reporting the last score.
- 
- @note The method will act only if the current tournament is from a 'GameControlled' tournament type.
  
  @param score The final score of the player.
  */
-+ (void)reportControlledTournamentOverWithScore:(float)score;
++ (void)reportControlledTournamentOverWithScore:(uint32_t)score;
 
 /**
  This method is used to push a buffer to the other players.
