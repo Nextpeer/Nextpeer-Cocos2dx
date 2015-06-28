@@ -41,6 +41,7 @@
     "challenges.status.creating.label":"Creating...",
     "challenges.status.async.challenge.creationFailed.label":"Could not find anyone to play with. Please invite your buddies!",
     "challenges.status.creationFailed.label":"Failed to create challenge. Please check your network connection and try again.",
+    "challenges.status.creationFailed.selfIInvite.label":"You are trying to challenge yourself, go ahead and select another player.",
 
     "challenges.newChallenges.subtitle.label": "New Challenges",
     "challenges.ongoingChallenges.subtitle.label": "Ongoing Challenges",
