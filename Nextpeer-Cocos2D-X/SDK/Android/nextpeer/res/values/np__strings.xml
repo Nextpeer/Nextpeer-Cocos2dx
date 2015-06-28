@@ -11,6 +11,12 @@
     <string name="np__string_service_status_updating_label_key">status.updating.label</string>
     
     <!--suppress Typos -->
+    <string name="np__string_service_tab_bar_buddies_button_key">tabBar.buddies.button</string>
+    <string name="np__string_service_tab_bar_challenges_button_key">tabBar.challenges.button</string>
+    <string name="np__string_service_tab_bar_leaderboards_button_key">tabBar.leaderboards.button</string>
+    <string name="np__string_service_tab_bar_more_button_key">tabBar.more.button</string>
+    <string name="np__string_service_tab_bar_stream_button_key">tabBar.stream.button</string>
+    
     <string name="np__string_service_general_button_ok_key">general.ok.button</string>
     <string name="np__string_service_general_button_cancel_key">general.cancel.button</string>
     <string name="np__string_service_default_user_name_key">general.player.nameRepresentationWhenNotSignIn.label</string>
@@ -98,8 +104,8 @@
     <string name="np__string_service_profile_edit_option_select_photo_key">avatarPicker.photoChooser.title.label</string>
     <string name="np__string_service_profile_edit_option_take_photo_key">avatarPicker.takePhoto.title.label</string>
     
-    <string name="np__string_service_games_title_label_key">games.title.label</string>
-    <string name="np__string_service_games_subtitle_label_key">games.subtitle.label</string>
+    <string name="np__string_service_games_title_label_key">myGames.title.label</string>
+    <string name="np__string_service_games_subtitle_label_key">myGames.subtitle.label</string>
     
     <string name="np__string_service_buddies_edit_textx_search_key">buddies.searchBar.label</string>
     <string name="np__string_service_buddies_button_accept_key">buddies.cells.requestAccept.button</string>

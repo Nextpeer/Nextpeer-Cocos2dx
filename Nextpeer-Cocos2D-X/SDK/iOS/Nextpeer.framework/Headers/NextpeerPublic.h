@@ -88,7 +88,7 @@ typedef NS_ENUM(int, NPScreenType) {
                     andDelegates:(NPDelegatesContainer*)delegatesContainer;
 
 /**
- Log in to Nextpeer with Facebook user. This method should be invoked when user logs in to Facebook form game UI.
+ Log in to Nextpeer with Facebook user. This method should be invoked when user logs in to Facebook from game UI.
  */
 + (void)loginWithFacebook;
 
