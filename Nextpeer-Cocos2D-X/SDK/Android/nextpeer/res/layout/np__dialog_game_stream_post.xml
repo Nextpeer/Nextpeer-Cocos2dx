@@ -94,7 +94,6 @@
                     android:layout_height="match_parent"
                     android:layout_gravity="bottom"
                     android:background="@null" 
-                    android:clickable="false"
                     android:maxLength="0"/>
 
                 <ImageButton
