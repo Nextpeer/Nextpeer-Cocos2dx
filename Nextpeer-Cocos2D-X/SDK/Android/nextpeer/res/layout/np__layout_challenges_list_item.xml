@@ -11,6 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:padding="@dimen/np__widget_listview_item_default_padding"
+        android:baselineAligned="false"
         android:weightSum="5" >
 
         <LinearLayout
@@ -77,11 +78,12 @@
 
             <LinearLayout
                 android:id="@+id/np__challenges_list_item_button_container"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
-                android:visibility="gone" >
+                android:gravity="right"
+                android:visibility="gone">
 
                 <com.nextpeer.android.open.ui.NPButton
                     android:id="@+id/np__challenges_list_item_button"
@@ -92,7 +94,8 @@
                     android:clickable="false"
                     android:focusable="false"
                     android:text="@string/np__application_name"
-                    app:np__button_color="@color/np__palette_red" />
+                    app:np__button_color="@color/np__palette_red"
+                    app:np__button_shadow="false" />
             </LinearLayout>
 
             <LinearLayout

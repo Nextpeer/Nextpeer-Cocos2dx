@@ -48,7 +48,7 @@
                     android:layout_height="match_parent"
                     android:orientation="horizontal" >
 
-                    <EditText
+                    <com.nextpeer.android.open.ui.NPEditText
                         android:id="@+id/np__buddies_search_users_dialog_search_box"
                         style="@style/NP__.Buddies.Search"
                         android:layout_width="fill_parent"

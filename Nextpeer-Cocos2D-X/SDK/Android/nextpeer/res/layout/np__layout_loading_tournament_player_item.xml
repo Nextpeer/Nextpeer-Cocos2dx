@@ -26,6 +26,7 @@
         style="@style/NP__.Loading.Player.Name.Text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:maxEms="@integer/np__tournament_loading_player_item_text_max_ems"
         android:layout_marginTop="@dimen/np__tournament_loading_vertical_margin"
         android:text="@string/np__application_name" />
 

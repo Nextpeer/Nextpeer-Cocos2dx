@@ -71,7 +71,7 @@
             android:orientation="vertical"
             android:padding="@dimen/np__fragment_default_padding" >
 
-            <EditText
+            <com.nextpeer.android.open.ui.NPEditText
                 android:id="@+id/np__game_stream_post_dialog_text"
                 style="@style/NP__.GameStream.Post.Text"
                 android:layout_width="match_parent"
@@ -87,13 +87,14 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/np__game_stream_post_dialog_upload_picture_top_margin" >
 
-                <EditText
+                <com.nextpeer.android.open.ui.NPEditText
                     android:id="@+id/np__game_stream_post_dialog_dummy_text"
                     style="@style/NP__.GameStream.Post.Text"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_gravity="bottom"
                     android:background="@null" 
+                    android:clickable="false"
                     android:maxLength="0"/>
 
                 <ImageButton

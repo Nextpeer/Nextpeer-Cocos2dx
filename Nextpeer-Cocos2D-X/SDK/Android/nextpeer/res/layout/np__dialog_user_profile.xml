@@ -4,56 +4,9 @@
     android:background="@null"
     android:orientation="vertical" >
 
-    <RelativeLayout
-        style="@style/NP__.Widget.ActionBar"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/np__dummy_action_bar_default_height"
-        android:gravity="center_vertical"
-        android:orientation="horizontal"
-        android:padding="@dimen/np__dummy_action_bar_padding" >
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:gravity="center_vertical"
-            android:orientation="horizontal" >
-
-            <ImageButton
-                android:id="@+id/np__user_profile_back_button"
-                style="@style/NP__.Widget.ImageButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@null"
-                android:src="@drawable/np__ic_action_bar_navigate_back" />
-
-            <TextView
-                android:id="@+id/np__user_profile_action_bar_title"
-                style="@style/NP__Theme.ActionBar.TitleTextStyle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:drawableLeft="@drawable/np__ic_action_bar_logo"
-                android:drawableStart="@drawable/np__ic_action_bar_logo"
-                android:text="@string/np__application_name" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:gravity="center_vertical"
-            android:orientation="horizontal" >
-
-            <ImageButton
-                android:id="@+id/np__user_profile_action_bar_right_button"
-                style="@style/NP__.Widget.ImageButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@null" />
-        </LinearLayout>
-    </RelativeLayout>
+    <include
+        android:id="@+id/np__full_page_story_action_bar_layout"
+        layout="@layout/np__layout_dialog_action_bar" />
 
     <LinearLayout
         android:layout_width="match_parent"

@@ -27,6 +27,8 @@
         <item name="android:textAppearanceMedium">@style/NP__.TextAppearance.Medium</item>
         <item name="android:textAppearanceSmall">@style/NP__.TextAppearance.Small</item>
         <item name="android:dropDownListViewStyle">@style/NP__Theme.DropDownBase</item>
+        <item name="android:windowEnableSplitTouch">false</item>
+   		<item name="android:splitMotionEvents">false</item>
     </style>
 
     <style name="NP__Theme.DropDownBase" parent="@style/NP__.Widget.DropDown">
