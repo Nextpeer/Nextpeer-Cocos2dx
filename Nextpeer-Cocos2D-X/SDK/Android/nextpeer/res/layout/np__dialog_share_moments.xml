@@ -78,7 +78,7 @@
                         android:layout_marginTop="@dimen/np__share_moment_screen_content_top_margin"
                         android:text="@string/np__application_name" />
 
-                    <EditText
+                    <com.nextpeer.android.open.ui.NPEditText
                         android:id="@+id/np__share_moments_post_text"
                         style="@style/NP__.Widget.EditText"
                         android:layout_width="@dimen/np__widget_edittext_width"

@@ -41,6 +41,7 @@
     <color name="np__share_kit_messages_green">#04DE0A</color>
     <color name="np__share_kit_hangout_green">#1da260</color>
     <color name="np__share_kit_copy_gray">@color/np__grey</color>
+    <color name="np__share_kit_viber_purple">#7C529E</color>
     
     <color name="np__widget_text_content">#303030</color>
     

@@ -328,13 +328,16 @@
     	========================================================
     	Loading
     	======================================================== 
+    	
     -->
     <style name="NP__.Loading.Player.Name.Text" parent="NP__.Widget.Text.Content.Large">
         <item name="android:textColor">@color/np__palette_dark_blue</item>
         <item name="android:textStyle">normal</item>
         <item name="android:ellipsize">end</item>
         <item name="android:maxLines">1</item>
+        <item name="android:lines">1</item>
         <item name="android:singleLine">true</item>
+        <item name="android:scrollHorizontally">true</item>
         <item name="android:gravity">center</item>
     </style>
     
@@ -343,6 +346,7 @@
         <item name="android:textStyle">normal</item>
         <item name="android:ellipsize">end</item>
         <item name="android:maxLines">1</item>
+        <item name="android:singleLine">true</item>
         <item name="android:gravity">center</item>
     </style>
     

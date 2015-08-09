@@ -10,13 +10,13 @@
     <string name="np__string_service_status_loading_label_key">status.loading.label</string>
     <string name="np__string_service_status_updating_label_key">status.updating.label</string>
     
-    <!--suppress Typos -->
     <string name="np__string_service_tab_bar_buddies_button_key">tabBar.buddies.button</string>
     <string name="np__string_service_tab_bar_challenges_button_key">tabBar.challenges.button</string>
     <string name="np__string_service_tab_bar_leaderboards_button_key">tabBar.leaderboards.button</string>
     <string name="np__string_service_tab_bar_more_button_key">tabBar.more.button</string>
     <string name="np__string_service_tab_bar_stream_button_key">tabBar.stream.button</string>
     
+    <!--suppress Typos -->
     <string name="np__string_service_general_button_ok_key">general.ok.button</string>
     <string name="np__string_service_general_button_cancel_key">general.cancel.button</string>
     <string name="np__string_service_default_user_name_key">general.player.nameRepresentationWhenNotSignIn.label</string>
@@ -95,6 +95,7 @@
     <string name="np__string_service_profile_edit_text_birthday_key">profile.edit.birthday.text.placeholder</string>
     <string name="np__string_service_profile_edit_updating_failed_label_key">profile.edit.updating.failed.label</string>
     <string name="np__string_service_profile_edit_updating_label_key">profile.edit.updating.status.label</string>
+    <string name="np__string_service_profile_edit_birthday_under_age_label_key">profile.edit.birthday.under.minimal.age.label</string>
     
     <string name="np__string_service_profile_edit_leave_without_save_alert_label_key">profile.edit.leaveWithoutSaveChangesAlertMessage.label</string>
     <string name="np__string_service_profile_edit_leave_without_save_alert_persist_label_key">profile.edit.leaveWithoutSaveChangesAlertPersistChanges.button</string>
@@ -123,6 +124,9 @@
     <string name="np__string_service_player_buddies_failed_to_add_buddy_error_key">playerBuddies.screen.status.failedToAddBuddy.label</string>
     
     <string name="np__string_service_signup_text_email_key">signUp.step1.email.text.placeholder</string>
+    <string name="np__string_service_signup_facebook_button_key">signUp.step1.facebook.button</string>
+    <string name="np__string_service_signup_facebook_permission_label_key">signUp.step1.facebook.permission.alert</string>
+    
     <string name="np__string_service_signup_text_password_key">signUp.step1.password.text.placeholder</string>
     <string name="np__string_service_signup_button_policy_key">signUp.step1.privacy.button</string>
     <string name="np__string_service_signup_button_key">signUp.step1.button</string>
@@ -228,6 +232,7 @@
     <string name="np__string_service_challenges_status_async_creation_failed_label_key">challenges.status.async.challenge.creationFailed.label</string>
     <string name="np__string_service_challenges_alerts_game_mode_not_supported_msg_label_key">challenges.alerts.gameModeNotSupportedMessage.label</string>
     <string name="np__string_service_challenges_empty_state_bubble_label_key">challenges.emptyState.bubble.label</string>
+    <string name="np__string_service_challenges_status_self_invite_creation_failure_label_key">challenges.status.creationFailed.selfIInvite.label</string>
     
     <string name="np__string_service_more_messages_key">sideMenu.messages.label</string>
 	<string name="np__string_service_more_settings_key">sideMenu.settings.label</string>
@@ -268,6 +273,7 @@
     <string name="np__string_service_share_kit_tencent_button_key">buddies.sharers.tencentWeibo.label</string>
     <string name="np__string_service_share_kit_wechat_button_key">buddies.sharers.wechat.label</string>
     <string name="np__string_service_share_kit_hangout_button_key">buddies.sharers.hangouts.label</string>
+    <string name="np__string_service_share_kit_viber_button_key">buddies.sharers.viber.label</string>
     
     <string name="np__string_service_opponent_games_title_label_key">opponentGames.title.label</string>
     <string name="np__string_service_opponent_games_challenge_title_label_key">opponentGames.challangeTitle.label</string>
@@ -292,7 +298,6 @@
     <string name="np__credentials_forgot_password">Forgot Password</string>
     <string name="np__credentials_select_avatar_action_bar_title">Choose Avatar</string>
     <string name="np__credentials_error_email_exist">This email already exist</string>
-    <string name="np__credentials_facebook_login">Facebook</string>
     
     <!-- Loading -->
     <string name="np__tournament_loading_footer_text_one_player">+%1$s</string>

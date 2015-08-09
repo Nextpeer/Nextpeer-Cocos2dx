@@ -99,7 +99,7 @@
                     android:gravity="center_horizontal"
                     android:text="@string/np__application_name" />
 
-                <EditText
+                <com.nextpeer.android.open.ui.NPEditText
                     android:id="@+id/np__user_profile_edit_username"
                     style="@style/NP__.Profile.Edit.Text"
                     android:layout_width="match_parent"
@@ -108,7 +108,7 @@
                     android:focusable="false"
                     android:maxLength="@integer/np__user_profile_edit_name_max_length" />
 
-                <EditText
+                <com.nextpeer.android.open.ui.NPEditText
                     android:id="@+id/np__user_profile_edit_motto"
                     style="@style/NP__.Profile.Edit.Text"
                     android:layout_width="match_parent"
