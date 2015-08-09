@@ -42,7 +42,7 @@
     <dimen name="np__tournament_loading_vertical_margin">5dp</dimen>
     <dimen name="np__tournament_loading_footer_bottom_margin">30dp</dimen>
     <dimen name="np__tournament_loading_indicator_text_top_margin">22dp</dimen>
-    <dimen name="np__tournament_loading_grid_item_margin">20dp</dimen>
+    <dimen name="np__tournament_loading_grid_item_margin">10dp</dimen>
     
     <dimen name="np__ranks_display_list_badge_size">25dp</dimen>
     <dimen name="np__ranks_display_list_image_badge_padding">15dp</dimen>
@@ -96,7 +96,8 @@
     <dimen name="np__buddies_list_profile_picture_border_line_size">1dp</dimen>
     <dimen name="np__buddies_list_button_width">52dp</dimen>
     <dimen name="np__buddies_list_button_height">24dp</dimen>
-    <dimen name="np__buddies_list_button_right_margin">12dp</dimen>    
+    <dimen name="np__buddies_list_button_right_margin">12dp</dimen>
+    <dimen name="np__buddies_list_button_touch_delegate_area_size">12dp</dimen>        
     <dimen name="np__buddies_list_padding">@dimen/np__fragment_default_padding</dimen>
     <dimen name="np__buddies_list_item_height">@dimen/np__widget_listview_item_default_height</dimen>
     <dimen name="np__buddies_list_item_content_margin">@dimen/np__widget_listview_item_default_content_margin</dimen>

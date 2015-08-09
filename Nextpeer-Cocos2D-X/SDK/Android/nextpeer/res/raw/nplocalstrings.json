@@ -31,6 +31,7 @@
     "buddies.sharers.whatsApp.label":"WhatsApp",
     "buddies.sharers.wechat.label":"WeChat",
     "buddies.sharers.hangouts.label":"Hangouts",
+    "buddies.sharers.viber.label":"Viber",
     "buddies.switch.myBuddies.label":"My Buddies",
     "buddies.switch.requests.label": "Requests",
     "buddies.sharers.copy.actionCompleted.label": "The message has been copied to your clipboard!",
@@ -41,6 +42,11 @@
     "challenges.status.creating.label":"Creating...",
     "challenges.status.async.challenge.creationFailed.label":"Could not find anyone to play with. Please invite your buddies!",
     "challenges.status.creationFailed.label":"Failed to create challenge. Please check your network connection and try again.",
+    "challenges.status.creationFailed.selfIInvite.label":"You are trying to challenge yourself, go ahead and select another player.",
+    
+    "challenges.newChallenges.subtitle.label": "New Challenges",
+    "challenges.ongoingChallenges.subtitle.label": "Ongoing Challenges",
+    "challenges.completedChallenges.subtitle.label": "Completed Challenges",
     
     "challenges.newChallenges.leftDescription.label":"Expires in",
     "challenges.newChallenges.leftOneDay.label":"a day",
@@ -170,6 +176,7 @@
     "profile.edit.leaveWithoutSaveChangesAlertPersistChanges.button": "Confirm",
     "profile.edit.leaveWithoutSaveChangesAlertLeave.button": "Cancel",
     "profile.edit.nameIsTooSmallAlert.label": "Your name must be at least 3 characters long. Please try another!",
+    "profile.edit.birthday.under.minimal.age.label": "Nextpeer service is only intended for individuals aged thirteen (13) years or older. If you are under 13 please do not use this service.",
     
     "profile.view.screen.title.label": "My Profile",
     "profile.view.screen.messages.button": "MESSAGES",

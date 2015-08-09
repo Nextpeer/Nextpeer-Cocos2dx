@@ -39,7 +39,7 @@
         android:text="@string/np__application_name" />
 
     <ImageButton
-        android:id="@+id/np__dialog_action_bar_done_button"
+        android:id="@+id/np__dialog_action_bar_right_button"
         style="@style/NP__.Widget.ImageButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
