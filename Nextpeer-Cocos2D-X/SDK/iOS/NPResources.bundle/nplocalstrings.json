@@ -3,13 +3,13 @@
     "about.description.label":"Nextpeer is the leading social network for mobile players. With Nextpeer you can enjoy multiplayer games, play with friends, connect with new people around the world and discover new games.",
     "about.feedback.button":"SEND US FEEDBACK",
     "about.title.label":"About",
-
+    
     "avatarPicker.avatarChooser.title.label": "Choose an Avatar",
     "avatarPicker.cancel.button": "Cancel",
     "avatarPicker.photoChooser.title.label": "Choose a Photo",
     "avatarPicker.status.failedFetching.label":"Failed fetching avatar list, please try again later.",
     "avatarPicker.takePhoto.title.label": "Take a Photo",
-
+    
     "buddies.cells.buddyApprovedRequest.label":"Accepted your buddy request",
     "buddies.cells.play.button":"PLAY",
     "buddies.cells.requestAccept.button":"ACCEPT",
@@ -25,6 +25,7 @@
     "buddies.sharers.sinaWeibo.label":"Sina Weibo",
     "buddies.sharers.sms.label":"Messages",
     "buddies.sharers.tencentWeibo.label":"Tencent Weibo",
+    "buddies.sharers.viber.label":"Viber",
     "buddies.sharers.shareMessage.notSignedIn.text.placeholder":"Come play %GAME_NAME% with me. Download the game from %TARGET_URL%",
     "buddies.sharers.shareMessage.signedIn.text.placeholder":"Come play %GAME_NAME% with me. Download the game from %TARGET_URL% and search for my Nextpeer ID %NEXTPEER_ID%.",
     "buddies.sharers.twitter.label":"Twitter",
@@ -35,18 +36,18 @@
     "buddies.switch.requests.label": "Requests",
     "buddies.sharers.copy.actionCompleted.label": "The message has been copied to your clipboard!",
     "buddies.screen.status.failedToCreateMatch.label":"Failed to create challenge. Please check your network connection and try again.",
-
+    
     "challenges.cells.morePlayers.label":"Players",
     "challenges.cells.play.button":"PLAY",
     "challenges.status.creating.label":"Creating...",
     "challenges.status.async.challenge.creationFailed.label":"Could not find anyone to play with. Please invite your buddies!",
     "challenges.status.creationFailed.label":"Failed to create challenge. Please check your network connection and try again.",
     "challenges.status.creationFailed.selfIInvite.label":"You are trying to challenge yourself, go ahead and select another player.",
-
+    
     "challenges.newChallenges.subtitle.label": "New Challenges",
     "challenges.ongoingChallenges.subtitle.label": "Ongoing Challenges",
     "challenges.completedChallenges.subtitle.label": "Completed Challenges",
-
+    
     "challenges.newChallenges.leftDescription.label":"Expires in",
     "challenges.newChallenges.leftOneDay.label":"a day",
     "challenges.newChallenges.leftDays.label":"days",
@@ -55,11 +56,11 @@
     "challenges.newChallenges.leftMinutes.label":"minutes",
     "challenges.alerts.gameModeNotSupportedMessage.label": "Seems like this challenge isn't supported for this game. If this persists please contact our support team.",
     "challenges.emptyState.bubble.label": "INVITE YOUR BUDDIES TO CHALLENGE THEM!",
-
+    
     "feed.footer.action.install.label": "INSTALL",
     "feed.footer.action.challenge.label": "CHALLENGE",
     "feed.footer.action.externalShare.label": "SHARE",
-
+    
     "forgotPassword.actions.default.label":"ENTER YOUR EMAIL TO RESET YOUR PASSWORD",
     "forgotPassword.email.text.placeholder": "Your email",
     "forgotPassword.error.invalidEmail.label": "Invalid email address",
@@ -67,20 +68,14 @@
     "forgotPassword.notifications.failure.label":"No matching email address found",
     "forgotPassword.notifications.reset.label":"Reseting your password",
     "forgotPassword.notifications.success.label":"Please check your email",
-
-    "fullStory.footer.action.install.label": "INSTALL",
-    "fullStory.footer.action.challenge.label": "CHALLENGE",
-    "fullStory.footer.action.externalShare.label": "SHARE",
-    "fullStory.screen.title.label": "%USER_NAME%'s Post",
-    "fullStory.status.failedToFetchPostDetails.label": "Failed to fetch post details. Please check your network connection and try again.",
-
+    
     "gameModes.title.label": "Game Modes",
-
+    
     "gender.type.female.label": "Female",
     "gender.type.male.label": "Male",
     "gender.type.unspecified.label": "Unspecified",
     "gender.hint.label": "Gender",
-
+    
     "general.cancel.button": "Cancel",
     "general.error.noNetwork.label" : "OH NO! The internet connection has been lost. Check your network and try again. If the problem persists, please contact support.",
     "general.launchNextpeer.noNetwork.label": "OH NO! You appear to be offline. Please check your network and try again.",
@@ -89,13 +84,13 @@
     "general.yes.button": "Yes",
     "general.no.button": "No",
     "general.player.nameRepresentationWhenNotSignIn.label": "You",
-
+    
     "leaderboard.title.label": "Weekly Leaderboard",
     "leaderboard.subtitle.label": "Your Ranking Position",
     "leaderboard.currentPlayerName.label": "You",
     "leaderboard.emptyState.play.button": "PLAY",
     "leaderboard.emptyState.bubble.label": "PLAY & BE THE FIRST TO SHOW UP ON THE LEADERBOARD",
-
+    
     "loading.random.connecting.title.label":"Searching for the best\nmatch for you...",
     "loading.buddies.connectingSingle.title.label":"Waiting for your friend...",
     "loading.buddies.connectingMultiple.title.label":"Waiting for your friends...",
@@ -106,18 +101,18 @@
     "loading.footerMorePlayers.label":"more players",
     "loading.playerLevel.label": "Level",
     "loading.noBuddyArrivedNotificationMessage.label":"Seems like your buddy isn't online, start by playing your turn first!",
-
+    
     "myGames.title.label":"My Games",
     "myGames.subtitle.label":"More Games",
-
+    
     "nativeAds.install.button":"INSTALL",
-
+    
     "opponent.flag.report.button": "REPORT",
     "opponent.flag.screen.title.label": "Report Player",
     "opponent.flag.screenDescription.label.optional" : "By flagging this player you won't be able to play together anymore!",
     "opponent.flag.reportProcess.label": "Reporting",
     "opponent.flag.reportProcessFailed.label": "Failed to report player activities. Please try again later!",
-
+    
     "opponent.screen.title.label": "Profile",
     "opponent.screen.message.button": "MESSAGE",
     "opponent.screen.games.button": "GAMES",
@@ -141,11 +136,11 @@
     "opponent.cancelOutgoingBuddyRequest.alert.text.label": "OH NO! This will remove this buddy from your buddy list. Are you sure you want to unbuddy?",
     "opponent.status.requestToAddBuddy.label" : "Your request is pending approval, if you change your mind just unbuddy.",
     "opponent.status.requestToAddBuddyTitle.label" : "Request buddy",
-
+    
     "opponentGames.title.label":"%USER_NAME%'s Games",
     "opponentGames.challangeTitle.label":"Challenge %USER_NAME% in",
     "opponentGames.subtitle.label":"More Games",
-
+    
     "playerBuddies.screen.title.label":"Buddies",
     "playerBuddies.cell.addBuddy.button": "ADD",
     "playerBuddies.cell.playBuddy.button": "PLAY",
@@ -154,12 +149,18 @@
     "playerBuddies.screen.status.failedToFetch.label": "Failed to fetch your buddy's details. Please check your network connection and try again.",
     "playerBuddies.screen.status.failedToAddBuddy.label" : "Could not add buddy. Please try again later!",
     "playerBuddies.screen.status.failedToCreateMatch.label" : "Failed to create challenge. Please check your network connection and try again.",
-
+    
     "post.label": "What's on your mind?",
     "post.status.label": "Posting...",
     "post.justPosted.label": "Just posted, go and visit your stream.",
     "postShareMomentsPicker.title.label": "Share Your Moment",
 
+    "fullStory.footer.action.install.label": "INSTALL",
+    "fullStory.footer.action.challenge.label": "CHALLENGE",
+    "fullStory.footer.action.externalShare.label": "SHARE",
+    "fullStory.screen.title.label": "%USER_NAME%'s Post",
+    "fullStory.status.failedToFetchPostDetails.label": "Failed to fetch post details. Please check your network connection and try again.",
+    
     "profile.edit.birthday.text.placeholder": "Birthday",
     "profile.edit.city.text.placeholder": "Your city",
     "profile.edit.country.text.placeholder": "Your country",
@@ -175,7 +176,8 @@
     "profile.edit.leaveWithoutSaveChangesAlertPersistChanges.button": "Confirm",
     "profile.edit.leaveWithoutSaveChangesAlertLeave.button": "Cancel",
     "profile.edit.nameIsTooSmallAlert.label": "Your name must be at least 3 characters long. Please try another!",
-
+    "profile.edit.birthday.under.minimal.age.label": "Nextpeer service is only intended for individuals aged thirteen (13) years or older. If you are under 13 please do not use this service.",
+    
     "profile.view.screen.title.label": "My Profile",
     "profile.view.screen.messages.button": "MESSAGES",
     "profile.view.screen.buddies.button": "BUDDIES",
@@ -194,7 +196,7 @@
     "registration.error.passwordCannotBeEmpty.label": "Please provide a password",
     "registration.sideBar.signIn.label": "Sign In",
     "registration.sideBar.signUp.label": "Sign Up",
-
+    
     "results.fetchingScores.label": "Fetching scores...",
     "results.active.quickPlay.button": "QUICK PLAY",
     "results.active.title.label": "Results",
@@ -204,7 +206,7 @@
     "results.static.challengeAgain.button": "NEW CHALLENGE",
     "results.noScoreAvailable.label": "-",
     "results.opponentTurn.label":"Their Turn",
-
+    
     "screenshotSelector.title.label": "Select Your Moment",
 
     "settings.about.button": "ABOUT",
@@ -214,7 +216,7 @@
     "settings.signOut.button": "SIGN OUT",
     "settings.signOut.progress.label": "Signing out...",
     "settings.title.label": "Settings",
-
+    
     "shareMoment.button.text": "PUBLISH",
     "shareMoment.externalShare.action.notSignedIn.text.placeholder":"See my moves in %GAME_NAME%. Download the game from %TARGET_URL%",
     "shareMoment.externalShare.action.signedIn.text.placeholder":"See my moves in %GAME_NAME%. Download the game from %TARGET_URL% and search for my Nextpeer ID %NEXTPEER_ID%",
@@ -223,7 +225,7 @@
     "shareMoment.title.label": "SHARE YOUR MOMENT TO THE STREAM",
     "shareMoment.justPosted.label": "Just posted, go and visit your stream.",
     "shareMoment.status.label": "Sharing...",
-
+    
     "sideMenu.exit.label": "Exit",
     "sideMenu.about.label": "About",
     "sideMenu.messages.label":  "Messages",
@@ -231,7 +233,7 @@
     "sideMenu.privacy.label": "Privacy",
     "sideMenu.settings.label": "Settings",
     "sideMenu.stream.label": "Stream",
-
+    
     "signIn.actions.addBuddy.label" : "PLEASE SIGN IN TO ADD A BUDDY",
     "signIn.actions.challengeBuddy.label": "PLEASE SIGN IN TO CHALLENGE A BUDDY",
     "signIn.actions.default.label": "PLEASE SIGN IN",
@@ -252,7 +254,7 @@
     "signIn.status.failed.label": "An error occurred, please try again later",
     "signIn.status.fetchingUser.label": "Fetching user details...",
     "signIn.status.signingIn.label": "Signing in...",
-
+    
     "signUp.actions.addBuddy.label" : "PLEASE SIGN UP TO ADD A BUDDY",
     "signUp.actions.challengeBuddy.label": "PLEASE SIGN UP TO CHALLENGE A BUDDY",
     "signUp.actions.default.label": "PLEASE SIGN UP",
@@ -281,7 +283,7 @@
     "signUp.step2.nameIsTooSmallAlert.label": "Your name must be at least 3 characters long. Please try another name!",
     "status.loading.label": "Loading...",
     "status.updating.label": "Updating...",
-
+    
     "stream.loadMoreAtBottom.label": "Loading more",
     "stream.newStories.label": "New Stories",
     "stream.play.random.label": "QUICK PLAY",
@@ -291,13 +293,13 @@
     "stream.shareMessage.signedIn.text.placeholder":"Come play %GAME_NAME% with me. Download the game from %TARGET_URL% and search for my Nextpeer ID %NEXTPEER_ID%.",
     "stream.shareMessage.subject.text.placeholder":"My moment in %GAME_NAME%",
     "stream.emptyState.bubble.label":"NO STORIES YET, BE THE FIRST TO POST OR START PLAYING!",
-
+    
     "tabBar.buddies.button": "Buddies",
     "tabBar.challenges.button": "Challenges",
     "tabBar.leaderboards.button": "Leaderboards",
     "tabBar.more.button": "More",
     "tabBar.stream.button": "Stream",
-
+    
     "time.daysAgo.label":"days ago",
     "time.hoursAgo.label":"hours ago",
     "time.justNow.label":"Just now",
